@@ -1,0 +1,183 @@
+{% extends 'pfl_app/base.html' %} 
+{% load static %}
+{% block content %}
+<script>
+	function scrollToAbout() {
+			var aboutSection = document.getElementById('about');
+			aboutSection.scrollIntoView({ behavior: 'smooth' });
+	}
+</script>
+<!-- page header -->
+<header id="home" class="header">
+  <div class="overlay"></div>
+  <div class="header-content container en">
+	  <h1 class="header-title">
+		<span class="up">Hi!</span>
+		<span class="down">I am Dang</span>
+	  </h1>
+	  <p class="header-subtitle">Analytics Engineer</p>            
+	  <button class="btn btn-primary" onclick="scrollToAbout()">About Me</button>
+  </div>
+	<div class="header-content container vi hidden">
+	  <h1 class="header-title">
+		<span class="up">Xin chào!</span>
+		<span class="down">Tôi là Đăng</span>
+	  </h1>
+	  <p class="header-subtitle">Analytics Engineer</p>            
+	  <button class="btn btn-primary" onclick="scrollToAbout()">Giới thiệu bản thân</button>
+  </div>
+</header><!-- end of page header -->
+
+<!-- about section -->
+<section class="section pt-0" id="about">
+<!-- container -->
+<div class="container text-center">
+	<!-- about wrapper -->
+	<div class="about">
+		<div class="about-img-holder">
+			<img  style="width: 300px; border-radius: 10px;box-shadow:  8px 8px 16px #989898,
+             -8px -8px 16px #ffffff;" src='{% static "pfl_app/assets/imgs/homepage/avatar_1.jpg" %}' class="about-img" alt="avartar.png">
+		</div>
+		<div class="about-caption" id="about">
+			<p class="section-subtitle en">Who Am I ?</p>
+			<h2 class="section-title mb-3 en">About Me</h2>
+			<h2 class="section-title mb-3 vi hidden">Giới thiệu bản thân</h2>
+			<p class="en">I am a keen learner, passion for discovering optimal solutions to complex problems. I enjoy with collaborative environments, working alongside skilled colleagues to address new challenges. Over the next 2-3 years, my objective is to rapidly advance my data analysis expertise to a senior level.              
+			</p>			
+			<p class="vi hidden">Bản thân là một người ham học hỏi, đam mê tìm tòi những phương án tốt nhất cho các vấn đề khó. Tôi thích hợp tác
+				với những người đồng đội giỏi, cùng nhau giải quyết những vấn đề mới. Tôi đặt mục tiêu trong vòng 2-3 năm tới sẽ
+				nhanh chóng tích luỹ thêm năng lực trở thành senior.     
+			</p>
+			<a href='{% static "pfl_app/assets/EN_pfl_app.pdf" %}' target="_blank" download="file.pdf" class="download-button en">
+				<button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
+			</a>
+			<a href='{% static "pfl_app/assets/VI_pfl_app.pdf" %}' target="_blank" download="file.pdf" class="download-button vi hidden">
+				<button class="btn-rounded btn btn-outline-primary mt-4">Tải xuống CV</button>
+			</a>
+		</div>
+	</div><!-- end of about wrapper -->
+</div><!-- end of container -->
+</section> <!-- end of about section -->
+
+<!-- portfolio section -->
+<section class="section" id="portfolio">
+  <div class="container text-center">
+	  <p class="section-subtitle en">What I Did ?</p>
+	  <h6 class="section-title mb-6">Portfolio</h6>
+	  <!-- row -->
+	  <div class="row" style="border: #5e5e5e;border-radius: 1px;
+		box-shadow:  -5px 5px 2px #474747,
+								 5px -5px 2px #ffffff;">
+		  <div class="col-md-3" style="padding-left: 0px;">
+			  <a style="width: 300px; pointer-events: none;"  href='#' class="portfolio-card">
+				  <img style="width: 300px;" src='{% static "pfl_app/assets/imgs/homepage/data-crawling.jpg" %}' class="portfolio-card-img" alt="Web Crawling">                      
+			  </a>
+		  </div>
+			<div class="col-md-9 en" style="text-align: left; padding-left: 30px;">
+				<p class="font-weight-normal"><strong>Visual Report with D3.js</strong></p>
+				<p class="font-weight-normal">Skills in Python, BeautifulSoup and Selenium. I have undertaken projects to collect data from <br>e-commerce sites, news outlets, and social media platforms. Achievements include effective data collection, analysis, and reporting. I am committed to ensuring data accuracy, automated crawling systems, and the highest possible performance.</p>
+				<p class="font-weight-normal"><strong><a href='{% url "pfl_app:member" member="pfl_app" func="d3"%}'>See more details</a></strong></p>
+		  </div>
+			<div class="col-md-9 vi hidden" style="text-align: left; padding-left: 30px;">
+				<p class="font-weight-normal"><strong>Thu thập dữ liệu Web</strong></p>
+				<p class="font-weight-normal">Kiến thức và kĩ năng về Python, BeautifulSoup và Selenium đã giúp tôi đã thực hiện các dự án thu thập dữ liệu từ các trang thương mại điện tử, các trang tin tức và các nền tảng mạng xã hội. Bao gồm việc thu thập dữ liệu hiệu quả, phân tích và báo cáo dữ liệu đảm bảo độ chính xác của dữ liệu, các hệ thống tự động thu thập dữ liệu và hiệu suất cao nhất có thể.</p>
+				<p class="font-weight-normal"><strong><a href='{% url "pfl_app:member" member="pfl_app" func="d3"%}'>Xem chi tiết</a></strong></p>
+		  </div>
+	  </div><!-- end of row -->
+		<br>
+		<div class="row" style="border: #5e5e5e;border-radius: 1px;
+		box-shadow:  -5px 5px 1px #474747,
+								 5px -5px 1px #ffffff;">
+		  <div class="col-md-3" style="padding-left: 0px;">
+			  <a style="width: 300px;pointer-events: none;"  href='#' class="portfolio-card">
+				  <img style="width: 300px;" src='{% static "pfl_app/assets/imgs/homepage/data-storage.png" %}' class="portfolio-card-img" alt="Web Crawling and Django Integration ">                      
+			  </a>
+		  </div>
+			<div class="col-md-9 en" style="text-align: left; padding-left: 30px;">
+				<p class="font-weight-normal"><strong>Database Development and Django Integration</strong></p>
+				<p class="font-weight-normal">Storing data in PostgreSQL or MySQL databases. I integrate this data with Django for presentation or manipulation, leveraging Django ORM for efficient database management and optimization.</p>
+		  </div>
+			<div class="col-md-9 vi hidden" style="text-align: left; padding-left: 30px;">
+				<p class="font-weight-normal"><strong>Xây dựng cơ sở dữ liệu và tích hợp dữ liệu với Django</strong></p>
+				<p class="font-weight-normal">Lưu trữ dữ liệu trong cơ sở dữ liệu như PostgreSQL, MySQL. Tôi tích hợp dữ liệu này với Django để trình bày hoặc thao tác, tận dụng Django ORM để quản lý và tối ưu hóa cơ sở dữ liệu hiệu quả.</p>
+		  </div>
+	  </div><!-- end of row -->
+		<br>
+		<div class="row" style="border: #5e5e5e;border-radius: 1px;
+		box-shadow:  -5px 5px 1px #474747,
+								 5px -5px 1px #ffffff;">
+		  <div class="col-md-3" style="padding-left: 0px;">
+			  <a style="width: 300px;pointer-events: none;"  href='#' class="portfolio-card">
+				  <img style="width: 300px;" src='{% static "pfl_app/assets/imgs/homepage/task-automation.png" %}' class="portfolio-card-img" alt="Task Automation and Data Processing">                      
+			  </a>
+		  </div>
+			<div class="col-md-9 en" style="text-align: left; padding-left: 30px;">
+				<p class="font-weight-normal"><strong>Task Automation and Data Processing</strong></p>
+				<p class="font-weight-normal">Skilled in task automation using Python (os, shutil, Selenium) for file management, web scraping. Proficient in data processing using pandas, numpy for batch data handling. Experienced with APIs such as Google Drive, Google Sheets, and the openpyxl library for efficient file management and Excel processing. These skills streamline workflows and enhance data management capabilities.</p>
+		  </div>
+			<div class="col-md-9 vi hidden" style="text-align: left; padding-left: 30px;">
+				<p class="font-weight-normal"><strong>Tự động hoá tác vụ với Python và Xử lí dữ liệu</strong></p>
+				<p class="font-weight-normal">Có kỹ năng trong tự động hóa tác vụ sử dụng Python (os, shutil, Selenium) cho việc quản lý tệp tin, và web scraping. Thành thạo việc xử lý dữ liệu bằng pandas để xử lý dữ liệu hàng loạt. Có kinh nghiệm với các API như Google Drive, Google Sheets, và thư viện openpyxl để quản lý tệp tin và xử lý Excel hiệu quả. Những kỹ năng này giúp tối ưu hóa quy trình làm việc và nâng cao khả năng quản lý dữ liệu</p>
+		  </div>
+	  </div><!-- end of row -->
+		<br>
+		<div class="row" style="border: #5e5e5e;border-radius: 1px;
+		box-shadow:  -5px 5px 2px #474747,
+								 5px -5px 2px #ffffff;">
+		  <div class="col-md-3" style="padding-left: 0px;">
+			  <a style="width: 300px;pointer-events: none;"  href='#' class="portfolio-card">
+				  <img style="width: 300px;" src='{% static "pfl_app/assets/imgs/homepage/data-visualization.png" %}' class="portfolio-card-img" alt="Data Visualization">                     
+			  </a>
+		  </div>
+			<div class="col-md-9 en" style="text-align: left; padding-left: 30px;">
+				<p class="font-weight-normal"><strong>Data Visualization</strong></p>
+				<p class="font-weight-normal">Data visualization with tools like Tableau, Matplotlib, and Seaborn, creating insightful charts, interactive dashboards, and dynamic visualizations.</p>
+				<p class="font-weight-normal"><strong><a href='{% url "pfl_app:member" member="pfl_app" func="menu-dashboard"%}'>See my dashboards</a></strong></p>
+		  </div>
+			<div class="col-md-9 vi hidden" style="text-align: left; padding-left: 30px;">
+				<p class="font-weight-normal"><strong>Trực quan hoá dữ liệu</strong></p>
+				<p class="font-weight-normal">Trực quan hóa dữ liệu với các công cụ như Tableau, Matplotlib và Seaborn. Tạo ra các dashboard phục vụ các nhu cầu cụ thể.</p>
+				<p class="font-weight-normal"><strong><a href='{% url "pfl_app:member" member="pfl_app" func="menu-dashboard"%}'>Danh sách dashboard tại đây!</a></strong></p>
+		  </div>
+	  </div><!-- end of row -->
+		<br>
+		<div class="row" style="border: #5e5e5e;border-radius: 1px;
+		box-shadow:  -5px 5px 2px #474747,
+								 5px -5px 2px #ffffff;">
+		  <div class="col-md-3" style="padding-left: 0px;">
+			  <a style="width: 300px;pointer-events: none;"  href='#' class="portfolio-card">
+				  <img style="width: 300px;" src='{% static "pfl_app/assets/imgs/homepage/webapp.png" %}' class="portfolio-card-img" alt="Web app Django - RealBuddy">                     
+			  </a>
+		  </div>
+			<div class="col-md-9 en" style="text-align: left; padding-left: 30px;">
+				<p class="font-weight-normal"><strong>Web app Django - RealBuddy</strong></p>
+				<p class="font-weight-normal">This web application combines automated real estate data retrieval with a chatbot for advisory purposes. Users can effortlessly search for property information such as prices, sizes, and locations. The data is regularly updated to ensure accuracy, and the chatbot provides prompt assistance and answers user inquiries regarding the real estate market.</p>
+				<p class="font-weight-normal"><strong><a href='{% url "pfl_app:member" member="pfl_app" func="webapp-real-estate"%}'>See more details</a></strong></p>
+		  </div>
+			<div class="col-md-9 vi hidden" style="text-align: left; padding-left: 30px;">
+				<p class="font-weight-normal"><strong>Web app Django - RealBuddy</strong></p>
+				<p class="font-weight-normal">Ứng dụng web này kết hợp tự động hóa việc thu thập dữ liệu bất động sản với một chatbot để cung cấp tư vấn. Người dùng có thể dễ dàng tìm kiếm thông tin về bất động sản như giá cả, diện tích và vị trí. Dữ liệu được cập nhật thường xuyên để đảm bảo độ chính xác, và chatbot cung cấp hỗ trợ nhanh chóng và trả lời các câu hỏi của người dùng về thị trường bất động sản.</p>
+				<p class="font-weight-normal"><strong><a href='{% url "pfl_app:member" member="pfl_app" func="webapp-real-estate"%}'>Xem chi tiết</a></strong></p>
+		  </div>
+	  </div><!-- end of row -->
+  </div><!-- end of container -->
+</section> <!-- end of portfolio section -->
+
+<!-- section contact -->
+<section class="section" id="contact">
+<div class="container text-center">
+	<p class="section-subtitle en">How can you communicate?</p>
+	<h6 class="section-title mb-5 en">Contact Me</h6>
+	<h6 class="section-title mb-5 vi hidden">Liên hệ</h6>
+	<!-- contact form -->
+	<div class="contact-card en">
+	  <p class="font-weight-normal">Email: <strong>pfl_app.md@gmail.com</strong></p>
+	  <p class="font-weight-normal">Phone: <strong>(+84)-393-219-945</strong></p>
+	</div>
+	<div class="contact-card vi hidden">
+	  <p class="font-weight-normal">Email: <strong>pfl_app.md@gmail.com</strong></p>
+	  <p class="font-weight-normal">Số điện thoại: <strong>(+84)-393-219-945</strong></p>
+	</div>
+</div><!-- end of container -->
+</section><!-- end of contact section -->
+{% endblock %}
