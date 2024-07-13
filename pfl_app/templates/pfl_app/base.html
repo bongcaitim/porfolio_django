@@ -12,8 +12,10 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
       <link rel="stylesheet" href= '{% static "pfl_app/assets/vendors/themify-icons/css/themify-icons.css" %}'>
-      <!-- Bootstrap + Meyawo main styles -->
+      <!-- Bootstrap + styles -->
     <link rel="stylesheet" href='{% static "pfl_app/assets/css/pfl_app.css" %}'>
+    <link rel="icon" type="image/x-icon" href='{% static "pfl_app/assets/imgs/pumpkin.png" %}'>
+	</head>
     {% block head_extra %}{% endblock %}
   </head>
   <style>
@@ -25,7 +27,7 @@
       <!-- Page Navbar -->
       <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
         <div class="container">
-            <a class="logo" href='{% url "pfl_app:member" member="pfl_app" func="homepage"%}'>Nhu Vuong</a>
+            <a class="logo" href='{% url "pfl_app:member" member="pfl_app" func="homepage"%}'>Vuong N. Hoang</a>
               <ul class="nav">
                 <!-- <li class="item">
                   <a class="link" href='{% url "pfl_app:member" member="pfl_app" func="homepage"%}'>Home</a>
@@ -37,7 +39,7 @@
                   <a class="link" href='{% url "pfl_app:member" member="pfl_app" func="homepage"%}#about'>Giới thiệu bản thân</a>
                 </li>
                 <li class="item">
-                  <a class="link" href='{% url "pfl_app:member" member="pfl_app" func="homepage"%}#portfolio'>Portfolio</a>
+                  <a class="link" href='{% url "pfl_app:member" member="pfl_app" func="homepage"%}#portfolio'>Background & Experience</a>
                 </li>
                 <li class="item en" style="width: 57px; height: 24px">
                   <a class="link" href='{% url "pfl_app:member" member="pfl_app" func="homepage"%}#contact'>Contact</a>
@@ -59,11 +61,12 @@
       <!-- footer -->
       <div class="container">
         <footer class="footer">       
-          <p class="mb-0">Dawn Tran | pfl_app.md@gmail.com | (+84)-393-219-945</p>
+          <p class="mb-0">Vuong N. Hoang | vuonghoang.workspace@gmail.com |
+              <br>(+84)-977-829-788</p>
           <div class="social-links text-right m-auto ml-sm-auto">
-              <a href="https://www.facebook.com/miinhdaang" target="_blank" class="link"><i class="ti-facebook"></i></a>
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pfl_app.md@gmail.com" target="_blank" class="link"><i class="ti-google"></i></a>
-              <a href="https://www.linkedin.com/in/minhdangtc/" class="link"><i class="ti-linkedin"></i></a>
+              <a href="https://www.facebook.com/agreytappo" target="_blank" class="link"><i class="ti-facebook"></i></a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vuonghoang.workspace@gmail.com" target="_blank" class="link"><i class="ti-google"></i></a>
+              <a href="https://www.linkedin.com/in/vuong-nhu-hoang-082b05227/" class="link"><i class="ti-linkedin"></i></a>
           </div>
         </footer>
       </div> <!-- end of page footer -->
