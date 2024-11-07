@@ -124,3 +124,7 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Media files
+MEDIA_URL = '/media/'  # The URL to access uploaded media files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'pfl_app', 'media')

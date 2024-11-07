@@ -92,6 +92,65 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 
+
+/* Grid layout styling */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 35px 45px;
+  justify-items: start;
+  margin-bottom: 20px;
+}
+
+/* Custom checkbox styling */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.custom-checkbox .form-check-input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--red);
+  border-radius: 4px;
+  margin-right: 25px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-checkbox .form-check-input:checked {
+  background-color: var(--red);
+}
+
+.custom-checkbox .form-check-label {
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+  margin-left: 10px;
+}
+
+/* Styling for Select Box */
+.custom-select {
+  color: var(--gray);
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  padding: 8px;
+  width: 100%;
+}
+
+/* Align submit button to center */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the button horizontally */
+}
+
+.submit-button {
+  align-self: center; /* Ensures the button aligns to the center horizontally */
+}
+
+
+
 p {
   margin-top: 0;
   margin-bottom: 1rem;
