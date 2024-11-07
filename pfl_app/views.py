@@ -82,3 +82,31 @@ def member(request, member, func):
         return render(request, 'pfl_app/error_template.html', {'error': 'Template configuration not found.'})
 
     return render(request, template_name, context)
+
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from .models import UserPreference
+
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from .models import UserPreference
+
+@csrf_exempt
+def save_preferences(request):
+    if request.method == 'POST':
+        # Retrieve data from the POST request
+        geographical_features = request.POST.getlist('geographical_features')
+        tourist_activities = request.POST.getlist('tourist_activities')
+        tour_month = request.POST.get('tour_month')
+
+        # Save the preferences to the database
+        UserPreference.objects.create(
+            geographical_features=geographical_features,
+            tourist_activities=tourist_activities,
+            tour_month=tour_month,
+        )
+
+        # Return a JSON response indicating success
+        return JsonResponse({'status': 'success', 'message': 'Preferences saved successfully.'})
+
+    return JsonResponse({'status': 'error', 'message': 'Invalid request method.'})

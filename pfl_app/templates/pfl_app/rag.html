@@ -37,14 +37,14 @@
 <!-- end of file upload section -->
 
 
-
 <!-- Preference selection form -->
 <section class="section" id="preference-selection-section" style="margin-top: 50px;">
   <div class="container text-center">
     <h6 class="section-title mb-5">Select Your Preferences</h6>
-    <form id="preferences-form" method="post" action="{% url 'pfl_app:member' member='pfl_app' func='rag' %}">
+    <form id="preferences-form" method="post" onsubmit="savePreferences(event)">
       {% csrf_token %}
-
+      
+      <!-- Preference form fields as they are -->
       <!-- Đặc điểm địa lý -->
       <h5 class="mt-4 mb-4">Đặc điểm địa lý</h5>
       <div class="grid-layout">
@@ -67,7 +67,7 @@
         {% endfor %}
       </div>
 
-      <!-- Tháng du lịch and Submit Button aligned -->
+      <!-- Tháng du lịch -->
       <h5 class="mt-4 mb-4">Tháng du lịch</h5>
       <div class="form-row mt-4">
         <div class="form-group" style="width: 100%; text-align: start;">
@@ -82,8 +82,43 @@
         <button type="submit" class="btn btn-primary mt-4 submit-button">Submit Preferences</button>
       </div>
     </form>
+    <p id="preference-status" class="mt-3"></p> <!-- Message display area -->
   </div>
 </section>
+
+<script>
+  function savePreferences(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const form = document.getElementById('preferences-form');
+    const formData = new FormData(form); // Gather the form data
+    const statusDisplay = document.getElementById('preference-status');
+
+    fetch("{% url 'pfl_app:save_preferences' %}", {
+      method: "POST",
+      headers: {
+        'X-CSRFToken': '{{ csrf_token }}', // CSRF token for security
+      },
+      body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 'success') {
+        statusDisplay.textContent = data.message;
+        statusDisplay.style.color = 'green';
+      } else {
+        statusDisplay.textContent = 'Failed to save preferences.';
+        statusDisplay.style.color = 'red';
+      }
+    })
+    .catch(error => {
+      statusDisplay.textContent = 'An error occurred.';
+      statusDisplay.style.color = 'red';
+      console.error('Error:', error);
+    });
+  }
+</script>
+
 
 
 
