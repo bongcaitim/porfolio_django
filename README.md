@@ -35,8 +35,7 @@ Another method is to use Django's interactive shell to query the database. This 
    ```python
    from pfl_app.models import UserPreference
    preferences = UserPreference.objects.all()
-   for preference in preferences:
-       print(preference.geographical_features, preference.tourist_activities, preference.tour_month)
+   for preference in preferences: print(preference.geographical_features, preference.tourist_activities, preference.tour_month)
    ```
 
 This will display the preferences data that has been saved to the database.
