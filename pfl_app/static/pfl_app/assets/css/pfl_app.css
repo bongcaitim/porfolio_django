@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
+
 :root {
   --blue: #1e549f;
   --breakpoint-lg: 992px;
@@ -5124,7 +5125,7 @@ input[type="button"].btn-block {
           flex-direction: column;
   min-width: 0;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0;
+  border-radius: 15px;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
@@ -11179,7 +11180,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   opacity: 1;
   color: var(--dark);
-  font-weight: 300;
+  font-weight: 500;
   font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1300 - 300)));
   letter-spacing: .6px;
 }

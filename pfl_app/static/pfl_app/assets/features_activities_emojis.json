@@ -1,0 +1,23 @@
+{
+    "geo_features": {
+        "Núi đồi": "🏔️",
+        "Rừng": "🌲",
+        "Bãi biển": "🏖️",
+        "Thành phố": "🏙️",
+        "Làng mạc": "🏡",
+        "Hang động": "🕳️",
+        "Suối": "🏞️"
+    },
+    "tourist_activities": {
+        "Công viên": "⛲",
+        "Di tích lịch sử & văn hóa": "🏛️",
+        "Hoạt động ngoài trời & mạo hiểm": "⛷️",
+        "Hoạt động dưới nước": "🏊",
+        "Trải nghiệm ẩm thực": "🍲",
+        "Lễ hội": "🎠",
+        "Thư giãn & chăm sóc sức khỏe": "💆",
+        "Cuộc sống về đêm": "🪩",
+        "Thiên nhiên & động vật hoang dã": "🐾",
+        "Mua sắm": "🛍️"
+    }
+}

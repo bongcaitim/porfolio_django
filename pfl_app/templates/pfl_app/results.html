@@ -1,0 +1,254 @@
+{% extends 'pfl_app/base.html' %}
+{% load static %}
+{% block content %}
+<script>
+  function scrollToAbout() {
+    var aboutSection = document.getElementById("about");
+    aboutSection.scrollIntoView({ behavior: "smooth" });
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+
+      let currentCardIndex = 0;
+      const cityCards = document.querySelectorAll('.city-card');  // All city cards
+
+      // Hide all cards initially
+      cityCards.forEach(function(card) {
+          card.style.display = 'none';
+      });
+
+      // Show the first card
+      if (cityCards.length > 0) {
+          cityCards[currentCardIndex].style.display = 'block';
+          updateCardProgress();  // Update the progress
+      }
+
+      // Show the next card on button click
+      document.getElementById('nextCardButton').addEventListener('click', function() {
+          cityCards[currentCardIndex].style.display = 'none';  // Hide current card
+          currentCardIndex = (currentCardIndex + 1) % cityCards.length;  // Move to the next card, loop back to the start
+          cityCards[currentCardIndex].style.display = 'block';  // Show the next card
+          updateCardProgress();  // Update the progress
+      });
+
+      // Show the previous card on button click
+      document.getElementById('prevCardButton').addEventListener('click', function() {
+          cityCards[currentCardIndex].style.display = 'none';  // Hide current card
+          currentCardIndex = (currentCardIndex - 1 + cityCards.length) % cityCards.length;  // Move to the previous card, loop back to the end
+          cityCards[currentCardIndex].style.display = 'block';  // Show the previous card
+          updateCardProgress();  // Update the progress
+      });
+
+      // Update the progress of current card (e.g., "3/22")
+      function updateCardProgress() {
+          const progressText = `${currentCardIndex + 1} / ${cityCards.length}`;
+          document.getElementById('cardProgress').textContent = progressText;
+      }
+  });
+</script>
+
+{% block head_extra %}
+    <style>
+        section#city-cards p {
+            font-size: 14px;
+        }
+        .emoji-row {
+          display: flex;
+          justify-content: center; /* Center emojis horizontally */
+          gap: 8px;
+          flex-wrap: wrap; /* Adjust if emojis overflow */
+          margin-bottom: 10px;
+      }
+
+      .emoji {
+          font-size: 20px;
+          cursor: pointer;
+      }
+
+      .city-card {
+          display: none; /* Initially hide all cards */
+      }
+
+      /* Sticky Buttons - Left Side for Previous and Right Side for Next */
+      #nextCardButton, #prevCardButton {
+          position: fixed;
+          z-index: 1000;
+          border-radius: 5px;
+          display: block;
+          margin: 10px 0;
+      }
+      
+      /* Right Side: Next City button */
+      #nextCardButton {
+          right: 180px;
+          top: 50%;
+          transform: translateY(-50%); /* Center vertically */
+      }
+      
+      /* Left Side: Previous City button */
+      #prevCardButton {
+          left: 180px;  /* Move it to the left side */
+          top: 50%;
+          transform: translateY(-50%); /* Center vertically */
+      }
+      
+      /* Progress Text Above Button */
+      #cardProgress {
+          position: fixed;
+          right: 180px;
+          top: calc(50% - 20px);  /* Slightly above the "Next City" button */
+          transform: translateY(-50%);
+          color: rgba(0, 0, 0, 0.7);
+          padding: 10px;
+          font-size: 14px;
+          text-align: center;
+      }
+      
+      /* Break the description into two columns */
+      .city-description {
+          column-count: 2; /* Split into two columns */
+          column-gap: 20px; /* Space between the columns */
+          text-align: left !important; /* Ensure the text is aligned to the left */
+      }
+      
+      /* Optional: Ensure paragraphs inside the description break properly in the columns */
+      .city-description p {
+          text-align: justify !important; /* Force text alignment to the left */
+      }
+      
+
+    </style>
+{% endblock %}
+
+<!-- City Cards Section -->
+<section class="section" id="city-cards">
+    <div class="container text-center">
+        {% comment %} <p class="section-subtitle en">Explore Cities</p> {% endcomment %}
+        {% comment %} <h6 class="section-title mb-5 en">Các thành phố đề xuất😉</h6> {% endcomment %}
+  
+        {% if cities %}
+            {% for city in cities %}
+            <div class="city-card my-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title my-4">{{ city.city }}</h5>
+
+                        <div class="row p-2">
+                            <!-- Geographical Features -->
+                            <div class="col-12 col-md-6">
+                                <h6>Thiên nhiên địa lý</h6>
+                                <div class="emoji-row justify-content-center">
+                                    {% for feature, emoji in city.geo_features_emoji.items %}
+                                        <span class="emoji mx-2" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ feature }}">{{ emoji }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <!-- Tourist Activities -->
+                            <div class="col-12 col-md-6">
+                                <h6>Các hoạt động du lịch</h6>
+                                <div class="emoji-row justify-content-center">
+                                    {% for activity, emoji in city.tourist_activities_emoji.items %}
+                                        <span class="emoji mx-2" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ activity }}">{{ emoji }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <!-- Description -->
+                        <div class="city-description">
+                            <p class="px-4">{{ city.description|linebreaksbr }}</p>
+                        </div>
+                        <hr> 
+                        
+                        
+                        <!-- Climate Information -->
+                        <div class="row g-0 p-3">
+                            <div class="col">
+                                <p class="m-0 p-0">🌞🌡️: {{ city.formatted_climate_data.daytime_temp }} °C</p>
+                            </div>
+                            <div class="col">
+                                <p class="m-0 p-0">🌚🌡️: {{ city.formatted_climate_data.nighttime_temp }} °C</p>
+                            </div>
+                            <div class="col">
+                                <p class="m-0 p-0">🌧️: {{ city.formatted_climate_data.precipitation }} mm</p>
+                            </div>
+                            <div class="col">
+                                <p class="m-0 p-0">UV Index: {{ city.formatted_climate_data.uv_index }}</p>
+                            </div>
+                            {% if city.formatted_climate_data.typhoon_season == "Typhoon" %}
+                                <div class="col">
+                                    <p class="m-0 p-0">🌪️ Typhoon Season</p>
+                                </div>
+                            {% endif %}
+                            {% if city.formatted_climate_data.best_month != "No" %}
+                                <div class="col">
+                                    <p class="m-0 p-0">✨Best Month: {{ city.formatted_climate_data.best_month }}✨</p>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>No cities available to display.</p>
+        {% endif %}
+  
+    </div>
+</section>
+
+
+  <!-- Progress Indicator -->
+  <div id="cardProgress">1 / {{ cities|length }}</div>
+
+  <!-- Button to show next city -->
+  <div class="text-center mt-4">
+      <button id="prevCardButton" class="btn btn-primary">Back</button>
+      <button id="nextCardButton" class="btn btn-primary">Next</button>
+  </div>
+
+<!-- section contact -->
+<section class="section" id="contact">
+  <div class="container text-center">
+    <p class="section-subtitle en">How can you communicate?</p>
+    <h6 class="section-title mb-5 en">Contact Me</h6>
+    <h6 class="section-title mb-5 vi hidden">Liên hệ</h6>
+    <!-- contact form -->
+    <div class="contact-card en">
+      <p class="font-weight-normal">
+        Email: <strong>vuonghoang.workspace@gmail.com</strong>
+      </p>
+      <p class="font-weight-normal">
+        Phone: <strong>0977-829-788</strong>
+      </p>
+    </div>
+    <div class="contact-card vi hidden">
+      <p class="font-weight-normal">
+        Email: <strong>vuonghoang.workspace@gmail.com</strong>
+      </p>
+      <p class="font-weight-normal">
+        Số điện thoại: <strong>0977-829-788</strong>
+      </p>
+    </div>
+  </div>
+  <!-- end of container -->
+</section>
+<!-- end of contact section -->
+
+
+{% comment %} GO UP BUTTON {% endcomment %}
+<div class="btn__go-up text-primary text-center" onclick="topFunction()" id="btn-back-to-top">
+  <a href="#">
+    <img src='{% static "pfl_app/assets/imgs/homepage/gingerbread.png" %}' alt="" width="80px"> 
+    <p class="d-block border rounded-4 p-0 m-0" id="btn__text">Go up!</p>
+  </a>
+</div>
+{% comment %} END OF GO UP BUTTON {% endcomment %}
+{% endblock %}

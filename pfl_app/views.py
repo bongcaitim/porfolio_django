@@ -1,46 +1,22 @@
-# from django.shortcuts import render,redirect
-# import json
-# import os 
-
-# # Create your views here.
-# def member(requests,member,func):
-# 	with open(os.path.join(r"pfl_app\templates",f"{member}\info_template.json"), 'r', encoding='utf-8') as file:
-# 		INFO_TEMPLATE = json.load(file)
-# 	context = {member:member,func:func}
-# 	template = INFO_TEMPLATE[str(func).lower()]
-# 	return render(requests, template, context)
-
 from django.shortcuts import render, redirect
 from django.core.files.storage import FileSystemStorage
 import json
 import os
-
-# # Create your views here.
-# def member(requests, member, func):
-#     if requests.method == 'POST' and requests.FILES:
-#         uploaded_files = requests.FILES.getlist('uploaded_file')  # Get the uploaded files
-#         fs = FileSystemStorage()  # Create a FileSystemStorage instance
-
-#         for file in uploaded_files:
-#             filename = fs.save(file.name, file)  # Save the file
-#             uploaded_file_url = fs.url(filename)  # Get the URL for the saved file
-
-#             # You can do something with the uploaded_file_url if needed
-
-#     # Load the JSON template configuration
-#     with open(os.path.join(r"pfl_app\templates", f"{member}\info_template.json"), 'r', encoding='utf-8') as file:
-#         INFO_TEMPLATE = json.load(file)
-
-#     context = {member: member, func: func}
-#     template = INFO_TEMPLATE[str(func).lower()]
-#     return render(requests, template, context)
-
 import os
 import json
 from django.core.files.storage import FileSystemStorage
 from django.shortcuts import render
 
+# def member(request, member, func):
+
+
 def member(request, member, func):
+    print("FUNCTION MEMBER IS BEING TRIGGERED")
+    
+    if request.path.startswith('/portfolio/pfl_app/results'):
+        print('REDIRECTING TO RESULTS VIEW')
+        return results_view(request)  # Call results_view directly if this is the 'results' URL
+    
     # Lists for form options
     geographical_features = ["Núi đồi", "Rừng", "Bãi biển", "Thành phố", "Làng mạc", "Hang động", "Suối"]
     tourist_activities = [
@@ -110,3 +86,89 @@ def save_preferences(request):
         return JsonResponse({'status': 'success', 'message': 'Preferences saved successfully.'})
 
     return JsonResponse({'status': 'error', 'message': 'Invalid request method.'})
+
+
+# views.py
+import json
+from django.shortcuts import render
+import json
+
+# def results_view(request):
+#     print("FUNCTION results_view IS BEING TRIGGERED")
+#     try:
+#         with open(r"E:\data_science\portfolio\pfl_app\media\matches\matched_city_data.json", "r", encoding="utf-8") as file:
+#             cities = json.load(file)
+
+
+#     except FileNotFoundError:
+#         return render(request, "pfl_app/error.html", {"message": "Data file not found"})
+#     except json.JSONDecodeError:
+#         return render(request, "pfl_app/error.html", {"message": "Failed to decode JSON"})
+
+#     # Format the data for template compatibility
+#     for city in cities:
+#         climate_data = city.get("climate_data", {})
+#         formatted_climate_data = {
+#             "daytime_temp": climate_data.get("Daytime temperature (°C)", "Data unavailable"),
+#             "nighttime_temp": climate_data.get("Nighttime temperature (°C)", "Data unavailable"),
+#             "precipitation": climate_data.get("Precipitation (mm)", "Data unavailable"),
+#             "uv_index": climate_data.get("UV Index", "Data unavailable"),
+#             "typhoon_season": climate_data.get("Typhoon season", "Data unavailable"),
+#             "best_month": climate_data.get("Best month", "Data unavailable"),
+#         }
+#         city["formatted_climate_data"] = formatted_climate_data
+
+#     return render(request, "pfl_app/results.html", {"cities": cities})
+
+
+
+import json
+from django.shortcuts import render
+
+def results_view(request):
+    print("FUNCTION results_view IS BEING TRIGGERED")
+
+    # Load city data
+    try:
+        with open(r"E:\data_science\portfolio\pfl_app\media\matches\matched_city_data.json", "r", encoding="utf-8") as file:
+            cities = json.load(file)
+    except FileNotFoundError:
+        return render(request, "pfl_app/error.html", {"message": "Data file not found"})
+    except json.JSONDecodeError:
+        return render(request, "pfl_app/error.html", {"message": "Failed to decode JSON"})
+
+    # Load emoji data
+    try:
+        with open(r"E:\data_science\portfolio\pfl_app\static\pfl_app\assets\features_activities_emojis.json", "r", encoding="utf-8") as emoji_file:
+            emoji_data = json.load(emoji_file)
+    except FileNotFoundError:
+        return render(request, "pfl_app/error.html", {"message": "Emoji file not found"})
+    except json.JSONDecodeError:
+        return render(request, "pfl_app/error.html", {"message": "Failed to decode Emoji JSON"})
+
+    # Format the data for template compatibility
+    for city in cities:
+        # Format climate data
+        climate_data = city.get("climate_data", {})
+        formatted_climate_data = {
+            "daytime_temp": climate_data.get("Daytime temperature (°C)"),
+            "nighttime_temp": climate_data.get("Nighttime temperature (°C)"),
+            "precipitation": climate_data.get("Precipitation (mm)"),
+            "uv_index": climate_data.get("UV Index"),
+            "typhoon_season": climate_data.get("Typhoon season"),
+            "best_month": climate_data.get("Best month"),
+        }
+
+        city["formatted_climate_data"] = formatted_climate_data
+
+        # Add emojis to geo_features and tourist_activities
+        city["geo_features_emoji"] = {
+            feature: emoji_data["geo_features"].get(feature, "") for feature, available in city.get("geo_features", {}).items() if available == "1"
+        }
+        city["tourist_activities_emoji"] = {
+            activity: emoji_data["tourist_activities"].get(activity, "") for activity, available in city.get("tourist_activities", {}).items() if available == 1
+        }
+
+    return render(request, "pfl_app/results.html", {"cities": cities})
+
+
