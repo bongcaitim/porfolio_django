@@ -93,34 +93,6 @@ import json
 from django.shortcuts import render
 import json
 
-# def results_view(request):
-#     print("FUNCTION results_view IS BEING TRIGGERED")
-#     try:
-#         with open(r"E:\data_science\portfolio\pfl_app\media\matches\matched_city_data.json", "r", encoding="utf-8") as file:
-#             cities = json.load(file)
-
-
-#     except FileNotFoundError:
-#         return render(request, "pfl_app/error.html", {"message": "Data file not found"})
-#     except json.JSONDecodeError:
-#         return render(request, "pfl_app/error.html", {"message": "Failed to decode JSON"})
-
-#     # Format the data for template compatibility
-#     for city in cities:
-#         climate_data = city.get("climate_data", {})
-#         formatted_climate_data = {
-#             "daytime_temp": climate_data.get("Daytime temperature (°C)", "Data unavailable"),
-#             "nighttime_temp": climate_data.get("Nighttime temperature (°C)", "Data unavailable"),
-#             "precipitation": climate_data.get("Precipitation (mm)", "Data unavailable"),
-#             "uv_index": climate_data.get("UV Index", "Data unavailable"),
-#             "typhoon_season": climate_data.get("Typhoon season", "Data unavailable"),
-#             "best_month": climate_data.get("Best month", "Data unavailable"),
-#         }
-#         city["formatted_climate_data"] = formatted_climate_data
-
-#     return render(request, "pfl_app/results.html", {"cities": cities})
-
-
 
 import json
 from django.shortcuts import render
