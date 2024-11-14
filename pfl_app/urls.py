@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.urls import path, include
+
 
 app_name = 'pfl_app'
 
@@ -11,5 +13,10 @@ urlpatterns = [
     path('<member>/<func>/', views.member, name='member'),
 
     # Other paths for preferences or additional functionality
-    path('save_preferences/', views.save_preferences, name='save_preferences'),
+    # path('save_preferences/', views.save_preferences, name='save_preferences'),
+    
+    path('save_preferences_and_run_script/', views.save_preferences_and_run_script, name='save_preferences_and_run_script'),
+
+    
+    
 ]

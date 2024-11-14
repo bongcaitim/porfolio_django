@@ -67,25 +67,6 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from .models import UserPreference
 
-@csrf_exempt
-def save_preferences(request):
-    if request.method == 'POST':
-        # Retrieve data from the POST request
-        geographical_features = request.POST.getlist('geographical_features')
-        tourist_activities = request.POST.getlist('tourist_activities')
-        tour_month = request.POST.get('tour_month')
-
-        # Save the preferences to the database
-        UserPreference.objects.create(
-            geographical_features=geographical_features,
-            tourist_activities=tourist_activities,
-            tour_month=tour_month,
-        )
-
-        # Return a JSON response indicating success
-        return JsonResponse({'status': 'success', 'message': 'Preferences saved successfully.'})
-
-    return JsonResponse({'status': 'error', 'message': 'Invalid request method.'})
 
 
 # views.py
@@ -144,3 +125,47 @@ def results_view(request):
     return render(request, "pfl_app/results.html", {"cities": cities})
 
 
+# views.py
+import subprocess
+from django.http import JsonResponse, HttpResponseRedirect
+from django.urls import reverse
+
+import subprocess
+import sys
+from django.http import JsonResponse, HttpResponseRedirect
+from django.urls import reverse
+
+
+
+@csrf_exempt
+def save_preferences_and_run_script(request):
+    if request.method == 'POST':
+        # Retrieve the data from the form submission
+        geographical_features = request.POST.getlist('geographical_features')
+        tourist_activities = request.POST.getlist('tourist_activities')
+        tour_month = request.POST.get('tour_month')
+
+        # Save the preferences to the database
+        UserPreference.objects.create(
+            geographical_features=geographical_features,
+            tourist_activities=tourist_activities,
+            tour_month=tour_month,
+        )
+
+        # Path to your virtual environment
+        venv_path = r"E:\data_science\portfolio\portfolio_env\Scripts\activate.bat"
+        
+        # Path to your script
+        script_path = r"E:\data_science\portfolio\fetch_match_preferences.py"
+
+        try:
+            # Run the script after saving preferences
+            subprocess.run([venv_path, '&&', 'python', script_path], shell=True, check=True)
+
+            # Redirect to results page after successful execution
+            return HttpResponseRedirect(reverse('pfl_app:results_view'))
+
+        except subprocess.CalledProcessError as e:
+            return JsonResponse({'status': 'error', 'message': f'Failed to run script: {str(e)}'})
+
+    return JsonResponse({'status': 'error', 'message': 'Invalid request method.'})

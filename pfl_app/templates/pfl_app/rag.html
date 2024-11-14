@@ -44,8 +44,7 @@
     <form id="preferences-form" method="post" onsubmit="savePreferences(event)">
       {% csrf_token %}
       
-      <!-- Preference form fields as they are -->
-      <!-- Đặc điểm địa lý -->
+      <!-- Geographical Features -->
       <h5 class="mt-4 mb-4">Đặc điểm địa lý</h5>
       <div class="grid-layout">
         {% for feature in geographical_features %}
@@ -56,7 +55,7 @@
         {% endfor %}
       </div>
 
-      <!-- Hoạt động du lịch -->
+      <!-- Tourist Activities -->
       <h5 class="mt-4 mb-4">Hoạt động du lịch</h5>
       <div class="grid-layout">
         {% for activity in tourist_activities %}
@@ -67,7 +66,7 @@
         {% endfor %}
       </div>
 
-      <!-- Tháng du lịch -->
+      <!-- Tour Month -->
       <h5 class="mt-4 mb-4">Tháng du lịch</h5>
       <div class="form-row mt-4">
         <div class="form-group" style="width: 100%; text-align: start;">
@@ -94,41 +93,41 @@
     const formData = new FormData(form); // Gather the form data
     const statusDisplay = document.getElementById('preference-status');
 
-    fetch("{% url 'pfl_app:save_preferences' %}", {
+    fetch("{% url 'pfl_app:save_preferences_and_run_script' %}", {
       method: "POST",
       headers: {
         'X-CSRFToken': '{{ csrf_token }}', // CSRF token for security
       },
       body: formData,
     })
-    .then(response => response.json())
-    .then(data => {
-      if (data.status === 'success') {
-        statusDisplay.textContent = data.message;
-        statusDisplay.style.color = 'green';
+    .then(response => {
+      if (response.redirected) {
+        window.location.href = response.url; // Redirect to results page if successful
       } else {
-        statusDisplay.textContent = 'Failed to save preferences.';
-        statusDisplay.style.color = 'red';
+        return response.json();
+      }
+    })
+    .then(data => {
+      if (data && data.status === 'error') {
+        document.getElementById('preference-status').textContent = data.message;
+        document.getElementById('preference-status').style.color = 'red';
       }
     })
     .catch(error => {
-      statusDisplay.textContent = 'An error occurred.';
-      statusDisplay.style.color = 'red';
+      document.getElementById('preference-status').textContent = 'An error occurred.';
+      document.getElementById('preference-status').style.color = 'red';
       console.error('Error:', error);
     });
   }
 </script>
 
-
-
-
-<!-- section contact -->
+<!-- Contact Section -->
 <section class="section" id="contact">
   <div class="container text-center">
     <p class="section-subtitle en">How can you communicate?</p>
     <h6 class="section-title mb-5 en">Contact Me</h6>
     <h6 class="section-title mb-5 vi hidden">Liên hệ</h6>
-    <!-- contact form -->
+    <!-- Contact form -->
     <div class="contact-card en">
       <p class="font-weight-normal">
         Email: <strong>vuonghoang.workspace@gmail.com</strong>
@@ -146,16 +145,14 @@
       </p>
     </div>
   </div>
-  <!-- end of container -->
 </section>
-<!-- end of contact section -->
 
-{% comment %} GO UP BUTTON {% endcomment %}
+<!-- Go Up Button -->
 <div class="btn__go-up text-primary text-center" onclick="topFunction()" id="btn-back-to-top">
   <a href="#">
     <img src='{% static "pfl_app/assets/imgs/homepage/gingerbread.png" %}' alt="" width="80px"> 
     <p class="d-block border rounded-4 p-0 m-0" id="btn__text">Go up!</p>
   </a>
 </div>
-{% comment %} END OF GO UP BUTTON {% endcomment %}
+
 {% endblock %}
