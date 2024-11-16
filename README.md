@@ -1,48 +1,91 @@
-# porfolio_django
-# porfolio_django
-# porfolio_django
+# Portfolio Django Project
 
-URL to homepage: http://127.0.0.1:8000/portfolio/pfl_app/homepage
-URL to rag: http://127.0.0.1:8000/portfolio/pfl_app/rag
-http://127.0.0.1:8000/portfolio/pfl_app/results
-
-Commands to start:
-E:\data_science\portfolio>portfolio_env\Scripts\activate
-
-(portfolio_env) E:\data_science\portfolio>python manage.py runserver
------------
-portfolio_env\Scripts\activate
-python manage.py runserver
-
-To view the data stored in `db.sqlite3` at `E:\data_science\portfolio\db.sqlite3`, you have several options. Here are some common methods:
-
-### 3. **Using Django Shell**
-
-Another method is to use Django's interactive shell to query the database. This will use Django’s ORM to access the data.
-
-1. Open your terminal or command prompt.
-2. Navigate to your project directory (where `manage.py` is located):
-
-   ```bash
-   cd E:\data_science\portfolio
-   ```
-
-3. Launch the Django shell:
-
-   ```bash
-   python manage.py shell
-   ```
-
-4. In the shell, you can query the `UserPreference` model like this:
-
-   ```python
-   from pfl_app.models import UserPreference
-   preferences = UserPreference.objects.all()
-   for preference in preferences: print(preference.geographical_features, preference.tourist_activities, preference.tour_month)
-   ```
-
-This will display the preferences data that has been saved to the database.
+Welcome to **Portfolio Django**, a comprehensive Django-based application for managing and displaying user preferences, tourism-related data, and results. This README will guide you through setting up, running, and interacting with the project.
 
 ---
 
-If you're looking for an easy way to browse the database, I recommend using **DB Browser for SQLite** since it's user-friendly and provides a visual interface to interact with the database.
+## **Application URLs**
+Here are the key URLs for accessing different parts of the application:
+
+- **Homepage:** [http://127.0.0.1:8000/portfolio/pfl_app/homepage](http://127.0.0.1:8000/portfolio/pfl_app/homepage)  
+- **RAG (Random Activity Generator):** [http://127.0.0.1:8000/portfolio/pfl_app/rag](http://127.0.0.1:8000/portfolio/pfl_app/rag)  
+- **Results Page:** [http://127.0.0.1:8000/portfolio/pfl_app/results](http://127.0.0.1:8000/portfolio/pfl_app/results)  
+
+---
+
+## **How to Run the Project**
+
+Follow the steps below to activate the environment and start the server.
+
+### **1. Activate the Virtual Environment**
+In the terminal, navigate to the project folder and activate the virtual environment:
+```bash
+E:\data_science\portfolio>portfolio_env\Scripts\activate
+```
+
+### **2. Start the Server**
+Run the Django development server:
+```bash
+(portfolio_env) E:\data_science\portfolio>python manage.py runserver
+```
+
+Once the server is running, you can access the application in your browser using the URLs listed above.
+
+---
+
+## **Database Information**
+
+### **Database Location**
+The project uses an SQLite database, located at:
+```
+E:\data_science\portfolio\db.sqlite3
+```
+
+### **How to View and Query the Data**
+
+#### **Option 1: DB Browser for SQLite**
+Use [DB Browser for SQLite](https://sqlitebrowser.org/) for a user-friendly way to browse and edit the database:
+1. Download and install DB Browser for SQLite.
+2. Open the application and load the `db.sqlite3` file.
+3. View and manage the data visually.
+
+#### **Option 2: Django Shell**
+Use the Django shell to interact with the database programmatically:
+1. Navigate to the project directory:
+   ```bash
+   cd E:\data_science\portfolio
+   ```
+2. Start the Django shell:
+   ```bash
+   python manage.py shell
+   ```
+3. Query the `UserPreference` model:
+   ```python
+   from pfl_app.models import UserPreference
+   preferences = UserPreference.objects.all()
+   for preference in preferences:
+       print(preference.geographical_features, preference.tourist_activities, preference.tour_month)
+   ```
+
+---
+
+## **Additional Notes**
+- Ensure all dependencies are installed using:
+  ```bash
+  pip install -r requirements.txt
+  ```
+- If you encounter any issues, double-check the database and application settings in `settings.py`.
+
+---
+
+## **Contributing**
+If you'd like to contribute, feel free to fork the repository, make your changes, and submit a pull request. We welcome contributions that improve the functionality or fix issues.
+
+---
+
+## **License**
+This project is open-source and available under the [MIT License](LICENSE). 
+
+---
+
+Enjoy using **Portfolio Django**! 🎉
