@@ -5,7 +5,12 @@ import json
 import pandas as pd
 
 # Add the project directory to the system path
-sys.path.insert(0, "E:/data_science/portfolio")
+# sys.path.insert(0, "E:/data_science/portfolio")
+# Navigate two levels up from the current script's directory to get the project root
+project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+
+sys.path.insert(0, project_dir)
+
 
 # Set up the Django environment
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pfl_project.settings')
@@ -29,10 +34,12 @@ else:
     sys.exit()
 
 # Load JSON data for geographical features and tourist activities
-with open(r'E:\data_science\portfolio\pfl_app\media\all_cities_geo_features.json', 'r', encoding='utf-8') as f:
+geo_file_path = r"pfl_app\media\all_cities_geo_features.json"
+with open(geo_file_path, 'r', encoding='utf-8') as f:
     geo_data = json.load(f)
 
-with open(r'E:\data_science\portfolio\pfl_app\media\all_cities_tourist_activities.json', 'r', encoding='utf-8') as f:
+tourist_act_file_path = r"pfl_app\media\all_cities_tourist_activities.json"
+with open(tourist_act_file_path, 'r', encoding='utf-8') as f:
     activities_data = json.load(f)
 
 # Filter function to find matching cities
@@ -50,10 +57,14 @@ matching_cities = filter_cities(geo_data, activities_data)
 print("Cities that match preferences:", matching_cities)
 
 # Load province descriptions
-province_data = pd.read_excel(r'E:\data_science\portfolio\pfl_app\media\all_province_descriptions.xlsx')
+static_asset = r"pfl_app\static\pfl_app\assets"
+province_data_excel = os.path.join(static_asset, r"all_province_descriptions.xlsx")
+
+province_data = pd.read_excel(province_data_excel)
 
 # Load climate data
-climate_data_file = r'E:\data_science\portfolio\pfl_app\media\combined_climate_data.json'
+static_asset = r"pfl_app\static\pfl_app\assets"
+climate_data_file = os.path.join(static_asset, "combined_climate_data.json")
 with open(climate_data_file, 'r', encoding='utf-8') as f:
     climate_data = json.load(f)
 
@@ -82,7 +93,9 @@ for city in matching_cities:
         })
 
 # Save the matched result as a JSON file
-output_file = r'E:\data_science\portfolio\pfl_app\media\matches\matched_city_data.json'
+# output_file = r'E:\data_science\portfolio\pfl_app\media\matches\matched_city_data.json'
+output_file = os.path.join(static_asset, r"matched_city_data.json")
+
 with open(output_file, 'w', encoding='utf-8') as f:
     json.dump(matched_result, f, ensure_ascii=False, indent=4)
 

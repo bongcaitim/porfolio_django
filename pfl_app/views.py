@@ -6,9 +6,15 @@ import os
 import json
 from django.core.files.storage import FileSystemStorage
 from django.shortcuts import render
-
-# def member(request, member, func):
-
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from .models import UserPreference
+import json
+from django.shortcuts import render
+import subprocess
+import sys
+from django.http import JsonResponse, HttpResponseRedirect
+from django.urls import reverse
 
 def member(request, member, func):
     print("FUNCTION MEMBER IS BEING TRIGGERED")
@@ -47,6 +53,15 @@ def member(request, member, func):
             uploaded_file_url = fs.url(filename)  # Get the URL for the saved file
             
             # If needed, add uploaded_file_url to the context or handle it otherwise
+        
+        # Run the transform script after saving files
+        transform_data_script = os.path.join(os.getcwd(), 'transform.py')
+        try:
+            print("Running transform.py script...")
+            subprocess.run(['python', transform_data_script], check=True)
+        except subprocess.CalledProcessError as e:
+            return render(request, 'pfl_app/error_template.html', {'error': f'Failed to run transform script: {str(e)}'})
+
 
     # Load JSON template configuration
     json_path = os.path.join("pfl_app", "templates", f"{member}", "info_template.json")
@@ -59,31 +74,15 @@ def member(request, member, func):
 
     return render(request, template_name, context)
 
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-from .models import UserPreference
-
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-from .models import UserPreference
-
-
-
-# views.py
-import json
-from django.shortcuts import render
-import json
-
-
-import json
-from django.shortcuts import render
-
 def results_view(request):
     print("FUNCTION results_view IS BEING TRIGGERED")
 
     # Load city data
     try:
-        with open(r"E:\data_science\portfolio\pfl_app\media\matches\matched_city_data.json", "r", encoding="utf-8") as file:
+        static_asset = r"pfl_app\static\pfl_app\assets"
+        matched_city_data = os.path.join(static_asset, r"matched_city_data.json")
+
+        with open(matched_city_data, "r", encoding="utf-8") as file:
             cities = json.load(file)
     except FileNotFoundError:
         return render(request, "pfl_app/error.html", {"message": "Data file not found"})
@@ -92,7 +91,8 @@ def results_view(request):
 
     # Load emoji data
     try:
-        with open(r"E:\data_science\portfolio\pfl_app\static\pfl_app\assets\features_activities_emojis.json", "r", encoding="utf-8") as emoji_file:
+        feature_emojis = r"pfl_app\static\pfl_app\assets\features_activities_emojis.json"
+        with open(feature_emojis, "r", encoding="utf-8") as emoji_file:
             emoji_data = json.load(emoji_file)
     except FileNotFoundError:
         return render(request, "pfl_app/error.html", {"message": "Emoji file not found"})
@@ -125,18 +125,6 @@ def results_view(request):
     return render(request, "pfl_app/results.html", {"cities": cities})
 
 
-# views.py
-import subprocess
-from django.http import JsonResponse, HttpResponseRedirect
-from django.urls import reverse
-
-import subprocess
-import sys
-from django.http import JsonResponse, HttpResponseRedirect
-from django.urls import reverse
-
-
-
 @csrf_exempt
 def save_preferences_and_run_script(request):
     if request.method == 'POST':
@@ -152,15 +140,17 @@ def save_preferences_and_run_script(request):
             tour_month=tour_month,
         )
 
-        # Path to your virtual environment
-        venv_path = r"E:\data_science\portfolio\portfolio_env\Scripts\activate.bat"
-        
-        # Path to your script
-        script_path = r"E:\data_science\portfolio\fetch_match_preferences.py"
+        venv_path = os.path.join(os.getcwd(), 'portfolio_env', 'Scripts', 'activate.bat')
+        fetch_match_preferences_script = os.path.join(os.getcwd(), 'fetch_match_preferences.py')
+
+        print("Venv Path:", venv_path)
+        print("Script Path:", fetch_match_preferences_script)
+
+
 
         try:
             # Run the script after saving preferences
-            subprocess.run([venv_path, '&&', 'python', script_path], shell=True, check=True)
+            subprocess.run(['python', fetch_match_preferences_script], check=True)
 
             # Redirect to results page after successful execution
             return HttpResponseRedirect(reverse('pfl_app:results_view'))

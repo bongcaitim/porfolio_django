@@ -1,6 +1,52 @@
 # Portfolio Django Project
 
+<<<<<<< HEAD
 Welcome to **Portfolio Django**, a comprehensive Django-based application for managing and displaying user preferences, tourism-related data, and results. This README will guide you through setting up, running, and interacting with the project.
+=======
+URL to homepage: http://127.0.0.1:8000/portfolio/pfl_app/homepage
+URL to rag: http://127.0.0.1:8000/portfolio/pfl_app/rag
+http://127.0.0.1:8000/portfolio/pfl_app/results
+
+///////////////////////
+Commands to start:
+E:\data_science\portfolio>portfolio_env\Scripts\activate
+(portfolio_env) E:\data_science\portfolio>python manage.py runserver
+---------------------------
+portfolio_env\Scripts\activate
+python manage.py runserver
+/////////////////////////////
+
+
+
+To view the data stored in `db.sqlite3` at `E:\data_science\portfolio\db.sqlite3`, you have several options. Here are some common methods:
+
+### 3. **Using Django Shell**
+
+Another method is to use Django's interactive shell to query the database. This will use Django’s ORM to access the data.
+
+1. Open your terminal or command prompt.
+2. Navigate to your project directory (where `manage.py` is located):
+
+   ```bash
+   cd E:\data_science\portfolio
+   ```
+
+3. Launch the Django shell:
+
+   ```bash
+   python manage.py shell
+   ```
+
+4. In the shell, you can query the `UserPreference` model like this:
+
+   ```python
+   from pfl_app.models import UserPreference
+   preferences = UserPreference.objects.all()
+   for preference in preferences: print(preference.geographical_features, preference.tourist_activities, preference.tour_month)
+   ```
+
+This will display the preferences data that has been saved to the database.
+>>>>>>> 662681fbd48486e3c6279b810a9caa3c6c834921
 
 ---
 
