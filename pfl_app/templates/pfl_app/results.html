@@ -57,69 +57,104 @@
             font-size: 14px;
         }
         .emoji-row {
-          display: flex;
-          justify-content: center; /* Center emojis horizontally */
-          gap: 8px;
-          flex-wrap: wrap; /* Adjust if emojis overflow */
-          margin-bottom: 10px;
-      }
+            display: flex;
+            justify-content: center; /* Center emojis horizontally */
+            gap: 8px;
+            flex-wrap: wrap; /* Adjust if emojis overflow */
+            margin-bottom: 10px;
+        }
 
-      .emoji {
-          font-size: 20px;
-          cursor: pointer;
-      }
+        .emoji {
+            font-size: 20px;
+            cursor: pointer;
+        }
 
-      .city-card {
-          display: none; /* Initially hide all cards */
-      }
+        .city-card {
+            display: none; /* Initially hide all cards */
+        }
 
-      /* Sticky Buttons - Left Side for Previous and Right Side for Next */
-      #nextCardButton, #prevCardButton {
-          position: fixed;
-          z-index: 1000;
-          border-radius: 5px;
-          display: block;
-          margin: 10px 0;
-      }
-      
-      /* Right Side: Next City button */
-      #nextCardButton {
-          right: 180px;
-          top: 50%;
-          transform: translateY(-50%); /* Center vertically */
-      }
-      
-      /* Left Side: Previous City button */
-      #prevCardButton {
-          left: 180px;  /* Move it to the left side */
-          top: 50%;
-          transform: translateY(-50%); /* Center vertically */
-      }
-      
-      /* Progress Text Above Button */
-      #cardProgress {
-          position: fixed;
-          right: 180px;
-          top: calc(50% - 20px);  /* Slightly above the "Next City" button */
-          transform: translateY(-50%);
-          color: rgba(0, 0, 0, 0.7);
-          padding: 10px;
-          font-size: 14px;
-          text-align: center;
-      }
-      
-      /* Break the description into two columns */
-      .city-description {
-          column-count: 2; /* Split into two columns */
-          column-gap: 20px; /* Space between the columns */
-          text-align: left !important; /* Ensure the text is aligned to the left */
-      }
-      
-      /* Optional: Ensure paragraphs inside the description break properly in the columns */
-      .city-description p {
-          text-align: justify !important; /* Force text alignment to the left */
-      }
-      
+        /* Sticky Buttons - Left Side for Previous and Right Side for Next */
+        #nextCardButton, #prevCardButton {
+            position: fixed;
+            z-index: 1000;
+            border-radius: 5px;
+            display: block;
+            margin: 10px 0;
+        }
+        
+        /* Right Side: Next City button */
+        #nextCardButton {
+            right: 180px;
+            top: 50%;
+            transform: translateY(-50%); /* Center vertically */
+        }
+        
+        /* Left Side: Previous City button */
+        #prevCardButton {
+            left: 180px;  /* Move it to the left side */
+            top: 50%;
+            transform: translateY(-50%); /* Center vertically */
+        }
+        
+        /* Progress Text Above Button */
+        #cardProgress {
+            position: fixed;
+            right: 180px;
+            top: calc(50% - 20px);  /* Slightly above the "Next City" button */
+            transform: translateY(-50%);
+            color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        /* Break the description into two columns */
+        .city-description {
+            column-count: 2; /* Split into two columns */
+            column-gap: 20px; /* Space between the columns */
+            text-align: left !important; /* Ensure the text is aligned to the left */
+        }
+        
+        /* Optional: Ensure paragraphs inside the description break properly in the columns */
+        .city-description p {
+            text-align: justify !important; /* Force text alignment to the left */
+        }
+        .weather-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+        width: 100%;
+    }
+
+        .weather-day {
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            text-align: center;
+        }
+
+        .weather-day .date {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .weather-day .temp {
+            margin-bottom: 0.5rem;
+        }
+
+        .weather-day .max {
+            color: #e53e3e;
+        }
+
+        .weather-day .min {
+            color: #3182ce;
+        }
+
+        .weather-day .uv,
+        .weather-day .rain {
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+    }
 
     </style>
 {% endblock %}
@@ -168,6 +203,7 @@
                         
                         
                         <!-- Climate Information -->
+                        <h6>Thời tiết của tháng</h6>
                         <div class="row g-0 p-3">
                             <div class="col">
                                 <p class="m-0 p-0">🌞🌡️: {{ city.formatted_climate_data.daytime_temp }} °C</p>
@@ -191,6 +227,36 @@
                                     <p class="m-0 p-0">✨Best Month✨</p>
                                 </div>
                             {% endif %}
+                        </div>
+                        
+                        <!-- Weather -->
+                        <hr>
+                        <h6>Thời tiết 7 ngày đến</h6>
+                        <div class="weather-grid">
+                            {% for i in "1234567"|make_list %}
+                                <div class="weather-day">
+                                    <div class="date fw-bold mb-2">
+                                        {{ city.next_7_days_weather.date|slice:i|last }}
+                                    </div>
+                                    <div class="weather-icon">
+                                        {% with temp=city.next_7_days_weather.temperature_2m_max|slice:i|last %}
+                                            ☀️
+                                        {% endwith %}
+                                    </div>
+                                    <div class="temp-max text-danger">
+                                        ↑ {{ city.next_7_days_weather.temperature_2m_max|slice:i|last }}
+                                    </div>
+                                    <div class="temp-min text-primary">
+                                        ↓ {{ city.next_7_days_weather.temperature_2m_min|slice:i|last }}
+                                    </div>
+                                    <div class="uv small mt-1">
+                                        😎 UV: {{ city.next_7_days_weather.uv_index_max|slice:i|last }}
+                                    </div>
+                                    <div class="rain small mt-1">
+                                        🌧️ {{ city.next_7_days_weather.precipitation_sum|slice:i|last }}
+                                    </div>
+                                </div>
+                            {% endfor %}
                         </div>
 
                     </div>

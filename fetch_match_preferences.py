@@ -67,11 +67,98 @@ static_asset = r"pfl_app\static\pfl_app\assets"
 climate_data_file = os.path.join(static_asset, "combined_climate_data.json")
 with open(climate_data_file, 'r', encoding='utf-8') as f:
     climate_data = json.load(f)
+    
+# LOAD CURRENT WEATHER AND THE NEXT 7 DAYS' WEATHER
+import openmeteo_requests
+import requests_cache
+import pandas as pd
+from retry_requests import retry
+from geopy.geocoders import Nominatim
+import json
+import os
+
+
+def get_current_and_next_7_days_weather(city_name):
+    geolocator = Nominatim(user_agent="MyApp")
+    location = geolocator.geocode(f"{city_name}, Việt Nam")
+    print(location)
+
+    lat = location.latitude
+    long = location.longitude
+
+    print("The latitude of the location is: ", lat)
+    print("The longitude of the location is: ", long)
+
+    cache_session = requests_cache.CachedSession('.cache', expire_after = 3600)
+    retry_session = retry(cache_session, retries = 5, backoff_factor = 0.2)
+    openmeteo = openmeteo_requests.Client(session = retry_session)
+
+    # Make sure all required weather variables are listed here
+    # The order of variables in hourly or daily is important to assign them correctly below
+    url = "https://api.open-meteo.com/v1/forecast"
+    params = {
+        "latitude": lat,
+        "longitude": long,
+        "current": ["temperature_2m", "rain"],
+        "daily": ["temperature_2m_max", "temperature_2m_min", "uv_index_max", "precipitation_sum"],
+        "timezone": "auto"
+    }
+    responses = openmeteo.weather_api(url, params=params)
+
+    # Process first location. Add a for-loop for multiple locations or weather models
+    response = responses[0]
+    print(f"Coordinates {response.Latitude()}°N {response.Longitude()}°E")
+    print(f"Elevation {response.Elevation()} m asl")
+    print(f"Timezone {response.Timezone()} {response.TimezoneAbbreviation()}")
+    print(f"Timezone difference to GMT+0 {response.UtcOffsetSeconds()} s")
+
+    # Current values. The order of variables needs to be the same as requested.
+    current = response.Current()
+    current_temperature_2m = str(round(current.Variables(0).Value()))+' °C'
+    current_rain = str(round(current.Variables(1).Value())) +' mm'
+
+    print(f"Current time {current.Time()}")
+    print(f"Current temperature_2m {current_temperature_2m}")
+    print(f"Current rain {current_rain}")
+
+    # Process daily data. The order of variables needs to be the same as requested.
+    daily = response.Daily()
+    daily_temperature_2m_max = daily.Variables(0).ValuesAsNumpy()
+    daily_temperature_2m_min = daily.Variables(1).ValuesAsNumpy()
+    daily_uv_index_max = daily.Variables(2).ValuesAsNumpy()
+    daily_precipitation_sum = daily.Variables(3).ValuesAsNumpy()
+
+    daily_data = {"date": pd.date_range(
+        start = pd.to_datetime(daily.Time(), unit = "s", utc = True),
+        end = pd.to_datetime(daily.TimeEnd(), unit = "s", utc = True),
+        freq = pd.Timedelta(seconds = daily.Interval()),
+        inclusive = "left"
+    )}
+
+    daily_data["date"] = daily_data["date"].strftime('%Y-%m-%d').tolist()
+
+    daily_data["temperature_2m_max"] = [str(round(x))+' °C' for x in daily_temperature_2m_max.tolist()]
+    daily_data["temperature_2m_min"] = [str(round(x))+' °C' for x in daily_temperature_2m_min.tolist()]
+    daily_data["uv_index_max"] = [str(round(x)) for x in daily_uv_index_max.tolist()]
+    daily_data["precipitation_sum"] = [str(round(x))+' mm' for x in daily_precipitation_sum.tolist()]
+
+
+    daily_dataframe = pd.DataFrame(data=daily_data)
+
+    daily_dataframe = pd.DataFrame(data = daily_data)
+    print(daily_dataframe)
+
+    return daily_dataframe, current_temperature_2m, current_rain, daily_data
+
+
 
 # Prepare list for matched results
 matched_result = []
 
 for city in matching_cities:
+    
+    daily_dataframe, current_temperature_2m, current_rain, daily_data = get_current_and_next_7_days_weather(city)
+    
     geo_data_for_city = next((geo for geo in geo_data if geo["City"] == city), None)
     activities_data_for_city = next((activity for activity in activities_data if activity["City"] == city), None)
     province_description = province_data[province_data['Province Name'] == city]['Province Summary'].iloc[0] if not province_data[province_data['Province Name'] == city].empty else "Description not available"
@@ -89,7 +176,10 @@ for city in matching_cities:
             "geo_features": {key: value for key, value in geo_data_for_city.items() if key != "City"},
             "tourist_activities": {key: value for key, value in activities_data_for_city.items() if key != "City"},
             "description": province_description,
-            "climate_data": climate_data_for_city
+            "climate_data": climate_data_for_city,
+            "current_temperature_2m": current_temperature_2m,
+            "current_rain": current_rain,
+            "next_7_days_weather": daily_data
         })
 
 # Save the matched result as a JSON file

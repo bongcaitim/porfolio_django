@@ -140,22 +140,20 @@ def save_preferences_and_run_script(request):
             tour_month=tour_month,
         )
 
+        import subprocess
+
+        # Paths to the virtual environment and script
         venv_path = os.path.join(os.getcwd(), 'portfolio_env', 'Scripts', 'activate.bat')
         fetch_match_preferences_script = os.path.join(os.getcwd(), 'fetch_match_preferences.py')
 
-        print("Venv Path:", venv_path)
-        print("Script Path:", fetch_match_preferences_script)
-
-
-
+        # Activate virtual environment and run the script
         try:
-            # Run the script after saving preferences
-            subprocess.run(['python', fetch_match_preferences_script], check=True)
-
+            # Run the script in the activated environment
+            subprocess.run(f'"{venv_path}" && python "{fetch_match_preferences_script}"', shell=True, check=True)
+            
             # Redirect to results page after successful execution
             return HttpResponseRedirect(reverse('pfl_app:results_view'))
 
         except subprocess.CalledProcessError as e:
             return JsonResponse({'status': 'error', 'message': f'Failed to run script: {str(e)}'})
 
-    return JsonResponse({'status': 'error', 'message': 'Invalid request method.'})
