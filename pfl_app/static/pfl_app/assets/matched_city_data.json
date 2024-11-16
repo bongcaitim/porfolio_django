@@ -1,169 +1,5 @@
 [
     {
-        "city": "Hải Phòng",
-        "geo_features": {
-            "Núi đồi": "1",
-            "Rừng": "0",
-            "Bãi biển": "1",
-            "Thành phố": "1",
-            "Làng mạc": "0",
-            "Hang động": "0",
-            "Suối": "0"
-        },
-        "tourist_activities": {
-            "Công viên": 0,
-            "Di tích lịch sử & văn hóa": 1,
-            "Hoạt động ngoài trời & mạo hiểm": 1,
-            "Hoạt động dưới nước": 1,
-            "Trải nghiệm ẩm thực": 1,
-            "Lễ hội": 1,
-            "Thư giãn & chăm sóc sức khỏe": 0,
-            "Cuộc sống về đêm": 0,
-            "Thiên nhiên & động vật hoang dã": 1,
-            "Mua sắm": 0
-        },
-        "description": "Hải Phòng đẹp trong cả 4 mùa. Mùa đông, thưởng thức ẩm thực đường phố nóng hổi. Mùa hè, đi biển, thưởng thức dừa dầm và hoa phượng nở rộ. Mỗi mùa đều mang đến trải nghiệm độc đáo và thú vị cho du khách. Từ Hà Nội, có thể di chuyển đến Hải Phòng bằng cao tốc (1,5 tiếng), tàu hỏa (100.000-130.000 đồng), xe khách (120.000-250.000 đồng) hoặc xe limousine (230.000-250.000 đồng). Từ TP HCM, có thể bay đến Hà Nội và di chuyển đường bộ đến Hải Phòng.\n Lưu trú tại Hải Phòng có nhiều lựa chọn từ cao cấp đến bình dân. Các khách sạn sang trọng như Hotel Nikko, Mercure Hai Phong và Vinpearl Hotel Imperia có giá từ 1,2 triệu đến 2,5 triệu đồng một đêm. Còn có các lựa chọn bình dân như homestay và khu nhà liền kề. \"Khám phá Hải Phòng\" là một trải nghiệm thú vị với nhiều địa điểm hấp dẫn. Dưới đây là một số điểm đến nổi bật:\n- Nhà ga Hà Nội\n- Hải Phòng: Một trong những nhà ga xe lửa đẹp nhất do người Pháp xây dựng.\n- Nhà hát thành phố Hải Phòng: Một biểu tượng du lịch của thành phố, được xây dựng vào năm 1904 và là nơi sinh hoạt chính trị, văn hóa của người Pháp và người bản xứ giàu có.\n- Cầu Bính, Cầu Hoàng Văn Thụ và Cầu Quay xe lửa: Các cây cầu đẹp và độc đáo bắc qua sông Cấm và sông Tam Bạc.\n- Hồ nước ở Hải Phòng: Một hồ nước xanh lạ mắt và bao bọc bởi núi đá vôi. - Đồ Sơn: Một khu du lịch nổi tiếng với các khu vui chơi và tham quan như Đồi Rồng, Hòn Dấu và casino.\n- Cát Bà: Một \"viên ngọc\" của du lịch Hải Phòng với các vịnh, đảo Khỉ và ăn hải sản. Tất cả những địa điểm này đều mang lại cho du khách một trải nghiệm thú vị và đáng nhớ khi đến với Hải Phòng. Hải Phòng nổi tiếng với ẩm thực đường phố đa dạng. Du khách có thể tham gia food tour để thưởng thức các món ngon như bánh bèo, bánh đa cua, bánh mì cay, dừa dầm, bún cá cay, ốc, trà cúc, sủi dìn và bánh đúc tàu.",
-        "climate_data": {
-            "Daytime temperature (°C)": "33",
-            "Nighttime temperature (°C)": "27",
-            "Precipitation (mm)": "299",
-            "UV Index": "7",
-            "Typhoon season": "Typhoon",
-            "Best month": "No"
-        },
-        "current_temperature_2m": "31 °C",
-        "current_rain": "0 mm",
-        "next_7_days_weather": {
-            "date": [
-                "2024-11-15",
-                "2024-11-16",
-                "2024-11-17",
-                "2024-11-18",
-                "2024-11-19",
-                "2024-11-20",
-                "2024-11-21"
-            ],
-            "temperature_2m_max": [
-                "31 °C",
-                "33 °C",
-                "28 °C",
-                "29 °C",
-                "28 °C",
-                "27 °C",
-                "27 °C"
-            ],
-            "temperature_2m_min": [
-                "23 °C",
-                "21 °C",
-                "23 °C",
-                "20 °C",
-                "17 °C",
-                "18 °C",
-                "16 °C"
-            ],
-            "uv_index_max": [
-                "6",
-                "6",
-                "5",
-                "6",
-                "6",
-                "1",
-                "4"
-            ],
-            "precipitation_sum": [
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm"
-            ]
-        }
-    },
-    {
-        "city": "Cà Mau",
-        "geo_features": {
-            "Núi đồi": "1",
-            "Rừng": "1",
-            "Bãi biển": "1",
-            "Thành phố": "1",
-            "Làng mạc": "0",
-            "Hang động": "0",
-            "Suối": "0"
-        },
-        "tourist_activities": {
-            "Công viên": 0,
-            "Di tích lịch sử & văn hóa": 0,
-            "Hoạt động ngoài trời & mạo hiểm": 0,
-            "Hoạt động dưới nước": 1,
-            "Trải nghiệm ẩm thực": 1,
-            "Lễ hội": 0,
-            "Thư giãn & chăm sóc sức khỏe": 0,
-            "Cuộc sống về đêm": 0,
-            "Thiên nhiên & động vật hoang dã": 1,
-            "Mua sắm": 0
-        },
-        "description": "Khí hậu Cà Mau quanh năm dễ chịu, nhưng thời điểm lý tưởng du lịch là từ tháng 12 đến tháng 4. Mùa mưa kéo dài từ tháng 5 đến tháng 11. Tháng 7-8 Âm lịch là thời điểm lý tưởng để thưởng thức nhiều đặc sản của Cà Mau.\n Di chuyển đến Cà Mau có thể thực hiện theo các cách sau:\n- Từ Hà Nội: Chọn chuyến bay tới Cần Thơ (3-4 triệu đồng) và sau đó di chuyển bằng xe ôtô giường nằm (125.000-150.000 đồng).\n- Từ TP HCM: Mua vé xe khách (190.000-200.000 đồng) hoặc tự lái xe (7-8 tiếng).\n- Phương tiện tốt nhất để khám phá thành phố Cà Mau là xe máy hoặc ôtô. - Để đi Đất Mũi, du khách có thể đi tàu cao tốc (hơn 3 giờ) hoặc xe ôm (50.000 đồng). Khi đến Cà Mau, bạn nên nghỉ tại trung tâm thành phố để thuận tiện ăn uống, vui chơi. Giá khách sạn dao động từ 200.000 đến 600.000 đồng tùy chất lượng. Ngoài ra, có thể chọn homestay giữa thiên nhiên với giá từ 70.000 đồng một người một đêm. \"Chơi đâu\" tại Cà Mau là một điểm đến lý tưởng với nhiều hoạt động thú vị. Du khách có thể:\n- Quan sát mặt trời mọc và lặn tại Mũi Cà Mau\n- Chèo thuyền vào rừng ngập mặn tại Vườn quốc gia Mũi Cà Mau\n- Trải nghiệm ăn ong tại rừng U Minh Hạ\n- Ngắm hàng nghìn con chim quý hiếm tại Sân chim Ngọc Hiển\n- Ghé thăm Đảo Hòn Khoai và Hòn Đá Bạc\n- Thưởng thức trái dâu tại Vườn dâu Cái Tàu\n- Du ngoạn sông Trẹm và đầm Thị Tường. Đặc sản Cà Mau nổi tiếng với nhiều món ăn ngon và độc đáo. Một số món đặc sản bao gồm:\n- Cua Cà Mau tươi ngon, giá cả phải chăng\n- Vọp nướng dai ngọt, có thể nấu canh chua, luộc, hấp, xào hay nướng mỡ hành - Ốc len xào dừa nổi tiếng nhất\n- Ba khía làm gỏi ăn với cơm nếp, luộc hay rang me\n- Cá nâu kho trái giác có vị chua nhẹ\n- Cá thòi lòi nướng muối ớt, chiên giòn hoặc nấu canh chua\n- Cá lóc nướng trui có vị ngọt thanh tao\n- Gỏi nhộng ong hấp dẫn\n- Mắm ong đặc sản không phải ai cũng dám thử\n- Bồn bồn chế biến như rau thành nhiều món khác nhau\n- Bánh tằm dân dã chân chất nhưng có sức thu hút đặc biệt\n- Các món ăn bình dân khác như cá kèo, hàu, chuột đồng chiên sả ớt, chả mực trứng, cháo tống...",
-        "climate_data": {
-            "Daytime temperature (°C)": "32",
-            "Nighttime temperature (°C)": "26",
-            "Precipitation (mm)": "387",
-            "UV Index": "7",
-            "Typhoon season": "Typhoon",
-            "Best month": "No"
-        },
-        "current_temperature_2m": "33 °C",
-        "current_rain": "0 mm",
-        "next_7_days_weather": {
-            "date": [
-                "2024-11-15",
-                "2024-11-16",
-                "2024-11-17",
-                "2024-11-18",
-                "2024-11-19",
-                "2024-11-20",
-                "2024-11-21"
-            ],
-            "temperature_2m_max": [
-                "33 °C",
-                "32 °C",
-                "32 °C",
-                "33 °C",
-                "32 °C",
-                "33 °C",
-                "32 °C"
-            ],
-            "temperature_2m_min": [
-                "25 °C",
-                "25 °C",
-                "25 °C",
-                "25 °C",
-                "26 °C",
-                "25 °C",
-                "26 °C"
-            ],
-            "uv_index_max": [
-                "7",
-                "7",
-                "7",
-                "8",
-                "8",
-                "7",
-                "8"
-            ],
-            "precipitation_sum": [
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "1 mm",
-                "0 mm",
-                "0 mm"
-            ]
-        }
-    },
-    {
         "city": "Khánh Hòa",
         "geo_features": {
             "Núi đồi": "1",
@@ -188,14 +24,14 @@
         },
         "description": "Khánh Hòa có nhiều phương tiện di chuyển thuận tiện: - Đường hàng không: Sân bay Cam Ranh cách Nha Trang 35km, giá vé từ 3-6 triệu đồng. - Đường sắt: Giá vé tàu Thống Nhất từ 270.000-1,5 triệu đồng. - Đường bộ: Giá vé xe từ Hà Nội 800.000-1 triệu đồng, từ TP HCM 250.000-500.000 đồng. - Đường thủy: Vịnh Nha Trang đón hàng chục chuyến tàu biển quốc tế mỗi năm. Khánh Hòa có nhiều khu lưu trú từ bình dân đến cao cấp, tập trung ở TP Nha Trang, vịnh Cam Ranh và vịnh Ninh Vân. Giá phòng dao động từ 200.000 đồng đến 15 triệu đồng một đêm, tùy thuộc vào tiêu chuẩn và vị trí. Nha Trang là thành phố biển nổi tiếng ở Khánh Hòa, cách TP HCM 440 km về phía nam. Thành phố có nhiều điểm tham quan như bãi biển đẹp, nhà hát hình chiếc đó, vịnh Vân Phong, đảo Điệp Sơn, Biển Đại Lãnh, Dốc Lết, đảo Bình Ba và chùa Suối Đổ. Ẩm thực Khánh Hòa nổi bật với các món ăn như:\n- Bún sứa với thịt sứa dày mình, giòn sần sật\n- Nem nướng với thịt nạc giã nhuyễn, nướng trên bếp than\n- Hải sản đa dạng, bao gồm ốc biển\n- Bánh căn nướng bằng khuôn đất nung, ăn kèm nước mắm chua ngọt. Đặc sản yến được yêu thích vì bổ dưỡng và tốt cho sức khỏe. Phù hợp với người mới ốm dậy, phụ nữ, trẻ em suy dinh dưỡng. Yến được chế biến thành nhiều món ăn như chưng đường phèn, nấu súp, nấu chè. Mua tại cơ sở được Bộ NN và PTNT công nhận chất lượng.",
         "climate_data": {
-            "Daytime temperature (°C)": "35",
-            "Nighttime temperature (°C)": "27",
-            "Precipitation (mm)": "75",
-            "UV Index": "8",
-            "Typhoon season": "Typhoon",
+            "Daytime temperature (°C)": "29",
+            "Nighttime temperature (°C)": "24",
+            "Precipitation (mm)": "317",
+            "UV Index": "6",
+            "Typhoon season": "",
             "Best month": "No"
         },
-        "current_temperature_2m": "31 °C",
+        "current_temperature_2m": "27 °C",
         "current_rain": "0 mm",
         "next_7_days_weather": {
             "date": [
@@ -210,15 +46,15 @@
             "temperature_2m_max": [
                 "31 °C",
                 "31 °C",
+                "31 °C",
                 "30 °C",
-                "30 °C",
-                "32 °C",
-                "30 °C",
+                "31 °C",
+                "29 °C",
                 "29 °C"
             ],
             "temperature_2m_min": [
                 "23 °C",
-                "23 °C",
+                "22 °C",
                 "22 °C",
                 "24 °C",
                 "24 °C",
@@ -243,89 +79,8 @@
                 "0 mm",
                 "0 mm"
             ]
-        }
-    },
-    {
-        "city": "Đà Nẵng",
-        "geo_features": {
-            "Núi đồi": "1",
-            "Rừng": "0",
-            "Bãi biển": "1",
-            "Thành phố": "1",
-            "Làng mạc": "0",
-            "Hang động": "0",
-            "Suối": "1"
         },
-        "tourist_activities": {
-            "Công viên": 1,
-            "Di tích lịch sử & văn hóa": 1,
-            "Hoạt động ngoài trời & mạo hiểm": 1,
-            "Hoạt động dưới nước": 1,
-            "Trải nghiệm ẩm thực": 1,
-            "Lễ hội": 0,
-            "Thư giãn & chăm sóc sức khỏe": 0,
-            "Cuộc sống về đêm": 1,
-            "Thiên nhiên & động vật hoang dã": 1,
-            "Mua sắm": 1
-        },
-        "description": "Đà Nẵng có hai mùa rõ rệt: mùa khô từ tháng 1 đến tháng 7 và mùa mưa từ tháng 8 đến tháng 12. Thời điểm đẹp nhất để du lịch Đà Nẵng là từ đầu tháng 4 đến giữa\n tháng 9, khi có tiết trời mát mẻ và giá cả dịch vụ bình ổn. Du khách đến Đà Nẵng có thể di chuyển bằng máy bay, tàu hỏa hoặc tự lái ôtô. Giá vé máy bay từ 1,3-3 triệu đồng, tàu hỏa từ 600.000-1,1 triệu đồng. Tự lái ôtô cần ít nhất một tuần và hai tài xế thay phiên cầm lái. Du lịch tại Đà Nẵng phát triển nhanh chóng với nhiều lựa chọn lưu trú như khách sạn, homestay, căn hộ và phòng tập thể. Giá phòng dao động từ 500.000 đồng đến 10.000.000 đồng một đêm. Các resort và khách sạn 5 sao nổi tiếng ở Đà Nẵng bao gồm InterContinental và Hyatt Regency. Địa điểm đẹp ngoài thành phố Đà Nẵng bao gồm bán đảo Sơn Trà, núi Ngũ Hành Sơn, rạn Nam Ô, đèo Hải Vân. Bán đảo Sơn Trà có cánh rừng nguyên sinh rộng lớn và nhiều bãi tắm đẹp như Tiên Sa, Đá Đen, bãi Bụt. Du khách có thể tham gia nhiều hoạt động hấp dẫn như lặn biển ngắm san hô, câu cá cùng ngư dân, chiêm ngưỡng thành phố từ trực thăng, trên đỉnh Bàn Cờ. Nơi đây cũng là nơi sinh sống của hàng trăm loài động vật, trong đó có voọc chà vá chân nâu được mệnh danh là \"nữ hoàng linh trưởng\" trên bán đảo Sơn Trà. Ngũ Hành Sơn là nơi có nhiều ngôi chùa linh thiêng cùng hệ thống các hang động tự nhiên. Đèo Hải Vân cách trung tâm Đà Nẵng khoảng một giờ chạy xe máy, với chiều dài 21 km và đỉnh cao nhất là 496 m so với mực nước biển. Rạn đá Nam Ô là nơi cư dân đông đúc, chủ yếu hành nghề ngư lưới cụ và nổi tiếng với nghề làm pháo và nước mắm truyền thống. Đà Nẵng cũng có nhiều điểm tham quan hấp dẫn như cầu Rồng, cầu quay sông Hàn, cầu Trần Thị Lý, cầu tình yêu, tượng cá chép hóa rồng, Cung Văn hóa Thiếu nhi Đà Nẵng, Bảo tàng Nghệ thuật Điêu khắc Chăm, Bảo tàng Mỹ thuật Đà Nẵng, Bảo tàng Phật giáo, Nhà thờ Tourane, Làng bích họa Đà Nẵng, chợ Cồn, chợ Hàn, chợ hải sản và các khu chợ đêm. Tất cả những điểm tham quan này đều mang đến cho du khách những trải nghiệm độc đáo và đáng nhớ. Trải nghiệm tại Đà Nẵng bao gồm:\n- Lên trực thăng ngắm cảnh thành phố và biển\n- Học lướt sóng và chèo SUP tại trường dạy lướt sóng Đà Nẵng\n- Thuyền du lịch sông Hàn để ngắm nhìn trung tâm thành phố về đêm - Ăn uống và xem cầu Rồng phun lửa\n\n- Khám phá thành phố Đà Nẵng về đêm với tiết trời mát mẻ và không quá ồn ào. Đặc sản Đà Nẵng bao gồm:\n- Mì Quảng: món ăn khô với đậu phộng rang, bánh tráng mè nướng, giá từ 15.000 - 40.000 đồng một tô.\n- Bánh tráng thịt heo: món ăn đơn giản với thịt heo, giá từ 50.000 - 200.000 đồng một suất.\n- Bê thui Cầu Mống: thịt bê tái, chín rõ, bì chín, giá từ 350.000 - 380.000 đồng một kg.\n- Gỏi cá Nam Ô: cá tươi ngọt thấm vị trong nước dùng cay, giá khoảng 80.000 đồng một suất.\n- Bánh xèo: món ăn bình dân với nước tương nóng, giá từ 20.000 - 100.000 đồng một phần.\n- Bún mắm: món ăn quen thuộc với người Đà Nẵng, giá từ 15.000 - 30.000 đồng mỗi tô.\n- Bún thịt nướng: món ăn dễ tìm, giá khoảng 15.000 – 30.000 đồng mỗi tô.\n- Mít trộn: món khoái khẩu của nhiều người, giá mỗi đĩa khoảng 20.000 đồng. - Ốc hút: món ăn được chế biến theo nhiều vị, giá mỗi phần từ 15.000 đến 30.000 đồng.\n- Sữa chua muối: món ăn vặt mềm, không quá béo, giá 1.000 đồng một hũ. Đà Nẵng có nhiều đặc sản nổi tiếng như tré ông Chánh, tré bà Đệ, bánh khô mè Cẩm Lệ, rong biển Mỹ Khê, nước mắm Nam Ô, hải sản tươi sống hoặc khô mực, khô cá. Những món này dễ tìm mua và đóng gói hành lý làm quà.",
-        "climate_data": {
-            "Daytime temperature (°C)": "35",
-            "Nighttime temperature (°C)": "27",
-            "Precipitation (mm)": "89",
-            "UV Index": "8",
-            "Typhoon season": "Typhoon",
-            "Best month": "No"
-        },
-        "current_temperature_2m": "30 °C",
-        "current_rain": "0 mm",
-        "next_7_days_weather": {
-            "date": [
-                "2024-11-15",
-                "2024-11-16",
-                "2024-11-17",
-                "2024-11-18",
-                "2024-11-19",
-                "2024-11-20",
-                "2024-11-21"
-            ],
-            "temperature_2m_max": [
-                "30 °C",
-                "30 °C",
-                "26 °C",
-                "25 °C",
-                "27 °C",
-                "25 °C",
-                "25 °C"
-            ],
-            "temperature_2m_min": [
-                "22 °C",
-                "19 °C",
-                "24 °C",
-                "22 °C",
-                "22 °C",
-                "24 °C",
-                "24 °C"
-            ],
-            "uv_index_max": [
-                "7",
-                "7",
-                "7",
-                "4",
-                "3",
-                "0",
-                "0"
-            ],
-            "precipitation_sum": [
-                "0 mm",
-                "0 mm",
-                "10 mm",
-                "7 mm",
-                "0 mm",
-                "30 mm",
-                "19 mm"
-            ]
-        }
+        "month": 12
     },
     {
         "city": "Thanh Hóa",
@@ -352,14 +107,14 @@
         },
         "description": "Thanh Hóa có hai mùa rõ rệt: mùa nóng (tháng 5-10) và mùa lạnh (tháng 11-4). Thời điểm đẹp nhất để du lịch là từ tháng 3 đến tháng 8. Mùa hè thích hợp cho bãi biển, mùa thu mát mẻ, giá cả ổn định hơn. Di chuyển đến Thanh Hóa có nhiều phương tiện và giá vé khác nhau tùy thuộc vào vị trí xuất phát. Từ Hà Nội, giá vé tàu hỏa dao động từ 140.000 - 280.000 đồng, xe khách từ 150.000 - 200.000 đồng. Từ TP HCM, máy bay là lựa chọn tiện lợi nhất với giá vé khoảng 2-3 triệu đồng. Tại Thanh Hóa, khách sạn trung tâm thành phố có giá từ 600.000 - 1 triệu đồng/đêm. Các khu du lịch biển như Sầm Sơn, Hải Tiến, Bãi Đông có giá cao hơn từ 800.000 - 4 triệu đồng/đêm. Nhà nghỉ bình dân giá từ 300.000 đồng/đêm trở lên. \"Chơi đâu\" là một câu hỏi phổ biến khi tìm kiếm điểm đến du lịch. Tại Thanh Hóa, có nhiều lựa chọn hấp dẫn như:\n\n- Bãi biển Sầm Sơn: nổi tiếng với bãi cát sạch và cảnh vật hoang sơ.\n- Hải Tiến: có đường biển dài, bãi cát sạch và hạ tầng hiện đại.\n- Bãi Đông: thích hợp để tắm và tham gia các hoạt động vui chơi dưới nước.\n- Hải Hòa: yên bình với bãi biển hoang sơ và nước trong.\n- Vườn quốc gia Bến En: có nhiều hoạt động như chèo thuyền, bơi lội và khám phá hang động.\n- Pù Luông: có thời tiết mát mẻ và cảnh quan thiên nhiên đẹp.\n- Hàm Rồng: có các danh lam thắng cảnh, di tích lịch sử và công trình văn hóa tâm linh.\n- Suối cá thần Cẩm Lương: có hàng nghìn con cá tự nhiên đủ kích thước và màu sắc.\n- Thành nhà Hồ: được xây dựng bởi Hồ Quý Ly từ năm 1397 và được UNESCO công nhận là di sản văn hóa thế giới.\n- Khu di tích Lam Kinh: có kiến trúc phong thủy \"tọa sơn hướng thủy\" và được bao quanh bởi núi và dòng sông.\n- Thái miếu nhà Hậu Lê: thờ cúng 27 vị Hoàng đế thời Lê và có nhiều hiện vật gốc có giá trị. Đặc sản Thanh Hóa bao gồm:\n- Chả tôm: nhân từ tôm bột tươi, thịt ba chỉ, hành khô và bánh phở, ăn kèm dưa góp và nước mắm pha loãng.\n- Bánh khoái Thanh Hóa: làm từ bột tẻ, rau cần, bắp cải, tép đồng tươi, ăn chung với nước mắm và dưa góp.\n- Gỏi cá nhệch: đặc sản của vùng Nga Sơn, cá nhệch được bóp với riềng sả và trộn với thính gạo, ăn kèm chẻo làm từ xương cá.\n- Bánh răng bừa: đặc sản tiến vua, được gói bằng lá dong hoặc lá chuối, ăn kèm nước mắm nguyên chất pha chanh, ớt hoặc tiêu bắc.",
         "climate_data": {
-            "Daytime temperature (°C)": "35",
-            "Nighttime temperature (°C)": "27",
-            "Precipitation (mm)": "276",
-            "UV Index": "8",
-            "Typhoon season": "Typhoon",
-            "Best month": "No"
+            "Daytime temperature (°C)": "22",
+            "Nighttime temperature (°C)": "16",
+            "Precipitation (mm)": "37",
+            "UV Index": "5",
+            "Typhoon season": "",
+            "Best month": "Yes"
         },
-        "current_temperature_2m": "30 °C",
+        "current_temperature_2m": "27 °C",
         "current_rain": "0 mm",
         "next_7_days_weather": {
             "date": [
@@ -374,8 +129,8 @@
             "temperature_2m_max": [
                 "31 °C",
                 "31 °C",
-                "26 °C",
                 "27 °C",
+                "28 °C",
                 "26 °C",
                 "25 °C",
                 "25 °C"
@@ -384,18 +139,18 @@
                 "24 °C",
                 "23 °C",
                 "22 °C",
+                "22 °C",
                 "20 °C",
-                "19 °C",
                 "19 °C",
                 "16 °C"
             ],
             "uv_index_max": [
-                "4",
+                "5",
                 "6",
                 "5",
-                "5",
-                "4",
-                "2",
+                "6",
+                "6",
+                "1",
                 "2"
             ],
             "precipitation_sum": [
@@ -407,246 +162,8 @@
                 "0 mm",
                 "0 mm"
             ]
-        }
-    },
-    {
-        "city": "Bến Tre",
-        "geo_features": {
-            "Núi đồi": "1",
-            "Rừng": "0",
-            "Bãi biển": "1",
-            "Thành phố": "1",
-            "Làng mạc": "0",
-            "Hang động": "0",
-            "Suối": "0"
         },
-        "tourist_activities": {
-            "Công viên": 0,
-            "Di tích lịch sử & văn hóa": 0,
-            "Hoạt động ngoài trời & mạo hiểm": 0,
-            "Hoạt động dưới nước": 1,
-            "Trải nghiệm ẩm thực": 1,
-            "Lễ hội": 0,
-            "Thư giãn & chăm sóc sức khỏe": 0,
-            "Cuộc sống về đêm": 0,
-            "Thiên nhiên & động vật hoang dã": 1,
-            "Mua sắm": 0
-        },
-        "description": "Bến Tre có khí hậu nắng ấm quanh năm, du khách có thể ghé thăm bất cứ mùa nào. Thời điểm lý tưởng nhất là mùa hè (tháng 6, 7, 8), khi du khách vừa được ngắm cảnh thiên nhiên đa sắc màu và thưởng thức trái cây tươi hái trên cây. Để di chuyển từ TP HCM đến Bến Tre, bạn có thể: - Đi xe khách từ bến xe Miền Tây với giá 85.000-140.000 đồng, thời gian 1,5-2 tiếng.\n- Phượt bằng xe máy hoặc xe ôtô tự lái, xuất phát vào sáng sớm hoặc sau 9h sáng để tránh đông.\n- Chọn tour lữ hành để thuận tiện tham quan. Tại Bến Tre, homestay đang phát triển mạnh mẽ, cho phép du khách trải nghiệm lối sống địa phương và thưởng thức đặc sản địa phương. Ngoài ra, có nhiều khách sạn\n và nhà nghỉ trong nội thành như Công Đoàn, Hàm Luông, Cửu Long, Thư Thư và Quê Hương, nơi bạn có thể ngắm nhìn đường phố sông nước. Dưới đây là tóm tắt về các điểm du lịch tại Bến Tre:\n- Cồn Quy: Đặc sản trái cây ngon và tôm cá, thưởng thức \"đờn ca tài tử\" Nam bộ.\n- Cồn Phụng: Chế biến kẹo dừa, đồ lưu niệm từ dừa, câu cá sấu, thưởng thức trái cây nhiệt đới.\n- Vườn cây ăn trái: Hái trái cây tươi tại vườn Cái Mơn, Tiên Long, Tân Phú.\n- Vườn dừa: Đạp xe qua các vườn dừa, trò chuyện với người dân địa phương.\n- Sân chim Vàm Hồ: Quan sát hơn 100 loài chim khác nhau.\n- Lăng mộ cụ Nguyễn Đình Chiểu: Lễ hội truyền thống vào ngày 1/7 hàng năm.\n- Bãi biển Bình Đại: Tắm biển, câu cá, tham quan điểm du lịch tâm linh.\n- Làng du kích Đồng Khởi: Khu nhà triển lãm, trưng bày vũ khí chống quân xâm lược.\n- Làng nghề Phú Lễ: Hát sắc bùa, nấu rượu nếp, đình Phú Lễ được xây dựng vào năm 1826.\n- Làng nghề bánh tráng Mỹ Lồng: Xem người dân làm bánh tráng, nướng trên bếp than.\n- Làng nghề bánh phồng Sơn Đốc: Tham quan quy trình làm bánh phồng nếp.\n- Làng nghề đan lát Phước Tuy: Xem người dân làm ra sản phẩm bằng tre. Đặc sản Bến Tre bao gồm:\n- Cơm dừa, cháo dừa, tép rang dừa, cổ hũ dừa, bánh dừa Giồng Luông\n- Chuối đập nướng với nước cốt dừa\n- Bánh canh bột xắt với thịt vịt\n- Chè bưởi với sầu riêng\n- Thịt chuột dừa nướng, hấp, nấu cà ri\n- Mật ong thủ công\n- Bánh xèo ốc gạo\n- Tôm càng xanh nướng, luộc, nổ muối hột\n- Trái cây như sầu riêng, chôm chôm, nhãn, măng cụt\n- Nấm mối dai, vị ngọt, mùi thơm đặc trưng",
-        "climate_data": {
-            "Daytime temperature (°C)": "32",
-            "Nighttime temperature (°C)": "26",
-            "Precipitation (mm)": "209",
-            "UV Index": "7",
-            "Typhoon season": "Typhoon",
-            "Best month": "No"
-        },
-        "current_temperature_2m": "32 °C",
-        "current_rain": "0 mm",
-        "next_7_days_weather": {
-            "date": [
-                "2024-11-15",
-                "2024-11-16",
-                "2024-11-17",
-                "2024-11-18",
-                "2024-11-19",
-                "2024-11-20",
-                "2024-11-21"
-            ],
-            "temperature_2m_max": [
-                "32 °C",
-                "33 °C",
-                "33 °C",
-                "33 °C",
-                "34 °C",
-                "33 °C",
-                "33 °C"
-            ],
-            "temperature_2m_min": [
-                "25 °C",
-                "25 °C",
-                "25 °C",
-                "25 °C",
-                "25 °C",
-                "25 °C",
-                "25 °C"
-            ],
-            "uv_index_max": [
-                "8",
-                "5",
-                "8",
-                "8",
-                "8",
-                "7",
-                "7"
-            ],
-            "precipitation_sum": [
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "1 mm",
-                "0 mm"
-            ]
-        }
-    },
-    {
-        "city": "Tiền Giang",
-        "geo_features": {
-            "Núi đồi": "0",
-            "Rừng": "0",
-            "Bãi biển": "1",
-            "Thành phố": "1",
-            "Làng mạc": "0",
-            "Hang động": "0",
-            "Suối": "0"
-        },
-        "tourist_activities": {
-            "Công viên": 0,
-            "Di tích lịch sử & văn hóa": 1,
-            "Hoạt động ngoài trời & mạo hiểm": 1,
-            "Hoạt động dưới nước": 1,
-            "Trải nghiệm ẩm thực": 1,
-            "Lễ hội": 1,
-            "Thư giãn & chăm sóc sức khỏe": 0,
-            "Cuộc sống về đêm": 0,
-            "Thiên nhiên & động vật hoang dã": 1,
-            "Mua sắm": 0
-        },
-        "description": "Để di chuyển đến Mỹ Tho, du khách có thể chọn các phương tiện sau: - Đường hàng không: Sân bay TP HCM và Cần Thơ, sau đó đi xe khách đến Mỹ Tho.\n- Xe khách: Giá vé 100.000 - 150.000 đồng một chiều, thời gian di chuyển khoảng 2 tiếng.\n- Xe máy hoặc ôtô cá nhân: Giá thuê xe máy khoảng 100.000 - 150.000 đồng một ngày. Các khu lưu trú tại Tiền Giang tập trung ở thành phố Mỹ Tho và Gò Công. Giá khách sạn tại Mỹ Tho dao động từ 500.000 - 1 triệu đồng/đêm, trong khi đó tại Gò Công giá từ 150.000 - 300.000 đồng/đêm. Dưới đây là tóm tắt về các điểm du lịch ở Tiền Giang: 1. **Chùa Vĩnh Tràng**: Một ngôi cổ trên đất Nam bộ, kết hợp phong cách kiến trúc giữa phương Đông và phương Tây. 2. **Nhà cổ của ông Lê Công Phước**: Một ngôi nhà cổ điển châu Âu cổ điển, kết hợp với vật liệu xây dựng truyền thống. 3. **Lăng Hoàng Gia**: Lăng mộ của dòng họ Phạm Đăng, trong đó có ông Phạm Đăng Hưng, thân sinh Hoàng thái hậu Từ Dũ. 4. **Chợ nổi Cái Bè**: Một chợ nổi lâu đời bậc nhất Tiền Giang, thu hút du khách với cảnh ghe thuyền đi lại buôn bán trên sông. 5. **Làng cổ**: Một làng cổ thuộc xã Đông Hòa Hiệp, huyện Cái Bè, có nhiều căn nhà cổ từ 150-200 năm tuổi. 6. **Đình Tân Đông**: Một ngôi đình cổ có từ thời vua Minh Mạng, kiến trúc hoa văn và họa tiết khắc nổi trên đình mang đặc trưng của kiến trúc đình chùa thời Nguyễn. 7. **Cù lao Thới Sơn**: Một cù lao nằm ở hạ lưu sông Tiền, để đến đây du khách phải đi bằng thuyền.\n 8. **Khu du lịch biển Tân Thành**: Một khu du lịch biển nổi tiếng với nghề nuôi nghêu, có nhiều hàng quán lợp mái lá trên bãi biển cho du khách thưởng thức nghêu và các loại hải sản khác. Ẩm thực Tiền Giang nổi tiếng với các món ăn như hủ tiếu, bún gỏi già, bánh bèo nước cốt dừa, cháo rắn, phở, bún bò, lẩu riêu cua, hải sản. Hủ tiếu Mỹ Tho đặc trưng với sợi nhỏ, khô, dai, vị chua nhẹ, nước dùng màu vàng nhạt.",
-        "climate_data": {
-            "Daytime temperature (°C)": "34",
-            "Nighttime temperature (°C)": "26",
-            "Precipitation (mm)": "264",
-            "UV Index": "7",
-            "Typhoon season": "Typhoon",
-            "Best month": "No"
-        },
-        "current_temperature_2m": "33 °C",
-        "current_rain": "0 mm",
-        "next_7_days_weather": {
-            "date": [
-                "2024-11-15",
-                "2024-11-16",
-                "2024-11-17",
-                "2024-11-18",
-                "2024-11-19",
-                "2024-11-20",
-                "2024-11-21"
-            ],
-            "temperature_2m_max": [
-                "33 °C",
-                "33 °C",
-                "33 °C",
-                "33 °C",
-                "33 °C",
-                "33 °C",
-                "33 °C"
-            ],
-            "temperature_2m_min": [
-                "26 °C",
-                "26 °C",
-                "25 °C",
-                "25 °C",
-                "25 °C",
-                "26 °C",
-                "25 °C"
-            ],
-            "uv_index_max": [
-                "8",
-                "6",
-                "8",
-                "8",
-                "8",
-                "7",
-                "7"
-            ],
-            "precipitation_sum": [
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "1 mm",
-                "0 mm"
-            ]
-        }
-    },
-    {
-        "city": "Kiên Giang",
-        "geo_features": {
-            "Núi đồi": "0",
-            "Rừng": "0",
-            "Bãi biển": "1",
-            "Thành phố": "1",
-            "Làng mạc": "0",
-            "Hang động": "0",
-            "Suối": "0"
-        },
-        "tourist_activities": {
-            "Công viên": 0,
-            "Di tích lịch sử & văn hóa": 0,
-            "Hoạt động ngoài trời & mạo hiểm": 0,
-            "Hoạt động dưới nước": 1,
-            "Trải nghiệm ẩm thực": 1,
-            "Lễ hội": 0,
-            "Thư giãn & chăm sóc sức khỏe": 0,
-            "Cuộc sống về đêm": 0,
-            "Thiên nhiên & động vật hoang dã": 1,
-            "Mua sắm": 0
-        },
-        "description": "Di chuyển tới Kiên Giang có nhiều lựa chọn: - Đường bộ: Giá vé từ 200.000 - 300.000 đồng, thời gian 4,5 - 6,5 tiếng. - Đường thủy nội địa và biển: Giá vé từ 100.000 - 400.000 đồng, các hãng tàu như Superdong, Phú Quốc Express.\n- Sân bay Rạch Giá: Đường bay thẳng từ TP HCM, tần suất không cố định.\n- Sân bay Phú Quốc: Quốc tế, hàng chục chuyến bay mỗi ngày, giá vé máy bay khứ hồi nội địa từ 2,5 triệu - 8 triệu đồng. Khách sạn và khu nghỉ dưỡng ở Kiên Giang tập trung ở các thành phố lớn như Hà Tiên, Rạch Giá và Phú Quốc. Tại Rạch Giá, có nhiều lựa chọn lưu trú đa dạng từ cao cấp (1-1,2 triệu đồng/đêm) đến bình dân (dưới 300.000 đồng). \"Tham quan\" là một phần quan trọng của tỉnh Kiên Giang, bao gồm:\n- Rạch Giá: trung tâm hành chính, kinh tế, văn hóa của tỉnh Kiên Giang\n\n- Phú Quốc: hòn đảo du lịch nổi tiếng nhất của Việt Nam\n- Hà Tiên: cửa khẩu quốc tế với Campuchia\n- Nam Du: quần đảo xa nhất của huyện Kiên Hải\n- Hải Tặc: quần đảo có diện tích 251 ha\n- Hòn Sơn: đảo hoang sơ với 6 bãi biển đẹp\n- Ba Hòn: quần đảo có nhiều hang động kỳ bí\n- Quần đảo Bà Lụa: vùng biển êm, cảnh đẹp, không khí trong lành\n- Chùa Tam Bảo: chùa quan trọng trong quá trình hình thành và phát triển Phật giáo Kiên Giang\n- Cổng Tam Quan: biểu tượng đặc trưng của tỉnh Kiên Giang\n- Bến tàu Rạch Giá: nơi khởi hành các chuyến tàu ra đảo Phú Quốc, Hải Tặc, Nam Du\n- Sông Trẹm: chia U Minh thành hai vùng thượng và hạ\n- Bảo tàng Kiên Giang: nơi lưu giữ văn hóa, lịch sử và con người Kiên Giang - Đền thờ Nguyễn Trung Trực: đền lớn nhất trong chín đền thờ ông ở Kiên Giang Ẩm thực Phú Quốc nổi tiếng với các món ăn đặc sản như:\n- Gỏi cá trích: món ăn không có mùi tanh, ăn cùng dưa tươi\n- Bún kèn: món ăn của người Khmer với nước dùng sệt và vị ngọt thanh\n- Bún cá Kiên Giang: có nước lèo, bún tươi, thịt cá lóc đồng và tôm biển\n- Cà xỉu: hải sản mềm và ngọt, được muối cùng nước mắm đường\n- Xôi: món ăn truyền thống với gạo nếp, trứng gà, đường và nước cốt dừa.",
-        "climate_data": {},
-        "current_temperature_2m": "33 °C",
-        "current_rain": "0 mm",
-        "next_7_days_weather": {
-            "date": [
-                "2024-11-15",
-                "2024-11-16",
-                "2024-11-17",
-                "2024-11-18",
-                "2024-11-19",
-                "2024-11-20",
-                "2024-11-21"
-            ],
-            "temperature_2m_max": [
-                "34 °C",
-                "34 °C",
-                "34 °C",
-                "35 °C",
-                "35 °C",
-                "35 °C",
-                "34 °C"
-            ],
-            "temperature_2m_min": [
-                "26 °C",
-                "25 °C",
-                "25 °C",
-                "25 °C",
-                "26 °C",
-                "26 °C",
-                "26 °C"
-            ],
-            "uv_index_max": [
-                "8",
-                "8",
-                "8",
-                "8",
-                "8",
-                "7",
-                "7"
-            ],
-            "precipitation_sum": [
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "6 mm",
-                "0 mm"
-            ]
-        }
+        "month": 12
     },
     {
         "city": "Quảng Bình",
@@ -673,14 +190,14 @@
         },
         "description": "Khí hậu Quảng Bình chia làm hai mùa rõ rệt: mùa mưa (tháng 9 - 3) và mùa khô (tháng 4 - 8). Thời điểm đẹp nhất để đến Quảng Bình là từ cuối tháng 3 đến đầu tháng 9. Mùa mưa có nét thú vị riêng cho những người ưa khám phá. TP Đồng Hới cách Hà Nội 500 km, cách TP HCM 1.000 km. Du khách có thể di chuyển bằng máy bay, tàu, xe khách hoặc ôtô cá nhân. Giá vé và thời gian di chuyển tùy thuộc vào phương tiện và tuyến đường. Dịch vụ lưu trú ở Quảng Bình đa dạng từ khách sạn, nhà nghỉ, homestay, farmstay, cắm trại. Tại Đồng Hới, có nhiều lựa chọn từ 600.000 đến 2 triệu đồng mỗi đêm. Tại các huyện Lệ Thủy, Quảng Trạch, Bố Trạch, Minh Hóa, giá từ 400.000 đến 2 triệu đồng mỗi đêm. Vườn Quốc gia Phong Nha\n- Kẻ Bàng là một điểm tham quan và vui chơi nổi tiếng ở Quảng Bình, được UNESCO công nhận là Di sản thiên nhiên thế giới. Nơi đây có hơn 400 hang động với tổng chiều dài 220 km, ba sông chính là sông Chày, sông Son và sông Troóc. Một số điểm tham quan và vui chơi nổi bật tại Vườn Quốc gia Phong Nha\n- Kẻ Bàng bao gồm: - Động Phong Nha: được đánh giá là kỳ quan tiêu biểu về giá trị thẩm mỹ, địa chất của thế giới tự nhiên. - Động Thiên Đường: được mệnh danh là \"hoàng cung trong lòng đất\", có chiều dài 31,4 km và được coi là hang động khô có chiều dài kỷ lục ở châu Á.\n- Hang Sơn Đoòng: hiện là hang động tự nhiên lớn nhất thế giới, có chiều rộng 150 m, cao hơn 200 m, chiều dài gần 9 km.\n- Hang Tú Làn: hệ thống hang động được thám hiểm lần đầu năm 1992 bởi nhóm Thám hiểm Hang động Anh\n- Việt.\n- Hang Én: lớn thứ ba thế giới, dài 1,6 km, xuyên qua khối đá vôi khổng lồ.\n- Hang Pygmy: lớn thứ tư thế giới, nằm sâu trong Vườn quốc gia Phong Nha\n- Kẻ Bàng.\n- Hố sụt Kong: thuộc hệ thống hang Hổ, có hình dáng giống đầu khỉ khổng lồ trong phim Kong: Skull Island.\n- Sông Gianh: được xem là biểu tượng địa lý của tỉnh Quảng Bình.\n\n- Sông Son: chảy hoàn toàn trên địa phận tỉnh Quảng Bình.\n- Sông Nhật Lệ: bắt nguồn từ dãy Trường Sơn, chảy ra Biển Đông qua cửa biển Nhật Lệ.\n- Biển Nhật Lệ: trải dài ven TP Đồng Hới, cách trung tâm khoảng 2 km.\n- Bán đảo Bảo Ninh: yên bình giữa một bên là biển, một bên là sông Nhật Lệ.\n- Bãi Đá Nhảy: một thắng cảnh ở huyện Bố Trạch, nằm trên quốc lộ 1A.\n- Quảng Bình Quan: một thành lũy trong hệ thống Lũy Thầy, được xây năm 1639.\n- Tháp chuông nhà thờ Tam TòaNhà thờ Tam Tòa: nằm ở trung tâm TP Đồng Hới, bên dòng sông Nhật Lệ.\n- Thành cổ Đồng Hới: nằm trong tổng thể các di tích lịch sử quân sự của Đồng Hới vào thời kỳ Trịnh\n- Nguyễn phân tranh.\n- Tượng đài Mẹ Suốt: nằm bên bờ sông Nhật Lệ, là điểm dừng chân không thể bỏ qua của nhiều du khách. - Đèo Ngang: vắt qua dãy Hoành Sơn, là một chốt hiểm yếu trên quốc lộ 1A.\n- Vũng Chùa: một thắng cảnh thuộc thôn Thọ Sơn, xã Quảng Đông, huyện Quảng Trạch.\n- Sông Chày\n- Hang Tối: một tuyến du lịch khám phá thiên nhiên.\n- Khu du lịch suối nước Moọc: thuộc huyện Bố Trạch, cách TP Đồng Hới khoảng 70 km.\n- Tour \"Khám phá rừng lim\n- Ngôi nhà của Kong\": hoạt động tại xã Tân Hóa, huyện Minh Hoá. Những điểm tham quan và vui chơi này sẽ mang lại cho du khách những trải nghiệm thú vị và đáng nhớ tại Vườn Quốc gia Phong Nha\n- Kẻ Bàng. Ẩm thực Quảng Bình là một trong những điểm thu hút du khách. Các món ăn đặc trưng bao gồm:\n- Bánh bột lọc: vỏ làm từ tinh bột sắn, nhân tôm, thịt mỡ\n- Bánh mì bột lọc: bánh mì nóng kẹp bánh bột lọc\n- Cháo canh: vị nước lèo ngọt đậm, sợi bánh mềm\n- Bún chả cá thác lác: nước dùng nấu từ xương cá hoặc xương lợn\n- Chắt chắt: món ăn của người dân ven sông Gianh\n- Cháo hàu: món mời khách của người dân thị trấn Quán Hàu\n- Bánh khoái: bánh giống bánh xèo, nhưng dày hơn\n- Hải sản: phong phú và giá cả hợp lý\n- Lẩu cá khoai: nồi lẩu dân dã với cà chua, khế, lá me\n- Nấm tràm: vị đắng, được dùng xào với rau khoai, thịt heo, tôm\n- Khoai lang dẻo: được chế biến từ loại khoai sau khi thu hoạch về để xuống nước.\n \"Lưu ý\" khi du lịch Quảng Bình:\n- Mua tour tại công ty uy tín và có người dẫn hiểu rõ địa hình để đảm bảo an toàn.\n- Không tự ý trải nghiệm đường rừng núi nguy hiểm.\n- Chọn điểm đến theo từng khu vực để hạn chế di chuyển dài.",
         "climate_data": {
-            "Daytime temperature (°C)": "34",
-            "Nighttime temperature (°C)": "26",
-            "Precipitation (mm)": "149",
-            "UV Index": "7",
-            "Typhoon season": "Typhoon",
+            "Daytime temperature (°C)": "23",
+            "Nighttime temperature (°C)": "17",
+            "Precipitation (mm)": "177",
+            "UV Index": "5",
+            "Typhoon season": "",
             "Best month": "No"
         },
-        "current_temperature_2m": "25 °C",
+        "current_temperature_2m": "21 °C",
         "current_rain": "0 mm",
         "next_7_days_weather": {
             "date": [
@@ -698,14 +215,14 @@
                 "20 °C",
                 "19 °C",
                 "19 °C",
-                "17 °C",
+                "18 °C",
                 "18 °C"
             ],
             "temperature_2m_min": [
                 "17 °C",
-                "17 °C",
                 "18 °C",
-                "16 °C",
+                "18 °C",
+                "17 °C",
                 "16 °C",
                 "15 °C",
                 "15 °C"
@@ -722,95 +239,14 @@
             "precipitation_sum": [
                 "0 mm",
                 "0 mm",
-                "5 mm",
-                "4 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm"
-            ]
-        }
-    },
-    {
-        "city": "Bình Thuận",
-        "geo_features": {
-            "Núi đồi": "1",
-            "Rừng": "1",
-            "Bãi biển": "1",
-            "Thành phố": "1",
-            "Làng mạc": "0",
-            "Hang động": "0",
-            "Suối": "1"
-        },
-        "tourist_activities": {
-            "Công viên": 0,
-            "Di tích lịch sử & văn hóa": 0,
-            "Hoạt động ngoài trời & mạo hiểm": 0,
-            "Hoạt động dưới nước": 1,
-            "Trải nghiệm ẩm thực": 1,
-            "Lễ hội": 0,
-            "Thư giãn & chăm sóc sức khỏe": 0,
-            "Cuộc sống về đêm": 0,
-            "Thiên nhiên & động vật hoang dã": 1,
-            "Mua sắm": 0
-        },
-        "description": "Bình Thuận không có sân bay, du khách có thể di chuyển bằng:\n- Bay tới TP HCM và đi đường bộ theo cao tốc Dầu Giây\n- Phan Thiết (2,5 tiếng)\n\n- Hạ cánh ở sân bay Cam Ranh và đi cao tốc Vĩnh Hảo\n- Phan Thiết\n- Xe cá nhân hoặc xe khách từ TP HCM và các tỉnh phía Nam - Đường sắt từ ga Mường Mán (giá vé từ 145.000 - 1.500.000 đồng một chiều) Tại Bình Thuận, các khách sạn tập trung tại Phan Thiết, Mũi Né và đảo Phú Quý. Các khu nghỉ dưỡng ven biển tại Mũi Né có giá phòng từ 1 triệu đồng đến 10 triệu đồng một đêm. Đảo Phú Quý có nhiều điểm lưu trú mới với giá từ 300.000 đồng đến 1 triệu đồng một đêm. Tham quan là một phần quan trọng của chuyến du lịch đến Bình Thuận. Thành phố Phan Thiết chia thành 4 khu vực chính, bao gồm trung tâm, Mũi Né, Mũi Kê Gà và Hòn Rơm. Du khách có thể khám phá các địa danh nổi tiếng như Công viên biển Đồi Dương, tháp nước Phan Thiết, khu di tích trường Dục Thanh, dinh Vạn Thủy Tú, lầu Ông Hoàng, tháp Po Sah Inư, bãi đá Ông Địa... Mũi Né là một trong những điểm đến nổi tiếng của tỉnh Bình Thuận, với bãi biển xanh trải dài và những đồi cát đẹp. Bàu Trắng là điểm đến không thể bỏ qua khi tới Mũi Né, với trải nghiệm ngắm bình minh, trượt cát, đi xe địa hình và tham quan chụp ảnh. Huyện đảo Phú Quý nằm cách thành phố Phan Thiết khoảng 120 km về phía đông nam. Đảo này có nhiều cảnh đẹp, đa phần còn hoang sơ, để du khách khám phá trong vài ngày. Các điểm tham quan nổi bật bao gồm Bãi Nhỏ, Ghành Hang, đỉnh Cao Cát, vịnh Triều Dương, ngọn hải đăng... Cổ Thạch thuộc huyện Tuy Phong, nổi tiếng nhờ các viên đá có màu sắc và hình thù độc đáo trải dài, cùng nước biển xanh màu ngọc bích. Là một trong những cảnh quan đẹp nhất Bình Thuận, bãi đá còn có những tảng to phủ đầy rêu xanh. Bình Thuận có 3 cánh đồng quạt gió là Tuy Phong, Đại Phong và đảo Phú Quý. Cánh đồng Tuy Phong thu hút nhiều tín đồ xê dịch nhất vì diện tích khá lớn, dễ di chuyển và khung cảnh đẹp. Kê Gà tập hợp nhiều phiến đá có hình dáng độc đáo xếp thành hình đầu gà, cách trung tâm Phan Thiết khoảng 30 km. Không chỉ có vườn đá, Kê Gà còn có những bãi biển hoang sơ với làn nước trong xanh và ngọn hải đăng lâu đời nhất Đông Nam Á. Núi Tà Cú là địa điểm phù hợp với những người thích leo núi. Núi nằm ven Quốc lộ 1A, thuộc thị trấn Thuận Nam, có nhiều ngôi chùa như Linh Sơn Trường Thọ, Long Đoàn và chùa Tổ.\n Cù Lao Câu hay hòn Cau thuộc huyện Tuy Phong, nằm cách đất liền khoảng 10 km. Hòn đảo chưa được nhiều người biết đến nên vẫn khá hoang sơ, không có người dân sinh sống và chưa nhiều dịch vụ dành cho du lịch. Nội dung liên quan đến ẩm thực trên đảo Phú Quý và vùng ven biển thuộc huyện Tuy Phong như sau:\n- Lẩu thả: Món ăn được chế biến từ cá tươi, trứng chiên, thịt luộc, rau sống, xoài và dưa leo. Cá được trụng qua nước sôi và rửa sạch bằng nước chanh trước khi tẩm ướp gia vị.\n- Cua mặt trăng: Là đặc sản của vùng này, cua có nhiều hình tròn màu đỏ đậm và thịt ngọt, dai và thơm.\n- Cua huỳnh đế: Là một đặc sản khác của Tuy Phong, Phú Qúy.\n- Gỏi cá: Món ăn được chế biến từ cá mai, cá suốt hay cá đục tươi ăn kèm rau sống, bún và nước chấm đặc biệt.\n- Gỏi ốc giác: Món ăn được chế biến từ thịt ốc giác, thịt heo, rau, đậu phộng rang và hành phi.\n- Dông cát: Là loài bò sát sống trong hang và sáng ra đồi cát tìm ăn. Thịt dông trắng, ngọt, bùi và mềm, được chế biến thành nhiều món ăn như nướng, hấp, chả, cháo...",
-        "climate_data": {
-            "Daytime temperature (°C)": "32",
-            "Nighttime temperature (°C)": "25",
-            "Precipitation (mm)": "181",
-            "UV Index": "8",
-            "Typhoon season": "Typhoon",
-            "Best month": "No"
-        },
-        "current_temperature_2m": "30 °C",
-        "current_rain": "0 mm",
-        "next_7_days_weather": {
-            "date": [
-                "2024-11-15",
-                "2024-11-16",
-                "2024-11-17",
-                "2024-11-18",
-                "2024-11-19",
-                "2024-11-20",
-                "2024-11-21"
-            ],
-            "temperature_2m_max": [
-                "31 °C",
-                "33 °C",
-                "34 °C",
-                "34 °C",
-                "34 °C",
-                "34 °C",
-                "35 °C"
-            ],
-            "temperature_2m_min": [
-                "24 °C",
-                "21 °C",
-                "21 °C",
-                "21 °C",
-                "23 °C",
-                "23 °C",
-                "22 °C"
-            ],
-            "uv_index_max": [
-                "7",
-                "8",
-                "8",
-                "8",
-                "7",
-                "7",
-                "7"
-            ],
-            "precipitation_sum": [
-                "0 mm",
-                "0 mm",
-                "0 mm",
+                "1 mm",
                 "0 mm",
                 "0 mm",
                 "0 mm",
                 "0 mm"
             ]
-        }
+        },
+        "month": 12
     },
     {
         "city": "Bình Định",
@@ -837,14 +273,14 @@
         },
         "description": "Thời tiết tại Bình Định:\n- Nhiệt độ trung bình khoảng 27 độ C, từ 20 độ C (vùng núi) đến 35-36 độ C (vùng biển).\n- Mùa mưa từ tháng 9 đến 12, và từ tháng 5 đến 8 ở khu vực miền núi.\n- Mùa khô từ tháng 1 đến 8, thích hợp cho du lịch. Bình Định có nhiều phương tiện di chuyển: - Đường hàng không: Sân bay Phù Cát với giá vé từ 2,5 triệu đến 8 triệu đồng.\n - Đường bộ: Quốc lộ 1A, 1D, 19C, bến xe Quy Nhơn. - Đường sắt: Tàu Thống Nhất dừng ở ga Diêu Trì.\n- Xe máy, taxi, ôtô, xe điện cho thuê trong thành phố. Bình Định có nhiều lựa chọn lưu trú đa dạng về giá và chất lượng. Các khu resort cao cấp như Anantara Quy Nhon Villas và Avani Quy Nhon resort & spa có giá từ 2-8 triệu đồng một đêm. Khách sạn trong phố giá từ 500.000-1,5 triệu đồng một phòng. Bình Định là một điểm đến nổi tiếng với đường bờ biển dài, nước xanh, cát mịn và nhiều điểm du lịch hấp dẫn. Một số điểm đến nổi bật bao gồm:\n- Thị Nại: đầm lớn nhất Bình Định với hệ sinh thái rừng ngập mặn phong phú.\n- Cầu Thị Nại: cầu vượt biển dài nhất Việt Nam trước đây.\n- Eo Gió: nơi có cảnh hoàng hôn đẹp nhất Việt Nam.\n- Bãi Kỳ Co: bãi biển xanh và trong với cảnh quan \"sơn thủy hữu tình\".\n- Cù Lao Xanh: đảo đẹp nhất miền Trung với nước biển xanh và sạch.\n- Hòn Sẹo: hòn đảo đẹp với vô số khối đá lớn nhỏ nằm ngổn ngang trên mặt biển. - Đề Gi: bãi biển xanh, cát trắng và sinh vật biển phong phú.\n- Tam Quan: thị trấn với hàng dừa bạt ngàn và các điểm du lịch như gành đá Lộ Diêu, gành đá Hoài Hải, hang Yến, hồ Mỹ Bình.\n- Tháp Bánh Ít: tháp Chăm Pa cổ với nhiều tháp Chăm còn nguyên vẹn.\n- Tháp Cánh Tiên: kinh đô của vương quốc Chăm pa cổ.\n- Tháp Dương Long: tháp Chăm Pa cổ với chiều cao hơn 30 m.\n- Khu dã ngoại Trung Lương: khu dã ngoại với nhiều khu vực như cắm trại, ngủ nhà lều, bãi tắm và chơi các trò dưới biển.\n- Bảo tàng Quang Trung: bảo tàng thờ và tưởng niệm anh hùng áo vải Nguyễn Huệ.\n- Khu du lịch rừng nguyên sinh: khu du lịch với không gian mát mẻ quanh năm.\n- Làng phong: làng phong với ngôi làng là nơi an cư của bệnh nhân phong từ khắp cả nước. Bình Định là thiên đường ẩm thực với nhiều món ngon đặc trưng. Một số món nổi bật bao gồm:\n- Bánh hỏi: bánh làm từ bột gạo, lòng heo và rau sống.\n- Bánh xèo tôm nhảy: bánh xèo với tôm đất nhỏ, không sử dụng tôm biển.\n- Bánh ít lá gai: bánh có vỏ đen, nhân đậu xanh, vị dẻo và thơm.\n- Bánh hồng: bánh có hình dạng đơn giản, vị thơm của nếp và độ giòn của dừa.\n- Hải sản: tôm hùm, cua huỳnh đế, các loại ốc tươi ngon.",
         "climate_data": {
-            "Daytime temperature (°C)": "34",
-            "Nighttime temperature (°C)": "27",
-            "Precipitation (mm)": "316",
-            "UV Index": "7",
-            "Typhoon season": "Typhoon",
-            "Best month": "No"
+            "Daytime temperature (°C)": "22",
+            "Nighttime temperature (°C)": "16",
+            "Precipitation (mm)": "28",
+            "UV Index": "4",
+            "Typhoon season": "",
+            "Best month": "Yes"
         },
-        "current_temperature_2m": "29 °C",
+        "current_temperature_2m": "26 °C",
         "current_rain": "0 mm",
         "next_7_days_weather": {
             "date": [
@@ -861,7 +297,7 @@
                 "29 °C",
                 "28 °C",
                 "27 °C",
-                "29 °C",
+                "28 °C",
                 "27 °C",
                 "26 °C"
             ],
@@ -878,21 +314,22 @@
                 "7",
                 "7",
                 "7",
-                "6",
                 "7",
                 "6",
-                "1"
+                "6",
+                "4"
             ],
             "precipitation_sum": [
                 "0 mm",
                 "0 mm",
-                "6 mm",
-                "6 mm",
+                "3 mm",
+                "5 mm",
                 "0 mm",
                 "12 mm",
                 "14 mm"
             ]
-        }
+        },
+        "month": 12
     },
     {
         "city": "Quảng Nam",
@@ -919,14 +356,14 @@
         },
         "description": "Có nhiều phương tiện để đến Quảng Nam, bao gồm: - Đường hàng không: Sân bay Đà Nẵng hoặc Chu Lai - Đường sắt: Các đôi tàu Thống Nhất từ Hà Nội và TP HCM - Đường bộ: Xe khách, xe buýt, taxi, xe dịch vụ - Đường biển: Cảng Trường Hải ở khu kinh tế mở Chu Lai, tàu cao tốc từ biển Cửa Đại đến Cù Lao Chàm Giá vé và thời gian di chuyển tùy thuộc vào phương tiện và tuyến đường. Quảng Nam là địa phương phát triển mạnh về du lịch với nhiều lựa chọn lưu trú. Các resort ven biển như Four Seasons Resort The Nam Hai và Victoria Hoi An Beach Resort & Spa có giá từ 1-100 triệu đồng một đêm. Khách sạn và homestay ở Hội An và Tam Kỳ có giá từ 300.000-1,2 triệu đồng một đêm. Hội An là một trong hai Di sản văn hoá thế giới của tỉnh Quảng Nam, nổi tiếng với giá trị văn hoá và kiến trúc cổ. Ngoài ra, có nhiều điểm du lịch khác như:\n- Rừng dừa Bảy Mẫu: khu du lịch sinh thái nổi tiếng với rừng dừa xanh và các hoạt động như múa thúng, đua thuyền.\n- Thánh địa Mỹ Sơn: thánh địa Ấn Độ giáo của Vương quốc Chăm Pa xưa, với 70 công trình đền tháp được chia thành nhiều cụm.\n- Cù Lao Chàm: đảo bảo tồn hệ sinh thái biển với 950 loài thủy sinh, nơi du khách có thể khám phá, đi câu cá, lặn ngắm san hô.\n- Làng bích họa Tam Thanh: làng có khoảng 30 bức tranh sắc màu rực rỡ phủ trên những bức tường cũ.\n- Bãi biển Cửa Đại: bãi biển đẹp với nước xanh trong, cát trắng, thoai thoải, thích hợp\n để tắm.\n- Hồ Phú Ninh: địa điểm du lịch sinh thái nổi bật với khí hậu mát mẻ, rừng nguyên sinh và hơn 20 đảo lớn.\n- Tượng đài mẹ Thứ: tượng đài tưởng niệm Mẹ Việt Nam Anh hùng Nguyễn Thị Thứ, nơi có quy mô lớn nhất Đông Nam Á.\n- Làng gốm Thanh Hà: nơi bạn có thể ngắm nhìn những sản phẩm gốm mỹ nghệ tinh xảo được làm từ bàn tay của những nghệ nhân xứ Thanh Hà. Ẩm thực Quảng Nam nổi tiếng với các món ăn đặc trưng như:\n- Bê thui: Món ăn phổ biến ở miền Trung, được làm từ bê 4-5 tháng tuổi, thui trên than lửa và ăn kèm với mắm nêm, rau sống và bánh tráng cuốn.\n- Mì Quảng: Món ăn có nguồn gốc từ Quảng Nam, được làm từ bột gạo xay mịn, tráng thành từng lớp, và ăn kèm với rau sống, thịt lợn, tôm, thịt gà và nước dùng.\n- Cao lầu: Món ăn đặc sản của Hội An, được làm từ sợi mì vàng, dùng cùng tôm, thịt lợn, rau sống và nước dùng.\n- Cơm gà: Món ăn phổ biến ở Tam Kỳ và Hội An, được làm từ cơm dẻo, thơm, thịt gà chắc, ngậy, lòng gà đậm vị và đu đủ bào giòn.\n- Các món phổ biến khác như bánh tráng cuốn thịt heo, bánh canh, bánh mì, bánh bột lọc và nem nướng.",
         "climate_data": {
-            "Daytime temperature (°C)": "35",
-            "Nighttime temperature (°C)": "27",
-            "Precipitation (mm)": "112",
-            "UV Index": "8",
-            "Typhoon season": "Typhoon",
+            "Daytime temperature (°C)": "26",
+            "Nighttime temperature (°C)": "21",
+            "Precipitation (mm)": "400",
+            "UV Index": "4",
+            "Typhoon season": "",
             "Best month": "No"
         },
-        "current_temperature_2m": "31 °C",
+        "current_temperature_2m": "26 °C",
         "current_rain": "0 mm",
         "next_7_days_weather": {
             "date": [
@@ -940,19 +377,19 @@
             ],
             "temperature_2m_max": [
                 "31 °C",
-                "30 °C",
+                "29 °C",
                 "26 °C",
                 "25 °C",
-                "27 °C",
-                "24 °C",
+                "28 °C",
+                "25 °C",
                 "25 °C"
             ],
             "temperature_2m_min": [
                 "23 °C",
                 "22 °C",
                 "23 °C",
-                "22 °C",
-                "22 °C",
+                "23 °C",
+                "23 °C",
                 "23 °C",
                 "24 °C"
             ],
@@ -960,21 +397,22 @@
                 "7",
                 "7",
                 "7",
-                "4",
                 "3",
+                "7",
                 "1",
                 "0"
             ],
             "precipitation_sum": [
                 "0 mm",
                 "0 mm",
+                "16 mm",
                 "13 mm",
-                "9 mm",
-                "0 mm",
+                "1 mm",
                 "12 mm",
                 "22 mm"
             ]
-        }
+        },
+        "month": 12
     },
     {
         "city": "Phú Yên",
@@ -1001,14 +439,14 @@
         },
         "description": "Phú Yên có hai mùa rõ rệt: mùa mưa (tháng 9-12) và mùa nắng (tháng 1-8). Du khách nên đến Phú Yên vào mùa nắng để thuận tiện cho chuyến tham quan. Mùa hè là thời điểm lý tưởng để đắm mình vào biển xanh và săn ảnh. Phú Yên cách Hà Nội 1.200 km và TP HCM 500 km, có nhiều lựa chọn di chuyển như máy bay, tàu hỏa, ôtô. Giá vé máy bay từ 1,5 triệu đến 5 triệu đồng, tàu hỏa từ 400.000 đến 1.000.000 đồng, ôtô giường nằm 540.000 đồng. Phú Yên và Tuy Hòa có ít resort và khách sạn cao cấp. Giá phòng trung bình trong thành phố là 150.000 - 300.000 đồng/đêm. Các khu nghỉ sang trọng như Rosa Alba Resort và Sala Grand Tuy Hoa Hotel có giá từ 700.000 - 5.000.000 đồng/đêm. \"Chơi đâu\" là một trong những điểm du lịch nổi tiếng của Phú Yên, Việt Nam. Bạn có thể tham quan các điểm du lịch trong 4 ngày, hoặc 2 ngày nếu không dư dả thời gian. Dưới đây là một số điểm du lịch nổi bật:\n- Gành Đá Đĩa: Một tổ ong khổng lồ với những khối trụ vuông vức xếp liền nhau vươn mình ra biển.\n- Ngọn hải đăng Gành Đèn: Có độ cao 22 m so với mực nước biển, phát nguồn sáng cho tàu thuyền ra, vào vịnh Xuân Đài.\n- Bãi Xép: Nơi bạn có thể đứng chênh vênh trên vách núi cao và ngắm nhìn màu biển xanh ngọc bích bên dưới. - Đại Lãnh: Có những triền cát rất đẹp và là nơi nhìn thấy bình minh sớm nhất ở Việt Nam.\n- Bãi rêu Xóm Rớ: Với những tảng đá bê tông thô kệch nằm chìm dưới nước biển nay mọc lên từng đám rêu xanh đã hút hồn du khách.\n- Tháp đôi Nghinh Phong: Là biểu tượng của du lịch Phú Yên và truyền thuyết \"Con Rồng Cháu Tiên\".\n- Hòn Yến: Điểm check-in yêu thích không chỉ của khách du lịch mà cả giới nhiếp ảnh nhờ có những rạn san hô trên cạn nhiều màu sắc và hình thù.\n- Nhất Tự Sơn: Một trong những hòn đảo đẹp nhất của vịnh Xuân Đài, thuộc địa bàn xã Xuân Thọ 1, thị xã Sông Cầu.\n- Thác Vực Hòm: Là thác nước nằm giữa những cột đá bazan được thiên nhiên tạo thành theo cách tương tự như Gành Đá Đĩa của Phú Yên.\n- Hồ Trần Phú: Là một điểm hẹn \"hot\" cho các bạn trẻ chụp ảnh check-in, ngắm cảnh, hoặc đơn thuần là dạo chơi hóng gió.\n- Vân Hòa: Là một cao nguyên đất đỏ bazan màu mỡ, được ví như \"Đà Lạt của Phú\n Yên\" nhờ nằm ở độ cao 400 m, khi hậu mát mẻ, nhiều nắng gió và thường có mây mờ sương giăng. 'Lịch trình gợi ý' cho 4 ngày du lịch tại Cà Mau bao gồm:\n- Ngày 1: Tháp Nhạn, bãi Long Thuỷ, Bãi Xép\n- Ngày 2: Gành Đá Đĩa, hải đăng Gành Đèn, đầm Ô Loan, hải đăng Đại Lãnh – Mũi Điện, Bãi Môn\n- Ngày 3: Đại Lãnh, Vũng Rô, đảo Điệp Sơn\n- Ngày 4: Nhà thờ Măng Lăng, cầu gỗ Tuy An, bãi rêu Xóm Rớ Đặc sản Phú Yên bao gồm:\n- Cá ngừ: mắt cá ngừ tiềm thuốc bắc, gỏi bao tử cá ngừ, cá ngừ cuốn cải xanh\n- Sò huyết: hấp, nướng tái, xào me, rang muối ớt\n- Cơm gà: dai giòn, ít mỡ, vàng ươm và ngọt\n- Cá nục: hấp, ăn kèm bánh tráng, rau sống và nước chấm chua cay\n- Cháo hàu: xào hàu với hành, muối tiêu, ninh chung với gạo đỏ, gạo nếp\n- Bánh canh hẹ: sợi mềm dai, ăn cùng chả cá biển\n- Bò một nắng: thịt đùi và thăn bò tươi, nướng chín trên than hoa\n- Chả dông: thịt dông có sẵn vào mùa hè, ăn kèm rau sống\n- Bánh bèo: vị thơm và dẻo đặc biệt, ăn kèm bánh mì chiên giòn, chà bông và mỡ hành\n- Bánh hỏi lòng heo: ăn kèm bánh tráng cuốn, rau sống, chấm cùng nước mắm tỏi ớt\n- Bánh xèo tôm nhảy: đúc bằng khuôn nhỏ, ăn kèm bánh tráng và rau\n- Hải sản: quán vỉa hè ở 43 Trần Quý Cáp bán đa dạng hải sản như sò lông nướng mỡ hẹ, ốc hương nấu lá dứa, sò huyết, sò điệp, ốc móng tay, ốc bươu, ốc hút...",
         "climate_data": {
-            "Daytime temperature (°C)": "34",
-            "Nighttime temperature (°C)": "27",
-            "Precipitation (mm)": "97",
-            "UV Index": "8",
-            "Typhoon season": "Typhoon",
+            "Daytime temperature (°C)": "27",
+            "Nighttime temperature (°C)": "22",
+            "Precipitation (mm)": "263",
+            "UV Index": "5",
+            "Typhoon season": "",
             "Best month": "No"
         },
-        "current_temperature_2m": "30 °C",
+        "current_temperature_2m": "24 °C",
         "current_rain": "0 mm",
         "next_7_days_weather": {
             "date": [
@@ -1022,10 +460,10 @@
             ],
             "temperature_2m_max": [
                 "30 °C",
-                "29 °C",
-                "27 °C",
+                "28 °C",
+                "28 °C",
                 "26 °C",
-                "29 °C",
+                "28 °C",
                 "26 °C",
                 "25 °C"
             ],
@@ -1041,9 +479,9 @@
             "uv_index_max": [
                 "8",
                 "8",
-                "6",
-                "6",
+                "7",
                 "5",
+                "6",
                 "6",
                 "2"
             ],
@@ -1056,6 +494,7 @@
                 "2 mm",
                 "2 mm"
             ]
-        }
+        },
+        "month": 12
     }
 ]
