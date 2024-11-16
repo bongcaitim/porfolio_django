@@ -8,7 +8,7 @@ Welcome to **Portfolio Django**, a comprehensive Django-based application for ma
 Here are the key URLs for accessing different parts of the application:
 
 - **Homepage:** [http://127.0.0.1:8000/portfolio/pfl_app/homepage](http://127.0.0.1:8000/portfolio/pfl_app/homepage)  
-- **RAG (Random Activity Generator):** [http://127.0.0.1:8000/portfolio/pfl_app/rag](http://127.0.0.1:8000/portfolio/pfl_app/rag)  
+- **RAG** [http://127.0.0.1:8000/portfolio/pfl_app/rag](http://127.0.0.1:8000/portfolio/pfl_app/rag)  
 - **Results Page:** [http://127.0.0.1:8000/portfolio/pfl_app/results](http://127.0.0.1:8000/portfolio/pfl_app/results)  
 
 ---
