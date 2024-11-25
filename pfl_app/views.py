@@ -55,10 +55,11 @@ def member(request, member, func):
             # If needed, add uploaded_file_url to the context or handle it otherwise
         
         # Run the transform script after saving files
+        venv_path = os.path.join(os.getcwd(), 'portfolio_env', 'Scripts', 'activate.bat')
         transform_data_script = os.path.join(os.getcwd(), 'transform.py')
         try:
             print("Running transform.py script...")
-            subprocess.run(['python', transform_data_script], check=True)
+            subprocess.run(f'"{venv_path}" && python "{transform_data_script}"', shell=True, check=True)
         except subprocess.CalledProcessError as e:
             return render(request, 'pfl_app/error_template.html', {'error': f'Failed to run transform script: {str(e)}'})
 

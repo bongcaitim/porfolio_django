@@ -1,50 +1,41 @@
-{% extends 'pfl_app/base.html' %} 
-{% load static %} 
+{% extends 'pfl_app/base.html' %}
+{% load static %}
 {% block content %}
-<script>
-  function scrollToAbout() {
-    var aboutSection = document.getElementById("about");
-    aboutSection.scrollIntoView({ behavior: "smooth" });
-  }
 
-  function displaySelectedFiles(event) {
-    const fileList = document.getElementById("file-list");
-    fileList.innerHTML = ""; // Clear previous file list
-    const files = event.target.files; // Get the selected files
+<!-- Styles -->
+<style>
+.timer-display {
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  color: #666;
+}
+</style>
 
-    for (let i = 0; i < files.length; i++) {
-      const listItem = document.createElement("li");
-      listItem.textContent = files[i].name; // Display the file name
-      fileList.appendChild(listItem); // Append the file name to the list
-    }
-  }
-</script>
-
-
-
-<!-- file upload section -->
+<!-- File Upload Section -->
 <section class="section" id="file-upload-section" style="margin-top: 200px;">
   <div class="container text-center">
     <h6 class="section-title mb-5">Upload Your Files</h6>
-    <form id="file-upload-form" enctype="multipart/form-data" method="post" action="{% url 'pfl_app:member' member='pfl_app' func='rag' %}">
+    <form id="file-upload-form" enctype="multipart/form-data">
       {% csrf_token %}
       <input type="file" name="uploaded_file" class="form-control mb-3" required multiple onchange="displaySelectedFiles(event)">
-      <ul id="file-list" class="list-unstyled"></ul> <!-- List to display selected file names -->
+      <ul id="file-list" class="list-unstyled"></ul>
       <button type="submit" class="btn btn-primary">Upload</button>
+      <div id="timerDisplay" class="timer-display" style="display: none;">
+        Processing Time: <span id="seconds">0</span> seconds 
+        <span id="doneStatus" style="color: #28a745; font-weight: bold; display: none;">DONE</span>
+      </div>
     </form>
   </div>
 </section>
-<!-- end of file upload section -->
 
-
-<!-- Preference selection form -->
+<!-- Preferences Section -->
 <section class="section" id="preference-selection-section" style="margin-top: 50px;">
   <div class="container text-center">
     <h6 class="section-title mb-5">Select Your Preferences</h6>
     <form id="preferences-form" method="post" onsubmit="savePreferences(event)">
       {% csrf_token %}
       
-      <!-- Geographical Features -->
       <h5 class="mt-4 mb-4">Đặc điểm địa lý</h5>
       <div class="grid-layout">
         {% for feature in geographical_features %}
@@ -55,7 +46,6 @@
         {% endfor %}
       </div>
 
-      <!-- Tourist Activities -->
       <h5 class="mt-4 mb-4">Hoạt động du lịch</h5>
       <div class="grid-layout">
         {% for activity in tourist_activities %}
@@ -66,7 +56,6 @@
         {% endfor %}
       </div>
 
-      <!-- Tour Month -->
       <h5 class="mt-4 mb-4">Tháng du lịch</h5>
       <div class="form-row mt-4">
         <div class="form-group" style="width: 100%; text-align: start;">
@@ -77,49 +66,15 @@
             {% endfor %}
           </select>
         </div>
-
-        <button type="submit" class="btn btn-primary mt-4 submit-button">Submit Preferences</button>
+        <button type="submit" class="btn btn-primary mt-4">Submit Preferences</button>
+        <div id="preferences-timer" class="mt-2 text-muted" style="display: none;">
+          Matching & calling weather APIs: <span id="preferences-seconds">0</span> seconds
+          <span id="preferences-done" style="color: #28a745; font-weight: bold; display: none;">DONE</span>
+        </div>
       </div>
     </form>
-    <p id="preference-status" class="mt-3"></p> <!-- Message display area -->
   </div>
 </section>
-
-<script>
-  function savePreferences(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    const form = document.getElementById('preferences-form');
-    const formData = new FormData(form); // Gather the form data
-    const statusDisplay = document.getElementById('preference-status');
-
-    fetch("{% url 'pfl_app:save_preferences_and_run_script' %}", {
-      method: "POST",
-      headers: {
-        'X-CSRFToken': '{{ csrf_token }}', // CSRF token for security
-      },
-      body: formData,
-    })
-    .then(response => {
-      if (response.redirected) {
-        window.location.href = response.url; // Redirect to results page if successful
-      } else {
-        return response.json();
-      }
-    })
-    .then(data => {
-      if (data && data.status === 'error') {
-        document.getElementById('preference-status').textContent = data.message;
-        document.getElementById('preference-status').style.color = 'red';
-      }
-    })
-    .catch(error => {
-      document.getElementById('preference-status').textContent = 'An error occurred.';
-      document.getElementById('preference-status').style.color = 'red';
-      console.error('Error:', error);
-    });
-  }
-</script>
 
 <!-- Contact Section -->
 <section class="section" id="contact">
@@ -127,22 +82,13 @@
     <p class="section-subtitle en">How can you communicate?</p>
     <h6 class="section-title mb-5 en">Contact Me</h6>
     <h6 class="section-title mb-5 vi hidden">Liên hệ</h6>
-    <!-- Contact form -->
     <div class="contact-card en">
-      <p class="font-weight-normal">
-        Email: <strong>vuonghoang.workspace@gmail.com</strong>
-      </p>
-      <p class="font-weight-normal">
-        Phone: <strong>0977-829-788</strong>
-      </p>
+      <p class="font-weight-normal">Email: <strong>vuonghoang.workspace@gmail.com</strong></p>
+      <p class="font-weight-normal">Phone: <strong>0977-829-788</strong></p>
     </div>
     <div class="contact-card vi hidden">
-      <p class="font-weight-normal">
-        Email: <strong>vuonghoang.workspace@gmail.com</strong>
-      </p>
-      <p class="font-weight-normal">
-        Số điện thoại: <strong>0977-829-788</strong>
-      </p>
+      <p class="font-weight-normal">Email: <strong>vuonghoang.workspace@gmail.com</strong></p>
+      <p class="font-weight-normal">Số điện thoại: <strong>0977-829-788</strong></p>
     </div>
   </div>
 </section>
@@ -150,9 +96,136 @@
 <!-- Go Up Button -->
 <div class="btn__go-up text-primary text-center" onclick="topFunction()" id="btn-back-to-top">
   <a href="#">
-    <img src='{% static "pfl_app/assets/imgs/homepage/gingerbread.png" %}' alt="" width="80px"> 
+    <img src='{% static "pfl_app/assets/imgs/homepage/gingerbread.png" %}' alt="" width="80px">
     <p class="d-block border rounded-4 p-0 m-0" id="btn__text">Go up!</p>
   </a>
 </div>
 
+<!-- Scripts -->
+<script>
+function scrollToAbout() {
+  document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+}
+
+function topFunction() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+let timerInterval;
+let seconds = 0;
+
+function startTimer() {
+  seconds = 0;
+  document.getElementById('seconds').textContent = seconds;
+  document.getElementById('timerDisplay').style.display = 'block';
+  document.getElementById('doneStatus').style.display = 'none';
+  
+  timerInterval = setInterval(function() {
+    seconds++;
+    document.getElementById('seconds').textContent = seconds;
+  }, 1000);
+}
+
+function stopTimer() {
+  if (timerInterval) {
+    clearInterval(timerInterval);
+    document.getElementById('doneStatus').style.display = 'block';
+  }
+}
+
+function displaySelectedFiles(event) {
+  const fileList = document.getElementById('file-list');
+  fileList.innerHTML = '';
+  
+  for (let file of event.target.files) {
+    const li = document.createElement('li');
+    li.textContent = file.name;
+    fileList.appendChild(li);
+  }
+}
+
+document.getElementById('file-upload-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  startTimer();
+  
+  const formData = new FormData(this);
+  
+  fetch("{% url 'pfl_app:member' member='pfl_app' func='rag' %}", {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+    }
+  })
+  .then(response => response.ok ? response.json() : Promise.reject('Network response was not ok'))
+  .then(data => {
+    stopTimer();
+    if (data.redirect) window.location.href = data.redirect;
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    stopTimer();
+  });
+});
+
+let preferencesTimerInterval;
+
+function startPreferencesTimer() {
+  document.getElementById('preferences-timer').style.display = 'block';
+  document.getElementById('preferences-seconds').textContent = '0';
+  document.getElementById('preferences-done').style.display = 'none';
+  
+  let seconds = 0;
+  preferencesTimerInterval = setInterval(function() {
+    seconds++;
+    document.getElementById('preferences-seconds').textContent = seconds;
+  }, 1000);
+}
+
+function stopPreferencesTimer() {
+  if (preferencesTimerInterval) {
+    clearInterval(preferencesTimerInterval);
+    document.getElementById('preferences-done').style.display = 'block';
+  }
+}
+
+function savePreferences(event) {
+  event.preventDefault();
+  startPreferencesTimer();
+
+  const form = document.getElementById('preferences-form');
+  const formData = new FormData(form);
+
+  fetch("{% url 'pfl_app:save_preferences_and_run_script' %}", {
+    method: "POST",
+    headers: { 'X-CSRFToken': '{{ csrf_token }}' },
+    body: formData,
+  })
+  .then(response => {
+    if (response.redirected) {
+      stopPreferencesTimer();
+      window.location.href = response.url;
+      return;
+    }
+    return response.json();
+  })
+  .then(data => {
+    stopPreferencesTimer();
+    if (data?.status === 'error') {
+      document.getElementById('preference-status').textContent = data.message;
+    }
+  })
+  .catch(error => {
+    stopPreferencesTimer();
+    console.error('Error:', error);
+  });
+}
+
+window.addEventListener('beforeunload', () => {
+  stopTimer();
+  stopPreferencesTimer();
+});
+</script>
+
 {% endblock %}
+

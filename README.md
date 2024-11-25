@@ -9,7 +9,7 @@ Here are the key URLs for accessing different parts of the application:
 
 - **Homepage:** [http://127.0.0.1:8000/portfolio/pfl_app/homepage](http://127.0.0.1:8000/portfolio/pfl_app/homepage)  
 - **RAG:** [http://127.0.0.1:8000/portfolio/pfl_app/rag](http://127.0.0.1:8000/portfolio/pfl_app/rag)  
-- **Results Page:** [http://127.0.0.1:8000/portfolio/pfl_app/results](http://127.0.0.1:8000/portfolio/pfl_app/results)  
+- **Results Page:** [http://127.0.0.1:8000/portfolio/results](http://127.0.0.1:8000/portfolio/pfl_app/results)  
 
 ---
 
@@ -20,13 +20,13 @@ Follow the steps below to activate the environment and start the server.
 ### **1. Activate the Virtual Environment**
 In the terminal, navigate to the project folder and activate the virtual environment:
 ```bash
-E:\data_science\portfolio>portfolio_env\Scripts\activate
+portfolio_env\Scripts\activate
 ```
 
 ### **2. Start the Server**
 Run the Django development server:
 ```bash
-(portfolio_env) E:\data_science\portfolio>python manage.py runserver
+python manage.py runserver
 ```
 
 Once the server is running, you can access the application in your browser using the URLs listed above.

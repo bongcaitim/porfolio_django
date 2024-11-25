@@ -124,6 +124,7 @@
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 1rem;
         width: 100%;
+        font-size: 14px;
     }
 
         .weather-day {
@@ -152,7 +153,6 @@
 
         .weather-day .uv,
         .weather-day .rain {
-            font-size: 0.875rem;
             margin-top: 0.25rem;
     }
 
@@ -203,13 +203,13 @@
                         
                         
                         <!-- Climate Information -->
-                        <h6>Thời tiết của tháng</h6>
+                        <h6>Thời tiết tháng {{ city.month }}</h6>
                         <div class="row g-0 p-3">
                             <div class="col">
-                                <p class="m-0 p-0">🌞🌡️: {{ city.formatted_climate_data.daytime_temp }} °C</p>
+                                <p class="m-0 p-0">🌞: {{ city.formatted_climate_data.daytime_temp }} °C</p>
                             </div>
                             <div class="col">
-                                <p class="m-0 p-0">🌚🌡️: {{ city.formatted_climate_data.nighttime_temp }} °C</p>
+                                <p class="m-0 p-0">🌚: {{ city.formatted_climate_data.nighttime_temp }} °C</p>
                             </div>
                             <div class="col">
                                 <p class="m-0 p-0">🌧️: {{ city.formatted_climate_data.precipitation }} mm</p>
@@ -240,7 +240,7 @@
                                     </div>
                                     <div class="weather-icon">
                                         {% with temp=city.next_7_days_weather.temperature_2m_max|slice:i|last %}
-                                            ☀️
+                                            🌡️
                                         {% endwith %}
                                     </div>
                                     <div class="temp-max text-danger">
@@ -249,10 +249,10 @@
                                     <div class="temp-min text-primary">
                                         ↓ {{ city.next_7_days_weather.temperature_2m_min|slice:i|last }}
                                     </div>
-                                    <div class="uv small mt-1">
+                                    <div class="uv mt-1">
                                         😎 UV: {{ city.next_7_days_weather.uv_index_max|slice:i|last }}
                                     </div>
-                                    <div class="rain small mt-1">
+                                    <div class="rain mt-1">
                                         🌧️ {{ city.next_7_days_weather.precipitation_sum|slice:i|last }}
                                     </div>
                                 </div>

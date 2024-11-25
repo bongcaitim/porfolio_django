@@ -68,18 +68,21 @@ media_dir = r"pfl_app\media"
 pdf_path = os.path.join(media_dir, r"province_descriptions.pdf")
 txt_output_path = os.path.join(static_asset, r"province_descriptions.txt")
 
-# Extract text from the PDF and save it to a .txt file
-with pdfplumber.open(pdf_path) as pdf:
-    with open(txt_output_path, 'w', encoding='utf-8') as txt_file:
-        for page in pdf.pages:
-            text = page.extract_text()
-            if text:  # Check if the page has text
-                txt_file.write(text + '\n\n')  # Add a newline between pages
+# # Extract text from the PDF and save it to a .txt file
+# print("Processing the PDF files....")
+# with pdfplumber.open(pdf_path) as pdf:
+#     with open(txt_output_path, 'w', encoding='utf-8') as txt_file:
+#         for page in pdf.pages:
+#             text = page.extract_text()
+#             if text:  # Check if the page has text
+#                 txt_file.write(text + '\n\n')  # Add a newline between pages
 
 print(f"Text extracted and saved to {txt_output_path}")
 import re
 import pandas as pd
 import os
+
+
 
 # Read the content of the text file
 txt_output_path = r"pfl_app\static\pfl_app\assets\province_descriptions.txt"
@@ -97,19 +100,32 @@ city_descriptions = {}
 for i, (city, start_pos) in enumerate(matches):
     # Define the start and end positions for each description
     end_pos = matches[i + 1][1] if i + 1 < len(matches) else len(text)
-    description = text[start_pos:end_pos].split('\n', 1)[1].strip()  # Split at the first newline and remove extra spaces
+    description = text[start_pos:end_pos].split('\n', 1)[1].strip()
     
     # Clean line breaks within the description
-    description = re.sub(r'\n(?!\n)', ' ', description)  # Replace single newlines with a space if not followed by another newline
-    description = re.sub(r' +', ' ', description)  # Replace multiple spaces with a single space
-
+    description = re.sub(r'\n(?!\n)', ' ', description)  # Replace single newlines with space
+    description = re.sub(r' +', ' ', description)  # Replace multiple spaces with single space
+    
+    # Add newline before sentences ending with colon followed by a dash or special character
+    description = re.sub(r'([^.\n]*)(:)(?=\s*[-\W])', r'\n\n\1\2', description)
+    
     # Insert a newline before dashes that are followed by a capital letter to denote a bullet point
     description = re.sub(r' - (?=[A-Z])', r'\n- ', description)
+    
+    # Clean up any multiple consecutive newlines that might have been created
+    description = re.sub(r'\n{3,}', '\n\n', description)  # Replace 3 or more newlines with 2
+    description = re.sub(r'\n\n- ', '\n- ', description)  # Remove extra newline before bullet points
+    
+    # Remove newline characters at the beginning of the text
+    description = re.sub(r'^\n+', '', description)
 
+    
     print(city)
     print(f"{description[:20]}...{description[-20:]}")
     print()
     city_descriptions[city] = description
+
+
 
 # Create a DataFrame
 df = pd.DataFrame({

@@ -150,6 +150,20 @@ def get_current_and_next_7_days_weather(city_name):
 
     return daily_dataframe, current_temperature_2m, current_rain, daily_data
 
+month_to_number = {
+    "January": 1,
+    "February": 2,
+    "March": 3,
+    "April": 4,
+    "May": 5,
+    "June": 6,
+    "July": 7,
+    "August": 8,
+    "September": 9,
+    "October": 10,
+    "November": 11,
+    "December": 12
+}
 
 
 # Prepare list for matched results
@@ -179,7 +193,8 @@ for city in matching_cities:
             "climate_data": climate_data_for_city,
             "current_temperature_2m": current_temperature_2m,
             "current_rain": current_rain,
-            "next_7_days_weather": daily_data
+            "next_7_days_weather": daily_data,
+            "month": month_to_number[preferred_month]
         })
 
 # Save the matched result as a JSON file
