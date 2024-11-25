@@ -1,13 +1,13 @@
 [
     {
-        "city": "Quảng Nam",
+        "city": "Đà Nẵng",
         "geo_features": {
             "Núi đồi": "1",
-            "Rừng": "1",
+            "Rừng": "0",
             "Bãi biển": "1",
             "Thành phố": "1",
-            "Làng mạc": "1",
-            "Hang động": "1",
+            "Làng mạc": "0",
+            "Hang động": "0",
             "Suối": "1"
         },
         "tourist_activities": {
@@ -17,17 +17,17 @@
             "Hoạt động dưới nước": 1,
             "Trải nghiệm ẩm thực": 1,
             "Lễ hội": 0,
-            "Thư giãn & chăm sóc sức khỏe": 1,
-            "Cuộc sống về đêm": 0,
+            "Thư giãn & chăm sóc sức khỏe": 0,
+            "Cuộc sống về đêm": 1,
             "Thiên nhiên & động vật hoang dã": 1,
             "Mua sắm": 1
         },
-        "description": "Có nhiều phương tiện để đến Quảng Nam, bao gồm: - Đường hàng không: Sân bay Đà Nẵng hoặc Chu Lai - Đường sắt: Các đôi tàu Thống Nhất từ Hà Nội và TP HCM - Đường bộ: Xe khách, xe buýt, taxi, xe dịch vụ - Đường biển: Cảng Trường Hải ở khu kinh tế mở Chu Lai, tàu cao tốc từ biển Cửa Đại đến Cù Lao Chàm Giá vé và thời gian di chuyển tùy thuộc vào phương tiện và tuyến đường. Quảng Nam là địa phương phát triển mạnh về du lịch với nhiều lựa chọn lưu trú. Các resort ven biển như Four Seasons Resort The Nam Hai và Victoria Hoi An Beach Resort & Spa có giá từ 1-100 triệu đồng một đêm. Khách sạn và homestay ở Hội An và Tam Kỳ có giá từ 300.000-1,2 triệu đồng một đêm. Hội An là một trong hai Di sản văn hoá thế giới của tỉnh Quảng Nam, nổi tiếng với giá trị văn hoá và kiến trúc cổ.\n\n Ngoài ra, có nhiều điểm du lịch khác như:\n- Rừng dừa Bảy Mẫu: khu du lịch sinh thái nổi tiếng với rừng dừa xanh và các hoạt động như múa thúng, đua thuyền.\n- Thánh địa Mỹ Sơn: thánh địa Ấn Độ giáo của Vương quốc Chăm Pa xưa, với 70 công trình đền tháp được chia thành nhiều cụm.\n- Cù Lao Chàm: đảo bảo tồn hệ sinh thái biển với 950 loài thủy sinh, nơi du khách có thể khám phá, đi câu cá, lặn ngắm san hô.\n- Làng bích họa Tam Thanh: làng có khoảng 30 bức tranh sắc màu rực rỡ phủ trên những bức tường cũ.\n- Bãi biển Cửa Đại: bãi biển đẹp với nước xanh trong, cát trắng, thoai thoải, thích hợp\n để tắm.\n- Hồ Phú Ninh: địa điểm du lịch sinh thái nổi bật với khí hậu mát mẻ, rừng nguyên sinh và hơn 20 đảo lớn.\n- Tượng đài mẹ Thứ: tượng đài tưởng niệm Mẹ Việt Nam Anh hùng Nguyễn Thị Thứ, nơi có quy mô lớn nhất Đông Nam Á.\n- Làng gốm Thanh Hà: nơi bạn có thể ngắm nhìn những sản phẩm gốm mỹ nghệ tinh xảo được làm từ bàn tay của những nghệ nhân xứ Thanh Hà.\n\n Ẩm thực Quảng Nam nổi tiếng với các món ăn đặc trưng như:\n- Bê thui: Món ăn phổ biến ở miền Trung, được làm từ bê 4-5 tháng tuổi, thui trên than lửa và ăn kèm với mắm nêm, rau sống và bánh tráng cuốn.\n- Mì Quảng: Món ăn có nguồn gốc từ Quảng Nam, được làm từ bột gạo xay mịn, tráng thành từng lớp, và ăn kèm với rau sống, thịt lợn, tôm, thịt gà và nước dùng.\n- Cao lầu: Món ăn đặc sản của Hội An, được làm từ sợi mì vàng, dùng cùng tôm, thịt lợn, rau sống và nước dùng.\n- Cơm gà: Món ăn phổ biến ở Tam Kỳ và Hội An, được làm từ cơm dẻo, thơm, thịt gà chắc, ngậy, lòng gà đậm vị và đu đủ bào giòn.\n- Các món phổ biến khác như bánh tráng cuốn thịt heo, bánh canh, bánh mì, bánh bột lọc và nem nướng.",
+        "description": "Đà Nẵng có hai mùa rõ rệt: mùa khô từ tháng 1 đến tháng 7 và mùa mưa từ tháng 8 đến tháng 12. Thời điểm đẹp nhất để du lịch Đà Nẵng là từ đầu tháng 4 đến giữa\n tháng 9, khi có tiết trời mát mẻ và giá cả dịch vụ bình ổn. Du khách đến Đà Nẵng có thể di chuyển bằng máy bay, tàu hỏa hoặc tự lái ôtô. Giá vé máy bay từ 1,3-3 triệu đồng, tàu hỏa từ 600.000-1,1 triệu đồng. Tự lái ôtô cần ít nhất một tuần và hai tài xế thay phiên cầm lái. Du lịch tại Đà Nẵng phát triển nhanh chóng với nhiều lựa chọn lưu trú như khách sạn, homestay, căn hộ và phòng tập thể. Giá phòng dao động từ 500.000 đồng đến 10.000.000 đồng một đêm. Các resort và khách sạn 5 sao nổi tiếng ở Đà Nẵng bao gồm InterContinental và Hyatt Regency. Địa điểm đẹp ngoài thành phố Đà Nẵng bao gồm bán đảo Sơn Trà, núi Ngũ Hành Sơn, rạn Nam Ô, đèo Hải Vân. Bán đảo Sơn Trà có cánh rừng nguyên sinh rộng lớn và nhiều bãi tắm đẹp như Tiên Sa, Đá Đen, bãi Bụt. Du khách có thể tham gia nhiều hoạt động hấp dẫn như lặn biển ngắm san hô, câu cá cùng ngư dân, chiêm ngưỡng thành phố từ trực thăng, trên đỉnh Bàn Cờ. Nơi đây cũng là nơi sinh sống của hàng trăm loài động vật, trong đó có voọc chà vá chân nâu được mệnh danh là \"nữ hoàng linh trưởng\" trên bán đảo Sơn Trà. Ngũ Hành Sơn là nơi có nhiều ngôi chùa linh thiêng cùng hệ thống các hang động tự nhiên. Đèo Hải Vân cách trung tâm Đà Nẵng khoảng một giờ chạy xe máy, với chiều dài 21 km và đỉnh cao nhất là 496 m so với mực nước biển. Rạn đá Nam Ô là nơi cư dân đông đúc, chủ yếu hành nghề ngư lưới cụ và nổi tiếng với nghề làm pháo và nước mắm truyền thống. Đà Nẵng cũng có nhiều điểm tham quan hấp dẫn như cầu Rồng, cầu quay sông Hàn, cầu Trần Thị Lý, cầu tình yêu, tượng cá chép hóa rồng, Cung Văn hóa Thiếu nhi Đà Nẵng, Bảo tàng Nghệ thuật Điêu khắc Chăm, Bảo tàng Mỹ thuật Đà Nẵng, Bảo tàng Phật giáo, Nhà thờ Tourane, Làng bích họa Đà Nẵng, chợ Cồn, chợ Hàn, chợ hải sản và các khu chợ đêm. Tất cả những điểm tham quan này đều mang đến cho du khách những trải nghiệm độc đáo và đáng nhớ.\n\n Trải nghiệm tại Đà Nẵng bao gồm:\n- Lên trực thăng ngắm cảnh thành phố và biển\n- Học lướt sóng và chèo SUP tại trường dạy lướt sóng Đà Nẵng\n- Thuyền du lịch sông Hàn để ngắm nhìn trung tâm thành phố về đêm - Ăn uống và xem cầu Rồng phun lửa\n- Khám phá thành phố Đà Nẵng về đêm với tiết trời mát mẻ và không quá ồn ào.\n\n Đặc sản Đà Nẵng bao gồm:\n- Mì Quảng: món ăn khô với đậu phộng rang, bánh tráng mè nướng, giá từ 15.000 - 40.000 đồng một tô.\n- Bánh tráng thịt heo: món ăn đơn giản với thịt heo, giá từ 50.000 - 200.000 đồng một suất.\n- Bê thui Cầu Mống: thịt bê tái, chín rõ, bì chín, giá từ 350.000 - 380.000 đồng một kg.\n- Gỏi cá Nam Ô: cá tươi ngọt thấm vị trong nước dùng cay, giá khoảng 80.000 đồng một suất.\n- Bánh xèo: món ăn bình dân với nước tương nóng, giá từ 20.000 - 100.000 đồng một phần.\n- Bún mắm: món ăn quen thuộc với người Đà Nẵng, giá từ 15.000 - 30.000 đồng mỗi tô.\n- Bún thịt nướng: món ăn dễ tìm, giá khoảng 15.000 – 30.000 đồng mỗi tô.\n- Mít trộn: món khoái khẩu của nhiều người, giá mỗi đĩa khoảng 20.000 đồng.\n\n - Ốc hút: món ăn được chế biến theo nhiều vị, giá mỗi phần từ 15.000 đến 30.000 đồng.\n- Sữa chua muối: món ăn vặt mềm, không quá béo, giá 1.000 đồng một hũ. Đà Nẵng có nhiều đặc sản nổi tiếng như tré ông Chánh, tré bà Đệ, bánh khô mè Cẩm Lệ, rong biển Mỹ Khê, nước mắm Nam Ô, hải sản tươi sống hoặc khô mực, khô cá. Những món này dễ tìm mua và đóng gói hành lý làm quà.",
         "climate_data": {
-            "Daytime temperature (°C)": "26",
-            "Nighttime temperature (°C)": "20",
-            "Precipitation (mm)": "104",
-            "UV Index": "5",
+            "Daytime temperature (°C)": "35",
+            "Nighttime temperature (°C)": "26",
+            "Precipitation (mm)": "48",
+            "UV Index": "9",
             "Typhoon season": "",
             "Best month": "No"
         },
@@ -35,51 +35,51 @@
         "current_rain": "0 mm",
         "next_7_days_weather": {
             "date": [
-                "2024-11-15",
-                "2024-11-16",
-                "2024-11-17",
-                "2024-11-18",
-                "2024-11-19",
-                "2024-11-20",
-                "2024-11-21"
+                "2024-11-24",
+                "2024-11-25",
+                "2024-11-26",
+                "2024-11-27",
+                "2024-11-28",
+                "2024-11-29",
+                "2024-11-30"
             ],
             "temperature_2m_max": [
-                "31 °C",
-                "29 °C",
                 "26 °C",
                 "25 °C",
-                "28 °C",
                 "25 °C",
-                "25 °C"
+                "24 °C",
+                "24 °C",
+                "25 °C",
+                "26 °C"
             ],
             "temperature_2m_min": [
+                "24 °C",
+                "24 °C",
                 "23 °C",
-                "22 °C",
-                "23 °C",
-                "23 °C",
-                "23 °C",
-                "23 °C",
-                "24 °C"
+                "21 °C",
+                "19 °C",
+                "17 °C",
+                "17 °C"
             ],
             "uv_index_max": [
-                "7",
-                "7",
-                "7",
+                "6",
+                "6",
+                "5",
                 "3",
-                "7",
                 "1",
-                "0"
+                "2",
+                "1"
             ],
             "precipitation_sum": [
-                "0 mm",
-                "0 mm",
-                "16 mm",
+                "13 mm",
+                "20 mm",
                 "13 mm",
                 "1 mm",
-                "12 mm",
-                "22 mm"
+                "0 mm",
+                "0 mm",
+                "0 mm"
             ]
         },
-        "month": 1
+        "month": 5
     }
 ]
