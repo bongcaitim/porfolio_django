@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6m+jclzzrjst_!%csfgkm8#b9@*-^nufbc96c!l485jf6)^z&=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['porfolio-django.fly.dev']
 
 
 # Application definition
