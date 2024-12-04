@@ -68,14 +68,14 @@ media_dir = r"pfl_app\media"
 pdf_path = os.path.join(media_dir, r"province_descriptions.pdf")
 txt_output_path = os.path.join(static_asset, r"province_descriptions.txt")
 
-# # Extract text from the PDF and save it to a .txt file
-# print("Processing the PDF files....")
-# with pdfplumber.open(pdf_path) as pdf:
-#     with open(txt_output_path, 'w', encoding='utf-8') as txt_file:
-#         for page in pdf.pages:
-#             text = page.extract_text()
-#             if text:  # Check if the page has text
-#                 txt_file.write(text + '\n\n')  # Add a newline between pages
+# Extract text from the PDF and save it to a .txt file
+print("Processing the PDF files....")
+with pdfplumber.open(pdf_path) as pdf:
+    with open(txt_output_path, 'w', encoding='utf-8') as txt_file:
+        for page in pdf.pages:
+            text = page.extract_text()
+            if text:  # Check if the page has text
+                txt_file.write(text + '\n\n')  # Add a newline between pages
 
 print(f"Text extracted and saved to {txt_output_path}")
 import re

@@ -1,1 +1,3 @@
-ECHO is on.
+portfolio_env/
+pfl_app/__pycache__/
+pfl_project/__pycache__/
