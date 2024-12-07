@@ -84,12 +84,12 @@ WSGI_APPLICATION = 'pfl_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',  # Use MySQL engine
-        'NAME': 'city-matches',          # Replace with your database name
-        'USER': 'city-matches',                        # Your database user (root)
-        'PASSWORD': '1711',                    # Your database password
-        'HOST': '23.236.62.5',                 # Public IP of your MySQL instance
-        'PORT': '3306',                        # Default MySQL port
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'city-matches',          
+        'USER': 'city-matches',                
+        'PASSWORD': '1711',                 
+        'HOST': '23.236.62.5',           
+        'PORT': '3306',                    
     }
 }
 
