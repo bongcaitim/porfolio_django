@@ -15,12 +15,12 @@
 <!-- File Upload Section -->
 <section class="section" id="file-upload-section" style="margin-top: 200px;">
   <div class="container text-center">
-    <h6 class="section-title mb-5">Upload Your Files</h6>
+    <h6 class="section-title mb-5">Tải dữ liệu của bạn</h6>
     <form id="file-upload-form" enctype="multipart/form-data">
       {% csrf_token %}
       <input type="file" name="uploaded_file" class="form-control mb-3" required multiple onchange="displaySelectedFiles(event)">
       <ul id="file-list" class="list-unstyled"></ul>
-      <button type="submit" class="btn btn-primary">Upload</button>
+      <button type="submit" class="btn btn-primary">Tải lên</button>
       <div id="timerDisplay" class="timer-display" style="display: none;">
         Processing Time: <span id="seconds">0</span> seconds 
         <span id="doneStatus" style="color: #28a745; font-weight: bold; display: none;">DONE</span>
@@ -32,11 +32,13 @@
 <!-- Preferences Section -->
 <section class="section" id="preference-selection-section" style="margin-top: 50px;">
   <div class="container text-center">
-    <h6 class="section-title mb-5">Select Your Preferences</h6>
+    <h6 class="section-title mb-5 en hidden">Select Your Preferences</h6>
+    <h6 class="section-title mb-5 vi">Sở thích du lịch của bạn</h6>
     <form id="preferences-form" method="post" onsubmit="savePreferences(event)">
       {% csrf_token %}
       
-      <h5 class="mt-4 mb-4">Đặc điểm địa lý</h5>
+      <h5 class="mt-4 mb-4 vi">Đặc điểm địa lý</h5>
+      <h5 class="mt-4 mb-4 en hidden">Geographical features</h5>
       <div class="grid-layout">
         {% for feature in geographical_features %}
           <div class="form-check custom-checkbox">
@@ -46,7 +48,8 @@
         {% endfor %}
       </div>
 
-      <h5 class="mt-4 mb-4">Hoạt động du lịch</h5>
+      <h5 class="mt-4 mb-4 vi++">Hoạt động du lịch</h5>
+      <h5 class="mt-4 mb-4 en hidden">Tourist activities</h5>
       <div class="grid-layout">
         {% for activity in tourist_activities %}
           <div class="form-check custom-checkbox">
@@ -60,16 +63,16 @@
       <div class="form-row mt-4">
         <div class="form-group" style="width: 100%; text-align: start;">
           <select class="form-select custom-select" name="tour_month" required>
-            <option value="">Select Month</option>
+            <option value="">Chọn tháng</option>
             {% for month in months %}
               <option value="{{ month }}">{{ month }}</option>
             {% endfor %}
           </select>
         </div>
-        <button type="submit" class="btn btn-primary mt-4">Submit Preferences</button>
+        <button type="submit" class="btn btn-primary mt-4">Xem kết quả</button>
         <div id="preferences-timer" class="mt-2 text-muted" style="display: none;">
-          Matching & calling weather APIs: <span id="preferences-seconds">0</span> seconds
-          <span id="preferences-done" style="color: #28a745; font-weight: bold; display: none;">DONE</span>
+          Khớp các thành phố và gọi API: <span id="preferences-seconds">0</span> giây
+          <span id="preferences-done" style="color: #28a745; font-weight: bold; display: none;">HOÀN THÀNH</span>
         </div>
       </div>
     </form>
@@ -77,7 +80,25 @@
 </section>
 
 <!-- Looker Report -->
-<iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/4fdb224c-88d1-47f3-9673-e803b736c8b7/page/xTuXE" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+<section class="section" id="looker-report-section" style="margin-top: 50px; margin-bottom: 50px;">
+  <div class="container text-center">
+    <h6 class="section-title mb-5 vi">Thống kê Đặc điểm du lịch</h6>
+    <h6 class="section-title mb-5 en hidden">Tourism Characteristics Overview</h6>
+  </div>
+  
+  <div class="container d-flex justify-content-center">
+    <iframe
+      class="report-frame"
+      width="880"
+      height="660"
+      src="https://lookerstudio.google.com/embed/reporting/4fdb224c-88d1-47f3-9673-e803b736c8b7/page/xTuXE"
+      frameborder="0"
+      style="border: 2px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+      allowfullscreen
+      sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+    ></iframe>
+  </div>
+</section>
 
 <!-- Contact Section -->
 <section class="section" id="contact">

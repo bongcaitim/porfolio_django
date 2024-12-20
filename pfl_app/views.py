@@ -31,8 +31,8 @@ def member(request, member, func):
         "Thư giãn & chăm sóc sức khỏe", "Cuộc sống về đêm",
         "Thiên nhiên & động vật hoang dã", "Mua sắm"
     ]
-    months = ["January", "February", "March", "April", "May", "June", "July", 
-              "August", "September", "October", "November", "December"]
+    months = ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", 
+              "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"]
     
     # Context preparation
     context = {
@@ -134,11 +134,26 @@ def save_preferences_and_run_script(request):
         tourist_activities = request.POST.getlist('tourist_activities')
         tour_month = request.POST.get('tour_month')
 
+        vi_en_months = {
+            "Tháng 1": "January",
+            "Tháng 2": "February",
+            "Tháng 3": "March",
+            "Tháng 4": "April",
+            "Tháng 5": "May",
+            "Tháng 6": "June",
+            "Tháng 7": "July",
+            "Tháng 8": "August",
+            "Tháng 9": "September",
+            "Tháng 10": "October",
+            "Tháng 11": "November",
+            "Tháng 12": "December"
+        }
+
         # Save the preferences to the database
         UserPreference.objects.create(
             geographical_features=geographical_features,
             tourist_activities=tourist_activities,
-            tour_month=tour_month,
+            tour_month=vi_en_months[tour_month],
         )
 
         import subprocess

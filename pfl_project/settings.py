@@ -88,7 +88,8 @@ DATABASES = {
         'NAME': 'city-matches',          
         'USER': 'city-matches',                
         'PASSWORD': '1711',                 
-        'HOST': '23.236.62.5',           
+        'HOST': '23.236.62.5', # Regular host
+        # 'HOST': '127.0.0.1',       # Cloud SQL Proxy    
         'PORT': '3306',                    
     }
 }

@@ -1,0 +1,262 @@
+{% extends 'pfl_app/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Styles -->
+<style>
+.timer-display {
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  color: #666;
+}
+</style>
+
+<!-- File Upload Section -->
+<section class="section" id="file-upload-section" style="margin-top: 200px;">
+  <div class="container text-center">
+    <h6 class="section-title mb-5 en hidden">Upload Your Files</h6>
+    <h6 class="section-title mb-5 vi">Tải Files</h6>
+    <form id="file-upload-form" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="uploaded_file" class="form-control mb-3" required multiple onchange="displaySelectedFiles(event)">
+      <ul id="file-list" class="list-unstyled"></ul>
+      <button type="submit" class="btn btn-primary en hidden">Upload</button>
+      <button type="submit" class="btn btn-primary vi">Tải lên</button>
+      <div id="timerDisplay" class="timer-display" style="display: none;">
+        Processing Time: <span id="seconds">0</span> seconds 
+        <span id="doneStatus" style="color: #28a745; font-weight: bold; display: none;">DONE</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Preferences Section -->
+<section class="section" id="preference-selection-section" style="margin-top: 50px;">
+  <div class="container text-center">
+    <h6 class="section-title mb-5 en hidden">Select Your Preferences</h6>
+    <h6 class="section-title mb-5 vi">Sở thích của bạn</h6>
+    <form id="preferences-form" method="post" onsubmit="savePreferences(event)">
+      {% csrf_token %}
+      
+      <h5 class="mt-4 mb-4">Đặc điểm địa lý</h5>
+      <div class="grid-layout">
+        {% for feature in geographical_features %}
+          <div class="form-check custom-checkbox">
+            <input type="checkbox" class="form-check-input" name="geographical_features" value="{{ feature }}" id="feature{{ forloop.counter }}">
+            <label class="form-check-label" for="feature{{ forloop.counter }}">{{ feature }}</label>
+          </div>
+        {% endfor %}
+      </div>
+
+      <h5 class="mt-4 mb-4">Hoạt động du lịch</h5>
+      <div class="grid-layout">
+        {% for activity in tourist_activities %}
+          <div class="form-check custom-checkbox">
+            <input type="checkbox" class="form-check-input" name="tourist_activities" value="{{ activity }}" id="activity{{ forloop.counter }}">
+            <label class="form-check-label" for="activity{{ forloop.counter }}">{{ activity }}</label>
+          </div>
+        {% endfor %}
+      </div>
+
+      <h5 class="mt-4 mb-4">Tháng du lịch</h5>
+      <div class="form-row mt-4">
+        <div class="form-group" style="width: 100%; text-align: start;">
+          <select class="form-select custom-select en hidden" name="tour_month" required>
+            <option value="">Select Month</option>
+            {% for month in months %}
+              <option value="{{ month }}">{{ month }}</option>
+            {% endfor %}
+          </select>
+          <select class="form-select custom-select vi" name="tour_month" required>
+            <option value="">Chọn Tháng du lịch</option>
+            {% for month in months %}
+              <option value="{{ month }}">{{ month }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary mt-4 en hidden">Submit Preferences</button>
+        <button type="submit" class="btn btn-primary mt-4 vi">Xem kết quả</button>
+        <div id="preferences-timer" class="mt-2 text-muted" style="display: none;">
+          Matching & calling weather APIs: <span id="preferences-seconds">0</span> seconds
+          <span id="preferences-done" style="color: #28a745; font-weight: bold; display: none;">DONE</span>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Looker Report -->
+<section class="section" id="looker-report-section" style="margin-top: 50px; margin-bottom: 50px;">
+  <div class="container text-center">
+    <h6 class="section-title mb-5 en hidden">Tourism Characteristics Overview</h6>
+    <h6 class="section-title mb-5 vi">Thống kê Đặc điểm du lịch</h6>
+  </div>
+  
+  <div class="container d-flex justify-content-center">
+    <iframe
+      class="report-frame"
+      width="880"
+      height="660"
+      src="https://lookerstudio.google.com/embed/reporting/4fdb224c-88d1-47f3-9673-e803b736c8b7/page/xTuXE"
+      frameborder="0"
+      style="border: 2px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+      allowfullscreen
+      sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+    ></iframe>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section" id="contact">
+  <div class="container text-center">
+    <p class="section-subtitle en hidden">How can you communicate?</p>
+    <h6 class="section-title mb-5 en hidden">Contact Me</h6>
+    <h6 class="section-title mb-5 vi">Liên hệ</h6>
+    <div class="contact-card en hidden">
+      <p class="font-weight-normal">Email: <strong>vuonghoang.workspace@gmail.com</strong></p>
+      <p class="font-weight-normal">Phone: <strong>0977-829-788</strong></p>
+    </div>
+    <div class="contact-card vi">
+      <p class="font-weight-normal">Email: <strong>vuonghoang.workspace@gmail.com</strong></p>
+      <p class="font-weight-normal">Số điện thoại: <strong>0977-829-788</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- Go Up Button -->
+<div class="btn__go-up text-primary text-center" onclick="topFunction()" id="btn-back-to-top">
+  <a href="#">
+    <img src='{% static "pfl_app/assets/imgs/homepage/gingerbread.png" %}' alt="" width="80px">
+    <p class="d-block border rounded-4 p-0 m-0" id="btn__text">Go up!</p>
+  </a>
+</div>
+
+<!-- Scripts -->
+<script>
+function scrollToAbout() {
+  document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+}
+
+function topFunction() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+let timerInterval;
+let seconds = 0;
+
+function startTimer() {
+  seconds = 0;
+  document.getElementById('seconds').textContent = seconds;
+  document.getElementById('timerDisplay').style.display = 'block';
+  document.getElementById('doneStatus').style.display = 'none';
+  
+  timerInterval = setInterval(function() {
+    seconds++;
+    document.getElementById('seconds').textContent = seconds;
+  }, 1000);
+}
+
+function stopTimer() {
+  if (timerInterval) {
+    clearInterval(timerInterval);
+    document.getElementById('doneStatus').style.display = 'block';
+  }
+}
+
+function displaySelectedFiles(event) {
+  const fileList = document.getElementById('file-list');
+  fileList.innerHTML = '';
+  
+  for (let file of event.target.files) {
+    const li = document.createElement('li');
+    li.textContent = file.name;
+    fileList.appendChild(li);
+  }
+}
+
+document.getElementById('file-upload-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  startTimer();
+  
+  const formData = new FormData(this);
+  
+  fetch("{% url 'pfl_app:member' member='pfl_app' func='rag' %}", {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+    }
+  })
+  .then(response => response.ok ? response.json() : Promise.reject('Network response was not ok'))
+  .then(data => {
+    stopTimer();
+    if (data.redirect) window.location.href = data.redirect;
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    stopTimer();
+  });
+});
+
+let preferencesTimerInterval;
+
+function startPreferencesTimer() {
+  document.getElementById('preferences-timer').style.display = 'block';
+  document.getElementById('preferences-seconds').textContent = '0';
+  document.getElementById('preferences-done').style.display = 'none';
+  
+  let seconds = 0;
+  preferencesTimerInterval = setInterval(function() {
+    seconds++;
+    document.getElementById('preferences-seconds').textContent = seconds;
+  }, 1000);
+}
+
+function stopPreferencesTimer() {
+  if (preferencesTimerInterval) {
+    clearInterval(preferencesTimerInterval);
+    document.getElementById('preferences-done').style.display = 'block';
+  }
+}
+
+function savePreferences(event) {
+  event.preventDefault();
+  startPreferencesTimer();
+
+  const form = document.getElementById('preferences-form');
+  const formData = new FormData(form);
+
+  fetch("{% url 'pfl_app:save_preferences_and_run_script' %}", {
+    method: "POST",
+    headers: { 'X-CSRFToken': '{{ csrf_token }}' },
+    body: formData,
+  })
+  .then(response => {
+    if (response.redirected) {
+      stopPreferencesTimer();
+      window.location.href = response.url;
+      return;
+    }
+    return response.json();
+  })
+  .then(data => {
+    stopPreferencesTimer();
+    if (data?.status === 'error') {
+      document.getElementById('preference-status').textContent = data.message;
+    }
+  })
+  .catch(error => {
+    stopPreferencesTimer();
+    console.error('Error:', error);
+  });
+}
+
+window.addEventListener('beforeunload', () => {
+  stopTimer();
+  stopPreferencesTimer();
+});
+</script>
+
+{% endblock %}
+

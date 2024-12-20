@@ -15,6 +15,12 @@ Here are the key URLs for accessing different parts of the application:
 
 ## **How to Run the Project**
 
+Start the Cloud SQL Auth Proxy:
+```bash
+cloud-sql-proxy.exe nice-lodge-443310-b1:us-central1:city-matches ^
+    --credentials-file="C:\cloud_sql_proxy\application_default_credentials.json"
+```
+
 Follow the steps below to activate the environment and start the server.
 
 ### **1. Activate the Virtual Environment**
