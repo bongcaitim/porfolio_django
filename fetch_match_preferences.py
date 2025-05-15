@@ -107,19 +107,19 @@ def get_current_and_next_7_days_weather(city_name):
 
     # Process first location. Add a for-loop for multiple locations or weather models
     response = responses[0]
-    print(f"Coordinates {response.Latitude()}°N {response.Longitude()}°E")
-    print(f"Elevation {response.Elevation()} m asl")
-    print(f"Timezone {response.Timezone()} {response.TimezoneAbbreviation()}")
-    print(f"Timezone difference to GMT+0 {response.UtcOffsetSeconds()} s")
+    # print(f"Coordinates {response.Latitude()}°N {response.Longitude()}°E")
+    # print(f"Elevation {response.Elevation()} m asl")
+    # print(f"Timezone {response.Timezone()} {response.TimezoneAbbreviation()}")
+    # print(f"Timezone difference to GMT+0 {response.UtcOffsetSeconds()} s")
 
     # Current values. The order of variables needs to be the same as requested.
     current = response.Current()
     current_temperature_2m = str(round(current.Variables(0).Value()))+' °C'
     current_rain = str(round(current.Variables(1).Value())) +' mm'
 
-    print(f"Current time {current.Time()}")
-    print(f"Current temperature_2m {current_temperature_2m}")
-    print(f"Current rain {current_rain}")
+    # print(f"Current time {current.Time()}")
+    # print(f"Current temperature_2m {current_temperature_2m}")
+    # print(f"Current rain {current_rain}")
 
     # Process daily data. The order of variables needs to be the same as requested.
     daily = response.Daily()
@@ -146,7 +146,8 @@ def get_current_and_next_7_days_weather(city_name):
     daily_dataframe = pd.DataFrame(data=daily_data)
 
     daily_dataframe = pd.DataFrame(data = daily_data)
-    print(daily_dataframe)
+    # print(daily_dataframe)
+    print('Finished getting current weather.')
 
     return daily_dataframe, current_temperature_2m, current_rain, daily_data
 
@@ -166,6 +167,13 @@ month_to_number = {
 }
 
 
+
+warning_promotion_file_path = os.path.join(static_asset, r"warning_promotion.json")
+with open(warning_promotion_file_path, 'r', encoding='utf-8') as f:
+    warning_promotion_data = json.load(f)
+
+weather_favorability_score_df = pd.read_excel(os.path.join(static_asset, r"weather_favorability_scores.xlsx"))
+
 # Prepare list for matched results
 matched_result = []
 
@@ -176,6 +184,12 @@ for city in matching_cities:
     geo_data_for_city = next((geo for geo in geo_data if geo["City"] == city), None)
     activities_data_for_city = next((activity for activity in activities_data if activity["City"] == city), None)
     province_description = province_data[province_data['Province Name'] == city]['Province Summary'].iloc[0] if not province_data[province_data['Province Name'] == city].empty else "Description not available"
+    # print(province_description[:50], '...', province_description[-50:])
+    warning_promotion = warning_promotion_data.get(city, {})
+
+    weather_favorability_score = weather_favorability_score_df[(weather_favorability_score_df['Province'] == city) & (weather_favorability_score_df['Month'] == preferred_month)]['weather_favorability_score'].iloc[0]
+    weather_favorability_score = float(weather_favorability_score)
+    print(f"{city}'s Weather favorability score during {preferred_month} is {weather_favorability_score}")
     
     # Create a single dictionary for climate data for the specified preferred month
     climate_data_for_city = {
@@ -194,12 +208,33 @@ for city in matching_cities:
             "current_temperature_2m": current_temperature_2m,
             "current_rain": current_rain,
             "next_7_days_weather": daily_data,
-            "month": month_to_number[preferred_month]
+            "month": month_to_number[preferred_month],
+            "warning_promotion": warning_promotion,
+            "weather_favorability_score": weather_favorability_score
         })
 
 # Save the matched result as a JSON file
 # output_file = r'E:\data_science\portfolio\pfl_app\media\matches\matched_city_data.json'
 output_file = os.path.join(static_asset, r"matched_city_data.json")
+
+# Sort matched_result by weather_favorability_score in descending order
+matched_result.sort(key=lambda x: float(x['weather_favorability_score']), reverse=True)
+
+# Print matched_result without weather-related fields
+print("\nMatched Results (excluding weather data):")
+for result in matched_result:
+    filtered_result = {
+        "city": result["city"],
+        "geo_features": result["geo_features"],
+        "tourist_activities": result["tourist_activities"],
+        "description": result["description"],
+        "climate_data": result["climate_data"],
+        "month": result["month"],
+        "warning_promotion": result["warning_promotion"],
+        "weather_favorability_score": result["weather_favorability_score"]
+    }
+    print(json.dumps(filtered_result, ensure_ascii=False, indent=2))
+    print("-" * 80)
 
 with open(output_file, 'w', encoding='utf-8') as f:
     json.dump(matched_result, f, ensure_ascii=False, indent=4)

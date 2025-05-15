@@ -1,0 +1,417 @@
+{
+    "Tượng Cá Chép Hóa Rồng": {
+        "og_short_plus_code": "367H+5W Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C367H+5W",
+        "coordinates": "16.062937,108.229813"
+    },
+    "Ngũ Hành Sơn": {
+        "og_short_plus_code": "2737+9R Ngũ Hành Sơn, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C2737+9R",
+        "coordinates": "16.003437,108.264562"
+    },
+    "Bảo tàng Điêu khắc Chăm Đà Nẵng": {
+        "og_short_plus_code": "366F+48 Hải Châu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C366F+48",
+        "coordinates": "16.060313,108.223312"
+    },
+    "Cầu Rồng": {
+        "og_short_plus_code": "366H+FVM, Đ. Nguyễn Văn Linh, Phước Ninh, Hải Châu, Đà Nẵng 550000, Việt Nam",
+        "full_plus_code": "7P8C3669+9R",
+        "coordinates": "16.060938,108.219562"
+    },
+    "Động Huyền Không": {
+        "og_short_plus_code": "2736+WM6, Hòn Thủy Sơn, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam",
+        "full_plus_code": "7P8C2737+39",
+        "coordinates": "16.002688,108.263437"
+    },
+    "Công viên Kỳ Quan": {
+        "og_short_plus_code": "36XF+GQ Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C36XF+GQ",
+        "coordinates": "16.098813,108.224437"
+    },
+    "Cầu đi bộ Nguyễn Văn Trỗi": {
+        "og_short_plus_code": "362H+CJ Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C362H+CJ",
+        "coordinates": "16.051063,108.229062"
+    },
+    "Biển Phước Mỹ": {
+        "og_short_plus_code": "36CW+4JQ, Võ Nguyên Giáp, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+        "full_plus_code": "7P8C369W+",
+        "coordinates": "16.068750,108.246250"
+    },
+    "DA NANG DOWNTOWN": {
+        "og_short_plus_code": "26RG+F7 Hải Châu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C26RG+F7",
+        "coordinates": "16.041187,108.225687"
+    },
+    "Phố đi bộ - chợ đêm Bạch Đằng Đà Nẵng": {
+        "og_short_plus_code": "364F+2C5, Bạch Đằng, Hòa Thuận Đông, Hải Châu, Đà Nẵng 550000, Việt Nam",
+        "full_plus_code": "7P8C366F+RG",
+        "coordinates": "16.062063,108.223813"
+    },
+    "Bạch đằng": {
+        "og_short_plus_code": "366F+HP Hải Châu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C366F+HP",
+        "coordinates": "16.061438,108.224312"
+    },
+    "Đỉnh Bàn Cờ": {
+        "og_short_plus_code": "479C+HQ Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C479C+HQ",
+        "coordinates": "16.118938,108.271938"
+    },
+    "Động Tàng Chơn": {
+        "og_short_plus_code": "2737+QP4, Hòn Thủy Sơn, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam",
+        "full_plus_code": "7P8C2737+39",
+        "coordinates": "16.002688,108.263437"
+    },
+    "Bến Du Thuyền Sông Hàn Đà Nẵng": {
+        "og_short_plus_code": "36HF+MP Hải Châu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C36HF+MP",
+        "coordinates": "16.079187,108.224312"
+    },
+    "DHC Marina": {
+        "og_short_plus_code": "367H+PW4, Đ. Trần Hưng Đạo, An Hải, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+        "full_plus_code": "7P8C369H+QH",
+        "coordinates": "16.069437,108.228938"
+    },
+    "Nhà Vọng Cảnh": {
+        "og_short_plus_code": "46PW+25 Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C46PW+25",
+        "coordinates": "16.135063,108.245438"
+    },
+    "Bãi Rêu Nam Ô": {
+        "og_short_plus_code": "449J+526, Nam Ô 1, Liên Chiểu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C449J+52",
+        "coordinates": "16.117938,108.130063"
+    },
+    "Tượng Mẹ Âu Cơ": {
+        "og_short_plus_code": "36CW+46 Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C36CW+46",
+        "coordinates": "16.070313,108.245563"
+    },
+    "Ghềnh Bàng": {
+        "og_short_plus_code": "4866+XM Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C4866+XM",
+        "coordinates": "16.112437,108.311688"
+    },
+    "Bãi Tắm Non Nước": {
+        "og_short_plus_code": "273C+42, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam",
+        "full_plus_code": "7P8C273C+42",
+        "coordinates": "16.002812,108.270062"
+    },
+    "Quốc Tự Tam Thai": {
+        "og_short_plus_code": "2736+GXP, Hòn Thủy Sơn, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam",
+        "full_plus_code": "7P8C2737+39",
+        "coordinates": "16.002688,108.263437"
+    },
+    "Di tích nhà ông Huỳnh Trưng": {
+        "og_short_plus_code": "26CV+863, Xóm Đồng, Khuê Mỹ, Ngũ Hành Sơn, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C26CR+PX",
+        "coordinates": "16.021813,108.242437"
+    },
+    "Bãi biển Sơn Trà": {
+        "og_short_plus_code": "37X4+M2 Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C37X4+M2",
+        "coordinates": "16.099187,108.255063"
+    },
+    "Nhà Cổ Tích Thiện Đường": {
+        "og_short_plus_code": "243G+M7 Hòa Vang, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C243G+M7",
+        "coordinates": "16.004188,108.125687"
+    },
+    "Khu Du lịch Sinh thái Suối Rạng": {
+        "og_short_plus_code": "474V+98J, Hoàng Sa, Thọ Quang, Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C473J+",
+        "coordinates": "16.103750,108.281250"
+    },
+    "Hóc Khế": {
+        "og_short_plus_code": "X3PX+XX2, Unnamed Road, Hoà Phong, Hòa Vang, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P7CX3PX+XX",
+        "coordinates": "15.987438,108.099937"
+    },
+    "Khu Dừng Chân": {
+        "og_short_plus_code": "2737+Q43, Hòn Thủy Sơn, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam",
+        "full_plus_code": "7P8C2737+39",
+        "coordinates": "16.002688,108.263437"
+    },
+    "East Asia Park": {
+        "og_short_plus_code": "369W+8CJ, Phước Mỹ, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+        "full_plus_code": "7P8C369W+8C",
+        "coordinates": "16.068312,108.246062"
+    },
+    "Bảo tàng 3D Art In Paradise": {
+        "og_short_plus_code": "36WV+56 Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C36WV+56",
+        "coordinates": "16.095438,108.243063"
+    },
+    "Bãi Nam": {
+        "og_short_plus_code": "473X+VJ5, Hoàng Sa, Thọ Quang, Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C473J+",
+        "coordinates": "16.103750,108.281250"
+    },
+    "Hải đăng Tiên Sa": {
+        "og_short_plus_code": "48QC+VR Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C48QC+VR",
+        "coordinates": "16.139688,108.322063"
+    },
+    "Quảng trường 29 tháng 3": {
+        "og_short_plus_code": "26RF+85 Hải Châu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C26RF+85",
+        "coordinates": "16.040813,108.222938"
+    },
+    "Surf Feeling Beach Meeting Point": {
+        "og_short_plus_code": "366W+RM Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C366W+RM",
+        "coordinates": "16.062063,108.246688"
+    },
+    "Đỉnh Thượng Thai": {
+        "og_short_plus_code": "2737+P97, Hòn Thủy Sơn, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam",
+        "full_plus_code": "7P8C2737+39",
+        "coordinates": "16.002688,108.263437"
+    },
+    "Trạm dừng chân Chùa Linh Ứng": {
+        "og_short_plus_code": "37XH+7WM, Hoàng Sa, Thọ Quang, Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C473J+",
+        "coordinates": "16.103750,108.281250"
+    },
+    "Di tích Thành Điện Hải": {
+        "og_short_plus_code": "36GC+HR5, Đ. Thành Điện Hải, Thạch Thang, Hải Châu, Đà Nẵng 550000, Việt Nam",
+        "full_plus_code": "7P8C36GF+H7",
+        "coordinates": "16.076437,108.223187"
+    },
+    "Stu Toilet": {
+        "og_short_plus_code": "27Q2+XHP, Khuê Mỹ, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam",
+        "full_plus_code": "7P8C27Q2+XH",
+        "coordinates": "16.039938,108.251437"
+    },
+    "Vietnamese basket boat Viewpoint": {
+        "og_short_plus_code": "369W+3F Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C369W+3F",
+        "coordinates": "16.067687,108.246188"
+    },
+    "Tơ Lụa Vạn Phúc": {
+        "og_short_plus_code": "36VV+H2 Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C36VV+H2",
+        "coordinates": "16.093938,108.242563"
+    },
+    "Vòng quay Mặt Trời (Sun Wheel)": {
+        "og_short_plus_code": "26RH+3C Hải Châu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C26RH+3C",
+        "coordinates": "16.040188,108.228562"
+    },
+    "Bãi Yên Ngựa": {
+        "og_short_plus_code": "46XP+535, Thọ Quang, Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C46XP+53",
+        "coordinates": "16.147937,108.235187"
+    },
+    "Bảo tàng Hồ Chí Minh": {
+        "og_short_plus_code": "26X9+F2G, Duy Tân, Hoà Cường Bắc, Hải Châu, Đà Nẵng 550000, Việt Nam",
+        "full_plus_code": "7P8C26X7+CR",
+        "coordinates": "16.048563,108.214562"
+    },
+    "Làng Bích họa Đà Nẵng": {
+        "og_short_plus_code": "366C+72 Hải Châu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C366C+72",
+        "coordinates": "16.060688,108.220062"
+    },
+    "Son Tra Viewpoint": {
+        "og_short_plus_code": "4835+97, Thọ Quang, Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C4835+97",
+        "coordinates": "16.103437,108.308188"
+    },
+    "Ba Na Hills": {
+        "og_short_plus_code": "XXWW+3F Hòa Vang, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P79XXWW+3F",
+        "coordinates": "15.995188,107.996188"
+    },
+    "Suối Lương - Hai Van Park": {
+        "og_short_plus_code": "5445+JP Liên Chiểu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C5445+JP",
+        "coordinates": "16.156562,108.109313"
+    },
+    "Khu Văn hóa phẩm Phật giáo": {
+        "og_short_plus_code": "5445+JP Liên Chiểu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C5445+JP",
+        "coordinates": "16.156562,108.109313"
+    },
+    "Cầu Vàng": {
+        "og_short_plus_code": "XXVW+XJ Hòa Vang, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P79XXVW+XJ",
+        "coordinates": "15.994937,107.996562"
+    },
+    "Bảo tàng Đồng Đình": {
+        "og_short_plus_code": "472G+F5 Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C472G+F5",
+        "coordinates": "16.101188,108.275437"
+    },
+    "Suối mơ Khe Răm": {
+        "og_short_plus_code": "43WH+G6R, Hoà Bắc, Hòa Vang, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C43WH+G6",
+        "coordinates": "16.146313,108.078063"
+    },
+    "Regal Pavillon": {
+        "og_short_plus_code": "26MJ+F3 Hải Châu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C26MJ+F3",
+        "coordinates": "16.033687,108.230187"
+    },
+    "Khu Du Lịch Sinh Thái Thủy Tiên": {
+        "og_short_plus_code": "5454+WW Liên Chiểu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C5454+WW",
+        "coordinates": "16.159813,108.107313"
+    },
+    "Đức Maria Mẹ Sao Biển": {
+        "og_short_plus_code": "26XX+2JR, Võ Nguyên Giáp, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam",
+        "full_plus_code": "7P8C26VX+56",
+        "coordinates": "16.042938,108.248063"
+    },
+    "Hòa Phú Thành Tourist - Trượt thác Đà Nẵng": {
+        "og_short_plus_code": "XX5R+4M Hòa Vang, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P79XX5R+4M",
+        "coordinates": "15.957812,107.991687"
+    },
+    "Dịch vụ thuyền thúng Tham quan Rừng Dừa": {
+        "og_short_plus_code": "V9CC+FP Hội An, Quảng Nam, Việt Nam",
+        "full_plus_code": "7P7CV9CC+FP",
+        "coordinates": "15.871187,108.371813"
+    },
+    "Giếng Trời": {
+        "og_short_plus_code": "2XMR+W9 Hòa Vang, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P892XMR+W9",
+        "coordinates": "16.034813,107.990938"
+    },
+    "Tour Rừng Dừa Bảy Mẫu - KDL Rừng Dừa Bảy Mẫu Hội An Phát Huy": {
+        "og_short_plus_code": "V9GG+CP Hội An, Quảng Nam, Việt Nam",
+        "full_plus_code": "7P7CV9GG+CP",
+        "coordinates": "15.876062,108.376812"
+    },
+    "Rừng thông Bồ Bồ": {
+        "og_short_plus_code": "W597+RJ Điện Bàn, Quảng Nam, Việt Nam",
+        "full_plus_code": "7P7CW597+RJ",
+        "coordinates": "15.919562,108.164063"
+    },
+    "Nghĩa trang Y Pha Nho": {
+        "og_short_plus_code": "46CC+X26, Yết Kiêu, Thọ Quang, Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C467P+",
+        "coordinates": "16.113750,108.236250"
+    },
+    "Thác Thần Mặt Trời": {
+        "og_short_plus_code": "XXXQ+95C, Hoà Phú, Hòa Vang, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P79XXXQ+95",
+        "coordinates": "15.998437,107.987938"
+    },
+    "Tháp Xá Lợi": {
+        "og_short_plus_code": "37XJ+X26 Linh Ung Pagoda, Hoàng Sa, Thọ Quang, Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C473J+",
+        "coordinates": "16.103750,108.281250"
+    },
+    "Chùa Quán Thế Âm": {
+        "og_short_plus_code": "X7X4+G3 Ngũ Hành Sơn, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P7CX7X4+G3",
+        "coordinates": "15.998812,108.255188"
+    },
+    "Cây thông Cô đơn": {
+        "og_short_plus_code": "549G+GG Liên Chiểu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C549G+",
+        "coordinates": "16.168750,108.126250"
+    },
+    "Đồi Cừu Hải Vân": {
+        "og_short_plus_code": "543M+FJ Liên Chiểu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C543M+FJ",
+        "coordinates": "16.153688,108.134062"
+    },
+    "Bảo tàng Đà Nẵng": {
+        "og_short_plus_code": "36GC+HH Hải Châu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C36GC+HH",
+        "coordinates": "16.076437,108.221438"
+    },
+    "Nhà cổ Quân Thắng": {
+        "og_short_plus_code": "V8GH+RM Hội An, Quảng Nam, Việt Nam",
+        "full_plus_code": "7P7CV8GH+RM",
+        "coordinates": "15.877063,108.329188"
+    },
+    "Mỹ Sơn": {
+        "og_short_plus_code": "Q499+GP Duy Xuyên, Quảng Nam, Việt Nam",
+        "full_plus_code": "7P7CQ499+GP",
+        "coordinates": "15.768812,108.119313"
+    },
+    "Tour Rừng Dừa Thuyền Thúng-Dũng Nguyễn 60k/1 người": {
+        "og_short_plus_code": "V9HF+2P Hội An, Quảng Nam, Việt Nam",
+        "full_plus_code": "7P7CV9HF+2P",
+        "coordinates": "15.877562,108.374313"
+    },
+    "Du lịch suối Mơ Lăng Cô ( Đặt Sạp )": {
+        "og_short_plus_code": "628J+2C Phú Lộc, Thành phố Huế, Việt Nam",
+        "full_plus_code": "7P8C628J+2C",
+        "coordinates": "16.215063,108.031063"
+    },
+    "Công viên Biển Đông": {
+        "og_short_plus_code": "36CW+48 Sơn Trà, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C36CW+48",
+        "coordinates": "16.070313,108.245812"
+    },
+    "Rừng Dừa Xanh Hội An": {
+        "og_short_plus_code": "V9GG+5H Hội An, Quảng Nam, Việt Nam",
+        "full_plus_code": "7P7CV9GG+5H",
+        "coordinates": "15.875438,108.376437"
+    },
+    "Khu dự trữ sinh quyển thế giới Cù Lao Chàm": {
+        "og_short_plus_code": "XG73+4Q Hội An, Quảng Nam, Việt Nam",
+        "full_plus_code": "7P7CXG73+4Q",
+        "coordinates": "15.962813,108.504437"
+    },
+    "Bảo tàng Mỹ thuật Đà Nẵng": {
+        "og_short_plus_code": "36C9+F5 Hải Châu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C36C9+F5",
+        "coordinates": "16.071188,108.217938"
+    },
+    "Lunar castle": {
+        "og_short_plus_code": "XXVR+6M7, Hoà Phú, Hòa Vang, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P79XXVR+6M",
+        "coordinates": "15.993063,107.991687"
+    },
+    "Travada garden": {
+        "og_short_plus_code": "R9JH+35 Duy Xuyên, Quảng Nam, Việt Nam",
+        "full_plus_code": "7P7CR9JH+35",
+        "coordinates": "15.830188,108.377938"
+    },
+    "Chùa Pháp Lâm": {
+        "og_short_plus_code": "3668+W6 Hải Châu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C3668+W6",
+        "coordinates": "16.062312,108.215563"
+    },
+    "Hòn Thủy Sơn": {
+        "og_short_plus_code": "X7W7+6F Ngũ Hành Sơn, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P7CX7W7+6F",
+        "coordinates": "15.995563,108.263688"
+    },
+    "Đá Mỹ Nghệ Non Nước": {
+        "og_short_plus_code": "X7W7+6F Ngũ Hành Sơn, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P7CX7W7+6F",
+        "coordinates": "15.995563,108.263688"
+    },
+    "Nhà cổ Đức An": {
+        "og_short_plus_code": "V8GG+RW Hội An, Quảng Nam, Việt Nam",
+        "full_plus_code": "7P7CV8GG+RW",
+        "coordinates": "15.877063,108.327313"
+    },
+    "Làng lụa Hội An": {
+        "og_short_plus_code": "V8P9+XH Hội An, Quảng Nam, Việt Nam",
+        "full_plus_code": "7P7CV8P9+XH",
+        "coordinates": "15.887438,108.318938"
+    },
+    "Công viên APEC": {
+        "og_short_plus_code": "365F+67 Hải Châu, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C365F+67",
+        "coordinates": "16.058062,108.223187"
+    },
+    "Suối Hải Đăng": {
+        "og_short_plus_code": "43VF+PV Hòa Vang, Đà Nẵng, Việt Nam",
+        "full_plus_code": "7P8C43VF+PV",
+        "coordinates": "16.144312,108.074687"
+    },
+    "Du lịch Học Tập Cộng Đồng Kim Bồng": {
+        "og_short_plus_code": "V89C+CM4, Cẩm Kim, Tp. Hội An, Quảng Nam, Việt Nam",
+        "full_plus_code": "7P7CV89C+CM",
+        "coordinates": "15.868562,108.321687"
+    }
+}

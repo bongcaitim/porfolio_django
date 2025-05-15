@@ -97,6 +97,63 @@ function topFunction() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+let timerInterval;
+let seconds = 0;
+
+function startTimer() {
+  seconds = 0;
+  document.getElementById('seconds').textContent = seconds;
+  document.getElementById('timerDisplay').style.display = 'block';
+  document.getElementById('doneStatus').style.display = 'none';
+  
+  timerInterval = setInterval(function() {
+    seconds++;
+    document.getElementById('seconds').textContent = seconds;
+  }, 1000);
+}
+
+function stopTimer() {
+  if (timerInterval) {
+    clearInterval(timerInterval);
+    document.getElementById('doneStatus').style.display = 'block';
+  }
+}
+
+function displaySelectedFiles(event) {
+  const fileList = document.getElementById('file-list');
+  fileList.innerHTML = '';
+  
+  for (let file of event.target.files) {
+    const li = document.createElement('li');
+    li.textContent = file.name;
+    fileList.appendChild(li);
+  }
+}
+
+document.getElementById('file-upload-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  startTimer();
+  
+  const formData = new FormData(this);
+  
+  fetch("{% url 'pfl_app:member' member='pfl_app' func='rag' %}", {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+    }
+  })
+  .then(response => response.ok ? response.json() : Promise.reject('Network response was not ok'))
+  .then(data => {
+    stopTimer();
+    if (data.redirect) window.location.href = data.redirect;
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    stopTimer();
+  });
+});
+
 let preferencesTimerInterval;
 
 function startPreferencesTimer() {
@@ -120,7 +177,6 @@ function stopPreferencesTimer() {
 
 function savePreferences(event) {
   event.preventDefault();
-  console.log("savePreferences function triggered");
   startPreferencesTimer();
 
   const form = document.getElementById('preferences-form');
@@ -132,7 +188,6 @@ function savePreferences(event) {
     body: formData,
   })
   .then(response => {
-    console.log("Response received:", response);
     if (response.redirected) {
       stopPreferencesTimer();
       window.location.href = response.url;
@@ -141,10 +196,8 @@ function savePreferences(event) {
     return response.json();
   })
   .then(data => {
-    console.log("Response data:", data);
     stopPreferencesTimer();
     if (data?.status === 'error') {
-      console.error("Error from server:", data.message);
       document.getElementById('preference-status').textContent = data.message;
     }
   })
@@ -155,6 +208,7 @@ function savePreferences(event) {
 }
 
 window.addEventListener('beforeunload', () => {
+  stopTimer();
   stopPreferencesTimer();
 });
 </script>

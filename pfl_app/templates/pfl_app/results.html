@@ -229,9 +229,17 @@
                             {% endif %}
                         </div>
                         
+                        <!-- Warning Promotion -->
+                        <hr>
+                        <h6>Cảnh báo và Đề xuất thêm</h6>
+                            <div class="city-warning-promotion">
+                                <p class="px-4">{{ city.warning_promotion }}</p>
+                            </div>
+
                         <!-- Weather -->
                         <hr>
                         <h6>Thời tiết 7 ngày đến</h6>
+
                         <div class="weather-grid">
                             {% for i in "1234567"|make_list %}
                                 <div class="weather-day">

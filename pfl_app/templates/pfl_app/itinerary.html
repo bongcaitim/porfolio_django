@@ -1,0 +1,139 @@
+{% extends 'pfl_app/base.html' %}
+{% load static %}
+{% block content %}
+{% load custom_filters %}
+
+{% block head_extra %}
+<style>
+    .emoji-row {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    .emoji {
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .location-card {
+        margin-bottom: 2rem;
+    }
+
+    .location-description {
+        column-count: 2;
+        column-gap: 20px;
+        text-align: left !important;
+    }
+
+    .location-description p {
+        text-align: justify !important;
+    }
+</style>
+{% endblock %}
+
+<!-- Location Cards Section -->
+<section class="section" id="location-cards">
+    <div class="container text-center">
+        {% if location_names %}
+            {% for location_name in location_names %}
+            <div class="location-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title my-4">{{ location_name }}</h5>
+
+                        <div class="row p-2">
+                            <!-- Geographical Features -->
+                            <div class="col-12 col-md-6">
+                                <h6>Thiên nhiên địa lý</h6>
+                                <div class="emoji-row justify-content-center">
+                                    {% with location_data=geo_data|get_item:location_name %}
+                                        {% for feature, emoji in location_data.emojis.items %}
+                                            <span class="emoji mx-2" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ feature }}">
+                                                {{ emoji }}
+                                            </span>
+                                        {% endfor %}
+                                    {% endwith %}
+                                </div>
+                            </div>
+
+                            <!-- Tourist Activities -->
+                            <div class="col-12 col-md-6">
+                                <h6>Các hoạt động du lịch</h6>
+                                <div class="emoji-row justify-content-center">
+                                    {% with location_data=activity_data|get_item:location_name %}
+                                        {% for activity, emoji in location_data.emojis.items %}
+                                            <span class="emoji mx-2" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ activity }}">
+                                                {{ emoji }}
+                                            </span>
+                                        {% endfor %}
+                                    {% endwith %}
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <!-- Description -->
+                        <div class="location-description">
+                            <p class="px-4">{{ description_data|get_item:location_name|default:""|linebreaksbr }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>No locations available to display.</p>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Initialize tooltips -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+});
+</script>
+
+<!-- section contact -->
+<section class="section" id="contact">
+    <div class="container text-center">
+      <p class="section-subtitle en">How can you communicate?</p>
+      <h6 class="section-title mb-5 en">Contact Me</h6>
+      <h6 class="section-title mb-5 vi hidden">Liên hệ</h6>
+      <!-- contact form -->
+      <div class="contact-card en">
+        <p class="font-weight-normal">
+          Email: <strong>vuonghoang.workspace@gmail.com</strong>
+        </p>
+        <p class="font-weight-normal">
+          Phone: <strong>0977-829-788</strong>
+        </p>
+      </div>
+      <div class="contact-card vi hidden">
+        <p class="font-weight-normal">
+          Email: <strong>vuonghoang.workspace@gmail.com</strong>
+        </p>
+        <p class="font-weight-normal">
+          Số điện thoại: <strong>0977-829-788</strong>
+        </p>
+      </div>
+    </div>
+    <!-- end of container -->
+  </section>
+  <!-- end of contact section -->
+  
+  
+  {% comment %} GO UP BUTTON {% endcomment %}
+  <div class="btn__go-up text-primary text-center" onclick="topFunction()" id="btn-back-to-top">
+    <a href="#">
+      <img src='{% static "pfl_app/assets/imgs/homepage/gingerbread.png" %}' alt="" width="80px"> 
+      <p class="d-block border rounded-4 p-0 m-0" id="btn__text">Go up!</p>
+    </a>
+  </div>
+  {% comment %} END OF GO UP BUTTON {% endcomment %}
+{% endblock %}

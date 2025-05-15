@@ -1,0 +1,759 @@
+[{
+    "Tượng Cá Chép Hóa Rồng": {
+        "Công viên": 0,
+        "Di tích lịch sử & văn hóa": 0,
+        "Hoạt động ngoài trời & mạo hiểm": 0,
+        "Hoạt động dưới nước": 0,
+        "Trải nghiệm ẩm thực": 0,
+        "Lễ hội": 0,
+        "Thư giãn & chăm sóc sức khỏe": 0,
+        "Cuộc sống về đêm": 0,
+        "Thiên nhiên & động vật hoang dã": 0,
+        "Mua sắm": 0
+    },
+    "Ngũ Hành Sơn": {
+        "Công viên": 1,
+        "Di tích lịch sử & văn hóa": 1,
+        "Hoạt động ngoài trời & mạo hiểm": 1,
+        "Hoạt động dưới nước": 0,
+        "Trải nghiệm ẩm thực": 0,
+        "Lễ hội": 0,
+        "Thư giãn & chăm sóc sức khỏe": 0,
+        "Cuộc sống về đêm": 0,
+        "Thiên nhiên & động vật hoang dã": 1,
+        "Mua sắm": 0
+    },
+    "Bảo tàng Điêu khắc Chăm Đà Nẵng": {
+        "Công viên": 0,
+        "Di tích lịch sử & văn hóa": 1,
+        "Hoạt động ngoài trời & mạo hiểm": 0,
+        "Hoạt động dưới nước": 0,
+        "Trải nghiệm ẩm thực": 0,
+        "Lễ hội": 0,
+        "Thư giãn & chăm sóc sức khỏe": 0,
+        "Cuộc sống về đêm": 0,
+        "Thiên nhiên & động vật hoang dã": 0,
+        "Mua sắm": 0
+    },
+    "Cầu Rồng": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Động Huyền Không": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 1,
+        "Suối": 0
+    },
+    "Công viên Kỳ Quan": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Cầu đi bộ Nguyễn Văn Trỗi": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Biển Phước Mỹ": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 1,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "DA NANG DOWNTOWN": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Phố đi bộ - chợ đêm Bạch Đằng Đà Nẵng": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Bạch đằng": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Đỉnh Bàn Cờ": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Động Tàng Chơn": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 1,
+        "Suối": 0
+    },
+    "Bến Du Thuyền Sông Hàn Đà Nẵng": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "DHC Marina": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Nhà Vọng Cảnh": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Bãi Rêu Nam Ô": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 1,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Tượng Mẹ Âu Cơ": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Ghềnh Bàng": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 1,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Bãi Tắm Non Nước": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 1,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Quốc Tự Tam Thai": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Di tích nhà ông Huỳnh Trưng": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Bãi biển Sơn Trà": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 1,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Nhà Cổ Tích Thiện Đường": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Khu Du lịch Sinh thái Suối Rạng": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 1
+    },
+    "Hóc Khế": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 1
+    },
+    "Khu Dừng Chân": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 1
+    },
+    "East Asia Park": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Bảo tàng 3D Art In Paradise": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Bãi Nam": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 1,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Hải đăng Tiên Sa": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 1,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Quảng trường 29 tháng 3": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Surf Feeling Beach Meeting Point": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 1,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Đỉnh Thượng Thai": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Trạm dừng chân Chùa Linh Ứng": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Di tích Thành Điện Hải": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Stu Toilet": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Vietnamese basket boat Viewpoint": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 1,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Tơ Lụa Vạn Phúc": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Vòng quay Mặt Trời (Sun Wheel)": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Bãi Yên Ngựa": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 1,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Bảo tàng Hồ Chí Minh": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Làng Bích họa Đà Nẵng": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Son Tra Viewpoint": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Ba Na Hills": {
+        "Núi đồi": 1,
+        "Rừng": 1,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Suối Lương - Hai Van Park": {
+        "Núi đồi": 1,
+        "Rừng": 1,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 1
+    },
+    "Khu Văn hóa phẩm Phật giáo": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Cầu Vàng": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Bảo tàng Đồng Đình": {
+        "Núi đồi": 1,
+        "Rừng": 1,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Suối mơ Khe Răm": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 1
+    },
+    "Regal Pavillon": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Khu Du Lịch Sinh Thái Thủy Tiên": {
+        "Núi đồi": 0,
+        "Rừng": 1,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Đức Maria Mẹ Sao Biển": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Hòa Phú Thành Tourist - Trượt thác Đà Nẵng": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 1
+    },
+    "Dịch vụ thuyền thúng Tham quan Rừng Dừa": {
+        "Núi đồi": 0,
+        "Rừng": 1,
+        "Bãi biển": 1,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Giếng Trời": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 1
+    },
+    "Tour Rừng Dừa Bảy Mẫu - KDL Rừng Dừa Bảy Mẫu Hội An Phát Huy": {
+        "Núi đồi": 0,
+        "Rừng": 1,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 1,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Rừng thông Bồ Bồ": {
+        "Núi đồi": 1,
+        "Rừng": 1,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Nghĩa trang Y Pha Nho": {
+        "Núi đồi": 1,
+        "Rừng": 1,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Thác Thần Mặt Trời": {
+        "Núi đồi": 1,
+        "Rừng": 1,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 1
+    },
+    "Tháp Xá Lợi": {
+        "Núi đồi": 1,
+        "Rừng": 1,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Chùa Quán Thế Âm": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 1,
+        "Suối": 0
+    },
+    "Cây thông Cô đơn": {
+        "Núi đồi": 1,
+        "Rừng": 1,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Đồi Cừu Hải Vân": {
+        "Núi đồi": 1,
+        "Rừng": 1,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Bảo tàng Đà Nẵng": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Nhà cổ Quân Thắng": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Mỹ Sơn": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 1,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Tour Rừng Dừa Thuyền Thúng-Dũng Nguyễn 60k/1 người": {
+        "Núi đồi": 0,
+        "Rừng": 1,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 1,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Du lịch suối Mơ Lăng Cô ( Đặt Sạp )": {
+        "Núi đồi": 1,
+        "Rừng": 1,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 1
+    },
+    "Công viên Biển Đông": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 1,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Rừng Dừa Xanh Hội An": {
+        "Núi đồi": 0,
+        "Rừng": 1,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 1,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Khu dự trữ sinh quyển thế giới Cù Lao Chàm": {
+        "Núi đồi": 1,
+        "Rừng": 1,
+        "Bãi biển": 1,
+        "Thành phố": 0,
+        "Làng mạc": 1,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Bảo tàng Mỹ thuật Đà Nẵng": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Travada garden": {
+        "Núi đồi": 0,
+        "Rừng": 1,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Chùa Pháp Lâm": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Hòn Thủy Sơn": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 1,
+        "Suối": 0
+    },
+    "Đá Mỹ Nghệ Non Nước": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 1,
+        "Suối": 0
+    },
+    "Nhà cổ Đức An": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Lunar castle": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Làng lụa Hội An": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 1,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Suối Hải Đăng": {
+        "Núi đồi": 1,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 1
+    },
+    "Du lịch Học Tập Cộng Đồng Kim Bồng": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 0,
+        "Làng mạc": 1,
+        "Hang động": 0,
+        "Suối": 0
+    },
+    "Công viên APEC": {
+        "Núi đồi": 0,
+        "Rừng": 0,
+        "Bãi biển": 0,
+        "Thành phố": 1,
+        "Làng mạc": 0,
+        "Hang động": 0,
+        "Suối": 0
+    }
+}
+]

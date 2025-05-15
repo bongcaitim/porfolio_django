@@ -128,11 +128,15 @@ def results_view(request):
 
 @csrf_exempt
 def save_preferences_and_run_script(request):
+    print("save_preferences_and_run_script function is being triggered")
     if request.method == 'POST':
+        print("POST request received")
         # Retrieve the data from the form submission
         geographical_features = request.POST.getlist('geographical_features')
         tourist_activities = request.POST.getlist('tourist_activities')
         tour_month = request.POST.get('tour_month')
+        
+        print(f"Received data: geographical_features={geographical_features}, tourist_activities={tourist_activities}, tour_month={tour_month}")
 
         vi_en_months = {
             "Tháng 1": "January",
@@ -149,27 +153,100 @@ def save_preferences_and_run_script(request):
             "Tháng 12": "December"
         }
 
-        # Save the preferences to the database
-        UserPreference.objects.create(
-            geographical_features=geographical_features,
-            tourist_activities=tourist_activities,
-            tour_month=vi_en_months[tour_month],
-        )
-
-        import subprocess
-
-        # Paths to the virtual environment and script
-        venv_path = os.path.join(os.getcwd(), 'portfolio_env', 'Scripts', 'activate.bat')
-        fetch_match_preferences_script = os.path.join(os.getcwd(), 'fetch_match_preferences.py')
-
-        # Activate virtual environment and run the script
         try:
-            # Run the script in the activated environment
-            subprocess.run(f'"{venv_path}" && python "{fetch_match_preferences_script}"', shell=True, check=True)
+            # Save the preferences to the database
+            print("Attempting to save preferences to database")
+            UserPreference.objects.create(
+                geographical_features=geographical_features,
+                tourist_activities=tourist_activities,
+                tour_month=vi_en_months[tour_month],
+            )
+            print("Successfully saved preferences to database")
+
+            import subprocess
+
+            # Paths to the virtual environment and script
+            venv_path = os.path.join(os.getcwd(), 'portfolio_env', 'Scripts', 'activate.bat')
+            fetch_match_preferences_script = os.path.join(os.getcwd(), 'fetch_match_preferences.py')
             
-            # Redirect to results page after successful execution
-            return HttpResponseRedirect(reverse('pfl_app:results_view'))
+            print(f"Script paths: venv_path={venv_path}, fetch_match_preferences_script={fetch_match_preferences_script}")
 
-        except subprocess.CalledProcessError as e:
-            return JsonResponse({'status': 'error', 'message': f'Failed to run script: {str(e)}'})
+            # Activate virtual environment and run the script
+            try:
+                print("Attempting to run fetch_match_preferences.py script")
+                # Run the script in the activated environment
+                subprocess.run(f'"{venv_path}" && python "{fetch_match_preferences_script}"', shell=True, check=True)
+                print("Successfully ran fetch_match_preferences.py script")
+                
+                # Redirect to results page after successful execution
+                print("Redirecting to results page")
+                return HttpResponseRedirect(reverse('pfl_app:results_view'))
 
+            except subprocess.CalledProcessError as e:
+                print(f"Error running script: {str(e)}")
+                return JsonResponse({'status': 'error', 'message': f'Failed to run script: {str(e)}'})
+        except Exception as e:
+            print(f"Error saving preferences: {str(e)}")
+            return JsonResponse({'status': 'error', 'message': f'Failed to save preferences: {str(e)}'})
+    else:
+        print(f"Invalid request method: {request.method}")
+        return JsonResponse({'status': 'error', 'message': 'Invalid request method'})
+
+def itinerary_view(request):
+    # Load geo data
+    geo_path = os.path.join("pfl_app", "media", "ttd_geo_tag_copilot_processed.json")
+    with open(geo_path, "r", encoding="utf-8") as f:
+        geo_data = json.load(f)[0]  # Dữ liệu là list chứa dict
+
+    # Load activity data
+    activity_path = os.path.join("pfl_app", "media", "ttd_activity_tag_copilot_processed.json")
+    with open(activity_path, "r", encoding="utf-8") as f:
+        activity_data = json.load(f)[0]  # Dữ liệu là list chứa dict
+
+    # Load description data
+    description_path = os.path.join("pfl_app", "media", "ttd_description_copilot.json")
+    with open(description_path, "r", encoding="utf-8") as f:
+        description_data = json.load(f)  # Dữ liệu là list chứa dict
+
+    # Load emoji data
+    emoji_path = os.path.join("pfl_app", "static", "pfl_app", "assets", "features_activities_emojis.json")
+    with open(emoji_path, "r", encoding="utf-8") as f:
+        emoji_data = json.load(f)
+
+    # Lấy danh sách tên địa điểm (intersection của 2 dict)
+    location_names = list(set(geo_data.keys()) & set(activity_data.keys()))
+    location_names.sort()  # Sắp xếp cho đẹp
+
+    # Add emojis to geo_features and tourist_activities for each location
+    for location_name in location_names:
+        # Add emojis to geo features
+        geo_features = geo_data[location_name]
+        geo_data[location_name] = {
+            "features": geo_features,
+            "emojis": {
+                feature: emoji_data["geo_features"].get(feature, "") 
+                for feature, value in geo_features.items() 
+                if value == 1
+            }
+        }
+
+        # Add emojis to tourist activities
+        activities = activity_data[location_name]
+        activity_data[location_name] = {
+            "activities": activities,
+            "emojis": {
+                activity: emoji_data["tourist_activities"].get(activity, "") 
+                for activity, value in activities.items() 
+                if value == 1
+            }
+        }
+
+    context = {
+        "location_names": location_names,
+        "geo_data": geo_data,
+        "activity_data": activity_data,
+        "description_data": description_data
+    }
+
+    print(geo_data)
+    return render(request, "pfl_app/itinerary.html", context)
