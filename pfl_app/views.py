@@ -320,10 +320,9 @@ def save_selected_locations(request):
             for location in locations:
                 processed_location = {
                     'name': location['name'],
-                    'geo_features': location['geo_features'],
-                    'activities': location['activities'],
-                    'description': location['description'],
-                    'coordinates': location['coordinates']
+                    'geo_features': {k: str(v) for k, v in location['geo_features'].items()},
+                    'activities': {k: str(v) for k, v in location['activities'].items()},
+                    'description': str(location['description'])
                 }
                 processed_locations.append(processed_location)
             
