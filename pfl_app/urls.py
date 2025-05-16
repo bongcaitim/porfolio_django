@@ -13,6 +13,7 @@ urlpatterns = [
     path('save_preferences_and_run_script/', views.save_preferences_and_run_script, name='save_preferences_and_run_script'),
 
     path('itinerary/', views.itinerary_view, name='itinerary'),
+    path('save_selected_locations/', views.save_selected_locations, name='save_selected_locations'),
     
     
 ]

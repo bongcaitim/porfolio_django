@@ -1,0 +1,45 @@
+{% extends 'pfl_app/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<!-- section contact -->
+<section class="section" id="contact">
+    <div class="container text-center">
+      <p class="section-subtitle en">How can you communicate?</p>
+      <h6 class="section-title mb-5 en">Contact Me</h6>
+      <h6 class="section-title mb-5 vi hidden">Liên hệ</h6>
+      <!-- contact form -->
+      <div class="contact-card en">
+        <p class="font-weight-normal">
+          Email: <strong>vuonghoang.workspace@gmail.com</strong>
+        </p>
+        <p class="font-weight-normal">
+          Phone: <strong>0977-829-788</strong>
+        </p>
+      </div>
+      <div class="contact-card vi hidden">
+        <p class="font-weight-normal">
+          Email: <strong>vuonghoang.workspace@gmail.com</strong>
+        </p>
+        <p class="font-weight-normal">
+          Số điện thoại: <strong>0977-829-788</strong>
+        </p>
+      </div>
+    </div>
+    <!-- end of container -->
+  </section>
+  <!-- end of contact section -->
+  
+  
+  {% comment %} GO UP BUTTON {% endcomment %}
+  <div class="btn__go-up text-primary text-center" onclick="topFunction()" id="btn-back-to-top">
+    <a href="#">
+      <img src='{% static "pfl_app/assets/imgs/homepage/gingerbread.png" %}' alt="" width="80px"> 
+      <p class="d-block border rounded-4 p-0 m-0" id="btn__text">Go up!</p>
+    </a>
+  </div>
+  {% comment %} END OF GO UP BUTTON {% endcomment %}
+  {% endblock %}
+  

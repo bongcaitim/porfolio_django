@@ -9,7 +9,9 @@ Here are the key URLs for accessing different parts of the application:
 
 - **Homepage:** [http://127.0.0.1:8000/portfolio/pfl_app/homepage](http://127.0.0.1:8000/portfolio/pfl_app/homepage)  
 - **RAG:** [http://127.0.0.1:8000/portfolio/pfl_app/rag](http://127.0.0.1:8000/portfolio/pfl_app/rag)  
-- **Results Page:** [http://127.0.0.1:8000/portfolio/results](http://127.0.0.1:8000/portfolio/pfl_app/results)  
+- **Results Page:** [http://127.0.0.1:8000/portfolio/results](http://127.0.0.1:8000/portfolio/results)  
+- **Itinerary:** [http://127.0.0.1:8000/portfolio/itinerary](http://127.0.0.1:8000/portfolio/itinerary)  
+
 
 ---
 

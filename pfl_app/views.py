@@ -15,6 +15,8 @@ import subprocess
 import sys
 from django.http import JsonResponse, HttpResponseRedirect
 from django.urls import reverse
+from django.conf import settings
+from datetime import datetime
 
 def member(request, member, func):
     print("FUNCTION MEMBER IS BEING TRIGGERED")
@@ -193,32 +195,68 @@ def save_preferences_and_run_script(request):
         return JsonResponse({'status': 'error', 'message': 'Invalid request method'})
 
 def itinerary_view(request):
+    # Get the latest user preferences from the database
+    latest_preference = UserPreference.objects.order_by('-created_at').first()
+    if not latest_preference:
+        return render(request, "pfl_app/error.html", {"message": "No user preferences found"})
+
     # Load geo data
     geo_path = os.path.join("pfl_app", "media", "ttd_geo_tag_copilot_processed.json")
     with open(geo_path, "r", encoding="utf-8") as f:
-        geo_data = json.load(f)[0]  # Dữ liệu là list chứa dict
+        geo_data = json.load(f)[0]  # Data is a list containing dict
 
     # Load activity data
     activity_path = os.path.join("pfl_app", "media", "ttd_activity_tag_copilot_processed.json")
     with open(activity_path, "r", encoding="utf-8") as f:
-        activity_data = json.load(f)[0]  # Dữ liệu là list chứa dict
+        activity_data = json.load(f)[0]  # Data is a list containing dict
 
     # Load description data
     description_path = os.path.join("pfl_app", "media", "ttd_description_copilot.json")
     with open(description_path, "r", encoding="utf-8") as f:
-        description_data = json.load(f)  # Dữ liệu là list chứa dict
+        description_data = json.load(f)  
+
+    # Load description data
+    coordinates_path = os.path.join("pfl_app", "media", "place_full_pluscode_long_lat.json")
+    with open(coordinates_path, "r", encoding="utf-8") as f:
+        coordinates_data = json.load(f)          
 
     # Load emoji data
     emoji_path = os.path.join("pfl_app", "static", "pfl_app", "assets", "features_activities_emojis.json")
     with open(emoji_path, "r", encoding="utf-8") as f:
         emoji_data = json.load(f)
 
-    # Lấy danh sách tên địa điểm (intersection của 2 dict)
+    # Get the intersection of location names from both datasets
     location_names = list(set(geo_data.keys()) & set(activity_data.keys()))
-    location_names.sort()  # Sắp xếp cho đẹp
+    
+    # Filter locations based on user preferences
+    matching_locations = []
+    for location in location_names:
+        geo_features = geo_data[location]
+        activities = activity_data[location]
+        
+        # Check if any of the preferred geo features are available
+        geo_match = any(
+            geo_features.get(feature, 0) == 1 
+            for feature in latest_preference.geographical_features
+        )
+        
+        # Check if any of the preferred activities are available
+        activity_match = any(
+            activities.get(activity, 0) == 1 
+            for activity in latest_preference.tourist_activities
+        )
+        
+        # If either geo features or activities match, include the location
+        if geo_match or activity_match:
+            matching_locations.append(location)
 
-    # Add emojis to geo_features and tourist_activities for each location
-    for location_name in location_names:
+    # Sort the matching locations
+    matching_locations.sort()
+
+    location_coordinates = {}
+
+    # Add emojis to geo_features and tourist_activities for each matching location
+    for location_name in matching_locations:
         # Add emojis to geo features
         geo_features = geo_data[location_name]
         geo_data[location_name] = {
@@ -241,12 +279,66 @@ def itinerary_view(request):
             }
         }
 
+        location_coordinates[location_name] = coordinates_data[location_name]["coordinates"]
+
     context = {
-        "location_names": location_names,
+        "location_names": matching_locations,  # Use filtered locations
         "geo_data": geo_data,
         "activity_data": activity_data,
-        "description_data": description_data
+        "description_data": description_data,
+        "coordinates_data": location_coordinates
     }
 
-    print(geo_data)
+    print(latest_preference.geographical_features, latest_preference.tourist_activities)
+    print(len(matching_locations))
+    print(matching_locations)
+    print(location_coordinates)
+
     return render(request, "pfl_app/itinerary.html", context)
+
+@csrf_exempt
+def save_selected_locations(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            locations = data.get('locations', [])
+            
+            if not locations:
+                return JsonResponse({'status': 'error', 'message': 'No locations provided'}, status=400)
+            
+            # Create media directory if it doesn't exist
+            media_dir = os.path.join(settings.MEDIA_ROOT, 'selected_locations')
+            os.makedirs(media_dir, exist_ok=True)
+            
+            # Generate filename with timestamp
+            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+            filename = f'selected_locations_{timestamp}.json'
+            filepath = os.path.join(media_dir, filename)
+            
+            # Process the data to ensure it's serializable
+            processed_locations = []
+            for location in locations:
+                processed_location = {
+                    'name': location['name'],
+                    'geo_features': location['geo_features'],
+                    'activities': location['activities'],
+                    'description': location['description'],
+                    'coordinates': location['coordinates']
+                }
+                processed_locations.append(processed_location)
+            
+            # Save to file
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(processed_locations, f, ensure_ascii=False, indent=2)
+            
+            return JsonResponse({
+                'status': 'success',
+                'message': 'Locations saved successfully',
+                'file_path': filepath
+            })
+        except json.JSONDecodeError:
+            return JsonResponse({'status': 'error', 'message': 'Invalid JSON data'}, status=400)
+        except Exception as e:
+            return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+    
+    return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
