@@ -465,7 +465,7 @@ def haversine(coord1, coord2):
 
     return R * c
 
-def cluster_locations(locations_dict, home_name, home_point, n_clusters=3, enforce_min_cluster_size=True, max_retries=1):
+def cluster_locations(locations_dict, home_name, home_point, n_clusters=3, enforce_min_cluster_size=True, max_retries=3):
     """Create clusters of locations, ensuring no cluster has only one location (excluding home), with a retry limit."""
     locations_list = [(name, coords) for name, coords in locations_dict.items() if name != home_name]
     coordinates = np.array([(float(coord[0]), float(coord[1])) for _, coord in locations_list])

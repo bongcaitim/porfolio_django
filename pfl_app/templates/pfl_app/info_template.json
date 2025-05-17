@@ -4,7 +4,7 @@
 	"dashboard_analyze_real_estate_data_in_central_vietnam": "pfl_app/dashboard_analyze_real_estate_data_in_central_vietnam.html",
 	"dashboard_employees_analytics": "pfl_app/dashboard_employees_analytics.html",
 	"d3": "pfl_app/d3.html",
-	"rag": "pfl_app/rag.html",
+	"select_preferences": "pfl_app/select_preferences.html",
 	"results": "pfl_app/results.html",
 	"select_things_to_do": "pfl_app/select_things_to_do.html",
 	"save_selected_locations": "pfl_app/save_selected_locations.html"

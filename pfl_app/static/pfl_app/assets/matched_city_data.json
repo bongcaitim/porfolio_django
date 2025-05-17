@@ -1,515 +1,5 @@
 [
     {
-        "city": "Bình Định",
-        "geo_features": {
-            "Núi đồi": "1",
-            "Rừng": "1",
-            "Bãi biển": "1",
-            "Thành phố": "1",
-            "Làng mạc": "0",
-            "Hang động": "0",
-            "Suối": "1"
-        },
-        "tourist_activities": {
-            "Công viên": 0,
-            "Di tích lịch sử & văn hóa": 1,
-            "Hoạt động ngoài trời & mạo hiểm": 1,
-            "Hoạt động dưới nước": 1,
-            "Trải nghiệm ẩm thực": 1,
-            "Lễ hội": 1,
-            "Thư giãn & chăm sóc sức khỏe": 0,
-            "Cuộc sống về đêm": 0,
-            "Thiên nhiên & động vật hoang dã": 1,
-            "Mua sắm": 0
-        },
-        "description": "Thời tiết tại Bình Định:\n\n- Nhiệt độ trung bình khoảng 27 độ C, từ 20 độ C (vùng núi) đến 35-36 độ C (vùng biển).\n- Mùa mưa từ tháng 9 đến 12, và từ tháng 5 đến 8 ở khu vực miền núi.\n- Mùa khô từ tháng 1 đến 8, thích hợp cho du lịch.\n\nBình Định có nhiều phương tiện di chuyển:\n\n- Đường hàng không: Sân bay Phù Cát với giá vé từ 2,5 triệu đến 8 triệu đồng.\n- Đường bộ: Quốc lộ 1A, 1D, 19C, bến xe Quy Nhơn.\n- Đường sắt: Tàu Thống Nhất dừng ở ga Diêu Trì.\n- Xe máy, taxi, ôtô, xe điện cho thuê trong thành phố.\n\nBình Định có nhiều lựa chọn lưu trú đa dạng về giá và chất lượng. Các khu resort cao cấp như Anantara Quy Nhon Villas và Avani Quy Nhon resort & spa có giá từ 2-8 triệu đồng một đêm. Khách sạn trong phố giá từ 500.000-1,5 triệu đồng một phòng.\n\nBình Định là một điểm đến nổi tiếng với đường bờ biển dài, nước xanh, cát mịn và nhiều điểm du lịch hấp dẫn. Một số điểm đến nổi bật bao gồm:\n\n- Thị Nại: đầm lớn nhất Bình Định với hệ sinh thái rừng ngập mặn phong phú.\n- Cầu Thị Nại: cầu vượt biển dài nhất Việt Nam trước đây.\n- Eo Gió: nơi có cảnh hoàng hôn đẹp nhất Việt Nam.\n- Bãi Kỳ Co: bãi biển xanh và trong với cảnh quan \"sơn thủy hữu tình\".\n- Cù Lao Xanh: đảo đẹp nhất miền Trung với nước biển xanh và sạch.\n- Hòn Sẹo: hòn đảo đẹp với vô số khối đá lớn nhỏ nằm ngổn ngang trên mặt biển.\n- Đề Gi: bãi biển xanh, cát trắng và sinh vật biển phong phú.\n- Tam Quan: thị trấn với hàng dừa bạt ngàn và các điểm du lịch như gành đá Lộ Diêu, gành đá Hoài Hải, hang Yến, hồ Mỹ Bình.\n- Tháp Bánh Ít: tháp Chăm Pa cổ với nhiều tháp Chăm còn nguyên vẹn.\n- Tháp Cánh Tiên: kinh đô của vương quốc Chăm pa cổ.\n- Tháp Dương Long: tháp Chăm Pa cổ với chiều cao hơn 30 m.\n- Khu dã ngoại Trung Lương: khu dã ngoại với nhiều khu vực như cắm trại, ngủ nhà lều, bãi tắm và chơi các trò dưới biển.\n- Bảo tàng Quang Trung: bảo tàng thờ và tưởng niệm anh hùng áo vải Nguyễn Huệ.\n- Khu du lịch rừng nguyên sinh: khu du lịch với không gian mát mẻ quanh năm.\n- Làng phong: làng phong với ngôi làng là nơi an cư của bệnh nhân phong từ khắp cả nước.\n\nBình Định là thiên đường ẩm thực với nhiều món ngon đặc trưng. Một số món nổi bật bao gồm:\n\n- Bánh hỏi: bánh làm từ bột gạo, lòng heo và rau sống.\n- Bánh xèo tôm nhảy: bánh xèo với tôm đất nhỏ, không sử dụng tôm biển.\n- Bánh ít lá gai: bánh có vỏ đen, nhân đậu xanh, vị dẻo và thơm.\n- Bánh hồng: bánh có hình dạng đơn giản, vị thơm của nếp và độ giòn của dừa.\n- Hải sản: tôm hùm, cua huỳnh đế, các loại ốc tươi ngon.\n\n",
-        "climate_data": {
-            "Daytime temperature (°C)": "33",
-            "Nighttime temperature (°C)": "26",
-            "Precipitation (mm)": "267",
-            "UV Index": "7",
-            "Typhoon season": "Typhoon",
-            "Best month": "No"
-        },
-        "current_temperature_2m": "28 °C",
-        "current_rain": "0 mm",
-        "next_7_days_weather": {
-            "date": [
-                "2025-05-14",
-                "2025-05-15",
-                "2025-05-16",
-                "2025-05-17",
-                "2025-05-18",
-                "2025-05-19",
-                "2025-05-20"
-            ],
-            "temperature_2m_max": [
-                "32 °C",
-                "32 °C",
-                "33 °C",
-                "33 °C",
-                "34 °C",
-                "35 °C",
-                "35 °C"
-            ],
-            "temperature_2m_min": [
-                "27 °C",
-                "26 °C",
-                "26 °C",
-                "26 °C",
-                "27 °C",
-                "27 °C",
-                "27 °C"
-            ],
-            "uv_index_max": [
-                "9",
-                "9",
-                "9",
-                "9",
-                "9",
-                "8",
-                "7"
-            ],
-            "precipitation_sum": [
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "1 mm",
-                "1 mm"
-            ]
-        },
-        "month": 9,
-        "warning_promotion": "Bình Định là một điểm đến hấp dẫn với nhiều sự kiện nổi bật. Gần đây, tỉnh đã tổ chức lễ khánh thành tuyến đường nối Bình Định - Gia Lai và đăng cai giải đua thuyền máy quốc tế UIM F1H2O. Trong tương lai, Bình Định sẽ tổ chức nhiều sự kiện quan trọng như Giải đua vô địch thế giới thuyền máy nhà nghề quốc tế UIM F1H2O vào tháng 5/2025 và Lễ hội Tinh hoa Đất Võ - Biển Quy Nhơn vào tháng 8/2025. Du khách cần lưu ý tình hình giao thông và an ninh, đặc biệt là tại các khu vực đông đúc và các điểm du lịch nổi tiếng. Bình Định hứa hẹn mang đến nhiều trải nghiệm thú vị và đa dạng.",
-        "weather_favorability_score": -1.5
-    },
-    {
-        "city": "Phú Yên",
-        "geo_features": {
-            "Núi đồi": "1",
-            "Rừng": "1",
-            "Bãi biển": "1",
-            "Thành phố": "1",
-            "Làng mạc": "0",
-            "Hang động": "0",
-            "Suối": "1"
-        },
-        "tourist_activities": {
-            "Công viên": 1,
-            "Di tích lịch sử & văn hóa": 1,
-            "Hoạt động ngoài trời & mạo hiểm": 1,
-            "Hoạt động dưới nước": 1,
-            "Trải nghiệm ẩm thực": 1,
-            "Lễ hội": 1,
-            "Thư giãn & chăm sóc sức khỏe": 0,
-            "Cuộc sống về đêm": 0,
-            "Thiên nhiên & động vật hoang dã": 1,
-            "Mua sắm": 0
-        },
-        "description": "Phú Yên có hai mùa rõ rệt: mùa mưa (tháng 9-12) và mùa nắng (tháng 1-8). Du khách nên đến Phú Yên vào mùa nắng để thuận tiện cho chuyến tham quan. Mùa hè là thời điểm lý tưởng để đắm mình vào biển xanh và săn ảnh.\n\nPhú Yên cách Hà Nội 1.200 km và TP HCM 500 km, có nhiều lựa chọn di chuyển như máy bay, tàu hỏa, ôtô. Giá vé máy bay từ 1,5 triệu đến 5 triệu đồng, tàu hỏa từ 400.000 đến 1.000.000 đồng, ôtô giường nằm 540.000 đồng.\n\nPhú Yên và Tuy Hòa có ít resort và khách sạn cao cấp. Giá phòng trung bình trong thành phố là 150.000 - 300.000 đồng/đêm. Các khu nghỉ sang trọng như Rosa Alba Resort và Sala Grand Tuy Hoa Hotel có giá từ 700.000 - 5.000.000 đồng/đêm.\n\n\"Chơi đâu\" là một trong những điểm du lịch nổi tiếng của Phú Yên, Việt Nam. Bạn có thể tham quan các điểm du lịch trong 4 ngày, hoặc 2 ngày nếu không dư dả thời gian. Dưới đây là một số điểm du lịch nổi bật:\n\n- Gành Đá Đĩa: Một tổ ong khổng lồ với những khối trụ vuông vức xếp liền nhau vươn mình ra biển.\n- Ngọn hải đăng Gành Đèn: Có độ cao 22 m so với mực nước biển, phát nguồn sáng cho tàu thuyền ra, vào vịnh Xuân Đài.\n- Bãi Xép: Nơi bạn có thể đứng chênh vênh trên vách núi cao và ngắm nhìn màu biển xanh ngọc bích bên dưới.\n- Đại Lãnh: Có những triền cát rất đẹp và là nơi nhìn thấy bình minh sớm nhất ở Việt Nam.\n- Bãi rêu Xóm Rớ: Với những tảng đá bê tông thô kệch nằm chìm dưới nước biển nay mọc lên từng đám rêu xanh đã hút hồn du khách.\n- Tháp đôi Nghinh Phong: Là biểu tượng của du lịch Phú Yên và truyền thuyết \"Con Rồng Cháu Tiên\".\n- Hòn Yến: Điểm check-in yêu thích không chỉ của khách du lịch mà cả giới nhiếp ảnh nhờ có những rạn san hô trên cạn nhiều màu sắc và hình thù.\n- Nhất Tự Sơn: Một trong những hòn đảo đẹp nhất của vịnh Xuân Đài, thuộc địa bàn xã Xuân Thọ 1, thị xã Sông Cầu.\n- Thác Vực Hòm: Là thác nước nằm giữa những cột đá bazan được thiên nhiên tạo thành theo cách tương tự như Gành Đá Đĩa của Phú Yên.\n- Hồ Trần Phú: Là một điểm hẹn \"hot\" cho các bạn trẻ chụp ảnh check-in, ngắm cảnh, hoặc đơn thuần là dạo chơi hóng gió.\n- Vân Hòa: Là một cao nguyên đất đỏ bazan màu mỡ, được ví như \"Đà Lạt của Phú Yên\" nhờ nằm ở độ cao 400 m, khi hậu mát mẻ, nhiều nắng gió và thường có mây mờ sương giăng.\n\n'Lịch trình gợi ý' cho 4 ngày du lịch tại Cà Mau bao gồm:\n\n- Ngày 1: Tháp Nhạn, bãi Long Thuỷ, Bãi Xép\n- Ngày 2: Gành Đá Đĩa, hải đăng Gành Đèn, đầm Ô Loan, hải đăng Đại Lãnh – Mũi Điện, Bãi Môn\n- Ngày 3: Đại Lãnh, Vũng Rô, đảo Điệp Sơn\n- Ngày 4: Nhà thờ Măng Lăng, cầu gỗ Tuy An, bãi rêu Xóm Rớ\n\nĐặc sản Phú Yên bao gồm:\n\n- Cá ngừ: mắt cá ngừ tiềm thuốc bắc, gỏi bao tử cá ngừ, cá ngừ cuốn cải xanh\n- Sò huyết: hấp, nướng tái, xào me, rang muối ớt\n- Cơm gà: dai giòn, ít mỡ, vàng ươm và ngọt\n- Cá nục: hấp, ăn kèm bánh tráng, rau sống và nước chấm chua cay\n- Cháo hàu: xào hàu với hành, muối tiêu, ninh chung với gạo đỏ, gạo nếp\n- Bánh canh hẹ: sợi mềm dai, ăn cùng chả cá biển\n- Bò một nắng: thịt đùi và thăn bò tươi, nướng chín trên than hoa\n- Chả dông: thịt dông có sẵn vào mùa hè, ăn kèm rau sống\n- Bánh bèo: vị thơm và dẻo đặc biệt, ăn kèm bánh mì chiên giòn, chà bông và mỡ hành\n- Bánh hỏi lòng heo: ăn kèm bánh tráng cuốn, rau sống, chấm cùng nước mắm tỏi ớt\n- Bánh xèo tôm nhảy: đúc bằng khuôn nhỏ, ăn kèm bánh tráng và rau\n- Hải sản: quán vỉa hè ở 43 Trần Quý Cáp bán đa dạng hải sản như sò lông nướng mỡ hẹ, ốc hương nấu lá dứa, sò huyết, sò điệp, ốc móng tay, ốc bươu, ốc hút...\n\n",
-        "climate_data": {
-            "Daytime temperature (°C)": "33",
-            "Nighttime temperature (°C)": "26",
-            "Precipitation (mm)": "266",
-            "UV Index": "8",
-            "Typhoon season": "Typhoon",
-            "Best month": "No"
-        },
-        "current_temperature_2m": "26 °C",
-        "current_rain": "0 mm",
-        "next_7_days_weather": {
-            "date": [
-                "2025-05-14",
-                "2025-05-15",
-                "2025-05-16",
-                "2025-05-17",
-                "2025-05-18",
-                "2025-05-19",
-                "2025-05-20"
-            ],
-            "temperature_2m_max": [
-                "32 °C",
-                "32 °C",
-                "33 °C",
-                "33 °C",
-                "33 °C",
-                "34 °C",
-                "33 °C"
-            ],
-            "temperature_2m_min": [
-                "22 °C",
-                "22 °C",
-                "22 °C",
-                "22 °C",
-                "23 °C",
-                "23 °C",
-                "23 °C"
-            ],
-            "uv_index_max": [
-                "8",
-                "9",
-                "9",
-                "9",
-                "8",
-                "8",
-                "8"
-            ],
-            "precipitation_sum": [
-                "1 mm",
-                "0 mm",
-                "0 mm",
-                "1 mm",
-                "1 mm",
-                "4 mm",
-                "14 mm"
-            ]
-        },
-        "month": 9,
-        "warning_promotion": "Phú Yên là một điểm đến thú vị với nhiều sự kiện nổi bật. Gần đây, tỉnh đã tổ chức lễ chào cờ đầu năm mới 2025 và các hoạt động chào đón khách du lịch đến Mũi Đại Lãnh. Trong tương lai, Phú Yên sẽ tổ chức Hội thi đầu bếp Phú Yên 2024 với chủ đề \"Cá ngừ đại dương – Tinh hoa của biển\" vào ngày 13/12/2024. Du khách cần lưu ý tình hình giao thông và an ninh, đặc biệt là tại các khu vực đông đúc và các điểm du lịch nổi tiếng. Phú Yên hứa hẹn mang đến nhiều trải nghiệm thú vị và đa dạng.",
-        "weather_favorability_score": -1.5
-    },
-    {
-        "city": "Hải Phòng",
-        "geo_features": {
-            "Núi đồi": "1",
-            "Rừng": "0",
-            "Bãi biển": "1",
-            "Thành phố": "1",
-            "Làng mạc": "0",
-            "Hang động": "0",
-            "Suối": "0"
-        },
-        "tourist_activities": {
-            "Công viên": 0,
-            "Di tích lịch sử & văn hóa": 1,
-            "Hoạt động ngoài trời & mạo hiểm": 1,
-            "Hoạt động dưới nước": 1,
-            "Trải nghiệm ẩm thực": 1,
-            "Lễ hội": 1,
-            "Thư giãn & chăm sóc sức khỏe": 0,
-            "Cuộc sống về đêm": 0,
-            "Thiên nhiên & động vật hoang dã": 1,
-            "Mua sắm": 0
-        },
-        "description": "Hải Phòng đẹp trong cả 4 mùa. Mùa đông, thưởng thức ẩm thực đường phố nóng hổi. Mùa hè, đi biển, thưởng thức dừa dầm và hoa phượng nở rộ. Mỗi mùa đều mang đến trải nghiệm độc đáo và thú vị cho du khách.\n\nTừ Hà Nội, có thể di chuyển đến Hải Phòng bằng cao tốc (1,5 tiếng), tàu hỏa (100.000-130.000 đồng), xe khách (120.000-250.000 đồng) hoặc xe limousine (230.000-250.000 đồng). Từ TP HCM, có thể bay đến Hà Nội và di chuyển đường bộ đến Hải Phòng.\n\nLưu trú tại Hải Phòng có nhiều lựa chọn từ cao cấp đến bình dân. Các khách sạn sang trọng như Hotel Nikko, Mercure Hai Phong và Vinpearl Hotel Imperia có giá từ 1,2 triệu đến 2,5 triệu đồng một đêm. Còn có các lựa chọn bình dân như homestay và khu nhà liền kề.\n\n\"Khám phá Hải Phòng\" là một trải nghiệm thú vị với nhiều địa điểm hấp dẫn. Dưới đây là một số điểm đến nổi bật:\n\n- Nhà ga Hà Nội - Hải Phòng: Một trong những nhà ga xe lửa đẹp nhất do người Pháp xây dựng.\n- Nhà hát thành phố Hải Phòng: Một biểu tượng du lịch của thành phố, được xây dựng vào năm 1904 và là nơi sinh hoạt chính trị, văn hóa của người Pháp và người bản xứ giàu có.\n- Cầu Bính, Cầu Hoàng Văn Thụ và Cầu Quay xe lửa: Các cây cầu đẹp và độc đáo bắc qua sông Cấm và sông Tam Bạc.\n- Hồ nước ở Hải Phòng: Một hồ nước xanh lạ mắt và bao bọc bởi núi đá vôi.\n- Đồ Sơn: Một khu du lịch nổi tiếng với các khu vui chơi và tham quan như Đồi Rồng, Hòn Dấu và casino.\n- Cát Bà: Một \"viên ngọc\" của du lịch Hải Phòng với các vịnh, đảo Khỉ và ăn hải sản.\n\nTất cả những địa điểm này đều mang lại cho du khách một trải nghiệm thú vị và đáng nhớ khi đến với Hải Phòng.\n\nHải Phòng nổi tiếng với ẩm thực đường phố đa dạng. Du khách có thể tham gia food tour để thưởng thức các món ngon như bánh bèo, bánh đa cua, bánh mì cay, dừa dầm, bún cá cay, ốc, trà cúc, sủi dìn và bánh đúc tàu.\n\n",
-        "climate_data": {
-            "Daytime temperature (°C)": "32",
-            "Nighttime temperature (°C)": "26",
-            "Precipitation (mm)": "302",
-            "UV Index": "7",
-            "Typhoon season": "Typhoon",
-            "Best month": "No"
-        },
-        "current_temperature_2m": "27 °C",
-        "current_rain": "0 mm",
-        "next_7_days_weather": {
-            "date": [
-                "2025-05-14",
-                "2025-05-15",
-                "2025-05-16",
-                "2025-05-17",
-                "2025-05-18",
-                "2025-05-19",
-                "2025-05-20"
-            ],
-            "temperature_2m_max": [
-                "28 °C",
-                "28 °C",
-                "29 °C",
-                "29 °C",
-                "29 °C",
-                "31 °C",
-                "33 °C"
-            ],
-            "temperature_2m_min": [
-                "25 °C",
-                "25 °C",
-                "26 °C",
-                "26 °C",
-                "26 °C",
-                "26 °C",
-                "27 °C"
-            ],
-            "uv_index_max": [
-                "7",
-                "8",
-                "2",
-                "6",
-                "8",
-                "6",
-                "7"
-            ],
-            "precipitation_sum": [
-                "15 mm",
-                "27 mm",
-                "7 mm",
-                "11 mm",
-                "15 mm",
-                "11 mm",
-                "0 mm"
-            ]
-        },
-        "month": 9,
-        "warning_promotion": "Hải Phòng là một điểm đến thú vị với nhiều sự kiện nổi bật. Gần đây, thành phố đã tổ chức nhiều hoạt động văn hóa và kinh tế, bao gồm các sự kiện tại AEON MALL Hải Phòng Lê Chân như \"Happy Tet, Busy Deals\" từ ngày 18-27/01/2025. Trong tương lai, Hải Phòng sẽ tổ chức nhiều sự kiện hấp dẫn như \"ECO EVENT 2024 – GREEN LIVING – GREEN FUTURE\" từ ngày 25/05 đến 05/06/2024. Du khách cần lưu ý tình hình giao thông và an ninh, đặc biệt là tại các khu vực đông đúc và các điểm du lịch nổi tiếng. Hải Phòng hứa hẹn mang đến nhiều trải nghiệm thú vị và đa dạng.",
-        "weather_favorability_score": -2.0
-    },
-    {
-        "city": "Khánh Hòa",
-        "geo_features": {
-            "Núi đồi": "1",
-            "Rừng": "1",
-            "Bãi biển": "1",
-            "Thành phố": "1",
-            "Làng mạc": "0",
-            "Hang động": "0",
-            "Suối": "1"
-        },
-        "tourist_activities": {
-            "Công viên": 0,
-            "Di tích lịch sử & văn hóa": 0,
-            "Hoạt động ngoài trời & mạo hiểm": 1,
-            "Hoạt động dưới nước": 1,
-            "Trải nghiệm ẩm thực": 1,
-            "Lễ hội": 0,
-            "Thư giãn & chăm sóc sức khỏe": 0,
-            "Cuộc sống về đêm": 0,
-            "Thiên nhiên & động vật hoang dã": 1,
-            "Mua sắm": 1
-        },
-        "description": "Khánh Hòa có nhiều phương tiện di chuyển thuận tiện:\n\n- Đường hàng không: Sân bay Cam Ranh cách Nha Trang 35km, giá vé từ 3-6 triệu đồng.\n- Đường sắt: Giá vé tàu Thống Nhất từ 270.000-1,5 triệu đồng.\n- Đường bộ: Giá vé xe từ Hà Nội 800.000-1 triệu đồng, từ TP HCM 250.000-500.000 đồng.\n- Đường thủy: Vịnh Nha Trang đón hàng chục chuyến tàu biển quốc tế mỗi năm.\n\nKhánh Hòa có nhiều khu lưu trú từ bình dân đến cao cấp, tập trung ở TP Nha Trang, vịnh Cam Ranh và vịnh Ninh Vân. Giá phòng dao động từ 200.000 đồng đến 15 triệu đồng một đêm, tùy thuộc vào tiêu chuẩn và vị trí.\n\nNha Trang là thành phố biển nổi tiếng ở Khánh Hòa, cách TP HCM 440 km về phía nam. Thành phố có nhiều điểm tham quan như bãi biển đẹp, nhà hát hình chiếc đó, vịnh Vân Phong, đảo Điệp Sơn, Biển Đại Lãnh, Dốc Lết, đảo Bình Ba và chùa Suối Đổ.\n\nẨm thực Khánh Hòa nổi bật với các món ăn như:\n\n- Bún sứa với thịt sứa dày mình, giòn sần sật\n- Nem nướng với thịt nạc giã nhuyễn, nướng trên bếp than\n- Hải sản đa dạng, bao gồm ốc biển\n- Bánh căn nướng bằng khuôn đất nung, ăn kèm nước mắm chua ngọt.\n\nĐặc sản yến được yêu thích vì bổ dưỡng và tốt cho sức khỏe. Phù hợp với người mới ốm dậy, phụ nữ, trẻ em suy dinh dưỡng. Yến được chế biến thành nhiều món ăn như chưng đường phèn, nấu súp, nấu chè. Mua tại cơ sở được Bộ NN và PTNT công nhận chất lượng.\n\n",
-        "climate_data": {
-            "Daytime temperature (°C)": "34",
-            "Nighttime temperature (°C)": "26",
-            "Precipitation (mm)": "138",
-            "UV Index": "8",
-            "Typhoon season": "Typhoon",
-            "Best month": "No"
-        },
-        "current_temperature_2m": "28 °C",
-        "current_rain": "0 mm",
-        "next_7_days_weather": {
-            "date": [
-                "2025-05-14",
-                "2025-05-15",
-                "2025-05-16",
-                "2025-05-17",
-                "2025-05-18",
-                "2025-05-19",
-                "2025-05-20"
-            ],
-            "temperature_2m_max": [
-                "33 °C",
-                "33 °C",
-                "33 °C",
-                "34 °C",
-                "34 °C",
-                "34 °C",
-                "35 °C"
-            ],
-            "temperature_2m_min": [
-                "25 °C",
-                "25 °C",
-                "25 °C",
-                "25 °C",
-                "25 °C",
-                "26 °C",
-                "26 °C"
-            ],
-            "uv_index_max": [
-                "9",
-                "9",
-                "9",
-                "8",
-                "9",
-                "8",
-                "8"
-            ],
-            "precipitation_sum": [
-                "1 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "4 mm"
-            ]
-        },
-        "month": 9,
-        "warning_promotion": "Khánh Hòa là một điểm đến hấp dẫn với nhiều sự kiện nổi bật. Gần đây, tỉnh đã tổ chức lễ kỷ niệm 70 năm Ngày Thầy thuốc Việt Nam và khai giảng Câu lạc bộ tiếng Anh dành cho tài xế xích lô. Trong tương lai, Khánh Hòa sẽ tổ chức Lễ hội Du lịch Biển Nha Trang từ ngày 13-16/6/2024 và Lễ hội Ánh sáng Vịnh Nha Trang từ ngày 13-20/7/2024. Du khách cần lưu ý tình hình giao thông và an ninh, đặc biệt là tại các khu vực đông đúc và các điểm du lịch nổi tiếng. Khánh Hòa hứa hẹn mang đến nhiều trải nghiệm thú vị và đa dạng.",
-        "weather_favorability_score": -2.0
-    },
-    {
-        "city": "Thanh Hóa",
-        "geo_features": {
-            "Núi đồi": "1",
-            "Rừng": "1",
-            "Bãi biển": "1",
-            "Thành phố": "1",
-            "Làng mạc": "0",
-            "Hang động": "0",
-            "Suối": "1"
-        },
-        "tourist_activities": {
-            "Công viên": 0,
-            "Di tích lịch sử & văn hóa": 1,
-            "Hoạt động ngoài trời & mạo hiểm": 1,
-            "Hoạt động dưới nước": 1,
-            "Trải nghiệm ẩm thực": 1,
-            "Lễ hội": 1,
-            "Thư giãn & chăm sóc sức khỏe": 0,
-            "Cuộc sống về đêm": 0,
-            "Thiên nhiên & động vật hoang dã": 1,
-            "Mua sắm": 0
-        },
-        "description": "Thanh Hóa có hai mùa rõ rệt: mùa nóng (tháng 5-10) và mùa lạnh (tháng 11-4). Thời điểm đẹp nhất để du lịch là từ tháng 3 đến tháng 8. Mùa hè thích hợp cho bãi biển, mùa thu mát mẻ, giá cả ổn định hơn.\n\nDi chuyển đến Thanh Hóa có nhiều phương tiện và giá vé khác nhau tùy thuộc vào vị trí xuất phát. Từ Hà Nội, giá vé tàu hỏa dao động từ 140.000 - 280.000 đồng, xe khách từ 150.000 - 200.000 đồng. Từ TP HCM, máy bay là lựa chọn tiện lợi nhất với giá vé khoảng 2-3 triệu đồng.\n\nTại Thanh Hóa, khách sạn trung tâm thành phố có giá từ 600.000 - 1 triệu đồng/đêm. Các khu du lịch biển như Sầm Sơn, Hải Tiến, Bãi Đông có giá cao hơn từ 800.000 - 4 triệu đồng/đêm. Nhà nghỉ bình dân giá từ 300.000 đồng/đêm trở lên.\n\n\"Chơi đâu\" là một câu hỏi phổ biến khi tìm kiếm điểm đến du lịch. Tại Thanh Hóa, có nhiều lựa chọn hấp dẫn như:\n\n- Bãi biển Sầm Sơn: nổi tiếng với bãi cát sạch và cảnh vật hoang sơ.\n- Hải Tiến: có đường biển dài, bãi cát sạch và hạ tầng hiện đại.\n- Bãi Đông: thích hợp để tắm và tham gia các hoạt động vui chơi dưới nước.\n- Hải Hòa: yên bình với bãi biển hoang sơ và nước trong.\n- Vườn quốc gia Bến En: có nhiều hoạt động như chèo thuyền, bơi lội và khám phá hang động.\n- Pù Luông: có thời tiết mát mẻ và cảnh quan thiên nhiên đẹp.\n- Hàm Rồng: có các danh lam thắng cảnh, di tích lịch sử và công trình văn hóa tâm linh.\n- Suối cá thần Cẩm Lương: có hàng nghìn con cá tự nhiên đủ kích thước và màu sắc.\n- Thành nhà Hồ: được xây dựng bởi Hồ Quý Ly từ năm 1397 và được UNESCO công nhận là di sản văn hóa thế giới.\n- Khu di tích Lam Kinh: có kiến trúc phong thủy \"tọa sơn hướng thủy\" và được bao quanh bởi núi và dòng sông.\n- Thái miếu nhà Hậu Lê: thờ cúng 27 vị Hoàng đế thời Lê và có nhiều hiện vật gốc có giá trị.\n\nĐặc sản Thanh Hóa bao gồm:\n\n- Chả tôm: nhân từ tôm bột tươi, thịt ba chỉ, hành khô và bánh phở, ăn kèm dưa góp và nước mắm pha loãng.\n- Bánh khoái Thanh Hóa: làm từ bột tẻ, rau cần, bắp cải, tép đồng tươi, ăn chung với nước mắm và dưa góp.\n- Gỏi cá nhệch: đặc sản của vùng Nga Sơn, cá nhệch được bóp với riềng sả và trộn với thính gạo, ăn kèm chẻo làm từ xương cá.\n- Bánh răng bừa: đặc sản tiến vua, được gói bằng lá dong hoặc lá chuối, ăn kèm nước mắm nguyên chất pha chanh, ớt hoặc tiêu bắc.\n\n",
-        "climate_data": {
-            "Daytime temperature (°C)": "32",
-            "Nighttime temperature (°C)": "25",
-            "Precipitation (mm)": "451",
-            "UV Index": "7",
-            "Typhoon season": "Typhoon",
-            "Best month": "No"
-        },
-        "current_temperature_2m": "28 °C",
-        "current_rain": "0 mm",
-        "next_7_days_weather": {
-            "date": [
-                "2025-05-14",
-                "2025-05-15",
-                "2025-05-16",
-                "2025-05-17",
-                "2025-05-18",
-                "2025-05-19",
-                "2025-05-20"
-            ],
-            "temperature_2m_max": [
-                "32 °C",
-                "31 °C",
-                "33 °C",
-                "31 °C",
-                "32 °C",
-                "36 °C",
-                "36 °C"
-            ],
-            "temperature_2m_min": [
-                "25 °C",
-                "26 °C",
-                "26 °C",
-                "26 °C",
-                "26 °C",
-                "26 °C",
-                "27 °C"
-            ],
-            "uv_index_max": [
-                "8",
-                "8",
-                "8",
-                "8",
-                "9",
-                "9",
-                "9"
-            ],
-            "precipitation_sum": [
-                "12 mm",
-                "9 mm",
-                "8 mm",
-                "19 mm",
-                "3 mm",
-                "3 mm",
-                "1 mm"
-            ]
-        },
-        "month": 9,
-        "warning_promotion": "Thanh Hóa là một điểm đến hấp dẫn với nhiều sự kiện nổi bật. Gần đây, tỉnh đã tổ chức lễ kỷ niệm 70 năm Ngày Thầy thuốc Việt Nam và khai giảng Câu lạc bộ tiếng Anh dành cho tài xế xích lô. Trong tương lai, Thanh Hóa sẽ tổ chức hơn 150 sự kiện, bao gồm Carnaval Hạ Long 2025 vào dịp 30/4 - 1/5 và Cuộc thi Hoa hậu Biển Việt Nam Toàn cầu 2025 vào tháng 5 và tháng 6. Du khách cần lưu ý tình hình giao thông và an ninh, đặc biệt là tại các khu vực đông đúc và các điểm du lịch nổi tiếng. Thanh Hóa hứa hẹn mang đến nhiều trải nghiệm thú vị và đa dạng.",
-        "weather_favorability_score": -2.0
-    },
-    {
-        "city": "Quảng Bình",
-        "geo_features": {
-            "Núi đồi": "1",
-            "Rừng": "1",
-            "Bãi biển": "1",
-            "Thành phố": "1",
-            "Làng mạc": "0",
-            "Hang động": "1",
-            "Suối": "1"
-        },
-        "tourist_activities": {
-            "Công viên": 0,
-            "Di tích lịch sử & văn hóa": 0,
-            "Hoạt động ngoài trời & mạo hiểm": 1,
-            "Hoạt động dưới nước": 1,
-            "Trải nghiệm ẩm thực": 1,
-            "Lễ hội": 0,
-            "Thư giãn & chăm sóc sức khỏe": 0,
-            "Cuộc sống về đêm": 0,
-            "Thiên nhiên & động vật hoang dã": 1,
-            "Mua sắm": 0
-        },
-        "description": "Khí hậu Quảng Bình chia làm hai mùa rõ rệt: mùa mưa (tháng 9 - 3) và mùa khô (tháng 4 - 8). Thời điểm đẹp nhất để đến Quảng Bình là từ cuối tháng 3 đến đầu tháng 9. Mùa mưa có nét thú vị riêng cho những người ưa khám phá.\n\nTP Đồng Hới cách Hà Nội 500 km, cách TP HCM 1.000 km. Du khách có thể di chuyển bằng máy bay, tàu, xe khách hoặc ôtô cá nhân. Giá vé và thời gian di chuyển tùy thuộc vào phương tiện và tuyến đường.\n\nDịch vụ lưu trú ở Quảng Bình đa dạng từ khách sạn, nhà nghỉ, homestay, farmstay, cắm trại. Tại Đồng Hới, có nhiều lựa chọn từ 600.000 đến 2 triệu đồng mỗi đêm. Tại các huyện Lệ Thủy, Quảng Trạch, Bố Trạch, Minh Hóa, giá từ 400.000 đến 2 triệu đồng mỗi đêm.\n\nVườn Quốc gia Phong Nha - Kẻ Bàng là một điểm tham quan và vui chơi nổi tiếng ở Quảng Bình, được UNESCO công nhận là Di sản thiên nhiên thế giới. Nơi đây có hơn 400 hang động với tổng chiều dài 220 km, ba sông chính là sông Chày, sông Son và sông Troóc.\n\nMột số điểm tham quan và vui chơi nổi bật tại Vườn Quốc gia Phong Nha - Kẻ Bàng bao gồm:\n\n- Động Phong Nha: được đánh giá là kỳ quan tiêu biểu về giá trị thẩm mỹ, địa chất của thế giới tự nhiên.\n- Động Thiên Đường: được mệnh danh là \"hoàng cung trong lòng đất\", có chiều dài 31,4 km và được coi là hang động khô có chiều dài kỷ lục ở châu Á.\n- Hang Sơn Đoòng: hiện là hang động tự nhiên lớn nhất thế giới, có chiều rộng 150 m, cao hơn 200 m, chiều dài gần 9 km.\n- Hang Tú Làn: hệ thống hang động được thám hiểm lần đầu năm 1992 bởi nhóm Thám hiểm Hang động Anh - Việt.\n- Hang Én: lớn thứ ba thế giới, dài 1,6 km, xuyên qua khối đá vôi khổng lồ.\n- Hang Pygmy: lớn thứ tư thế giới, nằm sâu trong Vườn quốc gia Phong Nha - Kẻ Bàng.\n- Hố sụt Kong: thuộc hệ thống hang Hổ, có hình dáng giống đầu khỉ khổng lồ trong phim Kong: Skull Island.\n- Sông Gianh: được xem là biểu tượng địa lý của tỉnh Quảng Bình.\n- Sông Son: chảy hoàn toàn trên địa phận tỉnh Quảng Bình.\n- Sông Nhật Lệ: bắt nguồn từ dãy Trường Sơn, chảy ra Biển Đông qua cửa biển Nhật Lệ.\n- Biển Nhật Lệ: trải dài ven TP Đồng Hới, cách trung tâm khoảng 2 km.\n- Bán đảo Bảo Ninh: yên bình giữa một bên là biển, một bên là sông Nhật Lệ.\n- Bãi Đá Nhảy: một thắng cảnh ở huyện Bố Trạch, nằm trên quốc lộ 1A.\n- Quảng Bình Quan: một thành lũy trong hệ thống Lũy Thầy, được xây năm 1639.\n- Tháp chuông nhà thờ Tam TòaNhà thờ Tam Tòa: nằm ở trung tâm TP Đồng Hới, bên dòng sông Nhật Lệ.\n- Thành cổ Đồng Hới: nằm trong tổng thể các di tích lịch sử quân sự của Đồng Hới vào thời kỳ Trịnh - Nguyễn phân tranh.\n- Tượng đài Mẹ Suốt: nằm bên bờ sông Nhật Lệ, là điểm dừng chân không thể bỏ qua của nhiều du khách.\n- Đèo Ngang: vắt qua dãy Hoành Sơn, là một chốt hiểm yếu trên quốc lộ 1A.\n- Vũng Chùa: một thắng cảnh thuộc thôn Thọ Sơn, xã Quảng Đông, huyện Quảng Trạch.\n- Sông Chày - Hang Tối: một tuyến du lịch khám phá thiên nhiên.\n- Khu du lịch suối nước Moọc: thuộc huyện Bố Trạch, cách TP Đồng Hới khoảng 70 km.\n- Tour \"Khám phá rừng lim - Ngôi nhà của Kong\": hoạt động tại xã Tân Hóa, huyện Minh Hoá.\n\nNhững điểm tham quan và vui chơi này sẽ mang lại cho du khách những trải nghiệm thú vị và đáng nhớ tại Vườn Quốc gia Phong Nha - Kẻ Bàng.\n\nẨm thực Quảng Bình là một trong những điểm thu hút du khách. Các món ăn đặc trưng bao gồm:\n\n- Bánh bột lọc: vỏ làm từ tinh bột sắn, nhân tôm, thịt mỡ\n- Bánh mì bột lọc: bánh mì nóng kẹp bánh bột lọc\n- Cháo canh: vị nước lèo ngọt đậm, sợi bánh mềm\n- Bún chả cá thác lác: nước dùng nấu từ xương cá hoặc xương lợn\n- Chắt chắt: món ăn của người dân ven sông Gianh\n- Cháo hàu: món mời khách của người dân thị trấn Quán Hàu\n- Bánh khoái: bánh giống bánh xèo, nhưng dày hơn\n- Hải sản: phong phú và giá cả hợp lý\n- Lẩu cá khoai: nồi lẩu dân dã với cà chua, khế, lá me\n- Nấm tràm: vị đắng, được dùng xào với rau khoai, thịt heo, tôm\n- Khoai lang dẻo: được chế biến từ loại khoai sau khi thu hoạch về để xuống nước.\n\n\"Lưu ý\" khi du lịch Quảng Bình:\n\n- Mua tour tại công ty uy tín và có người dẫn hiểu rõ địa hình để đảm bảo an toàn.\n- Không tự ý trải nghiệm đường rừng núi nguy hiểm.\n- Chọn điểm đến theo từng khu vực để hạn chế di chuyển dài.\n\n",
-        "climate_data": {
-            "Daytime temperature (°C)": "32",
-            "Nighttime temperature (°C)": "26",
-            "Precipitation (mm)": "471",
-            "UV Index": "7",
-            "Typhoon season": "Typhoon",
-            "Best month": "No"
-        },
-        "current_temperature_2m": "23 °C",
-        "current_rain": "0 mm",
-        "next_7_days_weather": {
-            "date": [
-                "2025-05-14",
-                "2025-05-15",
-                "2025-05-16",
-                "2025-05-17",
-                "2025-05-18",
-                "2025-05-19",
-                "2025-05-20"
-            ],
-            "temperature_2m_max": [
-                "27 °C",
-                "28 °C",
-                "28 °C",
-                "28 °C",
-                "28 °C",
-                "28 °C",
-                "28 °C"
-            ],
-            "temperature_2m_min": [
-                "19 °C",
-                "21 °C",
-                "21 °C",
-                "20 °C",
-                "21 °C",
-                "22 °C",
-                "23 °C"
-            ],
-            "uv_index_max": [
-                "6",
-                "8",
-                "3",
-                "9",
-                "9",
-                "9",
-                "9"
-            ],
-            "precipitation_sum": [
-                "1 mm",
-                "3 mm",
-                "2 mm",
-                "6 mm",
-                "1 mm",
-                "0 mm",
-                "0 mm"
-            ]
-        },
-        "month": 9,
-        "warning_promotion": "Quảng Bình là một điểm đến hấp dẫn với nhiều sự kiện nổi bật. Gần đây, tỉnh đã tổ chức lễ khánh thành tuyến cao tốc Cần Thơ - Cà Mau và chuẩn bị cho lễ hội gốm truyền thống Biên Hòa - Đồng Nai lần đầu tiên vào tháng 4/2025. Trong tương lai, Quảng Bình sẽ tổ chức chương trình Countdown 2025 vào ngày 31/12/2024 với màn trình diễn ánh sáng, âm nhạc và pháo hoa rực rỡ. Du khách cần lưu ý tình hình giao thông và an ninh, đặc biệt là tại các khu vực đông đúc và các điểm du lịch nổi tiếng. Quảng Bình hứa hẹn mang đến nhiều trải nghiệm thú vị và đa dạng.",
-        "weather_favorability_score": -2.0
-    },
-    {
         "city": "Quảng Nam",
         "geo_features": {
             "Núi đồi": "1",
@@ -534,149 +24,64 @@
         },
         "description": "Có nhiều phương tiện để đến Quảng Nam, bao gồm:\n\n- Đường hàng không: Sân bay Đà Nẵng hoặc Chu Lai\n- Đường sắt: Các đôi tàu Thống Nhất từ Hà Nội và TP HCM\n- Đường bộ: Xe khách, xe buýt, taxi, xe dịch vụ\n- Đường biển: Cảng Trường Hải ở khu kinh tế mở Chu Lai, tàu cao tốc từ biển Cửa Đại đến Cù Lao Chàm\n\nGiá vé và thời gian di chuyển tùy thuộc vào phương tiện và tuyến đường.\n\nQuảng Nam là địa phương phát triển mạnh về du lịch với nhiều lựa chọn lưu trú. Các resort ven biển như Four Seasons Resort The Nam Hai và Victoria Hoi An Beach Resort & Spa có giá từ 1-100 triệu đồng một đêm. Khách sạn và homestay ở Hội An và Tam Kỳ có giá từ 300.000-1,2 triệu đồng một đêm.\n\nHội An là một trong hai Di sản văn hoá thế giới của tỉnh Quảng Nam, nổi tiếng với giá trị văn hoá và kiến trúc cổ. Ngoài ra, có nhiều điểm du lịch khác như:\n\n- Rừng dừa Bảy Mẫu: khu du lịch sinh thái nổi tiếng với rừng dừa xanh và các hoạt động như múa thúng, đua thuyền.\n- Thánh địa Mỹ Sơn: thánh địa Ấn Độ giáo của Vương quốc Chăm Pa xưa, với 70 công trình đền tháp được chia thành nhiều cụm.\n- Cù Lao Chàm: đảo bảo tồn hệ sinh thái biển với 950 loài thủy sinh, nơi du khách có thể khám phá, đi câu cá, lặn ngắm san hô.\n- Làng bích họa Tam Thanh: làng có khoảng 30 bức tranh sắc màu rực rỡ phủ trên những bức tường cũ.\n- Bãi biển Cửa Đại: bãi biển đẹp với nước xanh trong, cát trắng, thoai thoải, thích hợp để tắm.\n- Hồ Phú Ninh: địa điểm du lịch sinh thái nổi bật với khí hậu mát mẻ, rừng nguyên sinh và hơn 20 đảo lớn.\n- Tượng đài mẹ Thứ: tượng đài tưởng niệm Mẹ Việt Nam Anh hùng Nguyễn Thị Thứ, nơi có quy mô lớn nhất Đông Nam Á.\n- Làng gốm Thanh Hà: nơi bạn có thể ngắm nhìn những sản phẩm gốm mỹ nghệ tinh xảo được làm từ bàn tay của những nghệ nhân xứ Thanh Hà.\n\nẨm thực Quảng Nam nổi tiếng với các món ăn đặc trưng như:\n\n- Bê thui: Món ăn phổ biến ở miền Trung, được làm từ bê 4-5 tháng tuổi, thui trên than lửa và ăn kèm với mắm nêm, rau sống và bánh tráng cuốn.\n- Mì Quảng: Món ăn có nguồn gốc từ Quảng Nam, được làm từ bột gạo xay mịn, tráng thành từng lớp, và ăn kèm với rau sống, thịt lợn, tôm, thịt gà và nước dùng.\n- Cao lầu: Món ăn đặc sản của Hội An, được làm từ sợi mì vàng, dùng cùng tôm, thịt lợn, rau sống và nước dùng.\n- Cơm gà: Món ăn phổ biến ở Tam Kỳ và Hội An, được làm từ cơm dẻo, thơm, thịt gà chắc, ngậy, lòng gà đậm vị và đu đủ bào giòn.\n- Các món phổ biến khác như bánh tráng cuốn thịt heo, bánh canh, bánh mì, bánh bột lọc và nem nướng.\n\n",
         "climate_data": {
-            "Daytime temperature (°C)": "33",
-            "Nighttime temperature (°C)": "26",
-            "Precipitation (mm)": "341",
-            "UV Index": "8",
-            "Typhoon season": "Typhoon",
-            "Best month": "No"
+            "Daytime temperature (°C)": "27",
+            "Nighttime temperature (°C)": "21",
+            "Precipitation (mm)": "26",
+            "UV Index": "7",
+            "Typhoon season": "",
+            "Best month": "Yes"
         },
         "current_temperature_2m": "28 °C",
         "current_rain": "0 mm",
         "next_7_days_weather": {
             "date": [
-                "2025-05-14",
-                "2025-05-15",
                 "2025-05-16",
                 "2025-05-17",
                 "2025-05-18",
                 "2025-05-19",
-                "2025-05-20"
+                "2025-05-20",
+                "2025-05-21",
+                "2025-05-22"
             ],
             "temperature_2m_max": [
-                "32 °C",
-                "34 °C",
                 "35 °C",
                 "36 °C",
-                "35 °C",
+                "36 °C",
+                "37 °C",
+                "37 °C",
                 "37 °C",
                 "37 °C"
             ],
             "temperature_2m_min": [
                 "26 °C",
-                "25 °C",
-                "25 °C",
                 "26 °C",
                 "26 °C",
                 "26 °C",
+                "26 °C",
+                "27 °C",
                 "26 °C"
             ],
             "uv_index_max": [
+                "9",
+                "9",
+                "9",
+                "9",
                 "8",
                 "9",
-                "9",
-                "9",
-                "9",
-                "7",
-                "8"
+                "9"
             ],
             "precipitation_sum": [
+                "0 mm",
+                "0 mm",
                 "4 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
-                "7 mm",
-                "4 mm"
-            ]
-        },
-        "month": 9,
-        "warning_promotion": "Quảng Nam là một điểm đến hấp dẫn với nhiều sự kiện nổi bật. Gần đây, tỉnh đã tổ chức lễ kỷ niệm 70 năm Ngày Thầy thuốc Việt Nam và khai giảng Câu lạc bộ tiếng Anh dành cho tài xế xích lô. Trong tương lai, Quảng Nam sẽ tổ chức Hội thảo Lữ hành quốc tế từ ngày 6-9/3/2025 tại Hội An, Mỹ Sơn và Khu du lịch sinh thái Cổng Trời Đông Giang. Du khách cần lưu ý tình hình giao thông và an ninh, đặc biệt là tại các khu vực đông đúc và các điểm du lịch nổi tiếng. Quảng Nam hứa hẹn mang đến nhiều trải nghiệm thú vị và đa dạng.",
-        "weather_favorability_score": -2.0
-    },
-    {
-        "city": "Đà Nẵng",
-        "geo_features": {
-            "Núi đồi": "1",
-            "Rừng": "0",
-            "Bãi biển": "1",
-            "Thành phố": "1",
-            "Làng mạc": "0",
-            "Hang động": "0",
-            "Suối": "1"
-        },
-        "tourist_activities": {
-            "Công viên": 1,
-            "Di tích lịch sử & văn hóa": 1,
-            "Hoạt động ngoài trời & mạo hiểm": 1,
-            "Hoạt động dưới nước": 1,
-            "Trải nghiệm ẩm thực": 1,
-            "Lễ hội": 0,
-            "Thư giãn & chăm sóc sức khỏe": 0,
-            "Cuộc sống về đêm": 1,
-            "Thiên nhiên & động vật hoang dã": 1,
-            "Mua sắm": 1
-        },
-        "description": "Đà Nẵng có hai mùa rõ rệt: mùa khô từ tháng 1 đến tháng 7 và mùa mưa từ tháng 8 đến tháng 12. Thời điểm đẹp nhất để du lịch Đà Nẵng là từ đầu tháng 4 đến giữa tháng 9, khi có tiết trời mát mẻ và giá cả dịch vụ bình ổn.\n\nDu khách đến Đà Nẵng có thể di chuyển bằng máy bay, tàu hỏa hoặc tự lái ôtô. Giá vé máy bay từ 1,3-3 triệu đồng, tàu hỏa từ 600.000-1,1 triệu đồng. Tự lái ôtô cần ít nhất một tuần và hai tài xế thay phiên cầm lái.\n\nDu lịch tại Đà Nẵng phát triển nhanh chóng với nhiều lựa chọn lưu trú như khách sạn, homestay, căn hộ và phòng tập thể. Giá phòng dao động từ 500.000 đồng đến 10.000.000 đồng một đêm. Các resort và khách sạn 5 sao nổi tiếng ở Đà Nẵng bao gồm InterContinental và Hyatt Regency.\n\nĐịa điểm đẹp ngoài thành phố Đà Nẵng bao gồm bán đảo Sơn Trà, núi Ngũ Hành Sơn, rạn Nam Ô, đèo Hải Vân. Bán đảo Sơn Trà có cánh rừng nguyên sinh rộng lớn và nhiều bãi tắm đẹp như Tiên Sa, Đá Đen, bãi Bụt. Du khách có thể tham gia nhiều hoạt động hấp dẫn như lặn biển ngắm san hô, câu cá cùng ngư dân, chiêm ngưỡng thành phố từ trực thăng, trên đỉnh Bàn Cờ. Nơi đây cũng là nơi sinh sống của hàng trăm loài động vật, trong đó có voọc chà vá chân nâu được mệnh danh là \"nữ hoàng linh trưởng\" trên bán đảo Sơn Trà.\n\nNgũ Hành Sơn là nơi có nhiều ngôi chùa linh thiêng cùng hệ thống các hang động tự nhiên. Đèo Hải Vân cách trung tâm Đà Nẵng khoảng một giờ chạy xe máy, với chiều dài 21 km và đỉnh cao nhất là 496 m so với mực nước biển. Rạn đá Nam Ô là nơi cư dân đông đúc, chủ yếu hành nghề ngư lưới cụ và nổi tiếng với nghề làm pháo và nước mắm truyền thống.\n\nĐà Nẵng cũng có nhiều điểm tham quan hấp dẫn như cầu Rồng, cầu quay sông Hàn, cầu Trần Thị Lý, cầu tình yêu, tượng cá chép hóa rồng, Cung Văn hóa Thiếu nhi Đà Nẵng, Bảo tàng Nghệ thuật Điêu khắc Chăm, Bảo tàng Mỹ thuật Đà Nẵng, Bảo tàng Phật giáo, Nhà thờ Tourane, Làng bích họa Đà Nẵng, chợ Cồn, chợ Hàn, chợ hải sản và các khu chợ đêm.\n\nTất cả những điểm tham quan này đều mang đến cho du khách những trải nghiệm độc đáo và đáng nhớ.\n\nTrải nghiệm tại Đà Nẵng bao gồm:\n\n- Lên trực thăng ngắm cảnh thành phố và biển\n- Học lướt sóng và chèo SUP tại trường dạy lướt sóng Đà Nẵng\n- Thuyền du lịch sông Hàn để ngắm nhìn trung tâm thành phố về đêm\n- Ăn uống và xem cầu Rồng phun lửa\n- Khám phá thành phố Đà Nẵng về đêm với tiết trời mát mẻ và không quá ồn ào.\n\nĐặc sản Đà Nẵng bao gồm:\n\n- Mì Quảng: món ăn khô với đậu phộng rang, bánh tráng mè nướng, giá từ 15.000 - 40.000 đồng một tô.\n- Bánh tráng thịt heo: món ăn đơn giản với thịt heo, giá từ 50.000 - 200.000 đồng một suất.\n- Bê thui Cầu Mống: thịt bê tái, chín rõ, bì chín, giá từ 350.000 - 380.000 đồng một kg.\n- Gỏi cá Nam Ô: cá tươi ngọt thấm vị trong nước dùng cay, giá khoảng 80.000 đồng một suất.\n- Bánh xèo: món ăn bình dân với nước tương nóng, giá từ 20.000 - 100.000 đồng một phần.\n- Bún mắm: món ăn quen thuộc với người Đà Nẵng, giá từ 15.000 - 30.000 đồng mỗi tô.\n- Bún thịt nướng: món ăn dễ tìm, giá khoảng 15.000 – 30.000 đồng mỗi tô.\n- Mít trộn: món khoái khẩu của nhiều người, giá mỗi đĩa khoảng 20.000 đồng.\n- Ốc hút: món ăn được chế biến theo nhiều vị, giá mỗi phần từ 15.000 đến 30.000 đồng.\n- Sữa chua muối: món ăn vặt mềm, không quá béo, giá 1.000 đồng một hũ.\n\nĐà Nẵng có nhiều đặc sản nổi tiếng như tré ông Chánh, tré bà Đệ, bánh khô mè Cẩm Lệ, rong biển Mỹ Khê, nước mắm Nam Ô, hải sản tươi sống hoặc khô mực, khô cá. Những món này dễ tìm mua và đóng gói hành lý làm quà.\n\n",
-        "climate_data": {
-            "Daytime temperature (°C)": "34",
-            "Nighttime temperature (°C)": "26",
-            "Precipitation (mm)": "358",
-            "UV Index": "8",
-            "Typhoon season": "Typhoon",
-            "Best month": "No"
-        },
-        "current_temperature_2m": "28 °C",
-        "current_rain": "0 mm",
-        "next_7_days_weather": {
-            "date": [
-                "2025-05-14",
-                "2025-05-15",
-                "2025-05-16",
-                "2025-05-17",
-                "2025-05-18",
-                "2025-05-19",
-                "2025-05-20"
-            ],
-            "temperature_2m_max": [
-                "32 °C",
-                "34 °C",
-                "34 °C",
-                "35 °C",
-                "33 °C",
-                "35 °C",
-                "35 °C"
-            ],
-            "temperature_2m_min": [
-                "25 °C",
-                "24 °C",
-                "24 °C",
-                "24 °C",
-                "25 °C",
-                "25 °C",
-                "25 °C"
-            ],
-            "uv_index_max": [
-                "8",
-                "4",
-                "9",
-                "8",
-                "9",
-                "6",
-                "7"
-            ],
-            "precipitation_sum": [
-                "5 mm",
-                "0 mm",
-                "0 mm",
-                "0 mm",
+                "10 mm",
+                "6 mm",
                 "1 mm",
-                "5 mm",
-                "2 mm"
+                "10 mm"
             ]
         },
-        "month": 9,
-        "warning_promotion": "Đà Nẵng là một điểm đến hấp dẫn với nhiều sự kiện nổi bật. Gần đây, thành phố đã tổ chức lễ hội đếm ngược chào năm mới 2025 và đón đoàn khách du lịch đầu tiên của năm. Trong tương lai, Đà Nẵng sẽ tổ chức Lễ hội Pháo hoa Quốc tế từ ngày 31/5 đến 12/7/2025 và Lễ hội Sắc màu vào ngày 15/3/2025. Du khách cần lưu ý tình hình giao thông và an ninh, đặc biệt là tại các khu vực đông đúc và các điểm du lịch nổi tiếng. Đà Nẵng hứa hẹn mang đến nhiều trải nghiệm thú vị và đa dạng.",
-        "weather_favorability_score": -2.5
+        "month": 2,
+        "warning_promotion": "Quảng Nam là một điểm đến hấp dẫn với nhiều sự kiện nổi bật. Gần đây, tỉnh đã tổ chức lễ kỷ niệm 70 năm Ngày Thầy thuốc Việt Nam và khai giảng Câu lạc bộ tiếng Anh dành cho tài xế xích lô. Trong tương lai, Quảng Nam sẽ tổ chức Hội thảo Lữ hành quốc tế từ ngày 6-9/3/2025 tại Hội An, Mỹ Sơn và Khu du lịch sinh thái Cổng Trời Đông Giang. Du khách cần lưu ý tình hình giao thông và an ninh, đặc biệt là tại các khu vực đông đúc và các điểm du lịch nổi tiếng. Quảng Nam hứa hẹn mang đến nhiều trải nghiệm thú vị và đa dạng.",
+        "weather_favorability_score": 2.0
     }
 ]
