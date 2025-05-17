@@ -51,25 +51,25 @@ def member(request, member, func):
         'func': func
     }
     
-    # Handle file uploads
-    if request.method == 'POST' and request.FILES:
-        uploaded_files = request.FILES.getlist('uploaded_file')  # Get the uploaded files
-        fs = FileSystemStorage()  # Create a FileSystemStorage instance
+    # # Handle file uploads
+    # if request.method == 'POST' and request.FILES:
+    #     uploaded_files = request.FILES.getlist('uploaded_file')  # Get the uploaded files
+    #     fs = FileSystemStorage()  # Create a FileSystemStorage instance
 
-        for file in uploaded_files:
-            filename = fs.save(file.name, file)  # Save the file
-            uploaded_file_url = fs.url(filename)  # Get the URL for the saved file
+    #     for file in uploaded_files:
+    #         filename = fs.save(file.name, file)  # Save the file
+    #         uploaded_file_url = fs.url(filename)  # Get the URL for the saved file
             
-            # If needed, add uploaded_file_url to the context or handle it otherwise
+    #         # If needed, add uploaded_file_url to the context or handle it otherwise
         
-        # Run the transform script after saving files
-        venv_path = os.path.join(os.getcwd(), 'portfolio_env', 'Scripts', 'activate.bat')
-        transform_data_script = os.path.join(os.getcwd(), 'transform.py')
-        try:
-            print("Running transform.py script...")
-            subprocess.run(f'"{venv_path}" && python "{transform_data_script}"', shell=True, check=True)
-        except subprocess.CalledProcessError as e:
-            return render(request, 'pfl_app/error_template.html', {'error': f'Failed to run transform script: {str(e)}'})
+    #     # Run the transform script after saving files
+    #     venv_path = os.path.join(os.getcwd(), 'portfolio_env', 'Scripts', 'activate.bat')
+    #     transform_data_script = os.path.join(os.getcwd(), 'transform.py')
+    #     try:
+    #         print("Running transform.py script...")
+    #         subprocess.run(f'"{venv_path}" && python "{transform_data_script}"', shell=True, check=True)
+    #     except subprocess.CalledProcessError as e:
+    #         return render(request, 'pfl_app/error_template.html', {'error': f'Failed to run transform script: {str(e)}'})
 
 
     # Load JSON template configuration
