@@ -5,7 +5,6 @@
 
 {% block head_extra %}
 <style>
-
     .emoji-row {
         display: flex;
         gap: 8px;
@@ -168,22 +167,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Reusable Modal -->
-                    <div class="modal fade" id="locationModal" tabindex="-1" aria-labelledby="locationModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h5 class="modal-title" id="locationModalLabel">Location Name</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body modal-description" id="modalDescription">
-                            Loading...
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    
                 </div>
                 {% endfor %}
             {% else %}
@@ -192,6 +175,21 @@
         </div>
     </div>
 </section>
+
+<!-- Reusable Modal -->
+<div class="modal fade" id="locationModal" tabindex="-1" aria-labelledby="locationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="locationModalLabel">Location Name</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body modal-description" id="modalDescription">
+        Loading...
+        </div>
+    </div>
+    </div>
+</div>
 
 <!-- Initialize tooltips and add JavaScript for functionality -->
 <script>
@@ -250,20 +248,25 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         const selectedData = Array.from(selectedLocations).map(location => {
+            // Get data from the context
             const geoFeatures = {{ geo_data|safe }}[location].emojis;
-            const activities = {{ activity_data|safe }}[location].emojis;
+            const activities = {{ activity_data|safe }}[location].activities;
+            const emojiActivities = {{ activity_data|safe }}[location].emojis;
             const description = {{ description_data|safe }}[location];
+            const coordinates = {{ coordinates_data|safe }}[location];
             
             return {
                 name: location,
                 geo_features: geoFeatures,
                 activities: activities,
-                description: description
+                emoji_activities: emojiActivities,
+                description: description,
+                coordinates: coordinates
             };
         });
 
         try {
-            const response = await fetch('/pfl_app/save_selected_locations/', {
+            const response = await fetch('/portfolio/save_selected_locations/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -272,11 +275,26 @@ document.addEventListener("DOMContentLoaded", function() {
                 body: JSON.stringify({ locations: selectedData })
             });
 
+            const contentType = response.headers.get('content-type');
+            
             if (response.ok) {
-                alert('Locations saved successfully!');
+                if (contentType && contentType.includes('application/json')) {
+                    const data = await response.json();
+                    if (data.status === 'success') {
+                        window.location.href = data.redirect_url;
+                    } else {
+                        alert('Error: ' + data.message);
+                    }
+                } else {
+                    alert('Locations saved successfully!');
+                }
             } else {
-                const errorData = await response.json();
-                alert('Error saving locations: ' + (errorData.message || 'Unknown error'));
+                if (contentType && contentType.includes('application/json')) {
+                    const errorData = await response.json();
+                    alert('Error saving locations: ' + (errorData.message || 'Unknown error'));
+                } else {
+                    alert('Error saving locations. Server returned status: ' + response.status);
+                }
             }
         } catch (error) {
             console.error('Error:', error);
@@ -299,37 +317,36 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         return cookieValue;
     }
+    
     // Handle Show More Modal
-document.querySelectorAll('.show-more-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    const locationName = this.getAttribute('data-location');
-    const geoData = {{ geo_data|safe }};
-    const activityData = {{ activity_data|safe }};
-    const descriptionData = {{ description_data|safe }};
+    document.querySelectorAll('.show-more-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const locationName = this.getAttribute('data-location');
+            const geoData = {{ geo_data|safe }};
+            const activityData = {{ activity_data|safe }};
+            const descriptionData = {{ description_data|safe }};
 
-    const geoFeatures = geoData[locationName]?.emojis || {};
-    const activities = activityData[locationName]?.emojis || {};
-    const description = descriptionData[locationName] || 'No description available for this location.';
+            const geoFeatures = geoData[locationName]?.emojis || {};
+            const activities = activityData[locationName]?.emojis || {};
+            const description = descriptionData[locationName] || 'No description available for this location.';
 
-    const modalTitle = document.getElementById('locationModalLabel');
-    const modalBody = document.getElementById('modalDescription');
+            const modalTitle = document.getElementById('locationModalLabel');
+            const modalBody = document.getElementById('modalDescription');
 
-    // Set modal content
-    modalTitle.textContent = locationName;
+            // Set modal content
+            modalTitle.textContent = locationName;
 
-    let html = `<h6>Thiên nhiên địa lý</h6><div class="emoji-row mx-0 px-0">${Object.entries(geoFeatures).map(([feature, emoji]) => `<span class="emoji mx-1" data-bs-toggle="tooltip" title="${feature}">${emoji}</span>`).join('')}</div><h6 class="mt-1">Các hoạt động du lịch</h6><div class="emoji-row">${Object.entries(activities).map(([activity, emoji]) => `<span class="emoji mx-1" data-bs-toggle="tooltip" title="${activity}">${emoji}</span>`).join('')}</div><hr/><p style="white-space: pre-wrap; text-align: justify;">${description}</p>`;
+            let html = `<h6>Thiên nhiên địa lý</h6><div class="emoji-row mx-0 px-0">${Object.entries(geoFeatures).map(([feature, emoji]) => `<span class="emoji mx-1" data-bs-toggle="tooltip" title="${feature}">${emoji}</span>`).join('')}</div><h6 class="mt-1">Các hoạt động du lịch</h6><div class="emoji-row">${Object.entries(activities).map(([activity, emoji]) => `<span class="emoji mx-1" data-bs-toggle="tooltip" title="${activity}">${emoji}</span>`).join('')}</div><hr/><p style="white-space: pre-wrap; text-align: justify;">${description}</p>`;
 
+            modalBody.innerHTML = html;
 
-    modalBody.innerHTML = html;
-
-    // Reinitialize tooltips inside modal
-    setTimeout(() => {
-      var tooltipTriggerList = [].slice.call(modalBody.querySelectorAll('[data-bs-toggle="tooltip"]'));
-      tooltipTriggerList.map(el => new bootstrap.Tooltip(el));
-    }, 10);
-  });
-});
-
+            // Reinitialize tooltips inside modal
+            setTimeout(() => {
+                var tooltipTriggerList = [].slice.call(modalBody.querySelectorAll('[data-bs-toggle="tooltip"]'));
+                tooltipTriggerList.map(el => new bootstrap.Tooltip(el));
+            }, 10);
+        });
+    });
 });
 </script>
 

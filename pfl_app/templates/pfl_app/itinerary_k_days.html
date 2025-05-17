@@ -1,0 +1,204 @@
+{% extends 'pfl_app/base.html' %}
+{% load static %}
+{% block content %}
+{% load custom_filters %}
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="container mt-5">
+    <h2>Thông tin chuyến đi</h2>
+    <form id="tripPlanForm" method="POST" action="{% url 'pfl_app:process_trip_plan' %}">
+        {% csrf_token %}
+        <div class="form-group mb-3">
+            <label for="tripDuration">Số ngày đi:</label>
+            <input type="number" class="form-control" id="tripDuration" name="tripDuration" min="1" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="homePoint">Địa chỉ nơi ở trong chuyến đi:</label>
+            <input type="text" class="form-control" id="homePoint" name="homePoint" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Thiết kế lịch trình</button>
+    </form>
+
+    <!-- Loading Indicator -->
+    <div id="loadingIndicator" class="text-center mt-4" style="display: none;">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Đang tải...</span>
+        </div>
+        <p class="mt-2">Đang thiết kế lịch trình chuyến đi của bạn...</p>
+
+    </div>
+
+    <!-- Results Section -->
+    <div id="tripResults" class="mt-5" style="display: none;">
+        <h2>Lịch trình chuyến đi của bạn</h2>
+        <div id="resultsContent" class="position-relative">
+            <!-- Navigation Buttons -->
+            <!-- Nút Tiếp -->
+            <button id="nextButton" class="btn btn-primary" style="
+                position: fixed;
+                top: 50%;
+                right: 10vw;
+                transform: translateY(-50%);
+                z-index: 999;
+            ">
+            Tiếp <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Cluster Container -->
+            <div id="clusterContainer" class="px-5"></div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- section contact -->
+<section class="section" id="contact">
+    <div class="container text-center">
+      <p class="section-subtitle en">How can you communicate?</p>
+      <h6 class="section-title mb-5 en">Contact Me</h6>
+      <h6 class="section-title mb-5 vi hidden">Liên hệ</h6>
+      <!-- contact form -->
+      <div class="contact-card en">
+        <p class="font-weight-normal">
+          Email: <strong>vuonghoang.workspace@gmail.com</strong>
+        </p>
+        <p class="font-weight-normal">
+          Phone: <strong>0977-829-788</strong>
+        </p>
+      </div>
+      <div class="contact-card vi hidden">
+        <p class="font-weight-normal">
+          Email: <strong>vuonghoang.workspace@gmail.com</strong>
+        </p>
+        <p class="font-weight-normal">
+          Số điện thoại: <strong>0977-829-788</strong>
+        </p>
+      </div>
+    </div>
+    <!-- end of container -->
+  </section>
+  <!-- end of contact section -->
+  
+  
+  {% comment %} GO UP BUTTON {% endcomment %}
+  <div class="btn__go-up text-primary text-center" onclick="topFunction()" id="btn-back-to-top">
+    <a href="#">
+      <img src='{% static "pfl_app/assets/imgs/homepage/gingerbread.png" %}' alt="" width="80px"> 
+      <p class="d-block border rounded-4 p-0 m-0" id="btn__text">Go up!</p>
+    </a>
+  </div>
+  {% comment %} END OF GO UP BUTTON {% endcomment %}
+
+<!-- Add JavaScript for handling form submission -->
+<script>
+let currentClusterIndex = 0;
+let clusterResults = [];
+let routeDescriptions = {};
+let homeName = '';
+
+document.getElementById('tripPlanForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Show loading indicator
+    document.getElementById('loadingIndicator').style.display = 'block';
+    document.getElementById('tripResults').style.display = 'none';
+    
+    // Get form data
+    const formData = new FormData(this);
+    
+    // Send AJAX request
+    fetch('{% url "pfl_app:process_trip_plan" %}', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Hide loading indicator
+        document.getElementById('loadingIndicator').style.display = 'none';
+        
+        if (data.status === 'success') {
+            // Store data
+            clusterResults = data.cluster_results;
+            routeDescriptions = data.descriptions;
+            homeName = data.home_name;
+            currentClusterIndex = 0;
+            
+            // Show results section
+            document.getElementById('tripResults').style.display = 'block';
+            
+            // Show first cluster
+            displayCluster(currentClusterIndex);
+            
+            // Update navigation buttons
+            updateNavigationButtons();
+        } else {
+            alert('Error: ' + data.message);
+        }
+    })
+    .catch(error => {
+        document.getElementById('loadingIndicator').style.display = 'none';
+        alert('Error: ' + error.message);
+    });
+});
+
+function displayCluster(index) {
+    const cluster = clusterResults[index];
+    const container = document.getElementById('clusterContainer');
+    
+    container.innerHTML = `
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3>${cluster.cluster_name}</h3>
+            </div>
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <img src="data:image/png;base64,${cluster.plot}" class="img-fluid" alt="Route Map" style="width: 70%;">
+                </div>
+                <div class="mt-4">
+                    <p class="h5">Tổng khoảng cách: ${cluster.total_distance.toFixed(2)} km</p>
+                    <ul class="list-group">
+                        ${cluster.route_details.map(detail => `
+                            <li class="list-group-item">
+                                <strong>${detail.from}</strong> → <strong>${detail.to}</strong>
+                                <br>
+                                Khoảng cách: ${detail.distance.toFixed(2)} km
+                                ${detail.to !== homeName ? `
+                                    <div class="mt-2">
+                                        <small class="text-muted">${routeDescriptions[detail.to] || ''}</small>
+                                    </div>
+                                ` : ''}
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function updateNavigationButtons() {
+    const nextButton = document.getElementById('nextButton');
+    nextButton.style.display = clusterResults.length > 0 ? 'block' : 'none';
+}
+
+// Add event listener for navigation button
+document.getElementById('nextButton').addEventListener('click', function() {
+    if (clusterResults.length > 0) {
+        currentClusterIndex = (currentClusterIndex + 1) % clusterResults.length;
+        displayCluster(currentClusterIndex);
+    }
+});
+</script>
+
+{% endblock content%}

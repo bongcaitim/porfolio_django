@@ -71,6 +71,26 @@
 
         .city-card {
             display: none; /* Initially hide all cards */
+            position: relative; /* For positioning the link icon */
+        }
+
+        /* Link icon styling */
+        .card-link-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: #cacdd1;
+            text-decoration: none;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 8px;
+            border-radius: 50%
+        }
+
+        .card-link-icon:hover {
+            color: #9faec0;
         }
 
         /* Sticky Buttons - Left Side for Previous and Right Side for Next */
@@ -169,8 +189,11 @@
             {% for city in cities %}
             <div class="city-card my-5">
                 <div class="card">
+                    <a href="{% url 'pfl_app:select_things_to_do' %}" class="card-link-icon" title="Lựa chọn điểm đến">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
                     <div class="card-body">
-                        <h5 class="card-title my-4">{{ city.city }}</h5>
+                        <h5 class="my-4">{{ city.city }}</h5>
 
                         <div class="row p-2">
                             <!-- Geographical Features -->
