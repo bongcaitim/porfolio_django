@@ -99,3 +99,4 @@ wcwidth==0.2.13
 xyzservices==2025.4.0
 yarl==1.18.0
 gunicorn>=20.1.0
+whitenoise
