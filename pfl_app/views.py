@@ -174,9 +174,8 @@ def save_preferences_and_run_script(request):
             import subprocess
 
             # Paths to the virtual environment and script
-            import sys
-
             fetch_match_preferences_script = os.path.join(os.getcwd(), 'fetch_match_preferences.py')
+            python_executable = sys.executable  # This points to the Python in the current environment
             python_executable = sys.executable  # This points to the Python in the current environment
             
 
@@ -185,7 +184,6 @@ def save_preferences_and_run_script(request):
                 print("Attempting to run fetch_match_preferences.py script")
                 # Run the script in the activated environment
                 subprocess.run([python_executable, fetch_match_preferences_script], check=True)
-
                 print("Successfully ran fetch_match_preferences.py script")
                 
                 # Redirect to results page after successful execution
