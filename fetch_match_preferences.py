@@ -5,12 +5,8 @@ import json
 import pandas as pd
 
 # Add the project directory to the system path
-# sys.path.insert(0, "E:/data_science/portfolio")
-# Navigate two levels up from the current script's directory to get the project root
 project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-
 sys.path.insert(0, project_dir)
-
 
 # Set up the Django environment
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pfl_project.settings')
@@ -34,11 +30,11 @@ else:
     sys.exit()
 
 # Load JSON data for geographical features and tourist activities
-geo_file_path = r"pfl_app\media\all_cities_geo_features.json"
+geo_file_path = os.path.join('pfl_app', 'media', 'all_cities_geo_features.json')
 with open(geo_file_path, 'r', encoding='utf-8') as f:
     geo_data = json.load(f)
 
-tourist_act_file_path = r"pfl_app\media\all_cities_tourist_activities.json"
+tourist_act_file_path = os.path.join('pfl_app', 'media', 'all_cities_tourist_activities.json')
 with open(tourist_act_file_path, 'r', encoding='utf-8') as f:
     activities_data = json.load(f)
 
@@ -57,14 +53,13 @@ matching_cities = filter_cities(geo_data, activities_data)
 print("Cities that match preferences:", matching_cities)
 
 # Load province descriptions
-static_asset = r"pfl_app\static\pfl_app\assets"
-province_data_excel = os.path.join(static_asset, r"all_province_descriptions.xlsx")
+static_asset = os.path.join('pfl_app', 'static', 'pfl_app', 'assets')
+province_data_excel = os.path.join(static_asset, 'all_province_descriptions.xlsx')
 
 province_data = pd.read_excel(province_data_excel)
 
 # Load climate data
-static_asset = r"pfl_app\static\pfl_app\assets"
-climate_data_file = os.path.join(static_asset, "combined_climate_data.json")
+climate_data_file = os.path.join(static_asset, 'combined_climate_data.json')
 with open(climate_data_file, 'r', encoding='utf-8') as f:
     climate_data = json.load(f)
     
@@ -168,11 +163,11 @@ month_to_number = {
 
 
 
-warning_promotion_file_path = os.path.join(static_asset, r"warning_promotion.json")
+warning_promotion_file_path = os.path.join(static_asset, 'warning_promotion.json')
 with open(warning_promotion_file_path, 'r', encoding='utf-8') as f:
     warning_promotion_data = json.load(f)
 
-weather_favorability_score_df = pd.read_excel(os.path.join(static_asset, r"weather_favorability_scores.xlsx"))
+weather_favorability_score_df = pd.read_excel(os.path.join(static_asset, 'weather_favorability_scores.xlsx'))
 
 # Prepare list for matched results
 matched_result = []
@@ -214,8 +209,7 @@ for city in matching_cities:
         })
 
 # Save the matched result as a JSON file
-# output_file = r'E:\data_science\portfolio\pfl_app\media\matches\matched_city_data.json'
-output_file = os.path.join(static_asset, r"matched_city_data.json")
+output_file = os.path.join(static_asset, 'matched_city_data.json')
 
 # Sort matched_result by weather_favorability_score in descending order
 matched_result.sort(key=lambda x: float(x['weather_favorability_score']), reverse=True)
