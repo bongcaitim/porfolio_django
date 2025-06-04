@@ -1,6 +1,5 @@
 pfl_app/__pycache__/
 pfl_project/__pycache__/
-pfl_project/settings.py
 .cache.sqlite
 portfolio_env/
 portfolio_env/
