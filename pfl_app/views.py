@@ -23,6 +23,7 @@ import matplotlib.pyplot as plt
 import geopandas as gpd
 from shapely.geometry import Point
 import contextily as ctx
+from fetch_match_preferences import get_matched_cities_data
 
 def member(request, member, func):
     print("FUNCTION MEMBER IS BEING TRIGGERED")
@@ -59,9 +60,9 @@ def member(request, member, func):
     #     for file in uploaded_files:
     #         filename = fs.save(file.name, file)  # Save the file
     #         uploaded_file_url = fs.url(filename)  # Get the URL for the saved file
-            
+    #         
     #         # If needed, add uploaded_file_url to the context or handle it otherwise
-        
+    #     
     #     # Run the transform script after saving files
     #     venv_path = os.path.join(os.getcwd(), 'portfolio_env', 'Scripts', 'activate.bat')
     #     transform_data_script = os.path.join(os.getcwd(), 'transform.py')
@@ -171,26 +172,17 @@ def save_preferences_and_run_script(request):
             )
             print("Successfully saved preferences to database")
 
-            import subprocess
-
-            # Paths to the virtual environment and script
-            fetch_match_preferences_script = os.path.join(os.getcwd(), 'fetch_match_preferences.py')
-            python_executable = sys.executable  # This points to the Python in the current environment
-            python_executable = sys.executable  # This points to the Python in the current environment
-            
-
-            # Activate virtual environment and run the script
             try:
                 print("Attempting to run fetch_match_preferences.py script")
-                # Run the script in the activated environment
-                subprocess.run([python_executable, fetch_match_preferences_script], check=True)
+                # Run the matching logic
+                get_matched_cities_data()
                 print("Successfully ran fetch_match_preferences.py script")
                 
                 # Redirect to results page after successful execution
                 print("Redirecting to results page")
                 return HttpResponseRedirect(reverse('pfl_app:results_view'))
 
-            except subprocess.CalledProcessError as e:
+            except Exception as e:
                 print(f"Error running script: {str(e)}")
                 return JsonResponse({'status': 'error', 'message': f'Failed to run script: {str(e)}'})
         except Exception as e:
