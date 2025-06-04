@@ -73,11 +73,9 @@ Pygments==2.18.0
 pyogrio==0.11.0
 pyparsing==3.2.3
 pypdfium2==4.30.0
-pyproj==3.7.1
 python-dateutil==2.9.0.post0
 python-docx==1.1.2
 pytz==2024.2
-pywin32==308
 pyzmq==26.2.0
 rasterio==1.4.3
 requests==2.32.3
