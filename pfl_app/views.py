@@ -89,7 +89,7 @@ def results_view(request):
 
     # Load city data
     try:
-        static_asset = r"pfl_app\static\pfl_app\assets"
+        static_asset = os.path.join("pfl_app", "static", "pfl_app", "assets")
         matched_city_data = os.path.join(static_asset, r"matched_city_data.json")
 
         with open(matched_city_data, "r", encoding="utf-8") as file:
