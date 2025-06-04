@@ -101,7 +101,7 @@ def results_view(request):
 
     # Load emoji data
     try:
-        feature_emojis = r"pfl_app\static\pfl_app\assets\features_activities_emojis.json"
+        feature_emojis = os.path.join(static_asset, r"features_activities_emojis.json")
         with open(feature_emojis, "r", encoding="utf-8") as emoji_file:
             emoji_data = json.load(emoji_file)
     except FileNotFoundError:
