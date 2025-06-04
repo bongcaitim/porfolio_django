@@ -1,83 +1,49 @@
 [
   {
-    "name": "Công viên Kỳ Quan",
-    "geo_features_emojis": {},
-    "activities_emojis": {
-      "Công viên": "⛲",
-      "Hoạt động ngoài trời & mạo hiểm": "🧗🏽"
-    },
-    "description": "Công viên Kỳ Quan là một địa điểm thú vị, tái hiện các kỳ quan nổi tiếng trên thế giới trong không gian thu nhỏ. Công viên này bao gồm các mô hình kiến trúc tuyệt đẹp như Tháp Eiffel, Tượng Nữ Thần Tự Do, Kim Tự Tháp Giza, và Vạn Lý Trường Thành, được chế tác tỉ mỉ và chính xác đến từng chi tiết.\r\n\r\nMỗi mô hình không chỉ đẹp mắt mà còn mang đến cho du khách cảm giác như đang du ngoạn qua các quốc gia khác nhau mà không cần rời khỏi thành phố. Các công trình được bố trí hài hòa trong không gian xanh mát của công viên, tạo nên một khung cảnh vừa lãng mạn vừa hấp dẫn.\r\n\r\nDu khách có thể thoải mái chụp ảnh, tận hưởng không khí trong lành và khám phá từng kỳ quan trong hành trình của mình. Công viên còn có các khu vui chơi, quán café và nhà hàng, phục vụ nhu cầu thư giãn và ăn uống của du khách.\r\n\r\nCông viên Kỳ Quan không chỉ là nơi giải trí mà còn giúp du khách mở rộng tầm mắt, tìm hiểu về kiến trúc và văn hóa của nhiều quốc gia. Đây là điểm đến lý tưởng cho cả gia đình, bạn bè và những ai yêu thích khám phá thế giới.\r\n",
-    "coordinates": "16.098813,108.224437"
-  },
-  {
-    "name": "Cầu Vàng",
+    "name": "Bãi Rêu Nam Ô",
     "geo_features_emojis": {
-      "Núi đồi": "🏔️"
-    },
-    "activities_emojis": {
-      "Hoạt động ngoài trời & mạo hiểm": "🧗🏽"
-    },
-    "description": "Cầu Vàng, một kỳ quan kiến trúc đặc sắc, nằm ở độ cao 1.400 mét so với mực nước biển, bao quanh bởi những dãy núi hùng vĩ và rừng thông xanh ngát. Cây cầu dài 150 mét, với hai bàn tay khổng lồ nâng đỡ lối đi, tạo ấn tượng mạnh mẽ cho du khách ngay từ cái nhìn đầu tiên.\r\n\r\nCầu được làm từ chất liệu inox cao cấp và gỗ cứng, giúp đảm bảo độ bền vững và an toàn khi du khách dạo bước. Mặt cầu được lát bằng gỗ, mang lại cảm giác ấm cúng và hài hòa với thiên nhiên xung quanh. Hành lang của Cầu Vàng cũng được trang trí bằng hoa cẩm tú cầu rực rỡ, tạo nên một khung cảnh đầy màu sắc và lãng mạn.\r\n\r\nĐiểm đặc biệt của Cầu Vàng chính là hai bàn tay khổng lồ bằng đá, như thể xuất hiện từ lòng đất để nâng đỡ cây cầu, tạo nên hình ảnh tượng trưng cho sự kết nối giữa con người và thiên nhiên. Từ Cầu Vàng, du khách có thể thưởng ngoạn toàn cảnh không gian núi rừng, thung lũng xanh tươi và biển cả xa xăm, tạo nên một trải nghiệm khó quên và đầy cảm xúc.\r\n\r\nCầu Vàng không chỉ là nơi lý tưởng để chụp ảnh sống ảo mà còn là điểm đến thư giãn, tận hưởng không gian thiên nhiên trong lành và yên bình.",
-    "coordinates": "15.994937,107.996562"
-  },
-  {
-    "name": "Di tích Thành Điện Hải",
-    "geo_features_emojis": {
-      "Thành phố": "🏙️"
-    },
-    "activities_emojis": {
-      "Di tích lịch sử & văn hóa": "🏯",
-      "Hoạt động ngoài trời & mạo hiểm": "🧗🏽"
-    },
-    "description": "Di tích Thành Điện Hải là một công trình lịch sử quan trọng, gắn liền với cuộc kháng chiến chống Pháp của nhân dân Việt Nam. Thành được xây dựng vào thế kỷ XIX, ban đầu có tên là Thành An Hải, sau đó được đổi tên thành Thành Điện Hải. Đây là một trong những thành lũy có vai trò quan trọng trong việc phòng thủ bảo vệ đất nước.\r\n\r\nThành Điện Hải có cấu trúc hình chữ nhật, bao quanh bởi hào nước sâu và tường thành kiên cố. Các cổng thành được xây dựng vững chắc, với những bức tường dày và cao, tạo nên một hệ thống phòng thủ mạnh mẽ. Bên trong thành còn có các công trình kiến trúc như lầu vọng cảnh, kho vũ khí và khu vực sinh hoạt của binh lính.\r\n\r\nDi tích này không chỉ mang giá trị lịch sử mà còn là nơi để du khách tìm hiểu về văn hóa và truyền thống của dân tộc. Khi đến tham quan, du khách có thể chiêm ngưỡng kiến trúc cổ kính của thành, khám phá các hiện vật và tài liệu lịch sử được trưng bày tại bảo tàng bên trong thành.\r\n\r\nVới những giá trị lịch sử và văn hóa quý báu, Di tích Thành Điện Hải là điểm đến không thể bỏ qua cho những ai yêu thích khám phá lịch sử và văn hóa Việt Nam. Đây cũng là nơi tôn vinh tinh thần yêu nước và lòng kiên cường của dân tộc.",
-    "coordinates": "16.076437,108.223187"
-  },
-  {
-    "name": "DA NANG DOWNTOWN",
-    "geo_features_emojis": {
-      "Thành phố": "🏙️"
+      "Bãi biển": "🏖️"
     },
     "activities_emojis": {
       "Công viên": "⛲",
-      "Di tích lịch sử & văn hóa": "🏯",
       "Hoạt động ngoài trời & mạo hiểm": "🧗🏽",
+      "Hoạt động dưới nước": "🏊",
       "Trải nghiệm ẩm thực": "🍲",
-      "Lễ hội": "🎠",
+      "Thiên nhiên & động vật hoang dã": "🦌"
+    },
+    "description": "Bãi Rêu Nam Ô là một bãi biển đẹp và độc đáo với những bãi đá phủ đầy rêu xanh mướt, tạo nên cảnh quan lạ mắt và hấp dẫn. Vào mùa rêu, từ khoảng tháng 1 đến tháng 3, những tảng đá trên bãi biển được phủ kín bởi lớp rêu xanh, tạo nên một khung cảnh thiên nhiên tuyệt đẹp, thu hút đông đảo du khách và nhiếp ảnh gia đến tham quan và chụp ảnh.\r\n\r\nBãi biển Nam Ô có bờ cát trắng mịn, nước biển trong xanh và không gian yên tĩnh, lý tưởng cho những ai muốn tìm kiếm sự thư giãn và yên bình. Khi thủy triều lên, rêu xanh trên các tảng đá lấp lánh dưới ánh nắng mặt trời, tạo nên một bức tranh thiên nhiên rực rỡ và sống động.\r\n\r\nNgoài cảnh quan tuyệt đẹp, bãi Rêu Nam Ô còn là nơi thích hợp để tổ chức các hoạt động vui chơi ngoài trời như dã ngoại, cắm trại hay thả diều. Du khách cũng có thể tham gia các hoạt động thể thao nước như lướt ván, chèo thuyền kayak hay đơn giản là tắm biển và thả mình trong làn nước mát lạnh.\r\n\r\nVới vẻ đẹp thiên nhiên hoang sơ và yên bình, bãi Rêu Nam Ô chắc chắn sẽ mang lại cho du khách những trải nghiệm tuyệt vời và khó quên khi khám phá vùng biển miền Trung Việt Nam.",
+    "coordinates": "16.117938,108.130063"
+  },
+  {
+    "name": "Bãi biển Sơn Trà",
+    "geo_features_emojis": {
+      "Bãi biển": "🏖️"
+    },
+    "activities_emojis": {
+      "Hoạt động ngoài trời & mạo hiểm": "🧗🏽",
+      "Hoạt động dưới nước": "🏊",
+      "Trải nghiệm ẩm thực": "🍲",
+      "Thiên nhiên & động vật hoang dã": "🦌"
+    },
+    "description": "Bãi biển Sơn Trà là một điểm đến lý tưởng cho những ai yêu thích thiên nhiên và biển cả. Với bờ cát trắng mịn và nước biển trong xanh, bãi biển này mang đến không gian yên bình và thoáng đãng. Đây là nơi lý tưởng để du khách tận hưởng không khí trong lành và thư giãn.\r\n\r\nBãi biển có hệ sinh thái phong phú với nhiều loài động thực vật đa dạng, du khách có thể dễ dàng bắt gặp những chú sóc nhỏ nhảy nhót trên các tán cây hay những đàn chim biển bay lượn. Bãi biển Sơn Trà còn nổi tiếng với rạn san hô tuyệt đẹp, là điểm lặn ngắm san hô lý tưởng cho những ai yêu thích khám phá đại dương.\r\n\r\nDọc bờ biển có nhiều quán cà phê và nhà hàng, phục vụ các món hải sản tươi ngon và đồ uống mát lạnh. Du khách có thể ngồi thưởng thức bữa ăn, ngắm cảnh biển và cảm nhận sự yên bình của thiên nhiên.\r\n\r\nNgoài ra, bãi biển Sơn Trà còn là nơi lý tưởng để tổ chức các hoạt động vui chơi, thể thao như bóng chuyền, chèo thuyền kayak hay đơn giản là thả mình trên bãi cát và ngắm nhìn hoàng hôn. Với vẻ đẹp tự nhiên hoang sơ và không gian yên tĩnh, bãi biển Sơn Trà chắc chắn sẽ mang lại cho du khách những trải nghiệm tuyệt vời và khó quên.",
+    "coordinates": "16.099187,108.255063"
+  },
+  {
+    "name": "Hòa Phú Thành Tourist - Trượt thác Đà Nẵng",
+    "geo_features_emojis": {
+      "Núi đồi": "🏔️",
+      "Suối": "🏞️"
+    },
+    "activities_emojis": {
+      "Công viên": "⛲",
+      "Hoạt động ngoài trời & mạo hiểm": "🧗🏽",
+      "Hoạt động dưới nước": "🏊",
+      "Trải nghiệm ẩm thực": "🍲",
       "Thư giãn & chăm sóc sức khỏe": "💆",
-      "Cuộc sống về đêm": "🪩",
-      "Mua sắm": "🛍️"
+      "Thiên nhiên & động vật hoang dã": "🦌"
     },
-    "description": "Khu vực trung tâm Đà Nẵng (Da Nang Downtown) là một điểm đến sôi động, nơi du khách có thể trải nghiệm sự pha trộn hài hòa giữa văn hóa, ẩm thực và kiến trúc hiện đại. Trung tâm có nhiều điểm tham quan nổi bật như Chợ Hàn, nơi bạn có thể mua sắm các sản phẩm địa phương và quà lưu niệm, hay Công viên 29/3, một không gian xanh thoáng đãng để thư giãn.\r\n\r\nKhu vực này cũng nổi tiếng với các quán café phong cách và nhà hàng đa dạng, phục vụ từ món ăn truyền thống Việt Nam đến ẩm thực quốc tế. Đặc biệt, phố đi bộ Bạch Đằng ven sông Hàn là nơi lý tưởng để tản bộ, ngắm cảnh và thưởng thức không khí trong lành.\r\n\r\nCác tòa nhà cao tầng và khách sạn sang trọng tại đây cung cấp nhiều tiện nghi hiện đại, đáp ứng nhu cầu của du khách. Vào ban đêm, khu vực trung tâm rực rỡ với ánh đèn và các hoạt động giải trí như biểu diễn nghệ thuật đường phố, quán bar và club sôi động.\r\n\r\nDa Nang Downtown không chỉ là nơi lý tưởng để trải nghiệm cuộc sống đô thị hiện đại mà còn mang đến cho du khách những giây phút thư giãn và tận hưởng vẻ đẹp của thành phố biển.\r\n",
-    "coordinates": "16.041187,108.225687"
-  },
-  {
-    "name": "Du lịch Học Tập Cộng Đồng Kim Bồng",
-    "geo_features_emojis": {
-      "Làng mạc": "🏡"
-    },
-    "activities_emojis": {
-      "Di tích lịch sử & văn hóa": "🏯",
-      "Hoạt động ngoài trời & mạo hiểm": "🧗🏽",
-      "Trải nghiệm ẩm thực": "🍲",
-      "Thiên nhiên & động vật hoang dã": "🦌",
-      "Mua sắm": "🛍️"
-    },
-    "description": "Du lịch Học Tập Cộng Đồng Kim Bồng là một trải nghiệm độc đáo, nơi du khách có cơ hội tìm hiểu và tham gia vào các hoạt động sản xuất thủ công truyền thống của làng nghề. Kim Bồng nổi tiếng với nghề mộc và các sản phẩm gỗ tinh xảo, được chế tác bởi những người thợ lành nghề.\r\n\r\nDu khách đến đây sẽ được tận mắt chứng kiến quy trình làm việc của các nghệ nhân, từ khâu chọn gỗ, chế tác, đến hoàn thiện sản phẩm. Bạn cũng có thể thử tay vào các công đoạn đơn giản như mài, đục, chạm khắc dưới sự hướng dẫn của các thợ mộc. Điều này không chỉ mang lại niềm vui mà còn giúp bạn hiểu rõ hơn về sự tỉ mỉ và tinh tế trong từng sản phẩm gỗ.\r\n\r\nNgoài ra, làng Kim Bồng còn nổi tiếng với các sản phẩm thuyền gỗ, du khách có thể tham quan xưởng đóng thuyền và tìm hiểu về quy trình chế tác thuyền truyền thống. Không chỉ dừng lại ở nghề mộc, Kim Bồng còn có các làng nghề khác như dệt chiếu, làm nón, và sản xuất đồ gốm.\r\n\r\nKhu vực làng Kim Bồng cũng có cảnh quan thiên nhiên đẹp mắt, với những cánh đồng lúa xanh mướt, con sông hiền hòa và những ngôi nhà cổ kính. Đây là nơi lý tưởng để du khách tìm hiểu về văn hóa, lịch sử và trải nghiệm cuộc sống dân dã, mộc mạc của người dân địa phương.",
-    "coordinates": "15.868562,108.321687"
-  },
-  {
-    "name": "East Asia Park",
-    "geo_features_emojis": {
-      "Thành phố": "🏙️"
-    },
-    "activities_emojis": {
-      "Công viên": "⛲",
-      "Hoạt động ngoài trời & mạo hiểm": "🧗🏽",
-      "Trải nghiệm ẩm thực": "🍲",
-      "Thư giãn & chăm sóc sức khỏe": "💆"
-    },
-    "description": "East Asia Park là một công viên giải trí hiện đại và rộng lớn, nằm bên bờ sông Hàn. Với diện tích rộng rãi, công viên này được thiết kế với nhiều khu vực vui chơi, giải trí hấp dẫn cho mọi lứa tuổi.\r\n\r\nKhu vực vui chơi ngoài trời bao gồm các trò chơi cảm giác mạnh như tàu lượn siêu tốc, đu quay, tháp rơi tự do và vòng xoay khổng lồ. Đặc biệt, vòng xoay khổng lồ mang lại cho du khách tầm nhìn toàn cảnh thành phố từ trên cao, rất ấn tượng vào buổi tối khi đèn đêm rực rỡ.\r\n\r\nNgoài ra, East Asia Park còn có khu vực công viên nước với nhiều bể bơi và trò chơi dưới nước, phù hợp cho cả gia đình và trẻ em. Các khu vực trò chơi trong nhà cũng rất đa dạng, từ các trò chơi điện tử hiện đại đến các khu vui chơi trẻ em an toàn.\r\n\r\nCông viên còn có nhiều nhà hàng, quán ăn và quầy hàng phục vụ ẩm thực đa dạng, từ món ăn nhanh đến các món ăn truyền thống Việt Nam và quốc tế. Du khách có thể thư giãn, thưởng thức ẩm thực và tận hưởng không khí sôi động tại công viên.\r\n\r\nVới các hoạt động giải trí phong phú và không gian xanh mát, East Asia Park là điểm đến lý tưởng để vui chơi, thư giãn và tận hưởng những giây phút thú vị bên gia đình và bạn bè.",
-    "coordinates": "16.068312,108.246062"
+    "description": "Hòa Phú Thành Tourist là một khu du lịch sinh thái nổi bật với hoạt động trượt thác thú vị, mang đến cho du khách những trải nghiệm mạo hiểm và đầy hứng khởi. Dòng suối trong khu du lịch chảy qua nhiều tầng thác lớn nhỏ, tạo nên những thử thách hấp dẫn cho người tham gia.\r\n\r\nHoạt động trượt thác tại Hòa Phú Thành Tourist được thiết kế an toàn với các trang thiết bị bảo hộ hiện đại và đội ngũ hướng dẫn viên chuyên nghiệp. Du khách sẽ được trang bị áo phao và mũ bảo hiểm, sau đó ngồi trên thuyền cao su và thả mình theo dòng suối, vượt qua những con thác đầy thách thức và thú vị. Cảm giác mạnh khi nước xối tung, thuyền trượt qua các mỏm đá, tạo nên những tiếng reo hò và tiếng cười sảng khoái.\r\n\r\nNgoài hoạt động trượt thác, Hòa Phú Thành Tourist còn có nhiều hoạt động giải trí và thư giãn khác như tắm suối, câu cá, hay đơn giản là tản bộ giữa rừng cây xanh mát. Khu du lịch này còn có khu nhà hàng và quán café phục vụ các món ăn đặc sản địa phương, mang đến cho du khách những trải nghiệm ẩm thực đặc sắc.\r\n\r\nHòa Phú Thành Tourist không chỉ là nơi lý tưởng cho những ai yêu thích cảm giác mạnh mà còn là điểm đến tuyệt vời để thư giãn và tận hưởng không gian thiên nhiên trong lành.",
+    "coordinates": "15.957812,107.991687"
   },
   {
     "name": "Hải đăng Tiên Sa",
@@ -94,16 +60,29 @@
     "coordinates": "16.139688,108.322063"
   },
   {
-    "name": "Khu Dừng Chân",
+    "name": "Làng Bích họa Đà Nẵng",
     "geo_features_emojis": {
-      "Núi đồi": "🏔️",
-      "Suối": "🏞️"
+      "Thành phố": "🏙️"
     },
     "activities_emojis": {
-      "Hoạt động ngoài trời & mạo hiểm": "🧗🏽"
+      "Công viên": "⛲"
     },
-    "description": "Khu Dừng Chân là một điểm đến thú vị và lý tưởng để thư giãn, nghỉ ngơi trong không gian xanh mát và yên bình. Nằm giữa rừng cây xanh tươi, khu vực này được thiết kế với các tiểu cảnh đẹp mắt, các lối đi bộ thoáng đãng và những chòi nghỉ chân xinh xắn.\r\n\r\nCác chòi nghỉ chân được xây dựng bằng tre, nứa và gỗ, mang đến cảm giác gần gũi với thiên nhiên. Bên trong chòi có bàn ghế gỗ, võng và nệm ngồi thoải mái, tạo điều kiện thuận lợi cho du khách nghỉ ngơi và ngắm nhìn cảnh đẹp xung quanh. Những tán cây xanh rợp bóng mát, cùng với tiếng suối chảy róc rách và tiếng chim hót líu lo, mang đến cảm giác thư thái, dễ chịu.\r\n\r\nKhu Dừng Chân còn có các khu vực picnic, nơi du khách có thể tổ chức các buổi tiệc BBQ, dã ngoại cùng gia đình và bạn bè. Các bãi cỏ xanh mướt, rộng rãi là nơi lý tưởng để vui chơi, thả diều hoặc đơn giản là tận hưởng không gian trong lành.\r\n\r\nNgoài ra, Khu Dừng Chân còn có các con đường mòn dẫn lên các điểm ngắm cảnh trên cao, nơi du khách có thể tận hưởng tầm nhìn toàn cảnh và chụp ảnh lưu niệm. Với vẻ đẹp tự nhiên và không gian yên tĩnh, đây chắc chắn là một điểm dừng chân lý tưởng khi khám phá vùng đất này.",
-    "coordinates": "16.002688,108.263437"
+    "description": "Làng Bích họa Đà Nẵng là một điểm đến nghệ thuật độc đáo, nơi du khách có thể chiêm ngưỡng những tác phẩm tranh tường sống động và đầy màu sắc. Được thực hiện bởi các họa sĩ tài năng trong và ngoài nước, các bức tranh tại đây phản ánh nhiều chủ đề khác nhau, từ phong cảnh thiên nhiên, cuộc sống sinh hoạt hàng ngày đến các câu chuyện lịch sử và văn hóa.\r\n\r\nKhông gian làng bích họa rất thoáng đãng và yên bình, với những con đường nhỏ rợp bóng cây xanh, tạo nên một khung cảnh thơ mộng và lãng mạn. Du khách có thể tản bộ dọc theo các con đường, khám phá những bức tranh tường đầy sáng tạo và ghi lại những khoảnh khắc đẹp.\r\n\r\nNgoài việc ngắm nhìn tranh tường, du khách còn có cơ hội tham gia vào các hoạt động nghệ thuật tại đây, từ vẽ tranh, tô màu đến làm đồ thủ công mỹ nghệ. Đây là một trải nghiệm thú vị và bổ ích, giúp du khách hiểu rõ hơn về nghệ thuật và văn hóa địa phương.\r\n\r\nLàng Bích họa Đà Nẵng không chỉ là một điểm tham quan nghệ thuật mà còn là nơi giao lưu, học hỏi và kết nối với các nghệ sĩ. Đây chắc chắn sẽ là một kỷ niệm đáng nhớ trong hành trình khám phá vẻ đẹp văn hóa của thành phố.",
+    "coordinates": "16.060688,108.220062"
+  },
+  {
+    "name": "Nghĩa trang Y Pha Nho",
+    "geo_features_emojis": {
+      "Núi đồi": "🏔️",
+      "Rừng": "🌲"
+    },
+    "activities_emojis": {
+      "Công viên": "⛲",
+      "Di tích lịch sử & văn hóa": "🏯",
+      "Lễ hội": "🎠"
+    },
+    "description": "Nghĩa trang Y Pha Nho là một di tích lịch sử yên tĩnh và trang nghiêm, nằm giữa một khu rừng cây xanh mát. Nghĩa trang này là nơi an nghỉ của những người lính Tây Ban Nha đã hy sinh trong cuộc chiến tranh Trung - Tây Ban Nha vào cuối thế kỷ 19. Các bia mộ được xây dựng bằng đá trắng, trang trí đơn giản nhưng mang đậm tính chất lịch sử.\r\n\r\nKhuôn viên nghĩa trang rộng rãi, được chăm sóc cẩn thận, tạo nên một không gian yên bình và tôn nghiêm. Du khách đến đây không chỉ để tôn kính những người đã khuất mà còn để tìm hiểu thêm về một phần lịch sử đầy biến động. Cảnh quan xung quanh với hàng cây xanh mướt và hoa cỏ tươi tốt mang lại cảm giác thanh tịnh và trang trọng.\r\n\r\nNgoài việc tham quan, du khách có thể dành thời gian để ngắm nhìn và suy ngẫm về những câu chuyện lịch sử đằng sau mỗi ngôi mộ. Nghĩa trang Y Pha Nho còn là nơi tổ chức các buổi lễ tưởng niệm, thu hút sự tham gia của nhiều người dân và du khách.\r\n\r\nNghĩa trang Y Pha Nho không chỉ là một điểm đến lịch sử mà còn là một nơi để du khách trải nghiệm sự yên bình và tĩnh lặng, xa rời sự hối hả của cuộc sống thường ngày.",
+    "coordinates": "16.113750,108.236250"
   },
   {
     "name": "Làng lụa Hội An",
@@ -119,5 +98,17 @@
     },
     "description": "Làng lụa Hội An là một điểm đến hấp dẫn, mang đậm nét văn hóa và truyền thống của nghề dệt lụa. Khu làng này bao gồm nhiều ngôi nhà cổ, được xây dựng theo kiến trúc truyền thống, mang đến một không gian yên bình và thơ mộng.\r\n\r\nDu khách đến Làng lụa Hội An sẽ có cơ hội tìm hiểu về quy trình sản xuất lụa từ khâu nuôi tằm, ươm tơ, đến dệt lụa. Bạn có thể tham quan các xưởng dệt, xem các nghệ nhân làm việc và tự mình trải nghiệm quy trình tạo ra những tấm lụa mềm mại, óng ả. Ngoài ra, du khách còn được chiêm ngưỡng những sản phẩm lụa tinh xảo, từ trang phục truyền thống, khăn quàng, cho đến các sản phẩm trang trí.\r\n\r\nLàng lụa Hội An cũng có các cửa hàng bán đồ lưu niệm, nơi bạn có thể mua những món quà độc đáo và ý nghĩa để mang về. Không chỉ vậy, nơi đây còn có các buổi trình diễn thời trang, giới thiệu những bộ sưu tập lụa độc đáo và phong phú.\r\n\r\nKhuôn viên của Làng lụa Hội An được bao phủ bởi cây xanh và hoa cỏ, tạo nên một không gian thoáng đãng, trong lành. Đây là nơi lý tưởng để du khách tìm hiểu về văn hóa truyền thống, thư giãn và tận hưởng vẻ đẹp của thiên nhiên.",
     "coordinates": "15.887438,108.318938"
+  },
+  {
+    "name": "Bảo tàng Đồng Đình",
+    "geo_features_emojis": {
+      "Núi đồi": "🏔️",
+      "Rừng": "🌲"
+    },
+    "activities_emojis": {
+      "Di tích lịch sử & văn hóa": "🏯"
+    },
+    "description": "Bảo tàng Đồng Đình là một không gian văn hóa độc đáo, nằm ẩn mình giữa thiên nhiên rừng núi xanh tươi. Bảo tàng được xây dựng theo kiến trúc nhà rường truyền thống, tạo nên một không gian yên bình và ấm cúng, phản ánh vẻ đẹp văn hóa dân gian Việt Nam.\r\n\r\nBảo tàng gồm nhiều khu trưng bày, mỗi khu vực mang đến cho du khách cái nhìn sâu sắc về lịch sử và văn hóa địa phương. Tại đây, bạn có thể khám phá các hiện vật cổ xưa, từ đồ gốm sứ, trang sức, đến các công cụ lao động và nghệ thuật dân gian. Mỗi hiện vật đều kể lại câu chuyện riêng, gắn liền với cuộc sống và phong tục của người dân Việt Nam qua từng thời kỳ.\r\n\r\nNgoài ra, bảo tàng còn có khu vườn thảo mộc với nhiều loại cây cỏ, hoa lá quý hiếm, tạo nên một không gian thư giãn và gần gũi với thiên nhiên. Du khách có thể tản bộ trên những con đường lát đá, ngắm nhìn vẻ đẹp thiên nhiên, nghe tiếng chim hót líu lo, cảm nhận hương thơm của các loài hoa.\r\n\r\nBảo tàng Đồng Đình không chỉ là nơi lưu giữ và bảo tồn văn hóa mà còn là điểm đến lý tưởng để thư giãn và tìm hiểu về di sản văn hóa địa phương một cách chân thực và sống động.",
+    "coordinates": "16.101188,108.275437"
   }
 ]
