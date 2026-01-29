@@ -48,5 +48,7 @@ Thumbs.db
 
 # Project specific
 nghich.ipynb
+Dockerfile
+.dockerignore
 description_to_text_file.ipynb
 ssh.txt
