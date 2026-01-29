@@ -1,7 +1,52 @@
-pfl_app/__pycache__/
-pfl_project/__pycache__/
-.cache.sqlite
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+ENV/
+env.bak/
+venv.bak/
+django_env/
 portfolio_env/
-portfolio_env/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
 nghich.ipynb
-Dockerfile
+description_to_text_file.ipynb
+ssh.txt

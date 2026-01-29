@@ -1,0 +1,784 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Outfit', sans-serif;
+    scroll-behavior: smooth;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #231F20;
+    padding: 0.9rem 0;
+    /* Reduced from 1rem */
+    transition: background-color 0.6s ease, padding 0.5s ease, box-shadow 0.5s ease;
+}
+
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    gap: 3%;
+    position: relative;
+}
+
+/* Left and Right Groups (Initially Hidden) */
+.header-left-group,
+.header-right-group {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.header-left-group {
+    left: 20px;
+}
+
+.header-right-group {
+    right: 20px;
+}
+
+.left-most-logo {
+    height: 36px;
+    /* Reduced from 40px */
+    width: auto;
+}
+
+.social-icon {
+    height: 35px;
+    /* Increased from 30px */
+    width: auto;
+    transition: transform 0.2s;
+    filter: drop-shadow(0px 2px 0px #FF0073);
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.header-logo {
+    height: 73px;
+    /* Reduced from 70px */
+    width: auto;
+    transition: transform 0.5s ease;
+}
+
+.header-doorknob {
+    height: 63px;
+    /* Reduced from 70px */
+    width: auto;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Header Scrolled State */
+#main-header.scrolled {
+    background-color: #FFF5E1;
+    padding: 0.6rem 0;
+    /* Reduced from 1rem */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#main-header.scrolled .header-doorknob {
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+}
+
+#main-header.scrolled .header-left-group,
+#main-header.scrolled .header-right-group {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* Main Sections */
+.main-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Section 1 */
+#section-1 {
+    background-color: #FFF5E1;
+    align-items: flex-start;
+    /* Align content to top */
+    padding-top: 18vh;
+    /* Clear the header (~100px) + ~5% buffer */
+}
+
+#section-1 .content-wrapper {
+    max-width: 95%;
+    width: 95%;
+    padding: 0;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 75vh;
+    object-fit: contain;
+    animation: fadeIn 1.2s ease-out;
+    display: block;
+    margin: 0 auto;
+}
+
+.overlay-buttons {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 10;
+    padding: 0 5%;
+    flex-wrap: wrap;
+    /* Prevent overflow on small screens */
+}
+
+.overlay-btn {
+    padding: 8px 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border: 3px solid #252525;
+    border-radius: 6px;
+    box-shadow: 4px 4px 0px 0px #252525;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease;
+    text-align: center;
+    text-shadow:
+        -1.5px -1.5px 0 #252525,
+        0px -1.5px 0 #252525,
+        1.5px -1.5px 0 #252525,
+        1.5px 0px 0 #252525,
+        1.5px 1.5px 0 #252525,
+        0px 1.5px 0 #252525,
+        -1.5px 1.5px 0 #252525,
+        -1.5px 0px 0 #252525;
+}
+
+.overlay-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0px 0px #252525;
+}
+
+/* Sticky State */
+.overlay-buttons.sticky {
+    position: fixed;
+    top: 90px;
+    /* Header height offset */
+    left: 0;
+    width: 100%;
+    z-index: 900;
+    padding-top: 1.5%;
+    pointer-events: none;
+    /* Allow events to pass through wrapper */
+}
+
+.overlay-buttons.sticky .overlay-btn {
+    pointer-events: auto;
+    /* Re-enable events on buttons */
+    background-color: #F1D3BB !important;
+}
+
+.btn-red {
+    background-color: #FF004B;
+}
+
+.btn-blue {
+    background-color: #086DFF;
+}
+
+.btn-yellow {
+    background-color: #FFBF00;
+}
+
+.btn-purple {
+    background-color: purple;
+}
+
+/* Placeholders */
+.placeholder-section {
+    background-color: #fff;
+}
+
+/* Section 2 */
+#section-2 {
+    background-color: #FFF5E1;
+    padding-top: 100px;
+    /* Offset for sticky header if needed */
+}
+
+/* Section 2 Layout */
+.section-2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center Vertically */
+    gap: 24px;
+    /* Reduced gap */
+    max-width: 75%;
+    /* Slightly smaller width */
+    margin: 0 auto;
+    height: calc(100vh - 160px);
+    /* Fit within viewport minus header */
+    max-height: 550px;
+    /* Prevent excessive height */
+}
+
+/* Left Side: Collection Card */
+.collection-card-container {
+    position: relative;
+    width: 40%;
+    /* Reduced from 45% (~90% scale) */
+    height: 90%;
+    /* Reduced to 90% height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Remove fixed height to allow flex stretch or content sizing */
+}
+
+/* Ensure image fills the container */
+.collection-card-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Cover will ensure it fills the box defined by the neighbor if needed, or stick to contain if aspect ratio is critical. User asked for buttons to stick. Cover makes background distinct. Let's try to just fill width and auto height? */
+    /* User said "entire 2 rows... should be the height of the collection card".
+       This implies collection card is the reference.
+    */
+}
+
+.collection-btn {
+    position: absolute;
+    padding: 6px 14px;
+    /* Smaller */
+    font-size: 0.8rem;
+    /* Smaller */
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+    white-space: nowrap;
+}
+
+.collection-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Top Button */
+.btn-top {
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFF5E1;
+    color: #FF0073;
+    /* Drop shadow 100% opacity FF0073 */
+    box-shadow: 2px 2px 0px 0px #FF0073;
+    border: 2.5px solid #1E1E1E;
+    /* assuming border matches shadow/text theme */
+}
+
+.btn-top:hover {
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 4px 4px 0px 0px #FF0073;
+}
+
+/* Bottom Button */
+.btn-bottom {
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FF0073;
+    color: white;
+    /* "text content is 'Khám phá thêm -->'" - usually white on pink, user said "text outline like... before". Before was white text on colored bg. */
+    border: 2.5px solid #252525;
+    box-shadow: 2px 2px 0px 0px #252525;
+
+    /* Text outline effect from before */
+    text-shadow:
+        -1px -1px 0 #252525,
+        1px -1px 0 #252525,
+        -1px 1px 0 #252525,
+        1px 1px 0 #252525;
+}
+
+.btn-bottom:hover {
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 4px 4px 0px 0px #252525;
+}
+
+/* Right Side: Product Grid */
+.product-grid {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12px;
+    /* Smaller gap */
+    /* 2 equal rows */
+    height: 90%;
+    /* Fill container */
+}
+
+.product-card {
+    background-color: #FFFCF3;
+    /* FFFCF3 */
+    border: 3.5px solid #252525;
+    /* Thinner border */
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    /* Smaller padding */
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-container {
+    width: 100%;
+    flex-grow: 1;
+    /* Image takes available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4px;
+    /* Reduced margin */
+    height: 0;
+    /* Important for flex-grow to work properly in some constraints */
+    min-height: auto;
+    /* Override previous */
+    overflow: hidden;
+    /* Ensure image doesn't spill */
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Or cover depending on preference. Contain ensures whole illustration is seen */
+    display: block;
+}
+
+.product-info {
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+}
+
+.product-title {
+    font-size: 0.9rem;
+    /* Smaller */
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    line-height: 1.1;
+}
+
+.product-subtitle {
+    font-size: 0.7rem;
+    /* Smaller */
+    font-style: italic;
+    color: #555;
+    margin-bottom: 2px;
+}
+
+.product-divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 2px 0;
+}
+
+.product-price {
+    font-size: 1rem;
+    font-weight: 900;
+    /* Inter Black */
+    color: #FF0073;
+    margin: 2px 0;
+}
+
+.product-description {
+    font-size: 0.65rem;
+    /* Smaller */
+    color: #666;
+}
+
+/* Section 3 */
+#section-3 {
+    background-color: #fff;
+    /* or whatever base */
+    padding: 0;
+    height: 100vh;
+    display: block;
+    /* Section 1/2 used flex center, but here we want full control */
+}
+
+.section-3-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.section-3-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Fill the section */
+    display: block;
+    border-radius: 0;
+    /* Explicitly requested */
+}
+
+.section-3-btn {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    /* Centering on the point? Or starting at the point? "70% to the left" usually means left property is 70%. Let's assume left: 70%. Transform might shift it back to center on that point or just top-left. Let's stick to standard transform for button positioning to be precise on the "center" of the button or just the starting edge. User said "70% down... 70% to the left". Usually simpler is left: 70%; top: 70%. I'll center it on that point so it's not too far off. */
+
+    padding: 10px 24px;
+    /* Default size from btn-bottom before scale, or should I match the current scaled down version? User said "exactly like the collection-btn btn-bottom". The current one has padding: 6px 14px; font-size: 0.8rem. */
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 6px;
+
+    background-color: #FF0073;
+    color: white;
+    border: 2px solid #252525;
+    box-shadow: 2px 2px 0px 0px #252525;
+
+    text-shadow:
+        -1px -1px 0 #252525,
+        1px -1px 0 #252525,
+        -1px 1px 0 #252525,
+        1px 1px 0 #252525;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-3-btn:hover {
+    transform: translate(-50%, calc(-50% - 2px));
+    /* Maintain position + hover move */
+    box-shadow: 4px 4px 0px 0px #252525;
+}
+
+/* Section 4a: Text Stripe */
+.text-stripe-section {
+    background-color: #1E1E1E;
+    color: white;
+    padding: 40px 0;
+    /* Adjust vertical padding as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.stripe-text {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.3;
+    max-width: 50%;
+    /* Take no more than 40% of screen width */
+    margin: 0 auto;
+}
+
+/* Section 4b: Blog Section */
+#section-4b {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.section-4b-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.blog-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.blog-card {
+    background-color: #FFFCF3;
+    width: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid #252525;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.blog-image-wrapper {
+    width: 100%;
+    padding: 12px;
+    background-color: #FFFCF3;
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 3px solid #252525;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.blog-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.blog-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    background-color: #FFFCF3;
+    border: 2px solid #252525;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.blog-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #252525;
+    margin: 0;
+}
+
+/* Read More Button */
+.blog-read-more-btn {
+    position: relative;
+    z-index: 2;
+    padding: 12px 32px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Same as btn-blue from overlay buttons */
+    background-color: #086DFF;
+    color: white;
+    border: 3px solid #252525;
+    box-shadow: 4px 4px 0px 0px #252525;
+
+    text-shadow:
+        -1.5px -1.5px 0 #252525,
+        0px -1.5px 0 #252525,
+        1.5px -1.5px 0 #252525,
+        1.5px 0px 0 #252525,
+        1.5px 1.5px 0 #252525,
+        0px 1.5px 0 #252525,
+        -1.5px 1.5px 0 #252525,
+        -1.5px 0px 0 #252525;
+}
+
+.blog-read-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0px 0px #252525;
+}
+
+section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Footer */
+#main-footer {
+    background-color: #FFF5E1;
+    padding: 60px 0;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+/* Left: Logo */
+.footer-left {
+    flex-shrink: 0;
+}
+
+.footer-logo {
+    height: 200px;
+    width: auto;
+}
+
+/* Center: Contact Info */
+.footer-center {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-title {
+    height: auto;
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #252525;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    height: 24px;
+    width: 24px;
+    flex-shrink: 0;
+}
+
+/* Right: Animated Logo */
+.footer-right {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    /* Already centered, but ensuring it matches footer-left height */
+    justify-content: center;
+}
+
+.footer-animated-logo {
+    height: 200px;
+    /* Match footer-logo height for visual balance */
+    width: auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header-logo {
+        height: 40px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+}

@@ -144,3 +144,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Media files
 MEDIA_URL = '/media/'  # The URL to access uploaded media files
 MEDIA_ROOT = os.path.join(BASE_DIR, 'pfl_app', 'media')
+# Reload trigger
+# Reload trigger 2

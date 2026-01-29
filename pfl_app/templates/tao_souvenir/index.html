@@ -1,0 +1,272 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tao Souvenir - Unique and memorable souvenirs.">
+    <title>Tao Souvenir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'tao_souvenir/style.css' %}">
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="header-container">
+            <!-- Left Group (Scrolled Only) -->
+            <div class="header-left-group">
+                <img src="{% static 'tao_souvenir/assets/left_most_header_light_logo.svg' %}" alt="Tao Logo"
+                    class="left-most-logo">
+            </div>
+
+            <!-- Center Group -->
+            <img src="{% static 'tao_souvenir/assets/header_doorknob_dark.svg' %}" alt=""
+                class="header-doorknob left-knob">
+            <div class="header-center">
+                <img src="{% static 'tao_souvenir/assets/header_center_dark.svg' %}" alt="Tao Souvenir Logo"
+                    class="header-logo" id="header-logo-img">
+            </div>
+            <img src="{% static 'tao_souvenir/assets/header_doorknob_dark.svg' %}" alt=""
+                class="header-doorknob right-knob">
+
+            <!-- Right Group (Scrolled Only) -->
+            <div class="header-right-group">
+                <a href="#"><img src="{% static 'tao_souvenir/assets/instagram_header_light_right_button.png' %}"
+                        alt="Instagram" class="social-icon"></a>
+                <a href="https://www.facebook.com/"><img
+                        src="{% static 'tao_souvenir/assets/facebook_header_light_right_button.svg' %}" alt="Facebook"
+                        class="social-icon"></a>
+                <a href="#"><img src="{% static 'tao_souvenir/assets/tiktok_header_light_right_button.svg' %}"
+                        alt="TikTok" class="social-icon"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="section-1" class="main-section">
+            <div class="content-wrapper">
+                <div class="image-container">
+                    <img src="{% static 'tao_souvenir/assets/first_section_picture.png' %}"
+                        alt="Welcome to Tao Souvenir" class="hero-image">
+                    <div class="overlay-buttons">
+                        <a href="{% url 'pfl_app:about_us' %}" class="overlay-btn btn-red">Về Tạo</a>
+                        <a href="{% url 'pfl_app:blog_list_page' %}" class="overlay-btn btn-blue">Bài viết</a>
+                        <a href="{% url 'pfl_app:products' %}" class="overlay-btn btn-yellow">Sản phẩm</a>
+                        <a href="{% url 'pfl_app:campaigns_page' %}" class="overlay-btn btn-purple">Thiết kế vì cộng
+                            đồng</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-2" class="main-section">
+            <div class="content-wrapper section-2-container">
+                <!-- Left Side: Collection Intro -->
+                <div class="collection-card-container">
+                    <img src="{% static 'tao_souvenir/assets/collection_introduction_card.png' %}"
+                        alt="Collection Introduction" class="collection-card-bg">
+
+                    <!-- Top Button -->
+                    <a href="#" class="collection-btn btn-top">Bộ Sưu Tập</a>
+
+                    <!-- Bottom Button -->
+                    <a href="#" class="collection-btn btn-bottom">Khám phá thêm --></a>
+                </div>
+
+                <!-- Right Side: Product Cards -->
+                <div class="product-grid">
+                    <!-- Product Card 1 -->
+                    <a href="#" class="product-card">
+                        <div class="product-image-container">
+                            <img src="{% static 'tao_souvenir/assets/brick_product_card_illustration.png' %}"
+                                alt="Product" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Khóa Chòi</h3>
+                            <p class="product-subtitle">“Chòi” Keychains</p>
+                            <div class="product-divider"></div>
+                            <p class="product-price">50.000 VNĐ</p>
+                            <div class="product-divider"></div>
+                            <p class="product-description">Type: Bạch Huê</p>
+                        </div>
+                    </a>
+
+                    <!-- Product Card 2 -->
+                    <a href="#" class="product-card">
+                        <div class="product-image-container">
+                            <img src="{% static 'tao_souvenir/assets/brick_product_card_illustration.png' %}"
+                                alt="Product" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Khóa Chòi</h3>
+                            <p class="product-subtitle">“Chòi” Keychains</p>
+                            <div class="product-divider"></div>
+                            <p class="product-price">50.000 VNĐ</p>
+                            <div class="product-divider"></div>
+                            <p class="product-description">Type: Bạch Huê</p>
+                        </div>
+                    </a>
+
+                    <!-- Product Card 3 -->
+                    <a href="#" class="product-card">
+                        <div class="product-image-container">
+                            <img src="{% static 'tao_souvenir/assets/brick_product_card_illustration.png' %}"
+                                alt="Product" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Khóa Chòi</h3>
+                            <p class="product-subtitle">“Chòi” Keychains</p>
+                            <div class="product-divider"></div>
+                            <p class="product-price">50.000 VNĐ</p>
+                            <div class="product-divider"></div>
+                            <p class="product-description">Type: Bạch Huê</p>
+                        </div>
+                    </a>
+
+                    <!-- Product Card 4 -->
+                    <a href="#" class="product-card">
+                        <div class="product-image-container">
+                            <img src="{% static 'tao_souvenir/assets/brick_product_card_illustration.png' %}"
+                                alt="Product" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Khóa Chòi</h3>
+                            <p class="product-subtitle">“Chòi” Keychains</p>
+                            <div class="product-divider"></div>
+                            <p class="product-price">50.000 VNĐ</p>
+                            <div class="product-divider"></div>
+                            <p class="product-description">Type: Bạch Huê</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-3" class="main-section">
+            <div class="section-3-container">
+                <img src="{% static 'tao_souvenir/assets/section_3.png' %}" alt="Section 3" class="section-3-bg">
+                <a href="#" class="section-3-btn">Khám phá thêm --></a>
+            </div>
+        </section>
+
+        <!-- Section 4a: Text Stripe -->
+        <section id="section-4a" class="text-stripe-section">
+            <div class="content-wrapper">
+                <p class="stripe-text">
+                    Chúng tôi không chỉ kể câu chuyện văn hóa<br>
+                    ngay tại lúc bạn mua sản phẩm.<br><br>
+                    Chúng tôi còn mời bạn tham gia cùng trên hành trình học về<br>
+                    nghệ thuật địa phương thông qua những bài đăng trên các nền tảng trực tuyến.<br>
+                    Từng bài viết của Tạo được viết bởi những đúc rút cá nhân<br>
+                    trên con đường tìm hiểu văn hóa quê hương mình.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 4b: Blog Section -->
+        <section id="section-4b" class="blog-section">
+            <img src="{% static 'tao_souvenir/assets/section_4b_bg.png' %}" alt="Blog Background" class="section-4b-bg">
+            <div class="content-wrapper blog-container">
+                <!-- Blog Card 1 -->
+                <div class="blog-card">
+                    <div class="blog-image-wrapper">
+                        <img src="{% static 'tao_souvenir/assets/blog_card_thumbnail.png' %}" alt="Blog Thumbnail"
+                            class="blog-image">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-tags">
+                            <span class="blog-tag">Bài chòi</span>
+                            <span class="blog-tag">Tản mạn</span>
+                        </div>
+                        <h4 class="blog-title">Bài chòi Hội An - Nếp văn hóa đẹp giữa lòng phố cổ.</h4>
+                    </div>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="blog-card">
+                    <div class="blog-image-wrapper">
+                        <img src="{% static 'tao_souvenir/assets/blog_card_thumbnail.png' %}" alt="Blog Thumbnail"
+                            class="blog-image">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-tags">
+                            <span class="blog-tag">Bài chòi</span>
+                            <span class="blog-tag">Tản mạn</span>
+                        </div>
+                        <h4 class="blog-title">Bài chòi Hội An - Nếp văn hóa đẹp giữa lòng phố cổ.</h4>
+                    </div>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="blog-card">
+                    <div class="blog-image-wrapper">
+                        <img src="{% static 'tao_souvenir/assets/blog_card_thumbnail.png' %}" alt="Blog Thumbnail"
+                            class="blog-image">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-tags">
+                            <span class="blog-tag">Bài chòi</span>
+                            <span class="blog-tag">Tản mạn</span>
+                        </div>
+                        <h4 class="blog-title">Bài chòi Hội An - Nếp văn hóa đẹp giữa lòng phố cổ.</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Read More Button -->
+            <a href="#" class="blog-read-more-btn">Đọc thêm --></a>
+        </section>
+
+        <!-- Footer -->
+        <footer id="main-footer">
+            <div class="footer-container">
+                <!-- Left: Logo -->
+                <div class="footer-left">
+                    <img src="{% static 'tao_souvenir/assets/footer_logo_left.png' %}" alt="Tao Logo"
+                        class="footer-logo">
+                </div>
+
+                <!-- Center: Contact Information -->
+                <div class="footer-center">
+                    <img src="{% static 'tao_souvenir/assets/contact_title.png' %}" alt="Contact" class="contact-title">
+                    <div class="contact-list">
+                        <a href="mailto:tao.thesouvenir@gmail.com" class="contact-item">
+                            <img src="{% static 'tao_souvenir/assets/email_icon.png' %}" alt="Email"
+                                class="contact-icon">
+                            <span>tao.thesouvenir@gmail.com</span>
+                        </a>
+                        <a href="https://www.facebook.com/TẠO" class="contact-item">
+                            <img src="{% static 'tao_souvenir/assets/facebook_icon.png' %}" alt="Facebook"
+                                class="contact-icon">
+                            <span>TẠO</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@tao.thesouvenir" class="contact-item">
+                            <img src="{% static 'tao_souvenir/assets/tiktok_icon.png' %}" alt="TikTok"
+                                class="contact-icon">
+                            <span>tao.thesouvenir</span>
+                        </a>
+                        <a href="tel:+84373018990" class="contact-item">
+                            <img src="{% static 'tao_souvenir/assets/phone_icon.png' %}" alt="Phone"
+                                class="contact-icon">
+                            <span>+84 373 018 990</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Animated Logo -->
+                <div class="footer-right">
+                    <img src="{% static 'tao_souvenir/assets/header_center_light_1.svg' %}" alt="Tao"
+                        class="footer-animated-logo" id="footer-animated-logo">
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="{% static 'tao_souvenir/script.js' %}"></script>
+</body>
+
+</html>

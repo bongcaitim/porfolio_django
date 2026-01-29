@@ -590,3 +590,36 @@ def visualize_cluster_route(all_locations, cluster_locations, path, cluster_name
 
     plt.axis('off')
     plt.tight_layout()
+
+def tao_souvenir_home(request):
+    """View for Tao Souvenir homepage"""
+    return render(request, "tao_souvenir/index.html")
+
+def about_us(request):
+    """View for Tao Souvenir About Us page"""
+    return render(request, "tao_souvenir/about_us.html")
+
+def products(request):
+    """View for Tao Souvenir Products page"""
+    return render(request, "tao_souvenir/products.html")
+
+def blog(request):
+    """View for Tao Souvenir Blog list page"""
+    return render(request, "tao_souvenir/blog.html")
+
+def blog_detail(request):
+    """View for Tao Souvenir Blog detail page"""
+    return render(request, "tao_souvenir/blog_detail.html")
+
+def campaigns(request):
+    """View for Tao Souvenir Campaign list page"""
+    return render(request, "tao_souvenir/campaigns.html")
+
+def campaign_detail(request):
+    """View for Tao Souvenir Campaign detail page"""
+    return render(request, "tao_souvenir/blog_detail.html") # Reusing blog detail template as requested
+
+# Reload trigger
+
+
+

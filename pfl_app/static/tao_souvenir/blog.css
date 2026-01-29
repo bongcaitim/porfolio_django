@@ -1,0 +1,386 @@
+/* Blog Page Specific Styles */
+
+/* Navigation Stripe Background - Similar to products but for blog */
+.blog-nav-stripe {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    height: 95px;
+    width: 100%;
+    background-color: #FFF5E1;
+    border-bottom: 3px solid #1E1E1E;
+    z-index: 899;
+    pointer-events: none;
+}
+
+/* Ensure sticky buttons are visible on Blog pages */
+body .overlay-buttons.sticky {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    z-index: 900;
+    padding-top: 2%;
+    padding-bottom: 1.5%;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+body .overlay-buttons.sticky .overlay-btn {
+    pointer-events: auto;
+}
+
+/* Button Colors for Blog Pages */
+body .overlay-buttons.sticky .btn-red {
+    background-color: #FF004B !important;
+}
+
+body .overlay-buttons.sticky .btn-blue {
+    background-color: #086DFF !important;
+}
+
+body .overlay-buttons.sticky .btn-yellow {
+    background-color: #FFBF00 !important;
+}
+
+body .overlay-buttons.sticky .btn-purple {
+    background-color: #4100CE !important;
+}
+
+/* Blog Grid Section */
+.blog-grid-section {
+    width: 100%;
+    background-color: #FFFCF3;
+    padding: 220px 0 80px 0;
+    /* Padding for sticky nav */
+}
+
+.blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+/* Blog Preview Card */
+.blog-preview-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    padding: 25px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.blog-preview-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Card Frames */
+.blog-preview-card[data-frame="red"] {
+    background-image: url('/static/tao_souvenir/assets/blog_preview_card_red.png');
+}
+
+.blog-preview-card[data-frame="yellow"] {
+    background-image: url('/static/tao_souvenir/assets/blog_preview_card_yellow.png');
+}
+
+.blog-preview-card[data-frame="blue"] {
+    background-image: url('/static/tao_souvenir/assets/blog_preview_card_blue.png');
+}
+
+.blog-card-inner {
+    background-color: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-image-area {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #eee;
+}
+
+.blog-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.blog-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.blog-tag-chip {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 5px 15px;
+    border: 1px solid #1E1E1E;
+    border-radius: 15px;
+    background-color: transparent;
+    color: #1E1E1E;
+}
+
+.blog-divider {
+    height: 1.5px;
+    background-color: #1E1E1E;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.blog-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: #1E1E1E;
+    margin: 0;
+}
+
+.blog-summary {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+/* BLOG DETAIL STYLES */
+.blog-detail-article {
+    width: 100%;
+    background-color: #FFFCF3;
+    padding-top: 185px;
+    /* Alignment with nav */
+}
+
+.blog-cover-container {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.blog-cover-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blog-detail-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog-detail-tags {
+    display: flex;
+    gap: 15px;
+}
+
+.blog-detail-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    /* As requested "big title text" but usually bold is good, let's keep it prominent */
+    font-size: 3rem;
+    line-height: 1.1;
+    color: #1E1E1E;
+    margin: 10px 0;
+    letter-spacing: -1px;
+}
+
+.blog-divider.detail-top {
+    height: 3px;
+}
+
+.blog-divider.detail-meta {
+    height: 1.5px;
+}
+
+.blog-meta-info {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.blog-meta-info strong {
+    font-weight: 700;
+}
+
+.blog-detail-body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #1E1E1E;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Product Strip at end of blog */
+.blog-product-strip {
+    width: 100%;
+    background-color: #FFFCF3;
+    padding: 80px 0;
+    border-top: 1px solid #1E1E1E33;
+}
+
+.strip-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.strip-products-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.mini-product-card {
+    flex: 1;
+    max-width: 320px;
+    padding: 15px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mini-product-card[data-frame="red"] {
+    background-image: url('/static/tao_souvenir/assets/product_frame_red.png');
+}
+
+.mini-product-card[data-frame="blue"] {
+    background-image: url('/static/tao_souvenir/assets/product_frame_blue.png');
+}
+
+.mini-product-card[data-frame="yellow"] {
+    background-image: url('/static/tao_souvenir/assets/product_frame_yellow.png');
+}
+
+.mini-card-inner {
+    background-color: #FFFCF3;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.mini-prod-img {
+    width: 100%;
+    max-width: 120px;
+    margin-bottom: 15px;
+}
+
+.mini-prod-info h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.mini-prod-info p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    margin: 2px 0;
+}
+
+.mini-price {
+    color: #FF0073;
+    font-weight: 900;
+    font-size: 1.1rem !important;
+    margin: 8px 0 !important;
+}
+
+.discover-more-btn {
+    background-color: #FF0073;
+    color: white;
+    border: 3px solid #1E1E1E;
+    padding: 12px 35px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 4px 4px 0px 0px #1E1E1E;
+    transition: all 0.2s;
+}
+
+.discover-more-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px #1E1E1E;
+}
+
+.btn-arrow {
+    width: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .blog-container {
+        gap: 30px;
+    }
+
+    .strip-products-grid {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-grid-section {
+        padding-top: 180px;
+    }
+
+    .blog-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .blog-detail-title {
+        font-size: 2.2rem;
+    }
+
+    .blog-nav-stripe {
+        top: 70px;
+        height: 85px;
+    }
+
+    body .overlay-buttons.sticky {
+        top: 70px;
+    }
+}

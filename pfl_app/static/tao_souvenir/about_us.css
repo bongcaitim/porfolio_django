@@ -1,0 +1,139 @@
+/* About Us Page Specific Styles */
+
+/* Navigation Stripe Background */
+.about-nav-stripe {
+    position: fixed;
+    top: 90px;
+    /* Below header */
+    left: 0;
+    height: 95px;
+    width: 100%;
+    background-color: #FFF5E1;
+    border-bottom: 3px solid #1E1E1E;
+    padding: 3% 0 1.5% 0;
+    /* Match button padding to extend under them */
+    z-index: 899;
+    /* Below buttons but above content */
+    pointer-events: none;
+}
+
+/* About Us Sections */
+.about-section {
+    width: 100%;
+    background-color: #FFF5E1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* First section needs top padding for fixed nav */
+#about-section-1 {
+    padding-top: 180px;
+    /* Header (90px) + nav stripe with buttons (~90px) */
+}
+
+.about-content-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-section-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+}
+
+/* Text Stripe Between Sections */
+.about-text-stripe {
+    width: 100%;
+    background-color: #FFFCF3;
+    border-top: 4px solid #1E1E1E;
+    border-bottom: 4px solid #1E1E1E;
+    padding: 40px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-stripe-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.about-stripe-text {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.6;
+    color: #1E1E1E;
+    text-align: center;
+    margin: 0;
+}
+
+/* Ensure sticky buttons are visible on About Us page */
+body .overlay-buttons.sticky {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    z-index: 900;
+    padding-top: 2%;
+    padding-bottom: 1.5%;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+body .overlay-buttons.sticky .overlay-btn {
+    pointer-events: auto;
+}
+
+/* Button Colors for About Us Page */
+body .overlay-buttons.sticky .btn-red {
+    background-color: #FF004B !important;
+}
+
+body .overlay-buttons.sticky .btn-blue {
+    background-color: #086DFF !important;
+}
+
+body .overlay-buttons.sticky .btn-yellow {
+    background-color: #FFBF00 !important;
+}
+
+body .overlay-buttons.sticky .btn-purple {
+    background-color: #4100CE !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 100px 0 40px 0;
+    }
+
+    .about-stripe-text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .overlay-buttons.sticky {
+        top: 70px;
+        padding-top: 2%;
+    }
+
+    .overlay-btn {
+        padding: 6px 16px;
+        font-size: 0.75rem;
+    }
+}

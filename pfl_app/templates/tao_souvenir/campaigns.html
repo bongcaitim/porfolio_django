@@ -1,0 +1,204 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chiến dịch cộng đồng - Tao Souvenir for community and society.">
+    <title>Thiết kế vì cộng đồng - Tao Souvenir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'tao_souvenir/style.css' %}">
+    <link rel="stylesheet" href="{% static 'tao_souvenir/campaigns.css' %}">
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="header-container">
+            <!-- Left Group (Scrolled Only) -->
+            <div class="header-left-group">
+                <img src="{% static 'tao_souvenir/assets/left_most_header_light_logo.svg' %}" alt="Tao Logo"
+                    class="left-most-logo">
+            </div>
+
+            <!-- Center Group -->
+            <img src="{% static 'tao_souvenir/assets/header_doorknob_dark.svg' %}" alt=""
+                class="header-doorknob left-knob">
+            <div class="header-center">
+                <img src="{% static 'tao_souvenir/assets/header_center_dark.svg' %}" alt="Tao Souvenir Logo"
+                    class="header-logo" id="header-logo-img">
+            </div>
+            <img src="{% static 'tao_souvenir/assets/header_doorknob_dark.svg' %}" alt=""
+                class="header-doorknob right-knob">
+
+            <!-- Right Group (Scrolled Only) -->
+            <div class="header-right-group">
+                <a href="#"><img src="{% static 'tao_souvenir/assets/instagram_header_light_right_button.png' %}"
+                        alt="Instagram" class="social-icon"></a>
+                <a href="https://www.facebook.com/"><img
+                        src="{% static 'tao_souvenir/assets/facebook_header_light_right_button.svg' %}" alt="Facebook"
+                        class="social-icon"></a>
+                <a href="#"><img src="{% static 'tao_souvenir/assets/tiktok_header_light_right_button.svg' %}"
+                        alt="TikTok" class="social-icon"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Navigation Stripe Background -->
+        <div class="campaign-nav-stripe"></div>
+
+        <!-- Sticky Navigation Buttons -->
+        <div class="overlay-buttons sticky">
+            <a href="{% url 'pfl_app:about_us' %}" class="overlay-btn btn-red">Về Tạo</a>
+            <a href="{% url 'pfl_app:blog_list_page' %}" class="overlay-btn btn-blue">Bài viết</a>
+            <a href="{% url 'pfl_app:products' %}" class="overlay-btn btn-yellow">Sản phẩm</a>
+            <a href="{% url 'pfl_app:campaigns_page' %}" class="overlay-btn btn-purple">Thiết kế vì cộng đồng</a>
+        </div>
+
+        <!-- Quote/Intro Stripe -->
+        <section class="campaign-quote-strip">
+            <div class="quote-container">
+                <p class="quote-text">
+                    Tạo không chỉ là một doanh nghiệp.<br>
+                    Tạo còn là một nỗi trăn trở khôn nguôi về cộng đồng và xã hội.
+                </p>
+            </div>
+        </section>
+
+        <!-- Campaign Rows -->
+        <section class="campaign-list-section">
+            <div class="campaign-container">
+                <!-- Row 1: Picture Left, Content Right -->
+                <div class="campaign-row">
+                    <div class="campaign-col picture-col" data-shadow="red">
+                        <div class="campaign-image-wrapper">
+                            <img src="{% static 'tao_souvenir/assets/preview_campaign_placeholder_picture.png' %}"
+                                alt="Campaign Image" class="campaign-main-img">
+                        </div>
+                        <img src="{% static 'tao_souvenir/assets/campaign_picture_lower_frame.png' %}" alt=""
+                            class="campaign-lower-frame">
+                    </div>
+                    <a href="{% url 'pfl_app:campaign_detail' %}" class="campaign-col content-col">
+                        <div class="campaign-content-inner">
+                            <h2 class="campaign-title">CHIẾN DỊCH 1: LOREM ISPUM</h2>
+                            <div class="campaign-divider"></div>
+                            <p class="campaign-preview">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fermentum, enim non
+                                consectetur rutrum, tellus dui ultricies diam, sed fermentum est ipsum sed massa.
+                                Curabitur venenatis nibh a dictum vulputate. Vestibulum ante mi, porta id purus ut,
+                                bibendum interdum magna. Duis commodo consectetur ante et aliquam. Nam facilisis diam
+                                eget mi sodales, in dapibus metus hendrerit. Nulla nisl dolor, tristique ut luctus at,
+                                viverra vitae tortor. In egestas turpis a quam ornare fringilla....
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Row 2: Content Left, Picture Right -->
+                <div class="campaign-row reverse">
+                    <a href="{% url 'pfl_app:campaign_detail' %}" class="campaign-col content-col">
+                        <div class="campaign-content-inner">
+                            <h2 class="campaign-title">CHIẾN DỊCH 2: LOREM ISPUM</h2>
+                            <div class="campaign-divider"></div>
+                            <p class="campaign-preview">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fermentum, enim non
+                                consectetur rutrum, tellus dui ultricies diam, sed fermentum est ipsum sed massa.
+                                Curabitur venenatis nibh a dictum vulputate. Vestibulum ante mi, porta id purus ut,
+                                bibendum interdum magna. Duis commodo consectetur ante et aliquam. Nam facilisis diam
+                                eget mi sodales, in dapibus metus hendrerit. Nulla nisl dolor, tristique ut luctus at,
+                                viverra vitae tortor. In egestas turpis a quam ornare fringilla....
+                            </p>
+                        </div>
+                    </a>
+                    <div class="campaign-col picture-col" data-shadow="blue">
+                        <div class="campaign-image-wrapper">
+                            <img src="{% static 'tao_souvenir/assets/preview_campaign_placeholder_picture.png' %}"
+                                alt="Campaign Image" class="campaign-main-img">
+                        </div>
+                        <img src="{% static 'tao_souvenir/assets/campaign_picture_lower_frame.png' %}" alt=""
+                            class="campaign-lower-frame">
+                    </div>
+                </div>
+
+                <!-- Row 3: Picture Left, Content Right -->
+                <div class="campaign-row">
+                    <div class="campaign-col picture-col" data-shadow="yellow">
+                        <div class="campaign-image-wrapper">
+                            <img src="{% static 'tao_souvenir/assets/preview_campaign_placeholder_picture.png' %}"
+                                alt="Campaign Image" class="campaign-main-img">
+                        </div>
+                        <img src="{% static 'tao_souvenir/assets/campaign_picture_lower_frame.png' %}" alt=""
+                            class="campaign-lower-frame">
+                    </div>
+                    <a href="{% url 'pfl_app:campaign_detail' %}" class="campaign-col content-col">
+                        <div class="campaign-content-inner">
+                            <h2 class="campaign-title">CHIẾN DỊCH 3: LOREM ISPUM</h2>
+                            <div class="campaign-divider"></div>
+                            <p class="campaign-preview">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fermentum, enim non
+                                consectetur rutrum, tellus dui ultricies diam, sed fermentum est ipsum sed massa.
+                                Curabitur venenatis nibh a dictum vulputate. Vestibulum ante mi, porta id purus ut,
+                                bibendum interdum magna. Duis commodo consectetur ante et aliquam. Nam facilisis diam
+                                eget mi sodales, in dapibus metus hendrerit. Nulla nisl dolor, tristique ut luctus at,
+                                viverra vitae tortor. In egestas turpis a quam ornare fringilla....
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="main-footer">
+            <div class="footer-container">
+                <!-- Left: Logo -->
+                <div class="footer-left">
+                    <img src="{% static 'tao_souvenir/assets/footer_logo_left.png' %}" alt="Tao Logo"
+                        class="footer-logo">
+                </div>
+
+                <!-- Center: Contact Information -->
+                <div class="footer-center">
+                    <img src="{% static 'tao_souvenir/assets/contact_title.png' %}" alt="Contact" class="contact-title">
+                    <div class="contact-list">
+                        <a href="mailto:tao.thesouvenir@gmail.com" class="contact-item">
+                            <img src="{% static 'tao_souvenir/assets/email_icon.png' %}" alt="Email"
+                                class="contact-icon">
+                            <span>tao.thesouvenir@gmail.com</span>
+                        </a>
+                        <a href="https://www.facebook.com/TẠO" class="contact-item">
+                            <img src="{% static 'tao_souvenir/assets/facebook_icon.png' %}" alt="Facebook"
+                                class="contact-icon">
+                            <span>TẠO</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@tao.thesouvenir" class="contact-item">
+                            <img src="{% static 'tao_souvenir/assets/tiktok_icon.png' %}" alt="TikTok"
+                                class="contact-icon">
+                            <span>tao.thesouvenir</span>
+                        </a>
+                        <a href="tel:+84373018990" class="contact-item">
+                            <img src="{% static 'tao_souvenir/assets/phone_icon.png' %}" alt="Phone"
+                                class="contact-icon">
+                            <span>+84 373 018 990</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Animated Logo -->
+                <div class="footer-right">
+                    <img src="{% static 'tao_souvenir/assets/header_center_light_1.svg' %}" alt="Tao"
+                        class="footer-animated-logo" id="footer-animated-logo">
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="{% static 'tao_souvenir/script.js' %}"></script>
+</body>
+
+</html>
