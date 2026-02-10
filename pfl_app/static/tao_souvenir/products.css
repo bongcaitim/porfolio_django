@@ -143,7 +143,7 @@ body .overlay-buttons.sticky .btn-purple {
 }
 
 .intro-text {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.1rem;
     line-height: 1.8;
     color: #1E1E1E;
@@ -206,19 +206,16 @@ body .overlay-buttons.sticky .btn-purple {
 
 .product-image-area {
     width: 100%;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
     background-color: #FFFCF3;
-    min-height: 200px;
 }
 
 .product-img {
     width: 100%;
-    max-width: 150px;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3%
 }
 
 .product-details {
@@ -238,7 +235,7 @@ body .overlay-buttons.sticky .btn-purple {
 }
 
 .product-subtitle {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-style: italic;
     font-size: 0.85rem;
     color: #666;
@@ -255,12 +252,25 @@ body .overlay-buttons.sticky .btn-purple {
     font-family: 'Inter', sans-serif;
     font-weight: 900;
     font-size: 1.3rem;
-    color: #FF0073;
+    color: #1E1E1E;
     margin: 0;
 }
 
+/* Price color matches frame color */
+.product-card-wrapper[data-frame="red"] .product-price {
+    color: #FF004B;
+}
+
+.product-card-wrapper[data-frame="blue"] .product-price {
+    color: #086DFF;
+}
+
+.product-card-wrapper[data-frame="yellow"] .product-price {
+    color: #FFBF00;
+}
+
 .product-type {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
     color: #666;
     margin: 0;
@@ -296,7 +306,7 @@ body .overlay-buttons.sticky .btn-purple {
     padding: 50px;
     border: 4px solid #1E1E1E;
     width: 90%;
-    max-width: 1100px;
+    max-width: 1700px;
     max-height: 90vh;
     border-radius: 24px;
     position: relative;
@@ -342,11 +352,11 @@ body .overlay-buttons.sticky .btn-purple {
 
 .modal-image-container {
     flex: 1;
-    padding: 40px;
+    padding: 10px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 450px;
+    aspect-ratio: 4 / 3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -356,6 +366,7 @@ body .overlay-buttons.sticky .btn-purple {
     background-color: #FFFCF3;
     width: 85%;
     height: 85%;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -363,9 +374,9 @@ body .overlay-buttons.sticky .btn-purple {
 
 #modal-product-img {
     width: 100%;
-    max-width: 320px;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3%;
 }
 
 .modal-info-container {
@@ -413,7 +424,7 @@ body .overlay-buttons.sticky .btn-purple {
 }
 
 .modal-titles p {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-style: italic;
     font-size: 1.1rem;
     color: #666;
@@ -421,11 +432,40 @@ body .overlay-buttons.sticky .btn-purple {
 }
 
 .modal-description {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.05rem;
     line-height: 1.6;
     color: #1E1E1E;
     margin: 10px 0;
+}
+
+.modal-description p {
+    margin: 0 0 12px 0;
+}
+
+.modal-description p:last-child {
+    margin-bottom: 0;
+}
+
+.modal-readmore {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #1E1E1E;
+    margin: 5px 0 0 0;
+}
+
+.modal-readmore span {
+    font-weight: 600;
+}
+
+.modal-readmore a {
+    color: #1E1E1E;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.modal-readmore a:hover {
+    color: #FF0073;
 }
 
 .mua-ngay-btn {
@@ -455,6 +495,155 @@ body .overlay-buttons.sticky .btn-purple {
     box-shadow: 2px 2px 0px 0px #1E1E1E;
 }
 
+/* ============================
+   Purchase Popup Modal Styles
+   ============================ */
+.purchase-modal {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+.purchase-modal.show {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.purchase-modal-content {
+    background-color: #FFFCF3;
+    border: 4px solid #1E1E1E;
+    width: 90%;
+    max-width: 550px;
+    max-height: 90vh;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 10px 10px 0px 0px #1E1E1E;
+    overflow: hidden;
+    animation: modalScale 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-purchase-modal {
+    color: #1E1E1E;
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+    line-height: 1;
+    z-index: 10;
+}
+
+.close-purchase-modal:hover {
+    transform: scale(1.1) rotate(90deg);
+    color: #FF0073;
+}
+
+.purchase-character-area {
+    background: linear-gradient(180deg, #FFF5E1 0%, #FFFCF3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px 40px 0 40px;
+    min-height: 200px;
+}
+
+.purchase-character-img {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.purchase-divider-line {
+    height: 3px;
+    background-color: #FF8C42;
+    width: 100%;
+}
+
+.purchase-body {
+    padding: 25px 35px 30px 35px;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.purchase-greeting {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: #1E1E1E;
+    margin: 0 0 8px 0;
+}
+
+.purchase-message {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: #1E1E1E;
+    margin: 0 0 20px 0;
+}
+
+.purchase-locations-frame {
+    margin: 0 auto 25px auto;
+    max-width: 400px;
+}
+
+.purchase-address-board {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.purchase-social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.purchase-social-btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #086DFF;
+    background-color: #FFFCF3;
+    border: 3px solid #1E1E1E;
+    border-radius: 25px;
+    padding: 10px 28px;
+    text-decoration: none;
+    transition: all 0.2s;
+    box-shadow: 3px 3px 0px 0px #086DFF;
+}
+
+.purchase-social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 0px 0px #086DFF;
+    background-color: #086DFF;
+    color: #FFF5E1;
+}
+
+.purchase-social-btn:active {
+    transform: translateY(0);
+    box-shadow: 1px 1px 0px 0px #086DFF;
+}
+
+.purchase-thanks {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #1E1E1E;
+    margin: 0;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 1024px) {
     .catalog-container {
@@ -479,7 +668,7 @@ body .overlay-buttons.sticky .btn-purple {
     }
 
     .modal-image-container {
-        min-height: 350px;
+        aspect-ratio: 4 / 3;
     }
 }
 
@@ -499,5 +688,36 @@ body .overlay-buttons.sticky .btn-purple {
 
     .overlay-buttons.sticky {
         top: 70px;
+    }
+
+    .purchase-modal-content {
+        max-width: 95%;
+    }
+
+    .purchase-body {
+        padding: 20px 20px 25px 20px;
+    }
+
+    .purchase-character-area {
+        min-height: 160px;
+        padding: 15px 30px 0 30px;
+    }
+
+    .purchase-character-img {
+        max-width: 170px;
+    }
+
+    .purchase-social-buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .purchase-social-btn {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+
+    .purchase-message {
+        font-size: 0.85rem;
     }
 }

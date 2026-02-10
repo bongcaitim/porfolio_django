@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.core.files.storage import FileSystemStorage
+from pathlib import Path
 import json
 import os
 import os
@@ -603,13 +604,24 @@ def products(request):
     """View for Tao Souvenir Products page"""
     return render(request, "tao_souvenir/products.html")
 
+def _load_journals():
+    """Load journal data from JSON file."""
+    journals_path = Path(settings.BASE_DIR) / 'pfl_app' / 'static' / 'tao_souvenir' / 'assets' / 'journals' / 'journals.json'
+    with open(journals_path, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
 def blog(request):
     """View for Tao Souvenir Blog list page"""
-    return render(request, "tao_souvenir/blog.html")
+    journals = _load_journals()
+    return render(request, "tao_souvenir/blog.html", {'journals': journals})
 
-def blog_detail(request):
+def blog_detail(request, journal_id):
     """View for Tao Souvenir Blog detail page"""
-    return render(request, "tao_souvenir/blog_detail.html")
+    journals = _load_journals()
+    journal = next((j for j in journals if j['id'] == journal_id), None)
+    if journal is None:
+        return render(request, "tao_souvenir/blog_detail.html", {'journal': None})
+    return render(request, "tao_souvenir/blog_detail.html", {'journal': journal})
 
 def campaigns(request):
     """View for Tao Souvenir Campaign list page"""

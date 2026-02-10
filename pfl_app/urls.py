@@ -7,7 +7,7 @@ urlpatterns = [
     # Top Priority: Specific Tao Souvenir Pages
     path('tao_souvenir/blog/', views.blog, name='blog_list_page'),
 
-    path('tao_souvenir/blog/detail/', views.blog_detail, name='blog_detail'),
+    path('tao_souvenir/blog/detail/<int:journal_id>/', views.blog_detail, name='blog_detail'),
     path('tao_souvenir/campaigns/', views.campaigns, name='campaigns_page'),
     path('tao_souvenir/campaigns/detail/', views.campaign_detail, name='campaign_detail'),
     path('tao_souvenir/products/', views.products, name='products'),

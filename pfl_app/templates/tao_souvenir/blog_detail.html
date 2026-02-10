@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog Detail - Tao Souvenir.">
-    <title>Bài viết chi tiết - Tao Souvenir</title>
+    <meta name="description" content="{% if journal %}{{ journal.title }}{% else %}Blog Detail{% endif %} - Tao Souvenir.">
+    <title>{% if journal %}{{ journal.title }}{% else %}Journals{% endif %} - Tao Souvenir</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,28 +21,32 @@
         <div class="header-container">
             <!-- Left Group (Scrolled Only) -->
             <div class="header-left-group">
-                <img src="{% static 'tao_souvenir/assets/left_most_header_light_logo.svg' %}" alt="Tao Logo"
-                    class="left-most-logo">
+                <a href="{% url 'pfl_app:tao_souvenir_home' %}">
+                    <img src="{% static 'tao_souvenir/assets/left_most_header_light_logo.svg' %}" alt="Tao Logo"
+                        class="left-most-logo">
+                </a>
             </div>
 
             <!-- Center Group -->
             <img src="{% static 'tao_souvenir/assets/header_doorknob_dark.svg' %}" alt=""
                 class="header-doorknob left-knob">
             <div class="header-center">
-                <img src="{% static 'tao_souvenir/assets/header_center_dark.svg' %}" alt="Tao Souvenir Logo"
-                    class="header-logo" id="header-logo-img">
+                <a href="{% url 'pfl_app:tao_souvenir_home' %}">
+                    <img src="{% static 'tao_souvenir/assets/header_center_dark.svg' %}" alt="Tao Souvenir Logo"
+                        class="header-logo" id="header-logo-img">
+                </a>
             </div>
             <img src="{% static 'tao_souvenir/assets/header_doorknob_dark.svg' %}" alt=""
                 class="header-doorknob right-knob">
 
             <!-- Right Group (Scrolled Only) -->
             <div class="header-right-group">
-                <a href="#"><img src="{% static 'tao_souvenir/assets/instagram_header_light_right_button.png' %}"
+                <a href="https://www.instagram.com/tao.thesouvenir/"><img src="{% static 'tao_souvenir/assets/instagram_header_light_right_button.png' %}"
                         alt="Instagram" class="social-icon"></a>
-                <a href="https://www.facebook.com/"><img
+                <a href="https://www.facebook.com/profile.php?id=61586932133580"><img
                         src="{% static 'tao_souvenir/assets/facebook_header_light_right_button.svg' %}" alt="Facebook"
                         class="social-icon"></a>
-                <a href="#"><img src="{% static 'tao_souvenir/assets/tiktok_header_light_right_button.svg' %}"
+                <a href="https://www.tiktok.com/@tao.thesouvenir?lang=en"><img src="{% static 'tao_souvenir/assets/tiktok_header_light_right_button.svg' %}"
                         alt="TikTok" class="social-icon"></a>
             </div>
         </div>
@@ -51,123 +55,51 @@
     <main>
         <!-- Sticky Navigation Buttons -->
         <div class="overlay-buttons sticky">
-            <a href="{% url 'pfl_app:about_us' %}" class="overlay-btn btn-red">Về Tạo</a>
-            <a href="{% url 'pfl_app:blog_list_page' %}" class="overlay-btn btn-blue">Bài viết</a>
-            <a href="{% url 'pfl_app:products' %}" class="overlay-btn btn-yellow">Sản phẩm</a>
-            <a href="{% url 'pfl_app:campaigns_page' %}" class="overlay-btn btn-purple">Thiết kế vì cộng đồng</a>
+            <a href="{% url 'pfl_app:about_us' %}" class="overlay-btn btn-red">About Us</a>
+            <a href="{% url 'pfl_app:blog_list_page' %}" class="overlay-btn btn-blue">Journals</a>
+            <a href="{% url 'pfl_app:products' %}" class="overlay-btn btn-yellow">Products</a>
+            <a href="{% url 'pfl_app:campaigns_page' %}" class="overlay-btn btn-purple">Design for Society</a>
         </div>
 
+        {% if journal %}
         <!-- Blog Detail Content -->
         <article class="blog-detail-article">
             <!-- Cover Image -->
             <div class="blog-cover-container">
-                <img src="{% static 'tao_souvenir/assets/blog_cover.png' %}" alt="Blog Cover" class="blog-cover-img">
+                <img src="{% static 'tao_souvenir/assets/journals/' %}{{ journal.cover }}" alt="{{ journal.title }}" class="blog-cover-img">
             </div>
 
             <div class="blog-detail-container">
                 <!-- Tags -->
                 <div class="blog-detail-tags">
-                    <span class="blog-tag-chip detail">Bài chòi</span>
-                    <span class="blog-tag-chip detail">Tản mạn</span>
+                    {% for tag in journal.tags %}
+                    <span class="blog-tag-chip detail">{{ tag }}</span>
+                    {% endfor %}
                 </div>
 
                 <div class="blog-divider detail-top"></div>
 
                 <!-- Title -->
-                <h1 class="blog-detail-title">BÀI CHÒI HỘI AN - NẾP VĂN HÓA ĐẸP GIỮA LÒNG PHỐ CỔ.</h1>
-
-                <div class="blog-divider detail-meta"></div>
+                <h1 class="blog-detail-title">{{ journal.title }}</h1>
 
                 <!-- Meta Info -->
                 <div class="blog-meta-info">
-                    <p>NGÀY ĐĂNG TẢI : <strong>21.12.26</strong></p>
-                    <p>NGƯỜI VIẾT BÀI : <strong>Tường Vy</strong></p>
+                    <p>PUBLISHED ON &nbsp;|&nbsp; <strong>{{ journal.date }}</strong></p>
+                    <p>WRITTEN BY &nbsp;|&nbsp; <strong>{{ journal.author }}</strong></p>
                 </div>
 
                 <!-- Content Body -->
                 <div class="blog-detail-body">
-                    <p>Bạch Huê là con bài ý chỉ người phụ nữ. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Phasellus fermentum, enim non consectetur rutrum, tellus dui ultricies diam, sed fermentum est
-                        ipsum sed massa. Curabitur venenatis nibh a dictum vulputate. Vestibulum ante mi, porta id purus
-                        ut, bibendum interdum magna. Duis commodo consectetur ante et aliquam. Nam facilisis diam eget
-                        mi sodales, in dapibus metus hendrerit. Nulla nisl dolor, tristique ut luctus at, viverra vitae
-                        tortor. In egestas turpis a quam ornare fringilla.</p>
-
-                    <p>Bạch Huê là con bài ý chỉ người phụ nữ. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Phasellus fermentum, enim non consectetur rutrum, tellus dui ultricies diam, sed fermentum est
-                        ipsum sed massa. Curabitur venenatis nibh a dictum vulputate. Vestibulum ante mi, porta id purus
-                        ut, bibendum interdum magna. Duis commodo consectetur ante et aliquam. Nam facilisis diam eget
-                        mi sodales, in dapibus metus hendrerit. Nulla nisl dolor, tristique ut luctus at, viverra vitae
-                        tortor. In egestas turpis a quam ornare fringilla.</p>
-
-                    <p>Bạch Huê là con bài ý chỉ người phụ nữ. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Phasellus fermentum, enim non consectetur rutrum, tellus dui ultricies diam, sed fermentum est
-                        ipsum sed massa. Curabitur venenatis nibh a dictum vulputate. Vestibulum ante mi, porta id purus
-                        ut, bibendum interdum magna. Duis commodo consectetur ante et aliquam. Nam facilisis diam eget
-                        mi sodales, in dapibus metus hendrerit. Nulla nisl dolor, tristique ut luctus at, viverra vitae
-                        tortor. In egestas turpis a quam ornare fringilla.</p>
-
-                    <p>Bạch Huê là con bài ý chỉ người phụ nữ. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Phasellus fermentum, enim non consectetur rutrum, tellus dui ultricies diam, sed fermentum est
-                        ipsum sed massa. Curabitur venenatis nibh a dictum vulputate. Vestibulum ante mi, porta id purus
-                        ut, bibendum interdum magna. Duis commodo consectetur ante et aliquam. Nam facilisis diam eget
-                        mi sodales, in dapibus metus hendrerit. Nulla nisl dolor, tristique ut luctus at, viverra vitae
-                        tortor. In egestas turpis a quam ornare fringilla.</p>
+                    {{ journal.content_html|safe }}
                 </div>
             </div>
         </article>
-
-        <!-- Product Preview Strip -->
-        <section class="blog-product-strip">
-            <div class="strip-container">
-                <div class="strip-products-grid">
-                    <!-- Product Card 1 - Red -->
-                    <div class="mini-product-card" data-frame="red">
-                        <div class="mini-card-inner">
-                            <img src="{% static 'tao_souvenir/assets/brick_product_card_illustration.png' %}"
-                                alt="Product" class="mini-prod-img">
-                            <div class="mini-prod-info">
-                                <h4>Khóa Chòi</h4>
-                                <p>"Choi" Keychains</p>
-                                <p class="mini-price">50.000 VNÐ</p>
-                                <p class="mini-type">Type: Bach Huê</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product Card 2 - Blue -->
-                    <div class="mini-product-card" data-frame="blue">
-                        <div class="mini-card-inner">
-                            <img src="{% static 'tao_souvenir/assets/brick_product_card_illustration.png' %}"
-                                alt="Product" class="mini-prod-img">
-                            <div class="mini-prod-info">
-                                <h4>Khóa Chòi</h4>
-                                <p>"Choi" Keychains</p>
-                                <p class="mini-price">50.000 VNÐ</p>
-                                <p class="mini-type">Type: Bach Huê</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product Card 3 - Yellow -->
-                    <div class="mini-product-card" data-frame="yellow">
-                        <div class="mini-card-inner">
-                            <img src="{% static 'tao_souvenir/assets/brick_product_card_illustration.png' %}"
-                                alt="Product" class="mini-prod-img">
-                            <div class="mini-prod-info">
-                                <h4>Khóa Chòi</h4>
-                                <p>"Choi" Keychains</p>
-                                <p class="mini-price">50.000 VNÐ</p>
-                                <p class="mini-type">Type: Bach Huê</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Discover More Button -->
-                <a href="{% url 'pfl_app:products' %}" class="discover-more-btn">
-                    Khám phá thêm <img src="{% static 'tao_souvenir/assets/arrow_right_icon.svg' %}" alt=""
-                        class="btn-arrow">
-                </a>
-            </div>
-        </section>
+        {% else %}
+        <div class="blog-detail-container" style="padding-top: 200px; text-align: center;">
+            <h1>Journal not found</h1>
+            <p><a href="{% url 'pfl_app:blog_list_page' %}">Back to journals</a></p>
+        </div>
+        {% endif %}
 
         <!-- Footer -->
         <footer id="main-footer">
@@ -187,12 +119,12 @@
                                 class="contact-icon">
                             <span>tao.thesouvenir@gmail.com</span>
                         </a>
-                        <a href="https://www.facebook.com/TẠO" class="contact-item">
+                        <a href="https://www.facebook.com/profile.php?id=61586932133580" class="contact-item">
                             <img src="{% static 'tao_souvenir/assets/facebook_icon.png' %}" alt="Facebook"
                                 class="contact-icon">
                             <span>TẠO</span>
                         </a>
-                        <a href="https://www.tiktok.com/@tao.thesouvenir" class="contact-item">
+                        <a href="https://www.tiktok.com/@tao.thesouvenir?lang=en" class="contact-item">
                             <img src="{% static 'tao_souvenir/assets/tiktok_icon.png' %}" alt="TikTok"
                                 class="contact-icon">
                             <span>tao.thesouvenir</span>

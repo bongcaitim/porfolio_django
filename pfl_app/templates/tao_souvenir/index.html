@@ -19,28 +19,32 @@
         <div class="header-container">
             <!-- Left Group (Scrolled Only) -->
             <div class="header-left-group">
-                <img src="{% static 'tao_souvenir/assets/left_most_header_light_logo.svg' %}" alt="Tao Logo"
-                    class="left-most-logo">
+                <a href="{% url 'pfl_app:tao_souvenir_home' %}">
+                    <img src="{% static 'tao_souvenir/assets/left_most_header_light_logo.svg' %}" alt="Tao Logo"
+                        class="left-most-logo">
+                </a>
             </div>
 
             <!-- Center Group -->
             <img src="{% static 'tao_souvenir/assets/header_doorknob_dark.svg' %}" alt=""
                 class="header-doorknob left-knob">
             <div class="header-center">
-                <img src="{% static 'tao_souvenir/assets/header_center_dark.svg' %}" alt="Tao Souvenir Logo"
-                    class="header-logo" id="header-logo-img">
+                <a href="{% url 'pfl_app:tao_souvenir_home' %}">
+                    <img src="{% static 'tao_souvenir/assets/header_center_dark.svg' %}" alt="Tao Souvenir Logo"
+                        class="header-logo" id="header-logo-img">
+                </a>
             </div>
             <img src="{% static 'tao_souvenir/assets/header_doorknob_dark.svg' %}" alt=""
                 class="header-doorknob right-knob">
 
             <!-- Right Group (Scrolled Only) -->
             <div class="header-right-group">
-                <a href="#"><img src="{% static 'tao_souvenir/assets/instagram_header_light_right_button.png' %}"
+                <a href="https://www.instagram.com/tao.thesouvenir/"><img src="{% static 'tao_souvenir/assets/instagram_header_light_right_button.png' %}"
                         alt="Instagram" class="social-icon"></a>
-                <a href="https://www.facebook.com/"><img
+                <a href="https://www.facebook.com/profile.php?id=61586932133580"><img
                         src="{% static 'tao_souvenir/assets/facebook_header_light_right_button.svg' %}" alt="Facebook"
                         class="social-icon"></a>
-                <a href="#"><img src="{% static 'tao_souvenir/assets/tiktok_header_light_right_button.svg' %}"
+                <a href="https://www.tiktok.com/@tao.thesouvenir?lang=en"><img src="{% static 'tao_souvenir/assets/tiktok_header_light_right_button.svg' %}"
                         alt="TikTok" class="social-icon"></a>
             </div>
         </div>
@@ -53,11 +57,10 @@
                     <img src="{% static 'tao_souvenir/assets/first_section_picture.png' %}"
                         alt="Welcome to Tao Souvenir" class="hero-image">
                     <div class="overlay-buttons">
-                        <a href="{% url 'pfl_app:about_us' %}" class="overlay-btn btn-red">Về Tạo</a>
-                        <a href="{% url 'pfl_app:blog_list_page' %}" class="overlay-btn btn-blue">Bài viết</a>
-                        <a href="{% url 'pfl_app:products' %}" class="overlay-btn btn-yellow">Sản phẩm</a>
-                        <a href="{% url 'pfl_app:campaigns_page' %}" class="overlay-btn btn-purple">Thiết kế vì cộng
-                            đồng</a>
+                        <a href="{% url 'pfl_app:about_us' %}" class="overlay-btn btn-red">About Us</a>
+                        <a href="{% url 'pfl_app:blog_list_page' %}" class="overlay-btn btn-blue">Journals</a>
+                        <a href="{% url 'pfl_app:products' %}" class="overlay-btn btn-yellow">Products</a>
+                        <a href="{% url 'pfl_app:campaigns_page' %}" class="overlay-btn btn-purple">Design for Society</a>
                     </div>
                 </div>
             </div>
@@ -74,7 +77,7 @@
                     <a href="#" class="collection-btn btn-top">Bộ Sưu Tập</a>
 
                     <!-- Bottom Button -->
-                    <a href="#" class="collection-btn btn-bottom">Khám phá thêm --></a>
+                    <a href="#" class="collection-btn btn-bottom">Explore more --></a>
                 </div>
 
                 <!-- Right Side: Product Cards -->
@@ -149,7 +152,7 @@
         <section id="section-3" class="main-section">
             <div class="section-3-container">
                 <img src="{% static 'tao_souvenir/assets/section_3.png' %}" alt="Section 3" class="section-3-bg">
-                <a href="#" class="section-3-btn">Khám phá thêm --></a>
+                <a href="#" class="section-3-btn">Explore more --></a>
             </div>
         </section>
 
@@ -157,12 +160,9 @@
         <section id="section-4a" class="text-stripe-section">
             <div class="content-wrapper">
                 <p class="stripe-text">
-                    Chúng tôi không chỉ kể câu chuyện văn hóa<br>
-                    ngay tại lúc bạn mua sản phẩm.<br><br>
-                    Chúng tôi còn mời bạn tham gia cùng trên hành trình học về<br>
-                    nghệ thuật địa phương thông qua những bài đăng trên các nền tảng trực tuyến.<br>
-                    Từng bài viết của Tạo được viết bởi những đúc rút cá nhân<br>
-                    trên con đường tìm hiểu văn hóa quê hương mình.
+                    Our storytelling doesn't end the moment you purchase a product.<br>
+                    We invite you to join us on a journey of discovery, exploring local arts through our stories<br>
+                    shared across digital platforms. Every piece we write at Tao is a reflection of our personal insights—distilled from our own path of rediscovering the culture of our homeland.
                 </p>
             </div>
         </section>
@@ -239,12 +239,12 @@
                                 class="contact-icon">
                             <span>tao.thesouvenir@gmail.com</span>
                         </a>
-                        <a href="https://www.facebook.com/TẠO" class="contact-item">
+                        <a href="https://www.facebook.com/profile.php?id=61586932133580" class="contact-item">
                             <img src="{% static 'tao_souvenir/assets/facebook_icon.png' %}" alt="Facebook"
                                 class="contact-icon">
                             <span>TẠO</span>
                         </a>
-                        <a href="https://www.tiktok.com/@tao.thesouvenir" class="contact-item">
+                        <a href="https://www.tiktok.com/@tao.thesouvenir?lang=en" class="contact-item">
                             <img src="{% static 'tao_souvenir/assets/tiktok_icon.png' %}" alt="TikTok"
                                 class="contact-icon">
                             <span>tao.thesouvenir</span>

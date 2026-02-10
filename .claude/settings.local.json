@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(D:porfolio_djangoportfolio_envScriptsactivate)",
+      "Bash(python manage.py runserver:*)",
+      "Bash(cmd /c \"cd /d D:\\\\porfolio_django && portfolio_env\\\\Scripts\\\\activate && python manage.py runserver\")",
+      "Bash(D:/porfolio_django/portfolio_env/Scripts/python.exe:*)",
+      "Bash(dir:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

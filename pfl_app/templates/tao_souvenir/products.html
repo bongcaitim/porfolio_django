@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sản phẩm - Tao Souvenir products inspired by traditional craftsmanship.">
-    <title>Sản phẩm - Tao Souvenir</title>
+    <meta name="description" content="Products - Tao Souvenir products inspired by traditional craftsmanship.">
+    <title>Products - Tao Souvenir</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&family=Outfit:wght@300;400;600&display=swap"
@@ -20,28 +20,32 @@
         <div class="header-container">
             <!-- Left Group (Scrolled Only) -->
             <div class="header-left-group">
-                <img src="{% static 'tao_souvenir/assets/left_most_header_light_logo.svg' %}" alt="Tao Logo"
-                    class="left-most-logo">
+                <a href="{% url 'pfl_app:tao_souvenir_home' %}">
+                    <img src="{% static 'tao_souvenir/assets/left_most_header_light_logo.svg' %}" alt="Tao Logo"
+                        class="left-most-logo">
+                </a>
             </div>
 
             <!-- Center Group -->
             <img src="{% static 'tao_souvenir/assets/header_doorknob_dark.svg' %}" alt=""
                 class="header-doorknob left-knob">
             <div class="header-center">
-                <img src="{% static 'tao_souvenir/assets/header_center_dark.svg' %}" alt="Tao Souvenir Logo"
-                    class="header-logo" id="header-logo-img">
+                <a href="{% url 'pfl_app:tao_souvenir_home' %}">
+                    <img src="{% static 'tao_souvenir/assets/header_center_dark.svg' %}" alt="Tao Souvenir Logo"
+                        class="header-logo" id="header-logo-img">
+                </a>
             </div>
             <img src="{% static 'tao_souvenir/assets/header_doorknob_dark.svg' %}" alt=""
                 class="header-doorknob right-knob">
 
             <!-- Right Group (Scrolled Only) -->
             <div class="header-right-group">
-                <a href="#"><img src="{% static 'tao_souvenir/assets/instagram_header_light_right_button.png' %}"
+                <a href="https://www.instagram.com/tao.thesouvenir/"><img src="{% static 'tao_souvenir/assets/instagram_header_light_right_button.png' %}"
                         alt="Instagram" class="social-icon"></a>
-                <a href="https://www.facebook.com/"><img
+                <a href="https://www.facebook.com/profile.php?id=61586932133580"><img
                         src="{% static 'tao_souvenir/assets/facebook_header_light_right_button.svg' %}" alt="Facebook"
                         class="social-icon"></a>
-                <a href="#"><img src="{% static 'tao_souvenir/assets/tiktok_header_light_right_button.svg' %}"
+                <a href="https://www.tiktok.com/@tao.thesouvenir?lang=en"><img src="{% static 'tao_souvenir/assets/tiktok_header_light_right_button.svg' %}"
                         alt="TikTok" class="social-icon"></a>
             </div>
         </div>
@@ -53,10 +57,10 @@
 
         <!-- Sticky Navigation Buttons -->
         <div class="overlay-buttons sticky">
-            <a href="{% url 'pfl_app:about_us' %}" class="overlay-btn btn-red">Về Tạo</a>
-            <a href="{% url 'pfl_app:blog_list_page' %}" class="overlay-btn btn-blue">Bài viết</a>
-            <a href="{% url 'pfl_app:products' %}" class="overlay-btn btn-yellow">Sản phẩm</a>
-            <a href="{% url 'pfl_app:campaigns_page' %}" class="overlay-btn btn-purple">Thiết kế vì cộng đồng</a>
+            <a href="{% url 'pfl_app:about_us' %}" class="overlay-btn btn-red">About Us</a>
+            <a href="{% url 'pfl_app:blog_list_page' %}" class="overlay-btn btn-blue">Journals</a>
+            <a href="{% url 'pfl_app:products' %}" class="overlay-btn btn-yellow">Products</a>
+            <a href="{% url 'pfl_app:campaigns_page' %}" class="overlay-btn btn-purple">Design for Society</a>
         </div>
 
         <!-- Filter Panel -->
@@ -66,8 +70,6 @@
                 <div class="filter-chips">
                     <button class="filter-chip active" data-category="all">All</button>
                     <button class="filter-chip" data-category="bai-choi">Bài chòi Hội An</button>
-                    <button class="filter-chip" data-category="cam-ne">Làng chiếu Cẩm Nê</button>
-                    <button class="filter-chip" data-category="kim-bong">Điêu khắc gỗ Kim Bồng</button>
                 </div>
             </div>
         </section>
@@ -75,11 +77,11 @@
         <!-- Introduction Strip -->
         <section class="intro-strip">
             <div class="intro-container">
-                <h1 class="intro-title">TOÀN BỘ SẢN PHẨM</h1>
+                <h1 class="intro-title">ALL PRODUCTS</h1>
                 <p class="intro-text">
-                    Được truyền cảm hứng từ lửa nghề hừng hực của những nghệ nhân truyền thống.<br>
-                    Được sáng tạo từ trí óc của những con người trẻ tuổi.<br>
-                    Được ủng hộ bởi những tri kỉ đã lựa chọn Tạo làm món quà lưu niệm.
+                    <em>Inspired by the burning passion of traditional artisans.</em><br>
+                    <em>Created by the visionary minds of the youth.</em><br>
+                    <em>Sustained by the kindred spirits who choose Tao as their keepsake.</em>
                 </p>
             </div>
         </section>
@@ -87,191 +89,191 @@
         <!-- Product Catalog -->
         <section class="product-catalog">
             <div class="catalog-container">
-                <!-- Product Card 1 - Red Frame -->
-                <div class="product-card-wrapper" data-frame="red" data-category="bai-choi" data-name="Khóa Chòi"
-                    data-subtitle='"Chòi" Keychains' data-full-name='Khóa Chòi - "Bạch Huê"'
-                    data-full-subtitle='"Chòi" Keychains - "Young Lady"' data-price="50.000 VNĐ" data-type="Bạch Huê"
-                    data-description="Bạch Huê là con bài ý chỉ người phụ nữ. Với những nét vẽ mộc mạc nhưng đầy tinh xảo, Khóa Chòi tái hiện lại nếp vẽ bài chòi đặc trưng của vùng đất Quảng, mang theo hơi thở di sản trong từng đường nét.">
+                <!-- Product Card 1 - Red Frame - Bach Hue -->
+                <div class="product-card-wrapper" data-frame="red" data-category="bai-choi" data-name='"Chòi" Keychains'
+                    data-subtitle="Khóa Chòi" data-full-name='"Chòi" Keychains - Bach Hue'
+                    data-full-subtitle="Khóa Chòi - Bach Hue" data-price="50.000 VND" data-type="Bach Hue"
+                    data-description="Bach Hue keychain from the Bài Chòi Hội An collection, inspired by traditional artisans.">
                     <div class="product-card">
                         <div class="product-image-area">
-                            <img src="{% static 'tao_souvenir/assets/brick_product_card_illustration.png' %}"
-                                alt="Khóa Chòi" class="product-img">
+                            <img src="{% static 'tao_souvenir/assets/product_pictures/product1_bach_hue.png' %}"
+                                alt="Bach Hue Keychain" class="product-img">
                         </div>
                         <div class="product-details">
-                            <h3 class="product-name">Khóa Chòi</h3>
-                            <p class="product-subtitle">"Chòi" Keychains</p>
+                            <h3 class="product-name">"Chòi" Keychains</h3>
+                            <p class="product-subtitle">Khóa Chòi</p>
                             <div class="product-divider"></div>
-                            <p class="product-price">50.000 VNĐ</p>
+                            <p class="product-price">50.000 VND</p>
                             <div class="product-divider"></div>
-                            <p class="product-type">Type: Bạch Huê</p>
+                            <p class="product-type">Type: Bach Hue</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product Card 2 - Blue Frame -->
-                <div class="product-card-wrapper" data-frame="blue" data-category="cam-ne" data-name="Chiếu Cẩm Nê"
-                    data-subtitle='"Cam Ne" Mats' data-full-name='Chiếu Cẩm Nê - Mini'
-                    data-full-subtitle='"Cam Ne" Mats - Mini Heritage' data-price="120.000 VNĐ" data-type="Họa tiết hoa"
-                    data-description="Làng chiếu Cẩm Nê nổi tiếng với những tấm chiếu hoa rực rỡ. Sản phẩm thu nhỏ mang trọn vẹn kỹ thuật dệt truyền thống, là món quà tinh tế lưu giữ tinh hoa làng nghề dệt chiếu nghìn năm tuổi.">
+                <!-- Product Card 2 - Blue Frame - Noc Duong -->
+                <div class="product-card-wrapper" data-frame="blue" data-category="bai-choi" data-name='"Chòi" Keychains'
+                    data-subtitle="Khóa Chòi" data-full-name='"Chòi" Keychains - Noc Duong'
+                    data-full-subtitle="Khóa Chòi - Noc Duong" data-price="50.000 VND" data-type="Noc Duong"
+                    data-description="Noc Duong keychain from the Bài Chòi Hội An collection, inspired by traditional artisans.">
                     <div class="product-card">
                         <div class="product-image-area">
-                            <img src="{% static 'tao_souvenir/assets/brick_product_card_illustration.png' %}"
-                                alt="Chiếu Cẩm Nê" class="product-img">
+                            <img src="{% static 'tao_souvenir/assets/product_pictures/product2_noc_duong.png' %}"
+                                alt="Noc Duong Keychain" class="product-img">
                         </div>
                         <div class="product-details">
-                            <h3 class="product-name">Chiếu Cẩm Nê</h3>
-                            <p class="product-subtitle">"Cam Ne" Mats</p>
+                            <h3 class="product-name">"Chòi" Keychains</h3>
+                            <p class="product-subtitle">Khóa Chòi</p>
                             <div class="product-divider"></div>
-                            <p class="product-price">120.000 VNĐ</p>
+                            <p class="product-price">50.000 VND</p>
                             <div class="product-divider"></div>
-                            <p class="product-type">Type: Họa tiết hoa</p>
+                            <p class="product-type">Type: Noc Duong</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product Card 3 - Yellow Frame -->
-                <div class="product-card-wrapper" data-frame="yellow" data-category="kim-bong" data-name="Tranh Gỗ"
-                    data-subtitle="Wood Carvings" data-full-name="Tranh Gỗ Kim Bồng"
-                    data-full-subtitle="Kim Bong Wood Carvings - Classic" data-price="250.000 VNĐ" data-type="Phố Cổ"
-                    data-description="Điêu khắc gỗ Kim Bồng mang đậm dấu ấn kiến trúc Hội An. Từng nét chạm khắc tỉ mỉ trên nền gỗ tự nhiên tái hiện lại vẻ đẹp trầm mặc của phố Hội, thể hiện bàn tay tài hoa của những người thợ mộc xứ Quảng.">
+                <!-- Product Card 3 - Yellow Frame - Seven Sharp -->
+                <div class="product-card-wrapper" data-frame="yellow" data-category="bai-choi" data-name='"Chòi" Keychains'
+                    data-subtitle="Khóa Chòi" data-full-name='"Chòi" Keychains - Seven Sharp'
+                    data-full-subtitle="Khóa Chòi - Seven Sharp" data-price="50.000 VND" data-type="Seven Sharp"
+                    data-description="Seven Sharp keychain from the Bài Chòi Hội An collection, inspired by traditional artisans.">
                     <div class="product-card">
                         <div class="product-image-area">
-                            <img src="{% static 'tao_souvenir/assets/brick_product_card_illustration.png' %}"
-                                alt="Tranh Gỗ" class="product-img">
+                            <img src="{% static 'tao_souvenir/assets/product_pictures/product3_seven_sharp.png' %}"
+                                alt="Seven Sharp Keychain" class="product-img">
                         </div>
                         <div class="product-details">
-                            <h3 class="product-name">Tranh Gỗ</h3>
-                            <p class="product-subtitle">Wood Carvings</p>
+                            <h3 class="product-name">"Chòi" Keychains</h3>
+                            <p class="product-subtitle">Khóa Chòi</p>
                             <div class="product-divider"></div>
-                            <p class="product-price">250.000 VNĐ</p>
+                            <p class="product-price">50.000 VND</p>
                             <div class="product-divider"></div>
-                            <p class="product-type">Type: Phố Cổ</p>
+                            <p class="product-type">Type: Seven Sharp</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product Card 4 - Blue Frame -->
-                <div class="product-card-wrapper" data-frame="blue" data-category="bai-choi" data-name="Khóa Chòi"
-                    data-subtitle='"Chòi" Keychains' data-full-name='Khóa Chòi - "Ông Ầm"'
-                    data-full-subtitle='"Chòi" Keychains - "Grandfather"' data-price="50.000 VNĐ" data-type="Ông Ầm"
-                    data-description="Ông Ầm là một trong những quân bài thú vị trong bộ bài chòi. Chiếc móc khóa này không chỉ là vật trang trí mà còn là một câu chuyện văn hóa, đưa nghệ thuật trình diễn bài chòi đến gần hơn với cuộc sống hiện đại.">
+                <!-- Product Card 4 - Red Frame - Nine Monk -->
+                <div class="product-card-wrapper" data-frame="red" data-category="bai-choi" data-name='"Chòi" Keychains'
+                    data-subtitle="Khóa Chòi" data-full-name='"Chòi" Keychains - Nine Monk'
+                    data-full-subtitle="Khóa Chòi - Nine Monk" data-price="50.000 VND" data-type="Nine Monk"
+                    data-description="Nine Monk keychain from the Bài Chòi Hội An collection, inspired by traditional artisans.">
                     <div class="product-card">
                         <div class="product-image-area">
-                            <img src="{% static 'tao_souvenir/assets/brick_product_card_illustration.png' %}"
-                                alt="Khóa Chòi" class="product-img">
+                            <img src="{% static 'tao_souvenir/assets/product_pictures/product4_nine_monk.png' %}"
+                                alt="Nine Monk Keychain" class="product-img">
                         </div>
                         <div class="product-details">
-                            <h3 class="product-name">Khóa Chòi</h3>
-                            <p class="product-subtitle">"Chòi" Keychains</p>
+                            <h3 class="product-name">"Chòi" Keychains</h3>
+                            <p class="product-subtitle">Khóa Chòi</p>
                             <div class="product-divider"></div>
-                            <p class="product-price">50.000 VNĐ</p>
+                            <p class="product-price">50.000 VND</p>
                             <div class="product-divider"></div>
-                            <p class="product-type">Type: Ông Ầm</p>
+                            <p class="product-type">Type: Nine Monk</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product Card 5 - Yellow Frame -->
-                <div class="product-card-wrapper" data-frame="yellow" data-category="cam-ne" data-name="Chiếu Cẩm Nê"
-                    data-subtitle='"Cam Ne" Mats' data-full-name='Chiếu Cẩm Nê - Cân'
-                    data-full-subtitle='"Cam Ne" Mats - Symmetrical' data-price="120.000 VNĐ" data-type="Cân"
-                    data-description="Họa tiết Cân trên chiếu Cẩm Nê tượng trưng cho sự cân bằng và bền vững. Với màu sắc tự nhiên và chất liệu cói quen thuộc, sản phẩm mang đến cảm giác mộc mạc nhưng không kém phần sang trọng.">
+                <!-- Product Card 5 - Blue Frame - Three Curly -->
+                <div class="product-card-wrapper" data-frame="blue" data-category="bai-choi" data-name='"Chòi" Keychains'
+                    data-subtitle="Khóa Chòi" data-full-name='"Chòi" Keychains - Three Curly'
+                    data-full-subtitle="Khóa Chòi - Three Curly" data-price="50.000 VND" data-type="Three Curly"
+                    data-description="Three Curly keychain from the Bài Chòi Hội An collection, inspired by traditional artisans.">
                     <div class="product-card">
                         <div class="product-image-area">
-                            <img src="{% static 'tao_souvenir/assets/brick_product_card_illustration.png' %}"
-                                alt="Chiếu Cẩm Nê" class="product-img">
+                            <img src="{% static 'tao_souvenir/assets/product_pictures/product5_three_curly.png' %}"
+                                alt="Three Curly Keychain" class="product-img">
                         </div>
                         <div class="product-details">
-                            <h3 class="product-name">Chiếu Cẩm Nê</h3>
-                            <p class="product-subtitle">"Cam Ne" Mats</p>
+                            <h3 class="product-name">"Chòi" Keychains</h3>
+                            <p class="product-subtitle">Khóa Chòi</p>
                             <div class="product-divider"></div>
-                            <p class="product-price">120.000 VNĐ</p>
+                            <p class="product-price">50.000 VND</p>
                             <div class="product-divider"></div>
-                            <p class="product-type">Type: Cân</p>
+                            <p class="product-type">Type: Three Curly</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product Card 6 - Red Frame -->
-                <div class="product-card-wrapper" data-frame="red" data-category="kim-bong" data-name="Lồng Đèn Gỗ"
-                    data-subtitle="Wooden Lanterns" data-full-name="Lồng Đèn Gỗ Kim Bồng"
-                    data-full-subtitle="Kim Bong Wooden Lanterns" data-price="350.000 VNĐ" data-type="Chạm lộng"
-                    data-description="Kết hợp giữa kỹ thuật đóng tàu và chạm khắc tinh xảo, lồng đèn gỗ Kim Bồng là biểu hiện cao nhất của kỹ nghệ làm mộc. Ánh sáng xuyên qua những nhát đục lộng tạo nên một không gian huyền ảo, đậm chất Hội An.">
+                <!-- Product Card 6 - Yellow Frame - Hut -->
+                <div class="product-card-wrapper" data-frame="yellow" data-category="bai-choi" data-name='"Chòi" Keychains'
+                    data-subtitle="Khóa Chòi" data-full-name='"Chòi" Keychains - Hut'
+                    data-full-subtitle="Khóa Chòi - Hut" data-price="50.000 VND" data-type="Hut"
+                    data-description="Hut keychain from the Bài Chòi Hội An collection, inspired by traditional artisans.">
                     <div class="product-card">
                         <div class="product-image-area">
-                            <img src="{% static 'tao_souvenir/assets/brick_product_card_illustration.png' %}"
-                                alt="Lồng Đèn Gỗ" class="product-img">
+                            <img src="{% static 'tao_souvenir/assets/product_pictures/product6_hut.png' %}"
+                                alt="Hut Keychain" class="product-img">
                         </div>
                         <div class="product-details">
-                            <h3 class="product-name">Lồng Đèn Gỗ</h3>
-                            <p class="product-subtitle">Wooden Lanterns</p>
+                            <h3 class="product-name">"Chòi" Keychains</h3>
+                            <p class="product-subtitle">Khóa Chòi</p>
                             <div class="product-divider"></div>
-                            <p class="product-price">350.000 VNĐ</p>
+                            <p class="product-price">50.000 VND</p>
                             <div class="product-divider"></div>
-                            <p class="product-type">Type: Chạm lộng</p>
+                            <p class="product-type">Type: Hut</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product Card 7 - Yellow Frame -->
-                <div class="product-card-wrapper" data-frame="yellow" data-category="bai-choi" data-name="Khóa Chòi"
-                    data-subtitle='"Chòi" Keychains' data-full-name='Khóa Chòi - "Nhứt Trò"'
-                    data-full-subtitle='"Chòi" Keychains - "First Player"' data-price="50.000 VNĐ" data-type="Nhứt Trò"
-                    data-description="Nhứt Trò - quân bài của niềm vui và sự khởi đầu. Mang theo Nhứt Trò bên mình như mang theo một lời chúc may mắn từ những hội bài chòi xuân tấp nập tiếng cười và lời ca.">
+                <!-- Product Card 7 - Red Frame - Bamboo Tunnels -->
+                <div class="product-card-wrapper" data-frame="red" data-category="bai-choi" data-name='"Chòi" Keychains'
+                    data-subtitle="Khóa Chòi" data-full-name='"Chòi" Keychains - Bamboo Tunnels'
+                    data-full-subtitle="Khóa Chòi - Bamboo Tunnels" data-price="45.000 VND" data-type="Bamboo Tunnels"
+                    data-description="Bamboo Tunnels keychain from the Bài Chòi Hội An collection, inspired by traditional artisans.">
                     <div class="product-card">
                         <div class="product-image-area">
-                            <img src="{% static 'tao_souvenir/assets/brick_product_card_illustration.png' %}"
-                                alt="Khóa Chòi" class="product-img">
+                            <img src="{% static 'tao_souvenir/assets/product_pictures/product7_bamboo_tunnels.png' %}"
+                                alt="Bamboo Tunnels Keychain" class="product-img">
                         </div>
                         <div class="product-details">
-                            <h3 class="product-name">Khóa Chòi</h3>
-                            <p class="product-subtitle">"Chòi" Keychains</p>
+                            <h3 class="product-name">"Chòi" Keychains</h3>
+                            <p class="product-subtitle">Khóa Chòi</p>
                             <div class="product-divider"></div>
-                            <p class="product-price">50.000 VNĐ</p>
+                            <p class="product-price">45.000 VND</p>
                             <div class="product-divider"></div>
-                            <p class="product-type">Type: Nhứt Trò</p>
+                            <p class="product-type">Type: Bamboo Tunnels</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product Card 8 - Red Frame -->
-                <div class="product-card-wrapper" data-frame="red" data-category="cam-ne" data-name="Túi Cói"
-                    data-subtitle="Sedge Bags" data-full-name="Túi Cói Cẩm Nê" data-full-subtitle="Cam Ne Sedge Bags"
-                    data-price="220.000 VNĐ" data-type="Đan tay"
-                    data-description="Từ bàn tay khéo léo của các nghệ nhân, những sợi cói thô sơ đã trở thành chiếc túi thời trang đậm chất bản địa. Vừa thân thiện môi trường, vừa mang vẻ đẹp hiện đại từ chất liệu truyền thống.">
+                <!-- Product Card 8 - Blue Frame - Conical Hat Player -->
+                <div class="product-card-wrapper" data-frame="blue" data-category="bai-choi" data-name='"Chòi" Keychains'
+                    data-subtitle="Khóa Chòi" data-full-name='"Chòi" Keychains - Conical Hat Player'
+                    data-full-subtitle="Khóa Chòi - Conical Hat Player" data-price="30.000 VND" data-type="Conical Hat Player"
+                    data-description="Conical Hat Player keychain from the Bài Chòi Hội An collection, inspired by traditional artisans.">
                     <div class="product-card">
                         <div class="product-image-area">
-                            <img src="{% static 'tao_souvenir/assets/brick_product_card_illustration.png' %}"
-                                alt="Túi Cói" class="product-img">
+                            <img src="{% static 'tao_souvenir/assets/product_pictures/product8_conical_hat_player.png' %}"
+                                alt="Conical Hat Player Keychain" class="product-img">
                         </div>
                         <div class="product-details">
-                            <h3 class="product-name">Túi Cói</h3>
-                            <p class="product-subtitle">Sedge Bags</p>
+                            <h3 class="product-name">"Chòi" Keychains</h3>
+                            <p class="product-subtitle">Khóa Chòi</p>
                             <div class="product-divider"></div>
-                            <p class="product-price">220.000 VNĐ</p>
+                            <p class="product-price">30.000 VND</p>
                             <div class="product-divider"></div>
-                            <p class="product-type">Type: Đan tay</p>
+                            <p class="product-type">Type: Conical Hat Player</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product Card 9 - Blue Frame -->
-                <div class="product-card-wrapper" data-frame="blue" data-category="kim-bong" data-name="Tượng Gỗ"
-                    data-subtitle="Wood Statues" data-full-name="Tượng Gỗ Kim Bồng"
-                    data-full-subtitle="Kim Bong Wood Statue - Ancestor" data-price="450.000 VNĐ" data-type="Tượng gỗ"
-                    data-description="Những bức tượng gỗ Kim Bồng luôn toát lên khí chất thư thái và phúc hậu. Được tạc từ những loại gỗ quý lâu năm, sản phẩm là sự kết tinh của thời gian và tâm huyết người thợ làng nghề.">
+                <!-- Product Card 9 - Yellow Frame - Feet Up Player -->
+                <div class="product-card-wrapper" data-frame="yellow" data-category="bai-choi" data-name='"Chòi" Keychains'
+                    data-subtitle="Khóa Chòi" data-full-name='"Chòi" Keychains - Feet Up Player'
+                    data-full-subtitle="Khóa Chòi - Feet Up Player" data-price="30.000 VND" data-type="Feet Up Player"
+                    data-description="Feet Up Player keychain from the Bài Chòi Hội An collection, inspired by traditional artisans.">
                     <div class="product-card">
                         <div class="product-image-area">
-                            <img src="{% static 'tao_souvenir/assets/brick_product_card_illustration.png' %}"
-                                alt="Tượng Gỗ" class="product-img">
+                            <img src="{% static 'tao_souvenir/assets/product_pictures/product9_feet_up_player.png' %}"
+                                alt="Feet Up Player Keychain" class="product-img">
                         </div>
                         <div class="product-details">
-                            <h3 class="product-name">Tượng Gỗ</h3>
-                            <p class="product-subtitle">Wood Statues</p>
+                            <h3 class="product-name">"Chòi" Keychains</h3>
+                            <p class="product-subtitle">Khóa Chòi</p>
                             <div class="product-divider"></div>
-                            <p class="product-price">450.000 VNĐ</p>
+                            <p class="product-price">30.000 VND</p>
                             <div class="product-divider"></div>
-                            <p class="product-type">Type: Tượng gỗ</p>
+                            <p class="product-type">Type: Feet Up Player</p>
                         </div>
                     </div>
                 </div>
@@ -296,12 +298,12 @@
                                 class="contact-icon">
                             <span>tao.thesouvenir@gmail.com</span>
                         </a>
-                        <a href="https://www.facebook.com/TẠO" class="contact-item">
+                        <a href="https://www.facebook.com/profile.php?id=61586932133580" class="contact-item">
                             <img src="{% static 'tao_souvenir/assets/facebook_icon.png' %}" alt="Facebook"
                                 class="contact-icon">
                             <span>TẠO</span>
                         </a>
-                        <a href="https://www.tiktok.com/@tao.thesouvenir" class="contact-item">
+                        <a href="https://www.tiktok.com/@tao.thesouvenir?lang=en" class="contact-item">
                             <img src="{% static 'tao_souvenir/assets/tiktok_icon.png' %}" alt="TikTok"
                                 class="contact-icon">
                             <span>tao.thesouvenir</span>
@@ -345,9 +347,43 @@
                         <p id="modal-full-subtitle">Product Full Subtitle</p>
                     </div>
                     <div class="modal-divider"></div>
-                    <p id="modal-description" class="modal-description">Product detailed description...</p>
+                    <div id="modal-description" class="modal-description">Product detailed description...</div>
+                    <div class="modal-readmore">
+                        <span>Read More: </span>
+                        <a id="modal-readmore-link" href="#">Article Title</a>
+                    </div>
                     <button class="mua-ngay-btn">Mua Ngay!</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Purchase Popup Modal -->
+    <div id="purchase-modal" class="purchase-modal">
+        <div class="purchase-modal-content">
+            <span class="close-purchase-modal">&times;</span>
+            <div class="purchase-character-area">
+                <img src="{% static 'tao_souvenir/assets/waving_kid.png' %}"
+                    alt="Tao Character" class="purchase-character-img">
+            </div>
+            <div class="purchase-divider-line"></div>
+            <div class="purchase-body">
+                <p class="purchase-greeting">Bà con ơi!</p>
+                <p class="purchase-message">
+                    Hiện tại trang web của Tạo vẫn chưa hỗ trợ tính năng mua hàng.<br>
+                    Do đó, bạn vui lòng liên hệ Tạo qua Instagram, Facebook, TikTok,<br>
+                    hoặc ghé các cửa hàng Pop-up của Tạo tại các địa điểm sau:
+                </p>
+                <div class="purchase-locations-frame">
+                    <img src="{% static 'tao_souvenir/assets/address_board.png' %}"
+                        alt="Store locations" class="purchase-address-board">
+                </div>
+                <div class="purchase-social-buttons">
+                    <a href="https://www.tiktok.com/@tao.thesouvenir?lang=en" class="purchase-social-btn">TikTok</a>
+                    <a href="https://www.instagram.com/tao.thesouvenir/" class="purchase-social-btn">Instagram</a>
+                    <a href="https://www.facebook.com/profile.php?id=61586932133580" class="purchase-social-btn">Facebook</a>
+                </div>
+                <p class="purchase-thanks"><em>Cảm ơn Quý khách đã thông cảm cho sự bất tiện.</em></p>
             </div>
         </div>
     </div>
